@@ -1,23 +1,13 @@
 package mark123mark.mods.transcraft.Blocks;
 
-import java.util.List;
-
-
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class ThinCrystalGlass extends ThinBase 
+public class ThinCrystalGlass extends BlockPane 
 {
-    static String blockTextures[] = { "ClearGlass" };
-
     public ThinCrystalGlass(int id)
     {
-        super(id, Material.glass, "glass/", blockTextures);
+        super(id, "transcraft:ClearGlass", "transcraft:ClearGlass", Material.glass, true);
        
     }
 }
