@@ -43,6 +43,18 @@ public class Config {
 	public static int RedBlockEnderQuartzID = 2117;
 	public static int RedBlockChiselEnderQuartzID = 2118;
 	
+	
+	
+	public static int StairBlockEnderQuartzID = 2119;
+	public static int StairBlockChiselEnderQuartzID = 2120;
+	
+	public static int StairBlueBlockEnderQuartzID = 2121;
+	public static int StairBlueBlockChiselEnderQuartzID = 2122;
+	
+	public static int StairRedBlockEnderQuartzID = 2123;
+	public static int StairRedBlockChiselEnderQuartzID = 2124;
+	
+	
 	public static int ComIronOreID = 2021;
 	public static int ComGoldOreID = 2022;
 	public static int ComTransmutterOreID = 2023;
@@ -143,6 +155,18 @@ public class Config {
        
        RedBlockEnderQuartzID = config.getBlock("Red Ender Quartz", 2117).getInt();
        RedBlockChiselEnderQuartzID = config.getBlock("Red Chisel Ender Quartz", 2118).getInt();
+       
+       
+       
+       StairBlockEnderQuartzID = config.getBlock("Stair Ender Quartz", 2119).getInt();
+       StairBlockChiselEnderQuartzID = config.getBlock("Stair Chisel Ender Quartz", 2120).getInt();
+       
+       StairBlueBlockEnderQuartzID = config.getBlock("Stair Blue Ender Quartz", 2121).getInt();
+       StairBlueBlockChiselEnderQuartzID = config.getBlock("Stair Blue Chisel Ender Quartz", 2122).getInt();
+       
+       StairRedBlockEnderQuartzID = config.getBlock("Stair Red Ender Quartz", 2123).getInt();
+       StairRedBlockChiselEnderQuartzID = config.getBlock("Stair Red Chisel Ender Quartz", 2124).getInt();
+       
        
        ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
        ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();

@@ -86,6 +86,13 @@ public class Transcraft {
 	public static Block RedenderQuartz;
 	public static Block RedchiselEnderQuartz;
 	
+	public static Block StairenderQuartz;
+	public static Block StairchiselEnderQuartz;
+	public static Block StairBlueenderQuartz;
+	public static Block StairBluechiselEnderQuartz;
+	public static Block StairRedenderQuartz;
+	public static Block StairRedchiselEnderQuartz;
+	
 	
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
@@ -365,6 +372,59 @@ public class Transcraft {
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(RedchiselEnderQuartz, "RedChiselEnderQuartz");
 		LanguageRegistry.addName(RedchiselEnderQuartz, "Red Chiseled Ender Quartz Block");
+		
+		
+		
+		
+		StairenderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairBlockEnderQuartzID , enderQuartz , 0)
+		.setUnlocalizedName("Transcraft:Stairenderquartz")
+		.setTextureName("Transcraft:Stairenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(enderQuartz, "StairEnderQuartz");
+		LanguageRegistry.addName(enderQuartz, "Ender Quartz Block Stair");
+		
+		StairchiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairBlockChiselEnderQuartzID, chiselEnderQuartz , 0)
+		.setUnlocalizedName("Transcraft:Stairchiselenderquartz")
+		.setTextureName("Transcraft:Stairchiselenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(chiselEnderQuartz, "StairChiselEnderQuartz");
+		LanguageRegistry.addName(chiselEnderQuartz, "Chiseled Ender Quartz Block Stair");
+		
+		StairBlueenderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairBlueBlockEnderQuartzID , BlueenderQuartz , 0)
+		.setUnlocalizedName("Transcraft:StairBlueenderquartz")
+		.setTextureName("Transcraft:StairBlueenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(BlueenderQuartz, "StairBlueEnderQuartz");
+		LanguageRegistry.addName(BlueenderQuartz, "Blue Ender Quartz Block Stair");
+		
+		StairBluechiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairBlueBlockChiselEnderQuartzID, BluechiselEnderQuartz , 0)
+		.setUnlocalizedName("Transcraft:StairBluechiselenderquartz")
+		.setTextureName("Transcraft:StairBluechiselenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(BluechiselEnderQuartz, "StairBlueChiselEnderQuartz");
+		LanguageRegistry.addName(BluechiselEnderQuartz, "Blue Chiseled Ender Quartz Block Stair");
+		
+		StairRedenderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairRedBlockEnderQuartzID, RedenderQuartz , 0)
+		.setUnlocalizedName("Transcraft:StairRedenderquartz")
+		.setTextureName("Transcraft:StairRedenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(RedenderQuartz, "StairRedEnderQuartz");
+		LanguageRegistry.addName(RedenderQuartz, "Red Ender Quartz Block Stair");
+		
+		StairRedchiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.DefultStair(
+				Config.StairRedBlockChiselEnderQuartzID, RedchiselEnderQuartz , 0)
+		.setUnlocalizedName("Transcraft:StairRedchiselenderquartz")
+		.setTextureName("Transcraft:StairRedchiselenderquartz")
+		.setCreativeTab(TranstabBlocks);
+		GameRegistry.registerBlock(RedchiselEnderQuartz, "StairRedChiselEnderQuartz");
+		LanguageRegistry.addName(RedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
+		
+		
 		
 		
 		
