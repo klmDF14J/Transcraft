@@ -17,7 +17,6 @@ public class TickHandler implements ITickHandler
 	
     public static boolean adminfly = false;
     
-
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData)
 	{
