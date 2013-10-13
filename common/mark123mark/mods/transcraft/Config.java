@@ -55,6 +55,9 @@ public class Config {
 	public static int StairRedBlockChiselEnderQuartzID = 2124;
 	
 	
+	public static int ClearGlassStiarID = 2125;
+	
+	
 	public static int ComIronOreID = 2021;
 	public static int ComGoldOreID = 2022;
 	public static int ComTransmutterOreID = 2023;
@@ -166,6 +169,9 @@ public class Config {
        
        StairRedBlockEnderQuartzID = config.getBlock("Stair Red Ender Quartz", 2123).getInt();
        StairRedBlockChiselEnderQuartzID = config.getBlock("Stair Red Chisel Ender Quartz", 2124).getInt();
+       
+       
+       ClearGlassStiarID = config.getBlock("ClearGlassStiar", 2125).getInt();
        
        
        ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();

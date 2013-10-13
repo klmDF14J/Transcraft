@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft;
 
+import mark123mark.mods.transcraft.Blocks.GalssStair;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
@@ -93,6 +94,7 @@ public class Transcraft {
 	public static Block StairRedenderQuartz;
 	public static Block StairRedchiselEnderQuartz;
 	
+	public static Block ClearGlassStiar;
 	
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
@@ -582,7 +584,15 @@ public class Transcraft {
 		LanguageRegistry.addName(StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
 		
 		
-		
+		ClearGlassStiar = (new GalssStair(
+				Config.ClearGlassStiarID, ClearGlass , 0))
+		.setUnlocalizedName("Transcraft:ClearGlassStiar")
+		.setTextureName("Transcraft:ClearGlassStiar")
+		.setCreativeTab(TranstabBlocks)
+		.setLightOpacity(0)
+		.setTextureName("Transcraft:ClearGlass");
+		GameRegistry.registerBlock(ClearGlassStiar, "ClearGlassStiar");
+		LanguageRegistry.addName(ClearGlassStiar, "Clear Glass Stiar");
 	
 		
 		
