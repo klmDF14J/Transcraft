@@ -94,7 +94,6 @@ public class Transcraft {
 	public static Block StairRedenderQuartz;
 	public static Block StairRedchiselEnderQuartz;
 	
-	public static Block ClearGlassStiar;
 	
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
@@ -498,7 +497,8 @@ public class Transcraft {
 				"Transcraft:BunkerTool").setCreativeTab(TranstabItems);
 		EnderSword = new mark123mark.mods.transcraft.Tools.EnderSword(
 				Config.EnderSwordID, EnderToolEnum).setUnlocalizedName(
-				"Transcraft:EnderSword").setCreativeTab(TranstabItems);
+				"Transcraft:EnderSword").setCreativeTab(TranstabItems)
+				.setFull3D();
 
 		EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
 				15, new int[] { 3, 5, 5, 2 }, 5);
@@ -582,25 +582,6 @@ public class Transcraft {
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		LanguageRegistry.addName(StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
-		
-		
-		ClearGlassStiar = (new GalssStair(
-				Config.ClearGlassStiarID, ClearGlass , 0))
-		.setUnlocalizedName("Transcraft:ClearGlassStiar")
-		.setTextureName("Transcraft:ClearGlassStiar")
-		.setCreativeTab(TranstabBlocks)
-		.setLightOpacity(0)
-		.setTextureName("Transcraft:ClearGlass");
-		GameRegistry.registerBlock(ClearGlassStiar, "ClearGlassStiar");
-		LanguageRegistry.addName(ClearGlassStiar, "Clear Glass Stiar");
-	
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
