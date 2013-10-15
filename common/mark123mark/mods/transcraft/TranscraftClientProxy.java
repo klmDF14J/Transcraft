@@ -32,8 +32,20 @@ public static Minecraft mc = Minecraft.getMinecraft();
 			TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);	
 			TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
 			 RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class, new NukeCreeperRender());
-			 MinecraftForgeClient.registerItemRenderer(Transcraft.EnderSword.itemID, (IItemRenderer)new RenderEnderSword());
 			
+			 
+			 //TODO 
+		/*	 
+		 NEEDS FIXING!
+		 
+		 
+			 #####################################################################################
+			
+			 MinecraftForgeClient.registerItemRenderer(Transcraft.EnderSword.itemID, (IItemRenderer)new RenderEnderSword());
+			 
+			 ######################################################################################
+			 
+			*/
 		}
 	
 	 
