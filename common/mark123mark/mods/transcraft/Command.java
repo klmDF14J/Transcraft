@@ -28,7 +28,6 @@ public class Command extends CommandBase {
 	@Override
 	public void processCommand(ICommandSender icommandsender, String[] astring) {
 		// TODO Auto-generated method stub
-		
 	}
 
 }

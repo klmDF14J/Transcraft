@@ -35,17 +35,17 @@ public static Minecraft mc = Minecraft.getMinecraft();
 			
 			 
 			 //TODO 
-		/*	 
-		 NEEDS FIXING!
+			 
+	//	 NEEDS FIXING!
 		 
-		 
-			 #####################################################################################
+	//	 
+	//		 #####################################################################################
 			
-			 MinecraftForgeClient.registerItemRenderer(Transcraft.EnderSword.itemID, (IItemRenderer)new RenderEnderSword());
+//			 MinecraftForgeClient.registerItemRenderer(Transcraft.EnderSword.itemID, (IItemRenderer)new RenderEnderSword());
 			 
-			 ######################################################################################
+	//		 ######################################################################################
 			 
-			*/
+		
 		}
 	
 	 

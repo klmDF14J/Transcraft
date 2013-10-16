@@ -201,7 +201,7 @@ public class Config {
         PlasticPickaxeID = config.getItem("PlasticPickaxe", 5033).getInt();
         PlasticShovelID = config.getItem("PlasticShovel", 5034).getInt();
         PlasticSwordID = config.getItem("PlasticSword", 5035).getInt();
-        BunkerPickID = config.getItem("BunkerTool", 5036).getInt();
+        BunkerPickID = config.getItem("Ender Pickaxe", 5036).getInt();
         EnderSwordID = config.getItem("Ender Sword", 5037).getInt();
         
         PlasticHelmetID = config.getItem("PlasticHelmet", 5041).getInt();

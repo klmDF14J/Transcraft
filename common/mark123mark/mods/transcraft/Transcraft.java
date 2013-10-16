@@ -47,15 +47,16 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE, dependencies = "required-after:Forge@[9.10.0.859,)")
+@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 
 public class Transcraft {
 	public static final String VERSION = "1.6.4_V1.0.0_";
-	public static final String STATE = "Release_1";
+	public static final String STATE = "ReleaseCandidate_1";
 	public static boolean SHOWDEVMESSGAE = false;
 	public static boolean TransmatterFurnace = true;
 
+	
 	// Listblocks here
 	public static Block TranscraftOre;
 	public static Block OilOre;
@@ -156,18 +157,19 @@ public class Transcraft {
 			1.0F, 1.0F);
 	public static final StepSound soundSnowFootstep = new StepSound("snow",
 			1.0F, 1.0F);
-
+	
+	
 	static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
-			"PlasticTool", 2, 750, 5.0F, 2, 5);
+			"PlasticTool", 2, 750, 5.0F, 2, 0);
 	static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
-			"BunkerToolEnum", 4, 1000000, 80.0F, 1, 0);
+			"BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
 	static EnumToolMaterial EnderToolEnum = EnumHelper.addToolMaterial(
 			"EnderToolEnum", 400, 10000, 80.0F, 46, 100);
 
 	@Instance("transcraft")
 	public static Transcraft instance;
 
-
+	
 	public static Block TransmatterFurnaceIdle;
 	public static Block TransmatterFurnaceBurning;
 
@@ -254,14 +256,14 @@ public class Transcraft {
 		BunkerBlock = new mark123mark.mods.transcraft.Blocks.BunkerBlock(
 				Config.BunkerBlockID)
 				.setUnlocalizedName("Transcraft:BunkerBlock")
-				.setHardness(50.0F).setResistance(999999999999999999999.0F)
+				.setHardness(10.0F).setResistance(999999999999999999999.0F)
 				.setCreativeTab(TranstabBlocks).setLightValue(0.0F)
 				.setLightOpacity(0).setTextureName("Transcraft:BunkerBlock");
 		;
 		BunkerStair = (new mark123mark.mods.transcraft.Blocks.BunkerStair(
 				Config.BunkerStairID, BunkerBlock, 0))
 				.setUnlocalizedName("Transcraft:BunkerStair")
-				.setCreativeTab(TranstabBlocks).setHardness(50.0F)
+				.setCreativeTab(TranstabBlocks).setHardness(10.0F)
 				.setResistance(999999999999.0F)
 				.setTextureName("Transcraft:BunkerStair");
 		;
@@ -275,7 +277,7 @@ public class Transcraft {
 		SmoothBunkerBlock = new mark123mark.mods.transcraft.Blocks.SmoothBunkerBlock(
 				Config.SmoothBunkerBlockID)
 				.setUnlocalizedName("Transcraft:SmoothBunkerBlock")
-				.setHardness(50.0F).setResistance(999999999999999999999.0F)
+				.setHardness(10.0F).setResistance(999999999999999999999.0F)
 				.setCreativeTab(TranstabBlocks).setLightValue(0.0F)
 				.setLightOpacity(0)
 				.setTextureName("Transcraft:SmoothBunkerBlock");
@@ -283,7 +285,7 @@ public class Transcraft {
 		SmoothBunkerStair = (new mark123mark.mods.transcraft.Blocks.SmoothBunkerStair(
 				Config.SmoothBunkerStairID, SmoothBunkerBlock, 0))
 				.setUnlocalizedName("Transcraft:SmoothBunkerStair")
-				.setCreativeTab(TranstabBlocks).setHardness(50.0F)
+				.setCreativeTab(TranstabBlocks).setHardness(10.0F)
 				.setResistance(999999999999999999999.0F)
 				.setTextureName("Transcraft:SmoothBunkerStair");
 		;
@@ -320,7 +322,7 @@ public class Transcraft {
 
 	
 		Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(
-				Config.TranscrafterID).setCreativeTab(TranstabBlocks)
+				Config.TranscrafterID).setCreativeTab(TranstabBlocks).setHardness(1.0F)
 				.setUnlocalizedName("Transcraft:Transcrafter");
 		GameRegistry.registerBlock(Transcrafter, "Transcrafter");
 		LanguageRegistry.addName(Transcrafter, "Transcrafter");
@@ -329,14 +331,14 @@ public class Transcraft {
 		enderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.BlockEnderQuartzID)
 		.setUnlocalizedName("Transcraft:enderquartz")
-		.setTextureName("Transcraft:enderquartz")
+		.setTextureName("Transcraft:enderquartz").setHardness(1.0F)
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(enderQuartz, "EnderQuartz");
 		LanguageRegistry.addName(enderQuartz, "Ender Quartz Block");
 		
 		chiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.BlockChiselEnderQuartzID)
-		.setUnlocalizedName("Transcraft:chiselenderquartz")
+		.setUnlocalizedName("Transcraft:chiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:chiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(chiselEnderQuartz, "ChiselEnderQuartz");
@@ -344,7 +346,7 @@ public class Transcraft {
 		
 	BlueenderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.BlueBlockEnderQuartzID)
-		.setUnlocalizedName("Transcraft:Blueenderquartz")
+		.setUnlocalizedName("Transcraft:Blueenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Blueenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(BlueenderQuartz, "BlueEnderQuartz");
@@ -352,7 +354,7 @@ public class Transcraft {
 		
 		BluechiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.BlueBlockChiselEnderQuartzID)
-		.setUnlocalizedName("Transcraft:Bluechiselenderquartz")
+		.setUnlocalizedName("Transcraft:Bluechiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Bluechiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(BluechiselEnderQuartz, "BlueChiselEnderQuartz");
@@ -360,7 +362,7 @@ public class Transcraft {
 		
 		RedenderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.RedBlockEnderQuartzID)
-		.setUnlocalizedName("Transcraft:Redenderquartz")
+		.setUnlocalizedName("Transcraft:Redenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Redenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(RedenderQuartz, "RedEnderQuartz");
@@ -368,7 +370,7 @@ public class Transcraft {
 		
 		RedchiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(
 				Config.RedBlockChiselEnderQuartzID)
-		.setUnlocalizedName("Transcraft:Redchiselenderquartz")
+		.setUnlocalizedName("Transcraft:Redchiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Redchiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(RedchiselEnderQuartz, "RedChiselEnderQuartz");
@@ -494,7 +496,7 @@ public class Transcraft {
 				"Transcraft:PlasticSword").setCreativeTab(TranstabItems);
 		BunkerPick = new mark123mark.mods.transcraft.Tools.BunkerPick(
 				Config.BunkerPickID, BunkerToolEnum).setUnlocalizedName(
-				"Transcraft:BunkerTool").setCreativeTab(TranstabItems);
+				"Transcraft:EnderPick").setCreativeTab(TranstabItems);
 		EnderSword = new mark123mark.mods.transcraft.Tools.EnderSword(
 				Config.EnderSwordID, EnderToolEnum).setUnlocalizedName(
 				"Transcraft:EnderSword").setCreativeTab(TranstabItems)
@@ -537,7 +539,7 @@ public class Transcraft {
 		
 		StairenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairBlockEnderQuartzID , enderQuartz , 0))
-		.setUnlocalizedName("Transcraft:Stairenderquartz")
+		.setUnlocalizedName("Transcraft:Stairenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Stairenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairenderQuartz, "StairEnderQuartz");
@@ -545,7 +547,7 @@ public class Transcraft {
 		
 		StairchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairBlockChiselEnderQuartzID, chiselEnderQuartz , 0))
-		.setUnlocalizedName("Transcraft:Stairchiselenderquartz")
+		.setUnlocalizedName("Transcraft:Stairchiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:Stairchiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairchiselEnderQuartz, "StairChiselEnderQuartz");
@@ -553,7 +555,7 @@ public class Transcraft {
 		
 		StairBlueenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairBlueBlockEnderQuartzID , BlueenderQuartz , 0))
-		.setUnlocalizedName("Transcraft:StairBlueenderquartz")
+		.setUnlocalizedName("Transcraft:StairBlueenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:StairBlueenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairBlueenderQuartz, "StairBlueEnderQuartz");
@@ -561,7 +563,7 @@ public class Transcraft {
 		
 		StairBluechiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairBlueBlockChiselEnderQuartzID, BluechiselEnderQuartz , 0))
-		.setUnlocalizedName("Transcraft:StairBluechiselenderquartz")
+		.setUnlocalizedName("Transcraft:StairBluechiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:StairBluechiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairBluechiselEnderQuartz, "StairBlueChiselEnderQuartz");
@@ -569,7 +571,7 @@ public class Transcraft {
 		
 		StairRedenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairRedBlockEnderQuartzID, RedenderQuartz , 0))
-		.setUnlocalizedName("Transcraft:StairRedenderquartz")
+		.setUnlocalizedName("Transcraft:StairRedenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:StairRedenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairRedenderQuartz, "StairRedEnderQuartz");
@@ -577,7 +579,7 @@ public class Transcraft {
 		
 		StairRedchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(
 				Config.StairRedBlockChiselEnderQuartzID, RedchiselEnderQuartz , 0))
-		.setUnlocalizedName("Transcraft:StairRedchiselenderquartz")
+		.setUnlocalizedName("Transcraft:StairRedchiselenderquartz").setHardness(1.0F)
 		.setTextureName("Transcraft:StairRedchiselenderquartz")
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
@@ -672,7 +674,27 @@ public class Transcraft {
 		ItemStack BlueDye = new ItemStack(Item.dyePowder, 1, 12);
 		ItemStack GreenDye = new ItemStack(Item.dyePowder, 1, 2);
 		ItemStack OrangeDye = new ItemStack(Item.dyePowder, 1, 14);
-
+		
+		GameRegistry.addRecipe(new ItemStack(enderQuartz, 1), " q ", "qqq"," d ", 'd', GreenDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(chiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', enderQuartz, 'q', Item.netherQuartz);
+		
+		GameRegistry.addRecipe(new ItemStack(BlueenderQuartz, 1), " q ", "qqq"," d ", 'd', BlueDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(BluechiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', BlueenderQuartz, 'q', Item.netherQuartz);
+		
+		GameRegistry.addRecipe(new ItemStack(RedenderQuartz, 1), " q ", "qqq"," d ", 'd', OrangeDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(RedchiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', RedenderQuartz, 'q', Item.netherQuartz);
+		
+		
+		GameRegistry.addRecipe(new ItemStack(StairenderQuartz, 4), "b  ","bb ", "bbb", 'b', enderQuartz);
+		GameRegistry.addRecipe(new ItemStack(StairchiselEnderQuartz, 4), "b  ","bb ", "bbb", 'b', chiselEnderQuartz);
+		
+		GameRegistry.addRecipe(new ItemStack(StairBlueenderQuartz, 4), "b  ","bb ", "bbb", 'b', BlueenderQuartz);
+		GameRegistry.addRecipe(new ItemStack(StairBluechiselEnderQuartz, 4), "b  ","bb ", "bbb", 'b', BluechiselEnderQuartz);
+		
+		GameRegistry.addRecipe(new ItemStack(StairRedenderQuartz, 4), "b  ","bb ", "bbb", 'b', RedenderQuartz);
+		GameRegistry.addRecipe(new ItemStack(StairRedchiselEnderQuartz, 4), "b  ","bb ", "bbb", 'b', RedchiselEnderQuartz);
+		
+	
 		GameRegistry.addRecipe(new ItemStack(BlueLight, 8), "prp", "pbp",
 				"prp", 'r', Item.redstone, 'p', Plastic, 'b', BlueDye);
 		GameRegistry.addRecipe(new ItemStack(GreenLight, 8), "prp", "pbp",
@@ -766,7 +788,7 @@ public class Transcraft {
 		LanguageRegistry.addName(PlasticPickaxe, "Plastic Pickaxe");
 		LanguageRegistry.addName(PlasticShovel, "Plastic Shovel");
 		LanguageRegistry.addName(PlasticSword, "Plastic Sword");
-		LanguageRegistry.addName(BunkerPick, "Bunker Pick");
+		LanguageRegistry.addName(BunkerPick, "Ender Pickaxe");
 		LanguageRegistry.addName(EnderSword, "Ender Sword");
 
 		LanguageRegistry.addName(PlasticHelmet, "Plastic Helmet");
@@ -822,7 +844,7 @@ public class Transcraft {
 		LanguageRegistry.addName(PlasticPickaxe, "Plastic Pickaxe");
 		LanguageRegistry.addName(PlasticShovel, "Plastic Shovel");
 		LanguageRegistry.addName(PlasticSword, "Plastic Sword");
-		LanguageRegistry.addName(BunkerPick, "Bunker Pick");
+		LanguageRegistry.addName(BunkerPick, "Ender Pickaxe");
 		LanguageRegistry.addName(EnderSword, "Ender Sword");
 
 		LanguageRegistry.addName(PlasticHelmet, "Plastic Helmet");
