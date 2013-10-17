@@ -79,7 +79,7 @@ public class GuiTransTab extends GuiScreen
 	{
 		if(gui.id == next.id)
 		{
-			if(currentItem <= 35)
+			if(currentItem <= 34)
 			{
 				currentItem = currentItem+1;
 			}
@@ -98,7 +98,7 @@ public class GuiTransTab extends GuiScreen
 			}
 			else
 			{
-				currentItem = 35;
+				currentItem = 34;
 			}
 
 		}
