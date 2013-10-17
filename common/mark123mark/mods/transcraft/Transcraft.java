@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft;
 
-import mark123mark.mods.transcraft.Blocks.GalssStair;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
