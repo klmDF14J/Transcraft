@@ -42,6 +42,7 @@ public class BunkerPick extends ItemPickaxe
 	{
 		list.add("Breaks Harded Blocks");
 		list.add("Try right clicking!");
+		list.add("Powered by the magic of Nano Transmuter!");
 	}
     
     
