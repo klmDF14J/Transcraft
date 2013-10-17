@@ -5,6 +5,7 @@ import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
+import mark123mark.mods.transcraft.Items.ItemTransTab;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.armor.ArmorEnderBoots;
@@ -126,6 +127,8 @@ public class Transcraft {
 	public static Item EnderLegs;
 	public static Item EnderBoots;
 
+	public static Item transmutationTablet;
+	
 	public static int TrancraftOreID;
 	public static int OilOreID;
 	public static int BlueLighID;
@@ -585,7 +588,11 @@ public class Transcraft {
 		GameRegistry.registerBlock(StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		LanguageRegistry.addName(StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
 		
-		
+		transmutationTablet = new ItemTransTab(
+				Config.transmutationTablet)
+		.setCreativeTab(TranstabItems)
+		.setTextureName("Transcraft:transtab")
+		.setUnlocalizedName("Transcraft:transtab");
 		
 		MinecraftForge.setBlockHarvestLevel(OilOre, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(TranscraftOre, "pickaxe", 1);
