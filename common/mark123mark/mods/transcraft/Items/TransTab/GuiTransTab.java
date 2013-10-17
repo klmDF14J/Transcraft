@@ -55,6 +55,7 @@ public class GuiTransTab extends GuiScreen
 	
 	public void drawScreen(int i, int i1, float f)
 	{
+		//Fix
 		drawDefaultBackground();
  
 		if(currentItem >= 0 && currentItem <= 34)
