@@ -68,13 +68,9 @@ public class EnderSword extends ItemSword
 	                     return par1ItemStack;
 	            }
 	                 
-	                 
 			return par1ItemStack;
 		
     }
-	
-
-	
 	
 	
     @Override

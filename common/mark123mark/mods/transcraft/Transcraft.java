@@ -504,7 +504,13 @@ public class Transcraft {
 				Config.EnderSwordID, EnderToolEnum).setUnlocalizedName(
 				"Transcraft:EnderSword").setCreativeTab(TranstabItems)
 				.setFull3D();
-
+		transmutationTablet = new ItemTransTab(
+				Config.transmutationTabletID)
+		.setCreativeTab(TranstabItems)
+		.setTextureName("Transcraft:transtab")
+		.setUnlocalizedName("Transcraft:transtab");
+		
+		
 		EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
 				15, new int[] { 3, 5, 5, 2 }, 5);
 		PlasticHelmet = (mark123mark.mods.transcraft.armor.ArmorPlasticHelmet) (new ArmorPlasticHelmet(
@@ -588,11 +594,7 @@ public class Transcraft {
 		GameRegistry.registerBlock(StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		LanguageRegistry.addName(StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
 		
-		transmutationTablet = new ItemTransTab(
-				Config.transmutationTablet)
-		.setCreativeTab(TranstabItems)
-		.setTextureName("Transcraft:transtab")
-		.setUnlocalizedName("Transcraft:transtab");
+		
 		
 		MinecraftForge.setBlockHarvestLevel(OilOre, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(TranscraftOre, "pickaxe", 1);
@@ -790,6 +792,10 @@ public class Transcraft {
 		LanguageRegistry.addName(EnderGem, "Ender Gem");
 		LanguageRegistry.addName(DarkEndershard, "DarkEnder Shard");
 		
+		LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
+		
+		
+		
 		LanguageRegistry.addName(PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(PlasticHoe, "Plastic Hoe");
 		LanguageRegistry.addName(PlasticPickaxe, "Plastic Pickaxe");
@@ -845,6 +851,8 @@ public class Transcraft {
 		LanguageRegistry.addName(EnderQuartz, "Ender Quartz");
 		LanguageRegistry.addName(EnderGem, "Ender Gem");
 		LanguageRegistry.addName(DarkEndershard, "DarkEnder Shard");
+		LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
+		
 		
 		LanguageRegistry.addName(PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(PlasticHoe, "Plastic Hoe");
