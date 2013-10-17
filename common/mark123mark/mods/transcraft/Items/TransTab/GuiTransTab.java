@@ -40,7 +40,7 @@ public class GuiTransTab extends GuiScreen
 		buttonList.add(trans);
 		
 		int slot = (9*4)-1;
-		items = new String[slot];
+		items = new String[slot+1];
 		
 		
 		for(int j = 0; slot >= 0; slot--)
@@ -58,7 +58,7 @@ public class GuiTransTab extends GuiScreen
 		//Fix
 		drawDefaultBackground();
  
-		if(currentItem >= 0 && currentItem <= 34)
+		if(currentItem >= 0 && currentItem <= 35)
 		{
 			drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
 		}
@@ -74,6 +74,22 @@ public class GuiTransTab extends GuiScreen
 	public void updateScreen()
 	{
 		super.updateScreen();
+		if(currentItem >= 0 && currentItem <= 35)
+		{
+			if(items[currentItem] == null)
+			{
+				if(currentItem < 35 && currentItem >= 0)
+				{
+					currentItem = currentItem + 1;
+				}
+				
+				if(currentItem == 35)
+				{
+					currentItem = 0;
+				}
+				
+			}
+		}
 	}
 	
 	public boolean doesGuiPauseGame()
@@ -85,7 +101,7 @@ public class GuiTransTab extends GuiScreen
 	{
 		if(gui.id == next.id)
 		{
-			if(currentItem <= 34 && currentItem >= 0)
+			if(currentItem <= 35 && currentItem >= 0)
 			{
 				if(items[currentItem] == null)
 				{
@@ -103,7 +119,7 @@ public class GuiTransTab extends GuiScreen
 		
 		if(gui.id == back.id)
 		{
-			if(currentItem <= 34 && currentItem >= 0)
+			if(currentItem <= 35 && currentItem >= 0)
 			{
 				if(items[currentItem] == null)
 				{
@@ -114,7 +130,7 @@ public class GuiTransTab extends GuiScreen
 			}
 			else
 			{
-				currentItem = 34;
+				currentItem = 35;
 			}
 
 		}
