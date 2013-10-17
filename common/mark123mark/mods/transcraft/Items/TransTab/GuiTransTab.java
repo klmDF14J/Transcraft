@@ -56,7 +56,12 @@ public class GuiTransTab extends GuiScreen
 	public void drawScreen(int i, int i1, float f)
 	{
 		drawDefaultBackground();
-		drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
+ 
+		if(currentItem >= 0 && currentItem <= 34)
+		{
+			drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
+		}
+		
 		if(mode == TransmuterMode.BASIC)
 		{
 			drawString(mc.fontRenderer, "§fBasic Mode", width/2-"Basic Mode".length()-5, height/2-30, 0);
@@ -79,21 +84,31 @@ public class GuiTransTab extends GuiScreen
 	{
 		if(gui.id == next.id)
 		{
-			if(currentItem <= 34)
+			if(currentItem <= 34 && currentItem >= 0)
 			{
+				if(items[currentItem] == null)
+				{
+					currentItem = currentItem+1;
+					return;
+				}
 				currentItem = currentItem+1;
 			}
 			else
 			{
-				currentItem = 1;
+				currentItem = 0;
 			}
 
 		}
 		
 		if(gui.id == back.id)
 		{
-			if(currentItem >= 0)
+			if(currentItem <= 34 && currentItem >= 0)
 			{
+				if(items[currentItem] == null)
+				{
+					currentItem = currentItem-1;
+					return;
+				}
 				currentItem = currentItem-1;
 			}
 			else
