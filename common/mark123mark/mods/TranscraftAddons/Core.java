@@ -76,7 +76,11 @@ public class Core {
 				FMLLog.info("[Transcraft Addons]	Thaumcraft was detected!");
 				
 	        }
-	       
+			
+			if(Loader.isModLoaded("NotEnoughItems"))
+			{
+				AddonNEILoad.StartNei();
+			}	
 		}
 		
 		@Init
