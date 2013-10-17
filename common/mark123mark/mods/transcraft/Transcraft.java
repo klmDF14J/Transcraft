@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft;
 
+import mark123mark.mods.TranscraftAddons.AddonNEI;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
@@ -33,7 +34,9 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.oredict.OreDictionary;
+import codechicken.nei.api.API;
 import cpw.mods.fml.common.FMLLog;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -186,6 +189,11 @@ public class Transcraft {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
+		if(Loader.isModLoaded("NotEnoughItems"))
+		{
+			LanguageRegistry.instance().addStringLocalization("nei.Transcrafter", "Transcrafter");
+			API.registerRecipeHandler(new AddonNEI());
+		}		
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ Transcraft.VERSION);
 
