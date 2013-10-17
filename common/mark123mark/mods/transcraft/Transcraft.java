@@ -5,7 +5,7 @@ import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
-import mark123mark.mods.transcraft.Items.ItemTransTab;
+import mark123mark.mods.transcraft.Items.TransTab.ItemTransTab;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.armor.ArmorEnderBoots;

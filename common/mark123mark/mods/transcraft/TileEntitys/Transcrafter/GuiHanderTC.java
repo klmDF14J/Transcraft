@@ -1,11 +1,11 @@
 package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 
+import mark123mark.mods.transcraft.GuiIds;
+import mark123mark.mods.transcraft.Items.TransTab.GuiTransTab;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.*;
 
 public class GuiHanderTC implements IGuiHandler{
 
@@ -17,6 +17,11 @@ public class GuiHanderTC implements IGuiHandler{
         if(te instanceof TileTC)
         {
         	return new ContainerTC(player.inventory, world, x, y, z);
+        }
+        
+        if(ID == GuiIds.TransTab)
+        {
+        	return null;
         }
        
         else
@@ -36,6 +41,11 @@ public class GuiHanderTC implements IGuiHandler{
         	return new GuiTC(player.inventory, world, x, y, z);
         }
        
+        if(ID == GuiIds.TransTab)
+        {
+        	return new GuiTransTab(player, world);
+        }
+        
         else
         {
         	return null;
