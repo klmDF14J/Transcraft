@@ -68,7 +68,7 @@ public class BunkerPick extends ItemPickaxe
 					if (isBreakable(world.getBlockId(x + xD, y + yD, z + zD))) {
 						if (player.capabilities.isCreativeMode)
 						{
-							world.destroyBlock(x + xD, y + yD, z + zD, false);
+							world.setBlock(x + xD, y + yD, z + zD, 0);
 						}
 						else
 						{
@@ -76,11 +76,17 @@ public class BunkerPick extends ItemPickaxe
 						}
 						
 						if (world.rand.nextInt(2) == 0) {
-						//	world.spawnParticle("largeexplode", x + xD, y + yD, z + zD, 1.0D, 0.0D, 0.0D);
+							if (player.capabilities.isCreativeMode)
+							{
+								world.spawnParticle("largeexplode", x + xD, y + yD, z + zD, 1.0D, 0.0D, 0.0D);
+							}
 						}
 						destroyedSomething = true;
 						if (playOnce) {
-						//	world.playSoundEffect(x, y, z, "random.explode", 4.0F, (1.0F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.2F) * 0.7F);
+							if (player.capabilities.isCreativeMode)
+							{
+								world.playSoundEffect(x, y, z, "random.explode", 4.0F, (1.0F + (world.rand.nextFloat() - world.rand.nextFloat()) * 0.2F) * 0.7F);
+							}
 							playOnce = false;
 						}
 					}
