@@ -115,7 +115,7 @@ public class RecipesTC {
 	        
 	        addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ",'b', Transcraft.BasicTransmuter, 'e', Item.emerald);
 	        
-	        
+	        addRecipe(new ItemStack(Transcraft.transmutationTablet, 1), "DEI", "EDG", "DEI", 'I', Item.ingotIron, 'D', Item.diamond, 'E', Item.emerald, 'G', Item.ingotGold);
 	        
 	        if (Loader.isModLoaded("TranscraftAddons"))
 	        {
