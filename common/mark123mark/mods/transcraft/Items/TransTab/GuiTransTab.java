@@ -60,12 +60,14 @@ public class GuiTransTab extends GuiScreen
  
 		if(currentItem >= 1 && currentItem <= 35)
 		{
-			drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
+			//drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
+			drawString(mc.fontRenderer, "f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
 		}
 		
 		if(mode == TransmuterMode.BASIC)
 		{
-			drawString(mc.fontRenderer, "§fBasic Mode", width/2-"Basic Mode".length()-5, height/2-30, 0);
+			//drawString(mc.fontRenderer, "§fBasic Mode", width/2-"Basic Mode".length()-5, height/2-30, 0);
+			drawString(mc.fontRenderer, "fBasic Mode", width/2-"Basic Mode".length()-5, height/2-30, 0);
 		}
 		super.drawScreen(i, i1, f);
 
