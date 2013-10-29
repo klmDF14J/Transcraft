@@ -67,8 +67,11 @@ public class GuiTransTab extends GuiScreen
 			
 		}
 		super.drawScreen(i, i1, f);
-
+		
+		}
 	}
+
+	
 	
 	public void updateScreen()
 	{
