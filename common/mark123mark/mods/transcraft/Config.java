@@ -74,7 +74,7 @@ public class Config {
 	public static int EnderGemID = 5016;
 	public static int EnderQuartzID = 5017;
 	public static int DarkEndershardID = 5018;
-	
+	public static int transmutationTabletID = 5049;
 	
 	
 	public static int PlasticAxeID = 5031;
@@ -94,7 +94,7 @@ public class Config {
 	public static int EnderLegsID = 5047;
 	public static int EnderBootsID = 5048;
 	
-	public static int transmutationTablet = 5049;
+	
 	
 	public static boolean WorldGen = true;
 	
@@ -213,7 +213,7 @@ public class Config {
         EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
         EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
         
-        transmutationTablet = config.getItem("TransmutationTablet", 5049).getInt();
+        transmutationTabletID = config.getItem("TransmutationTablet", 5049).getInt();
        
         config.save();
 	}

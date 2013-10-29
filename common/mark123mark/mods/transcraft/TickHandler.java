@@ -38,8 +38,7 @@ public class TickHandler implements ITickHandler
 			if(player.getCurrentArmor(2).itemID == Transcraft.EnderChest.itemID)
 			{
 //				player.capabilities.allowFlying = true;
-			//	player.addPotionEffect(new PotionEffect(10, 2, 10, true));
-			//	player.addPotionEffect(new PotionEffect(12, 2, 3, true));
+
 			} else {
 				
 				
@@ -67,13 +66,6 @@ public class TickHandler implements ITickHandler
 			}
 		}	
 		
-		if(player.username.contains("DrumBaseCZ"))
-		{
-			player.addPotionEffect(new PotionEffect(2, 2, 20, true));
-			player.addPotionEffect(new PotionEffect(4, 2, 20, true));
-			player.addPotionEffect(new PotionEffect(15, 200, 30, true));
-		}
-			
 		}
 	}
 

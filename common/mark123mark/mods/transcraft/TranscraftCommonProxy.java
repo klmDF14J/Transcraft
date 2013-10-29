@@ -8,15 +8,11 @@ import cpw.mods.fml.relauncher.Side;
 
 public class TranscraftCommonProxy {
 
-	
-	
 	public static File getMinecraftDir() 
 	{
 		return new File(".");
 	}
-	
-	 
-	 
+
 	 public void registerHandlers()
 		{
 			TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
