@@ -25,6 +25,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
 import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
 import net.minecraft.block.Block;
 import net.minecraft.block.StepSound;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -62,6 +63,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Core {
 
+	@SidedProxy(clientSide = "mark123mark.mods.TranscraftAddons.ClientProxy", serverSide = "mark123mark.mods.TranscraftAddons.CommonProxy")
+	public static CommonProxy Coproxy;
+	public static ClientProxy Clproxy;
+	
+	
 		@Instance("TranscraftAddons")
 		public static Core instance;
 		
@@ -80,6 +86,7 @@ public class Core {
 			if(Loader.isModLoaded("NotEnoughItems"))
 			{
 				AddonNEILoad.StartNei();
+				FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
 			}	
 		}
 		
