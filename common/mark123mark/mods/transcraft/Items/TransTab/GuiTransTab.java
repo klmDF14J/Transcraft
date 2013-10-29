@@ -58,7 +58,7 @@ public class GuiTransTab extends GuiScreen
 		//Fix
 		drawDefaultBackground();
  
-		if(currentItem >= 0 && currentItem <= 35)
+		if(currentItem >= 1 && currentItem <= 35)
 		{
 			drawString(mc.fontRenderer, "§f"+items[currentItem]+"[Slot: "+currentItem+"]", width/2-(items[currentItem]+"[Slot: "+currentItem+"]").length(), height/2+10, 0);
 		}
@@ -74,18 +74,18 @@ public class GuiTransTab extends GuiScreen
 	public void updateScreen()
 	{
 		super.updateScreen();
-		if(currentItem >= 0 && currentItem <= 35)
+		if(currentItem >= 1 && currentItem <= 35)
 		{
 			if(items[currentItem] == null)
 			{
-				if(currentItem < 35 && currentItem >= 0)
+				if(currentItem < 35 && currentItem >= 1)
 				{
 					currentItem = currentItem + 1;
 				}
 				
 				if(currentItem == 35)
 				{
-					currentItem = 0;
+					currentItem = 1;
 				}
 				
 			}
@@ -101,7 +101,7 @@ public class GuiTransTab extends GuiScreen
 	{
 		if(gui.id == next.id)
 		{
-			if(currentItem <= 35 && currentItem >= 0)
+			if(currentItem <= 35 && currentItem >= 1)
 			{
 				if(items[currentItem] == null)
 				{
@@ -112,25 +112,19 @@ public class GuiTransTab extends GuiScreen
 			}
 			else
 			{
-				currentItem = 0;
+				currentItem = 1;
 			}
 
 		}
 		
 		if(gui.id == back.id)
 		{
-			if(currentItem <= 35 && currentItem >= 0)
+			if(currentItem <= 35)
 			{
-				if(items[currentItem] == null)
+				if(currentItem >= 0)
 				{
-					currentItem = currentItem-1;
-					return;
+					currentItem = currentItem - 1;
 				}
-				currentItem = currentItem-1;
-			}
-			else
-			{
-				currentItem = 35;
 			}
 
 		}

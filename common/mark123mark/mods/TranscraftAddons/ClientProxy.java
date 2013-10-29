@@ -6,11 +6,9 @@ import cpw.mods.fml.relauncher.Side;
 
 public class ClientProxy extends CommonProxy{
 
-	public void registerNei()
+	public void registerNEI()
 	{
-
-		
-		
+		AddonNEILoad.StartNei();
 	}
 
 }
