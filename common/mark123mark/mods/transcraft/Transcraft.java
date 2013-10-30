@@ -795,7 +795,6 @@ public class Transcraft {
 	//	LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
 		
 		
-		
 		LanguageRegistry.addName(PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(PlasticHoe, "Plastic Hoe");
 		LanguageRegistry.addName(PlasticPickaxe, "Plastic Pickaxe");
@@ -828,8 +827,6 @@ public class Transcraft {
         EntityRegistry.addSpawn(NukeCreeper.class, 10, 8, 12, EnumCreatureType.creature, end);
      
 	}
-
-	
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {

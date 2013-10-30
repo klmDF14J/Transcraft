@@ -114,9 +114,7 @@ public class RecipesTC {
 	        addRecipe(new ItemStack(Block.cobblestone, 3), "   ", "bcb", "   ",'b', Transcraft.BasicTransmuter, 'c', Block.cobblestone);
 	        
 	        addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ",'b', Transcraft.BasicTransmuter, 'e', Item.emerald);
-	        
-//	        addRecipe(new ItemStack(Transcraft.transmutationTablet, 1), "DEI", "EDG", "DEI", 'I', Item.ingotIron, 'D', Item.diamond, 'E', Item.emerald, 'G', Item.ingotGold);
-	        
+	       
 	        if (Loader.isModLoaded("TranscraftAddons"))
 	        {
 	        	if (Loader.isModLoaded("IC2"))
@@ -163,10 +161,7 @@ public class RecipesTC {
 	    		//	blkQuartz24.stackSize = 24;
 	    			
 	    		//	addRecipe((blkQuartz24), "   ", "ndn", "   ",'n', Transcraft.NanoTransmuter, 'd', blkQuartz);
-	    			
-		 			
-	    			
-	    			
+	    		
 		        } 
 	        }
 	        
@@ -176,7 +171,6 @@ public class RecipesTC {
 		        {
 	        	
 	    			//addRecipe(("ingotSteel"), "   ", "ndn", "   ",'n', Transcraft.NanoTransmuter, 'd', ":ingotSteel");
-	    			
 		        } 
 	        }
 	        
