@@ -51,7 +51,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 
 public class Transcraft {
-	public static final String VERSION = "1.6.4_V1.0.0_";
+	public static final String VERSION = "1.6.4_V1.1.0_";
 	public static final String STATE = "Release";
 	public static boolean SHOWDEVMESSGAE = false;
 	public static boolean TransmatterFurnace = true;
