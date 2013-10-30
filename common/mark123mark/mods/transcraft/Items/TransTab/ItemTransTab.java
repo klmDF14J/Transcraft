@@ -19,12 +19,13 @@ public class ItemTransTab extends Item
 	{
 		if(p.username.contains("mark123mark"))
 		{
-			p.openGui(Transcraft.instance, GuiIds.TransTab, w, (int)p.posX, (int)p.posY, (int)p.posZ);
+			//p.openGui(Transcraft.instance, GuiIds.Transcrafter, w, (int)p.posX, (int)p.posY, (int)p.posZ);
+			p.openGui(Transcraft.instance, 1, w, (int)p.posX, (int)p.posY, (int)p.posZ);
 			i.stackSize = i.stackSize-1;
 		}
 		else if(p.username.contains("tattyseal"))
 		{
-			p.openGui(Transcraft.instance, GuiIds.TransTab, w, (int)p.posX, (int)p.posY, (int)p.posZ);
+			p.openGui(Transcraft.instance, GuiIds.Transcrafter, w, (int)p.posX, (int)p.posY, (int)p.posZ);
 			i.stackSize = i.stackSize-1;
 		}
 		else
