@@ -213,7 +213,7 @@ public class Config {
         EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
         EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
         
-        transmutationTabletID = config.getItem("TransmutationTablet", 5049).getInt();
+      //  transmutationTabletID = config.getItem("TransmutationTablet", 5049).getInt();
        
         config.save();
 	}

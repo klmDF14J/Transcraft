@@ -126,7 +126,7 @@ public class Transcraft {
 	public static Item EnderLegs;
 	public static Item EnderBoots;
 
-	public static Item transmutationTablet;
+//	public static Item transmutationTablet;
 	
 	public static int TrancraftOreID;
 	public static int OilOreID;
@@ -504,11 +504,11 @@ public class Transcraft {
 				Config.EnderSwordID, EnderToolEnum).setUnlocalizedName(
 				"Transcraft:EnderSword").setCreativeTab(TranstabItems)
 				.setFull3D();
-		transmutationTablet = new ItemTransTab(
-				Config.transmutationTabletID)
-		.setCreativeTab(TranstabItems)
-		.setTextureName("Transcraft:transtab")
-		.setUnlocalizedName("Transcraft:transtab");
+	//	transmutationTablet = new ItemTransTab(
+	//			Config.transmutationTabletID)
+	//	.setCreativeTab(TranstabItems)
+	//	.setTextureName("Transcraft:transtab")
+	//	.setUnlocalizedName("Transcraft:transtab");
 		
 		
 		EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
@@ -792,7 +792,7 @@ public class Transcraft {
 		LanguageRegistry.addName(EnderGem, "Ender Gem");
 		LanguageRegistry.addName(DarkEndershard, "DarkEnder Shard");
 		
-		LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
+	//	LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
 		
 		
 		
@@ -851,7 +851,7 @@ public class Transcraft {
 		LanguageRegistry.addName(EnderQuartz, "Ender Quartz");
 		LanguageRegistry.addName(EnderGem, "Ender Gem");
 		LanguageRegistry.addName(DarkEndershard, "DarkEnder Shard");
-		LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
+//		LanguageRegistry.addName(transmutationTablet, "Transmutation Tablet");
 		
 		
 		LanguageRegistry.addName(PlasticAxe, "Plastic Axe");
