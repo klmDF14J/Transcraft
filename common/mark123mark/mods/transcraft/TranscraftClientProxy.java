@@ -37,18 +37,6 @@ public static Minecraft mc = Minecraft.getMinecraft();
 			 RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class, new NukeCreeperRender());
 			 RenderingRegistry.registerEntityRenderingHandler(Enderbat.class, new EnderBatRender());
 			 
-			 //TODO 
-			 
-	//	 NEEDS FIXING!
-		 
-	//	 
-	//		 #####################################################################################
-			
-//			 MinecraftForgeClient.registerItemRenderer(Transcraft.EnderSword.itemID, (IItemRenderer)new RenderEnderSword());
-			 
-	//		 ######################################################################################
-			 
-		
 		}
 	
 	 
