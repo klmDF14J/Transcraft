@@ -14,17 +14,11 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-
-
 public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	
 public static Minecraft mc = Minecraft.getMinecraft();
 
-
-	
-	 
-	 
 	 public void registerHandlers()
 		{
 		//	TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
