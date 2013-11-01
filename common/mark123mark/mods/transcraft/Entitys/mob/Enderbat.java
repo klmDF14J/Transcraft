@@ -8,7 +8,6 @@ public class Enderbat extends EntityBat{
 	 public Enderbat(World par1World)
 	    {
 	        super(par1World);
-	        this.setSize(3.5F, 3.9F);
 	    }
 	
 	 public void initCreature() {

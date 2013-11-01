@@ -177,8 +177,6 @@ public class Transcraft {
 	public static Block TransmatterFurnaceIdle;
 	public static Block TransmatterFurnaceBurning;
 
-
-
 	@SidedProxy(clientSide = "mark123mark.mods.transcraft.TranscraftClientProxy", serverSide = "mark123mark.mods.transcraft.TranscraftCommonProxy")
 	public static TranscraftCommonProxy Coproxy;
 	public static TranscraftClientProxy Clproxy;
@@ -188,10 +186,8 @@ public class Transcraft {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
-			
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison "
 				+ Transcraft.VERSION);
-
 
 		Coproxy.registerHandlers();
 		Coproxy.registerTickHandlers();
@@ -380,9 +376,6 @@ public class Transcraft {
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(RedchiselEnderQuartz, "RedChiselEnderQuartz");
 		LanguageRegistry.addName(RedchiselEnderQuartz, "Red Chiseled Ender Quartz Block");
-		
-		
-
 		
 		Block.torchWood.setLightValue(0.8F);
 		Block.whiteStone.setHardness(0.5F);
@@ -595,8 +588,6 @@ public class Transcraft {
 		.setCreativeTab(TranstabBlocks);
 		GameRegistry.registerBlock(StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		LanguageRegistry.addName(StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
-		
-		
 		
 		MinecraftForge.setBlockHarvestLevel(OilOre, "pickaxe", 1);
 		MinecraftForge.setBlockHarvestLevel(TranscraftOre, "pickaxe", 1);
@@ -828,9 +819,6 @@ public class Transcraft {
 		BiomeGenBase[] nether = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.NETHER);
 		BiomeGenBase[] end = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.END);
 		BiomeGenBase[] PlanesOverworld = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS);
-		
-		
-		
 		
         EntityRegistry.addSpawn(NukeCreeper.class, 10, 8, 12, EnumCreatureType.creature, end);
      
