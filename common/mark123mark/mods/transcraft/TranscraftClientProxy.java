@@ -7,6 +7,7 @@ import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import mark123mark.mods.transcraft.Renders.RenderEnderSword;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.ModelBat;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.RenderingRegistry;

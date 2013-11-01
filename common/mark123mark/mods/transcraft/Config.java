@@ -143,7 +143,7 @@ public class Config {
        BunkerStairID = config.getBlock("BunkerStair", 2005).getInt();
        SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006).getInt();
        SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007).getInt();
-       DriedTransmutterID = config.getBlock("DriedTransmuter", 2008).getInt();
+       DriedTransmutterID = config.getBlock("Dried Transmuter", 2008).getInt();
        ThinClearGlassID = config.getBlock("Thin Crystal Glass", 2009).getInt();
        FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010).getInt();
        

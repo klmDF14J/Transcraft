@@ -34,6 +34,7 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -401,7 +402,7 @@ public class Transcraft {
 		LanguageRegistry.addName(SmoothBunkerStair, "Smooth Bunker Stair");
 		LanguageRegistry.addName(ObsidianLever, "Obsidian Lever");
 		LanguageRegistry.addName(SmoothBunkerBlock, "Smooth Bunker Block");
-		LanguageRegistry.addName(DriedTransmutter, "DriedTransmuter");
+		LanguageRegistry.addName(DriedTransmutter, "Dried Transmuter");
 
 		LanguageRegistry.addName(ComIronOre, "Packed Iron Ore");
 		LanguageRegistry.addName(ComGoldOre, "Packed Gold Ore");
@@ -420,7 +421,7 @@ public class Transcraft {
 		GameRegistry.registerBlock(ThinClearGlass, "Thin Clear Glass");
 		GameRegistry.registerBlock(BunkerBlock, "Bunker Block");
 		GameRegistry.registerBlock(SmoothBunkerStair, "Smooth Bunker Stair");
-		GameRegistry.registerBlock(DriedTransmutter, "DriedTransmuter");
+		GameRegistry.registerBlock(DriedTransmutter, "Dried Transmuter");
 
 		GameRegistry.registerBlock(ComIronOre, "Packed Iron Ore");
 		GameRegistry.registerBlock(ComGoldOre, "Packed Gold Ore");
@@ -736,9 +737,7 @@ public class Transcraft {
 		GameRegistry.addRecipe(new ItemStack(PlasticShovel), " p ", " i ",
 				" i ", 'i', IronStick, 'p', Plastic);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BunkerPick), "bbb",
-				"dod", " o ", 'b', Transcraft.BunkerBlock, 'd',
-				Block.blockDiamond, 'o', Transcraft.HardendPlastic);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.BunkerPick), "bbb","dod", "qoq", 'b', Transcraft.BunkerBlock, 'd',Block.blockDiamond, 'o', Transcraft.HardendPlastic, 'q', Transcraft.DarkEndershard);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderSword), "ebe",
 				"ebe", "ndn", 'e', Transcraft.EnderGem, 'd',
 				Block.blockDiamond, 'b', Transcraft.BunkerBlock, 'n',
@@ -823,12 +822,14 @@ public class Transcraft {
 		entityID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(Enderbat.class, "Enderbat", entityID);
 		EntityList.addMapping(Enderbat.class, "Enderbat", entityID, 0x115838, 0x268F6B);
-		EntityRegistry.registerModEntity(Enderbat.class, "Enderbat", 2, Transcraft.instance, 65, 3, true);
+		EntityRegistry.registerModEntity(Enderbat.class, "Enderbat", 3, Transcraft.instance, 65, 3, true);
 		
 	
 		BiomeGenBase[] nether = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.NETHER);
 		BiomeGenBase[] end = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.END);
 		BiomeGenBase[] PlanesOverworld = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.PLAINS);
+		
+		
 		
 		
         EntityRegistry.addSpawn(NukeCreeper.class, 10, 8, 12, EnumCreatureType.creature, end);
