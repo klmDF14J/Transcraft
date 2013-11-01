@@ -1,0 +1,21 @@
+[
+{
+  "modid": "transcraft",
+  "name": "Transcraft",
+  "description": "Transraft is a mod about transmuting items and blocks!",
+  "version": "",
+  "url": "https://bitbucket.org/modmuss50/transcraft/",
+  "updateUrl": "",
+  "authorList": [
+    "mark123mark",
+    "tatty seal"
+  ],
+  "credits": "By mark123mark with LOADS of help form tattyseal",
+  "logoFile": "/assets/trasnscraft/textures/logo/logo.png",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

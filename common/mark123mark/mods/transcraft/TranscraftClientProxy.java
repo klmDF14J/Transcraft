@@ -1,6 +1,8 @@
 package mark123mark.mods.transcraft;
 
 
+import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
+import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import mark123mark.mods.transcraft.Renders.RenderEnderSword;
@@ -32,7 +34,7 @@ public static Minecraft mc = Minecraft.getMinecraft();
 			TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);	
 			TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
 			 RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class, new NukeCreeperRender());
-			
+			 RenderingRegistry.registerEntityRenderingHandler(Enderbat.class, new EnderBatRender());
 			 
 			 //TODO 
 			 

@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft;
 
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
+import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
 import mark123mark.mods.transcraft.Items.TransTab.ItemTransTab;
@@ -818,6 +819,12 @@ public class Transcraft {
 		EntityRegistry.registerGlobalEntityID(NukeCreeper.class, "EnderCreeper", entityID);
 		EntityList.addMapping(NukeCreeper.class, "EnderCreeper", entityID, 0x515838, 0x868F6B);
 		EntityRegistry.registerModEntity(NukeCreeper.class, "EnderCreeper", 2, Transcraft.instance, 64, 5, true);
+		
+		entityID = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerGlobalEntityID(Enderbat.class, "Enderbat", entityID);
+		EntityList.addMapping(Enderbat.class, "Enderbat", entityID, 0x115838, 0x268F6B);
+		EntityRegistry.registerModEntity(Enderbat.class, "Enderbat", 2, Transcraft.instance, 65, 3, true);
+		
 	
 		BiomeGenBase[] nether = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.NETHER);
 		BiomeGenBase[] end = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.END);
@@ -826,6 +833,8 @@ public class Transcraft {
 		
         EntityRegistry.addSpawn(NukeCreeper.class, 10, 8, 12, EnumCreatureType.creature, end);
      
+        
+        
 	}
 
 	@EventHandler
