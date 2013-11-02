@@ -196,6 +196,7 @@ public class Transcraft {
 		Config.initConfig();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Blocks");
+		
 		TranscraftOre = new TranscraftOre(Config.TranscraftOreID)
 				.setUnlocalizedName("Transcraft:TranscraftOre")
 				.setHardness(1.5F).setCreativeTab(TranstabBlocks)
