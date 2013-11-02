@@ -54,6 +54,8 @@ public class Config {
 	public static int StairRedBlockEnderQuartzID = 2123;
 	public static int StairRedBlockChiselEnderQuartzID = 2124;
 	
+	public static int DimPortalBlockID = 2200;
+	
 	public static int ComIronOreID = 2021;
 	public static int ComGoldOreID = 2022;
 	public static int ComTransmutterOreID = 2023;
@@ -94,6 +96,7 @@ public class Config {
 	public static int EnderLegsID = 5047;
 	public static int EnderBootsID = 5048;
 	
+	public static int DimID = 234;
 	
 	
 	public static boolean WorldGen = true;
@@ -179,7 +182,7 @@ public class Config {
        
        TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
       
-       
+       DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
        
         //Items
         BasicTransmuterID = config.getItem("BasicTransmuter", 5000).getInt();
@@ -213,8 +216,6 @@ public class Config {
         EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
         EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
         
-      //  transmutationTabletID = config.getItem("TransmutationTablet", 5049).getInt();
-       
         config.save();
 	}
 }

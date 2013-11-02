@@ -19,6 +19,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
+import mark123mark.mods.transcraft.loaders.LoadDim;
 import mark123mark.mods.transcraft.loaders.LoadEntity;
 import mark123mark.mods.transcraft.loaders.LoadItems;
 import mark123mark.mods.transcraft.loaders.LoadLang;
@@ -105,6 +106,8 @@ public class Transcraft {
 	public static Block StairBluechiselEnderQuartz;
 	public static Block StairRedenderQuartz;
 	public static Block StairRedchiselEnderQuartz;
+	
+	public static Block DimPortalBlock;
 	
 	
 	public static Item BasicTransmuter;
@@ -260,17 +263,18 @@ public class Transcraft {
 		
 		FMLLog.info("[TRANSCRAFT]	Adding new commands");
 		event.registerServerCommand(new CommandTranscraftVersion());
-		if (SHOWDEVMESSGAE) {
-			new DevMessage();
-		}
 		
 	}
 
 	@EventHandler
-	@SuppressWarnings("unchecked")
 	public void load(FMLInitializationEvent event) {
+		
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHanderTC());
+		
+		LoadDim.load();
+		
+		
 	}
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {

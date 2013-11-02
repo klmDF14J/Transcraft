@@ -75,7 +75,10 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.StairBluechiselEnderQuartz, "StairBlueChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedenderQuartz, "StairRedEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
+		GameRegistry.registerBlock(Transcraft.DimPortalBlock, "DimPortalBlock");
 		
+		
+
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		
 	}
