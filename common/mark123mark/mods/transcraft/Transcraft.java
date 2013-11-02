@@ -247,8 +247,6 @@ public class Transcraft {
 		
 	}
 
-	
-
 	public static void oreRegistration() {
 		
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");
