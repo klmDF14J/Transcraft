@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.TransDim;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Config;
+import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -15,7 +16,7 @@ public class DimWorldProv extends WorldProvider
 {
 	public void registerWorldChunkManager()
 	{
-		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.plains, 0.8F, 0.1F);
+		this.worldChunkMgr = new WorldChunkManagerHell(Transcraft.FlatLands, 0.8F, 0.1F);
 		this.dimensionId = Config.DimID;
 	}
 	

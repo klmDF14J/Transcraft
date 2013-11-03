@@ -16,6 +16,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticBoots;
 import mark123mark.mods.transcraft.armor.ArmorPlasticChestplate;
 import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
 import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
+import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
@@ -38,6 +39,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenPlains;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.EnumHelper;
@@ -68,6 +70,8 @@ public class Transcraft {
 	public static boolean SHOWDEVMESSGAE = false;
 	public static boolean TransmatterFurnace = true;
 
+ public static final BiomeGenBase FlatLands = (new FlatLands(1)).setBiomeName("TransLands").setDisableRain();
+	
 	
 	// Listblocks here
 	public static Block TranscraftOre;
