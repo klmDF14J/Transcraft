@@ -43,6 +43,8 @@ public class RegisterBlocks {
 		LanguageRegistry.addName(Transcraft.StairchiselEnderQuartz, "Chiseled Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.StairenderQuartz, "Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.DimPortalBlock, "TransMania Portal");
+		GameRegistry.registerBlock(Transcraft.TransDimGrass, "TransMania Grass");
+		
 		
 		GameRegistry.registerBlock(Transcraft.TranscraftOre, "Transmuter Ore");
 		GameRegistry.registerBlock(Transcraft.OilOre, "Oil Ore");
@@ -77,7 +79,7 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.StairRedenderQuartz, "StairRedEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.DimPortalBlock, "DimPortalBlock");
-		
+		GameRegistry.registerBlock(Transcraft.TransDimGrass, "TransDimGrass");
 		
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");

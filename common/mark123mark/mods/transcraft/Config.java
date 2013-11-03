@@ -55,6 +55,9 @@ public class Config {
 	public static int StairRedBlockChiselEnderQuartzID = 2124;
 	
 	public static int DimPortalBlockID = 2200;
+	public static int TransDimGrassID = 191;
+	
+	
 	
 	public static int ComIronOreID = 2021;
 	public static int ComGoldOreID = 2022;
@@ -183,6 +186,14 @@ public class Config {
        TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
       
        DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
+       
+       
+       
+       
+       TransDimGrassID = config.getBlock("Transmania grass   256 or less", 250).getInt();
+       
+       
+       
        
         //Items
         BasicTransmuterID = config.getItem("BasicTransmuter", 5000).getInt();

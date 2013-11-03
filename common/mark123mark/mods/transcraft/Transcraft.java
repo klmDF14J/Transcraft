@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft;
 
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
+import mark123mark.mods.transcraft.Blocks.TransDim.TransDimGrass;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
@@ -70,7 +71,7 @@ public class Transcraft {
 	public static boolean SHOWDEVMESSGAE = false;
 	public static boolean TransmatterFurnace = true;
 
- public static final BiomeGenBase FlatLands = (new FlatLands(1)).setBiomeName("TransLands").setDisableRain();
+	
 	
 	
 	// Listblocks here
@@ -113,6 +114,12 @@ public class Transcraft {
 	
 	public static Block DimPortalBlock;
 	
+	public static Block TransDimGrass= (new TransDimGrass(Config.TransDimGrassID))
+			.setUnlocalizedName("Transcraft:TransDimGrass").setHardness(0.6F).setStepSound(Block.soundGrassFootstep)
+			.setTextureName("Transcraft:Trans_grass")
+			.setCreativeTab(Transcraft.TranstabBlocks);
+	
+	public static final BiomeGenBase FlatLands = (new FlatLands(1)).setBiomeName("TransLands").setDisableRain();
 	
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
@@ -155,6 +162,9 @@ public class Transcraft {
 	public static int enderQuartzID;
 	public static int chiselEnderQuartzID;
 
+	
+	
+	
 	public static final StepSound soundPowderFootstep = new StepSound("stone",
 			1.0F, 1.0F);
 	public static final StepSound soundWoodFootstep = new StepSound("wood",
@@ -211,6 +221,7 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Loading Blocks");
 		LoadBlocks.LoadBlocks();
+		
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
 
@@ -231,9 +242,14 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
+		
+
      
 	}
 
+	
+	
+	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 
@@ -254,6 +270,9 @@ public class Transcraft {
 		
 	}
 
+
+	
+	
 	public static void oreRegistration() {
 		
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");

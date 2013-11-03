@@ -18,6 +18,7 @@ public class DimWorldProv extends WorldProvider
 	{
 		this.worldChunkMgr = new WorldChunkManagerHell(Transcraft.FlatLands, 0.8F, 0.1F);
 		this.dimensionId = Config.DimID;
+		
 	}
 	
 	

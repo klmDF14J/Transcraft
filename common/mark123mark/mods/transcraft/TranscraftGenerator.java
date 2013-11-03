@@ -12,6 +12,7 @@ import mark123mark.mods.transcraft.WorldGen.WorldGenRingSphere;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRings;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRuins;
 import mark123mark.mods.transcraft.WorldGen.WorldGenTower;
+import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
 
 public class TranscraftGenerator implements IWorldGenerator {
 
@@ -75,6 +76,7 @@ public class TranscraftGenerator implements IWorldGenerator {
 			{
 				new WorldGenTower(world, random).generate(i + 8, 0, j + 8);
 			}
+			
 		}
 		
 		
@@ -116,6 +118,13 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			{
 				new WorldGenTower(world, random).generate(i + 8, 0, j + 8);
 			}
+			if(random.nextInt(150) == 0)
+			{
+				new EscapePortal().generate(world, random, i + 8, 0, j + 8);
+			}
+			
+			
+			
 		}
 		
 		
