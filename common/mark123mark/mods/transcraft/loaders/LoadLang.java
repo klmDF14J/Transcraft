@@ -42,6 +42,8 @@ public class LoadLang {
 		LanguageRegistry.addName(Transcraft.EnderChest, "Ender Chestplate");
 		LanguageRegistry.addName(Transcraft.EnderLegs, "Ender Legs");
 		LanguageRegistry.addName(Transcraft.EnderBoots, "Ender Boots");
+		
+		LanguageRegistry.addName(Transcraft.DimPortalBlock, "TransMania Portal");
 	}
 	
 }

@@ -4,7 +4,7 @@ import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
-import mark123mark.mods.transcraft.TransDim.DimPortalBloack;
+import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -219,9 +219,9 @@ Transcraft.StairRedchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.D
 .setCreativeTab(Transcraft.TranstabBlocks);
 
 
-Transcraft.DimPortalBlock = (new DimPortalBloack(Config.DimPortalBlockID))
+Transcraft.DimPortalBlock = (new DimPortalBlock(Config.DimPortalBlockID))
 .setUnlocalizedName("Transcraft:DimPortalBlock").setHardness(1.0F)
-.setTextureName("Transcraft:DimPortalBlock")
+.setTextureName("Transcraft:Portal")
 .setCreativeTab(Transcraft.TranstabBlocks);
 
 	}

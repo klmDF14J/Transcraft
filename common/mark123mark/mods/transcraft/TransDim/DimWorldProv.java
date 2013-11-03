@@ -81,6 +81,12 @@ public class DimWorldProv extends WorldProvider
 	{
 		return false;
 	}
+	
+	@Override
+    public boolean canCoordinateBeSpawn(int par1, int par2)
+    {
+        return false;
+    }
 
 	@Override
 	@SideOnly(Side.CLIENT)
