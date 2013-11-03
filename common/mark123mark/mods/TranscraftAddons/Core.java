@@ -54,6 +54,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 
@@ -71,20 +73,11 @@ public class Core {
 		@Instance("TranscraftAddons")
 		public static Core instance;
 		
+		@SideOnly(Side.CLIENT)
 		@PreInit
 		public void preInit(FMLPreInitializationEvent event) {
 		
-			
-
-			FMLLog.info("[Transcraft Addons]	Starting Transcraft Addons verison " + Transcraft.VERSION + Transcraft.STATE);
-			
-			if (Loader.isModLoaded("Thaumcraft"))
-	        {
-				FMLLog.info("[Transcraft Addons]	Thaumcraft was detected!");
-				
-	        }
-			
-			if(Loader.isModLoaded("NotEnoughItems"))
+			if(Loader.isModLoaded("NotEnoughItems"));
 			{
 				AddonNEILoad.StartNei();
 				FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
@@ -93,6 +86,8 @@ public class Core {
 		
 		@Init
 		public void init(FMLInitializationEvent event) {
+			
+			FMLLog.info("[Transcraft Addons]	Starting Transcraft Addons verison " + Transcraft.VERSION + Transcraft.STATE);
 			
 			if (Loader.isModLoaded("transcraft"))
 	        {

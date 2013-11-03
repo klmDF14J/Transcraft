@@ -22,6 +22,8 @@ import codechicken.nei.api.IRecipeOverlayRenderer;
 import codechicken.nei.api.IStackPositioner;
 import codechicken.nei.recipe.RecipeInfo;
 import codechicken.nei.recipe.TemplateRecipeHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class AddonNEI extends TemplateRecipeHandler
 {
@@ -30,6 +32,7 @@ public class AddonNEI extends TemplateRecipeHandler
         public ArrayList<PositionedStack> ingredients;
         public PositionedStack result;
         
+        @SideOnly(Side.CLIENT)
         public CachedShapedRecipe(int width, int height, Object[] items, ItemStack out)
         {
             result = new PositionedStack(out, 119, 24);
@@ -37,11 +40,13 @@ public class AddonNEI extends TemplateRecipeHandler
             setIngredients(width, height, items);
         }
         
+        @SideOnly(Side.CLIENT)
         public CachedShapedRecipe(ShapedRecipes recipe)
         {
             this(recipe.recipeWidth, recipe.recipeHeight, recipe.recipeItems, recipe.getRecipeOutput());
         }
         
+        @SideOnly(Side.CLIENT)
         /**
          * @param width
          * @param height
@@ -63,17 +68,20 @@ public class AddonNEI extends TemplateRecipeHandler
             }
         }
         
+        @SideOnly(Side.CLIENT)
         @Override
         public List<PositionedStack> getIngredients()
         {
             return getCycledIngredients(cycleticks / 20, ingredients);
         }
         
+        @SideOnly(Side.CLIENT)
         public PositionedStack getResult()
         {
             return result;
         }
         
+        @SideOnly(Side.CLIENT)
         public void computeVisuals()
         {
             for(PositionedStack p : ingredients)
@@ -83,24 +91,28 @@ public class AddonNEI extends TemplateRecipeHandler
         }
     }
 
+    @SideOnly(Side.CLIENT)
     @Override
     public void loadTransferRects()
     {
         transferRects.add(new RecipeTransferRect(new Rectangle(84, 23, 24, 18), "crafting"));
     }
     
+    @SideOnly(Side.CLIENT)
     @Override
     public Class<? extends GuiContainer> getGuiClass()
     {
         return GuiTC.class;
     }
-
+    
+    @SideOnly(Side.CLIENT)
     @Override
     public String getRecipeName()
     {
         return NEIClientUtils.translate("Transcrafter");
     }
     
+    @SideOnly(Side.CLIENT)
     @Override
     public void loadCraftingRecipes(String outputId, Object... results)
     {
@@ -128,6 +140,7 @@ public class AddonNEI extends TemplateRecipeHandler
         }
     }
     
+    @SideOnly(Side.CLIENT)
     @Override
     public void loadCraftingRecipes(ItemStack result)
     {
