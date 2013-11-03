@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft.biomes.transmania;
 
+import java.awt.Color;
 import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
@@ -25,7 +26,7 @@ public class FlatLands extends BiomeGenBase
         super(par1);
         this.spawnableCreatureList.add(new SpawnListEntry(EntityHorse.class, 5, 2, 6));
         this.theBiomeDecorator.treesPerChunk = 1;
-        this.theBiomeDecorator.flowersPerChunk = 7;
+        this.theBiomeDecorator.flowersPerChunk = 0;
         this.theBiomeDecorator.grassPerChunk = 8;
         this.spawnableMonsterList.clear();
         
@@ -50,6 +51,11 @@ public class FlatLands extends BiomeGenBase
     	return 0x07D7FF;
     }
     
+    @SideOnly(Side.CLIENT)
+    public int getSkyColorByTemp(float par1)
+    {
+    	return 0x07D7FF;
+    }
     
 }
 

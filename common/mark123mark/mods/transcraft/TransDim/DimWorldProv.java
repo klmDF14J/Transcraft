@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.api.IWorldProvider;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
@@ -13,13 +14,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
 
-public class DimWorldProv extends WorldProvider
+public class DimWorldProv extends WorldProvider //implements IWorldProvider
 {
 	public void registerWorldChunkManager()
 	{
 		this.worldChunkMgr = new WorldChunkManagerHell(Transcraft.FlatLands, 0.8F, 0.1F);
 		this.dimensionId = Config.DimID;
-		
 	}
 	
 	
@@ -38,9 +38,10 @@ public class DimWorldProv extends WorldProvider
 	@Override
     public double getMovementFactor()
     {
-        return 16.0;
+        return 116.0;
     }
 
+	
 	@Override
 	public float calculateCelestialAngle(long par1, float par3)
 	{
@@ -50,7 +51,7 @@ public class DimWorldProv extends WorldProvider
 	@SideOnly(Side.CLIENT)
     public int getSkyColor()
     {
-        return 0x07D7FF;
+		return 0x07D7FF;
     }
 
 	public boolean darkenSkyDuringRain()
@@ -103,29 +104,10 @@ public class DimWorldProv extends WorldProvider
 		return 1.0D;
 	}
 
-	@Override
 	@SideOnly(Side.CLIENT)
-	public Vec3 getFogColor(float par1, float par2)
+	public int getFogColor()
 	{
-		float var3 = MathHelper.cos(par1 * (float)Math.PI * 2.0F) * 2.0F + 0.5F;
-
-		if (var3 < 0.0F)
-		{
-			var3 = 0.0F;
-		}
-
-		if (var3 > 1.0F)
-		{
-			var3 = 1.0F;
-		}
-
-		float var4 = 0.1F;
-		float var5 = 0.71764705882F;
-		float var6 = 1.0F;
-		var4 *= var3 * 3.94F + 0.06F;
-		var5 *= var3 * 0.94F + 0.06F;
-		var6 *= var3 * 0.91F + 0.09F;
-		return worldObj.getWorldVec3Pool().getVecFromPool(var4, var5, var6);
+		return 0x07D7FF;
 	}
 
 	@Override
@@ -133,6 +115,8 @@ public class DimWorldProv extends WorldProvider
 	{
 		allowPeaceful = true;
 	}
+
+
 	
 	
 }
