@@ -118,7 +118,7 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			{
 				new WorldGenTower(world, random).generate(i + 8, 0, j + 8);
 			}
-			if(random.nextInt(150) == 0)
+			if(random.nextInt(1150) == 0)
 			{
 				new EscapePortal(world, random).generate(i + 8, 0, j + 8);
 			}
