@@ -33,16 +33,16 @@ public class EscapePortal extends FishyWorldGenBase {
 		{
 			int x = (int) (Math.sin(angle) * pillarRadius);
 			int z = (int) (Math.cos(angle) * pillarRadius);
-			fillDown(x + i, getTerrainHeightAt(x + i, z + k) + rand.nextInt(3) + 3, z + k, Transcraft.DimPortalBlock.blockID, 0);
+			fillDown(x + i, getTerrainHeightAt(x + i, z + k) + rand.nextInt(3) + 3, z + k, Transcraft.DimPortalEscapeBlock.blockID, 0);
 			angle += step;
 		}
 		
 		int towerHeight = rand.nextInt(4) + 4;
-		fillDown(i, j + towerHeight + 3, k, Transcraft.DimPortalBlock.blockID, 0);
-		fillDown(i + 1, j + towerHeight, k, Transcraft.DimPortalBlock.blockID, 0);
-		fillDown(i - 1, j + towerHeight, k, Transcraft.DimPortalBlock.blockID, 0);
-		fillDown(i, j + towerHeight, k + 1, Transcraft.DimPortalBlock.blockID, 0);
-		fillDown(i, j + towerHeight, k - 1, Transcraft.DimPortalBlock.blockID, 0);
+		fillDown(i, j + towerHeight + 3, k, Transcraft.DimPortalEscapeBlock.blockID, 0);
+		fillDown(i + 1, j + towerHeight, k, Transcraft.DimPortalEscapeBlock.blockID, 0);
+		fillDown(i - 1, j + towerHeight, k, Transcraft.DimPortalEscapeBlock.blockID, 0);
+		fillDown(i, j + towerHeight, k + 1, Transcraft.DimPortalEscapeBlock.blockID, 0);
+		fillDown(i, j + towerHeight, k - 1, Transcraft.DimPortalEscapeBlock.blockID, 0);
 
 	}	
 	

@@ -113,11 +113,8 @@ public class Transcraft {
 	public static Block StairRedchiselEnderQuartz;
 	
 	public static Block DimPortalBlock;
+	public static Block DimPortalEscapeBlock;
 	
-	public static Block TransDimGrass= (new TransDimGrass(Config.TransDimGrassID))
-			.setUnlocalizedName("Transcraft:TransDimGrass").setHardness(0.6F).setStepSound(Block.soundGrassFootstep)
-			.setTextureName("Transcraft:Trans_grass")
-			.setCreativeTab(Transcraft.TranstabBlocks);
 	
 	public static final BiomeGenBase FlatLands = (new FlatLands(1)).setBiomeName("TransLands").setDisableRain();
 	
