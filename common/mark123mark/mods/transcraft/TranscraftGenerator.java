@@ -83,7 +83,7 @@ public class TranscraftGenerator implements IWorldGenerator {
 			
 private void generateTranDim(World world, Random random, int i, int j) {
         
-		for(int k = 0; k < 7; k++) {
+		for(int k = 0; k < 13; k++) {
 			int TranscraftOreXCoord = i + random.nextInt(16);
 			int TranscraftOreYCoord = random.nextInt(32);
 			int TranscraftOreZCoord = j + random.nextInt(16);
@@ -91,7 +91,7 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			(new WorldGenMinable(Config.TranscraftOreID, 7)).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
 			
 		}
-		for(int k = 0; k < 10; k++) {
+		for(int k = 0; k < 15; k++) {
 			int TranscraftOreXCoord = i + random.nextInt(16);
 			int TranscraftOreYCoord = random.nextInt(64);
 			int TranscraftOreZCoord = j + random.nextInt(16);
