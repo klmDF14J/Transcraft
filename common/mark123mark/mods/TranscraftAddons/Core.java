@@ -73,6 +73,7 @@ public class Core {
 		
 		@PreInit
 		public void preInit(FMLPreInitializationEvent event) {
+		
 			
 
 			FMLLog.info("[Transcraft Addons]	Starting Transcraft Addons verison " + Transcraft.VERSION + Transcraft.STATE);
@@ -85,8 +86,6 @@ public class Core {
 			
 			if(Loader.isModLoaded("NotEnoughItems"))
 			{
-			
-				
 				AddonNEILoad.StartNei();
 				FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
 			}	

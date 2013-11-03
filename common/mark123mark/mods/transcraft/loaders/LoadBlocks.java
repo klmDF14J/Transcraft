@@ -6,7 +6,6 @@ import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.EscapePortalBlock;
-import mark123mark.mods.transcraft.Blocks.TransDim.TransDimGrass;
 import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;

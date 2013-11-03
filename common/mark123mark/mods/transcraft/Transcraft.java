@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft;
 
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
-import mark123mark.mods.transcraft.Blocks.TransDim.TransDimGrass;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;

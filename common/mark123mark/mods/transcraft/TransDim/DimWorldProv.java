@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -46,11 +47,11 @@ public class DimWorldProv extends WorldProvider
 		return 1.0F;
 	}
 
-	@Override
-	public float getCloudHeight()
-	{
-		return 0.0F;
-	}
+	@SideOnly(Side.CLIENT)
+    public int getSkyColor()
+    {
+        return 0x07D7FF;
+    }
 
 	public boolean darkenSkyDuringRain()
 	{
