@@ -2,100 +2,55 @@ package mark123mark.mods.transcraft.WorldGen.TransManaia;
 
 import java.util.Random;
 
+import cpw.mods.fml.common.FMLLog;
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.WorldGen.FishyWorldGenBase;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class EscapePortal extends WorldGenerator
-{
-    public boolean generate(World par1World, Random par2Random, int par3, int par4, int par5)
-    {
-        while (par1World.isAirBlock(par3, par4, par5) && par4 > 2)
-        {
-            --par4;
-        }
+public class EscapePortal extends FishyWorldGenBase {
 
-        int l = par1World.getBlockId(par3, par4, par5);
+	public EscapePortal(World worldObj, Random rand) {
+		super(worldObj, rand);
+	}
 
-        if (l != Transcraft.RedenderQuartz.blockID)
-        {
-            return false;
-        }
-        else
-        {
-            int i1;
-            int j1;
+	@Override
+	public void generate(int i, int j, int k) {
+		j = getTerrainHeightAt(i, k);
+		
+		int radius = rand.nextInt(6) + 6;
+		
+		genCircle(i, j, k, Block.stone.blockID, 0, radius, 0, 3, true);
+		
+		float pillarRadius = radius * .8F;
+		float angle = rand.nextFloat() * 6;
+		float step = (float) (6.28318531 / (radius / 2));
+		for(int n = 0; n < radius / 2; n++)
+		{
+			int x = (int) (Math.sin(angle) * pillarRadius);
+			int z = (int) (Math.cos(angle) * pillarRadius);
+			fillDown(x + i, getTerrainHeightAt(x + i, z + k) + rand.nextInt(3) + 3, z + k, Transcraft.DimPortalBlock.blockID, 0);
+			angle += step;
+		}
+		
+		int towerHeight = rand.nextInt(4) + 4;
+		fillDown(i, j + towerHeight + 3, k, Transcraft.DimPortalBlock.blockID, 0);
+		fillDown(i + 1, j + towerHeight, k, Transcraft.DimPortalBlock.blockID, 0);
+		fillDown(i - 1, j + towerHeight, k, Transcraft.DimPortalBlock.blockID, 0);
+		fillDown(i, j + towerHeight, k + 1, Transcraft.DimPortalBlock.blockID, 0);
+		fillDown(i, j + towerHeight, k - 1, Transcraft.DimPortalBlock.blockID, 0);
 
-            for (i1 = -2; i1 <= 2; ++i1)
-            {
-                for (j1 = -2; j1 <= 2; ++j1)
-                {
-                    if (par1World.isAirBlock(par3 + i1, par4 - 1, par5 + j1) && par1World.isAirBlock(par3 + i1, par4 - 2, par5 + j1))
-                    {
-                        return false;
-                    }
-                }
-            }
+	}	
+	
+	
 
-            for (i1 = -1; i1 <= 0; ++i1)
-            {
-                for (j1 = -2; j1 <= 2; ++j1)
-                {
-                    for (int k1 = -2; k1 <= 2; ++k1)
-                    {
-                        par1World.setBlock(par3 + j1, par4 + i1, par5 + k1, Transcraft.RedenderQuartz.blockID, 0, 2);
-                    }
-                }
-            }
-
-            par1World.setBlock(par3, par4, par5, Transcraft.DimPortalBlock.blockID, 0, 2);
-            par1World.setBlock(par3 - 1, par4, par5, Transcraft.DimPortalBlock.blockID, 0, 2);
-            par1World.setBlock(par3 + 1, par4, par5, Transcraft.DimPortalBlock.blockID, 0, 2);
-            par1World.setBlock(par3, par4, par5 - 1, Transcraft.DimPortalBlock.blockID, 0, 2);
-            par1World.setBlock(par3, par4, par5 + 1, Transcraft.DimPortalBlock.blockID, 0, 2);
-
-            for (i1 = -2; i1 <= 2; ++i1)
-            {
-                for (j1 = -2; j1 <= 2; ++j1)
-                {
-                    if (i1 == -2 || i1 == 2 || j1 == -2 || j1 == 2)
-                    {
-                        par1World.setBlock(par3 + i1, par4 + 1, par5 + j1, Block.sandStone.blockID, 0, 2);
-                    }
-                }
-            }
-
-            par1World.setBlock(par3 + 2, par4 + 1, par5, Transcraft.RedenderQuartz.blockID, 1, 2);
-            par1World.setBlock(par3 - 2, par4 + 1, par5, Transcraft.RedenderQuartz.blockID, 1, 2);
-            par1World.setBlock(par3, par4 + 1, par5 + 2, Transcraft.RedenderQuartz.blockID, 1, 2);
-            par1World.setBlock(par3, par4 + 1, par5 - 2, Transcraft.RedenderQuartz.blockID, 1, 2);
-
-            for (i1 = -1; i1 <= 1; ++i1)
-            {
-                for (j1 = -1; j1 <= 1; ++j1)
-                {
-                    if (i1 == 0 && j1 == 0)
-                    {
-                        par1World.setBlock(par3 + i1, par4 + 4, par5 + j1, Transcraft.RedenderQuartz.blockID, 0, 2);
-                    }
-                    else
-                    {
-                        par1World.setBlock(par3 + i1, par4 + 4, par5 + j1, Transcraft.RedenderQuartz.blockID, 1, 2);
-                    }
-                }
-            }
-
-            for (i1 = 1; i1 <= 3; ++i1)
-            {
-                par1World.setBlock(par3 - 1, par4 + i1, par5 - 1, Transcraft.RedenderQuartz.blockID, 0, 2);
-                par1World.setBlock(par3 - 1, par4 + i1, par5 + 1, Transcraft.RedenderQuartz.blockID, 0, 2);
-                par1World.setBlock(par3 + 1, par4 + i1, par5 - 1, Transcraft.RedenderQuartz.blockID, 0, 2);
-                par1World.setBlock(par3 + 1, par4 + i1, par5 + 1, Transcraft.RedenderQuartz.blockID, 0, 2);
-            }
-
-            return true;
-        }
-    }
+	
+	
+	
+	
 
 }

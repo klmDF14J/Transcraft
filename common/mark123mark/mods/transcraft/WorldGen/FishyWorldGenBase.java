@@ -9,8 +9,8 @@ import net.minecraft.world.World;
 
 public abstract class FishyWorldGenBase {
 
-	World worldObj;
-	Random rand;
+	public World worldObj;
+	public Random rand;
 	
 	List<Integer> naturalBlocks = Arrays.asList(Block.dirt.blockID, Block.grass.blockID, Block.stone.blockID, Block.sand.blockID, Block.blockClay.blockID);
 	List<Integer> allowedBlocks = Arrays.asList(0, Block.tallGrass.blockID, Block.plantRed.blockID, Block.plantYellow.blockID);

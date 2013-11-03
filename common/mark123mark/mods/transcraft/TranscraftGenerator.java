@@ -120,7 +120,7 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			}
 			if(random.nextInt(150) == 0)
 			{
-				new EscapePortal().generate(world, random, i + 8, 0, j + 8);
+				new EscapePortal(world, random).generate(i + 8, 0, j + 8);
 			}
 			
 			

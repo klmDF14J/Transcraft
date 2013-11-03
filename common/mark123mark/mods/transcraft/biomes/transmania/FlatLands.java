@@ -27,18 +27,7 @@ public class FlatLands extends BiomeGenBase
     }
  
     
-    public void decorate(World par1World, Random par2Random, int par3, int par4)
-    {
-        super.decorate(par1World, par2Random, par3, par4);
-
-        if (par2Random.nextInt(500) == 0)
-        {
-            int k = par3 + par2Random.nextInt(16) + 8;
-            int l = par4 + par2Random.nextInt(16) + 8;
-            EscapePortal EscapePortal = new EscapePortal();
-            EscapePortal.generate(par1World, par2Random, k, par1World.getHeightValue(k, l) + 1, l);
-        }
-    }
+   
 
     
     
