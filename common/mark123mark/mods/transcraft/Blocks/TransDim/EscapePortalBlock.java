@@ -4,6 +4,7 @@ import java.util.Random;
 
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.TransDim.DimTp;
+import mark123mark.mods.transcraft.TransDim.DimTpEscape;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -75,11 +76,11 @@ public class EscapePortalBlock extends Block
 				EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
 				if (par5Entity.dimension != Config.DimID)
 				{
-					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Config.DimID, new DimTp(thePlayer.mcServer.worldServerForDimension(Config.DimID)));
+					//thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Config.DimID, new DimTp(thePlayer.mcServer.worldServerForDimension(Config.DimID)));
 				}
 				else
 				{
-					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new DimTp(thePlayer.mcServer.worldServerForDimension(0)));
+					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new DimTpEscape(thePlayer.mcServer.worldServerForDimension(0)));
 				}
 			}
 		}
