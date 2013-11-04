@@ -98,8 +98,17 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			int TranscraftOreYCoord = random.nextInt(64);
 			int TranscraftOreZCoord = j + random.nextInt(16);
 			
-			(new WorldGenMinable(Config.OilOreID, 10)).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
+			(new WorldGenMinable(Config.OilOreID, 12)).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
 		}
+		
+		for(int k = 0; k < 12; k++) {
+			int TranscraftOreXCoord = i + random.nextInt(16);
+			int TranscraftOreYCoord = random.nextInt(128);
+			int TranscraftOreZCoord = j + random.nextInt(16);
+			
+			(new WorldGenMinable(Config.TransManiaOreID ,15)).generate(world, random, TranscraftOreXCoord, TranscraftOreYCoord, TranscraftOreZCoord);
+		}
+		
 
 		{
 			if(random.nextInt(3500) == 0)

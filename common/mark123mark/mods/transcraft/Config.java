@@ -33,6 +33,8 @@ public class Config {
 	public static int DriedTransmutterID = 2008;
 	public static int ThinClearGlassID = 2009;
 	public static int FancyCrystalGlassID = 2010;
+	public static int TransManiaOreID = 2011;
+	
 	
 	public static int BlockEnderQuartzID = 2113;
 	public static int BlockChiselEnderQuartzID = 2114;
@@ -152,6 +154,8 @@ public class Config {
        DriedTransmutterID = config.getBlock("Dried Transmuter", 2008).getInt();
        ThinClearGlassID = config.getBlock("Thin Crystal Glass", 2009).getInt();
        FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010).getInt();
+       TransManiaOreID = config.getBlock("TransMania Ore", 2011).getInt();
+       
        
        BlockEnderQuartzID = config.getBlock("Ender Quartz", 2113).getInt();
        BlockChiselEnderQuartzID = config.getBlock("Chisel Ender Quartz", 2114).getInt();

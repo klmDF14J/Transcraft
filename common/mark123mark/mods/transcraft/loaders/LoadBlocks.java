@@ -6,6 +6,7 @@ import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.EscapePortalBlock;
+import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -21,6 +22,11 @@ public class LoadBlocks {
 		.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
 		.setTextureName("Transcraft:TranscraftOre");
 		
+		Transcraft.TransManiaOre = new TransManiaOre(Config.TransManiaOreID)
+		.setUnlocalizedName("Transcraft:TransManiaOre")
+		.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
+		.setTextureName("Transcraft:TransManiaOre");
+
 		Transcraft.OilOre = new mark123mark.mods.transcraft.Blocks.OilOre(Config.OilOreID)
 		.setUnlocalizedName("Transcraft:OilOre").setHardness(1.5F)
 		.setTextureName("Transcraft:OilOre");
@@ -229,14 +235,8 @@ Transcraft.DimPortalBlock = (new DimPortalBlock(Config.DimPortalBlockID))
 
 Transcraft.DimPortalEscapeBlock = (new EscapePortalBlock(Config.DimPortalEscapeBlockID))
 .setUnlocalizedName("Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
-.setTextureName("Transcraft:Portal")
+.setTextureName("Transcraft:EscapePortal")
 .setCreativeTab(Transcraft.TranstabBlocks);
-
-//Transcraft.TransDimGrass = (new TransDimGrass(Config.TransDimGrassID))
-//.setUnlocalizedName("Transcraft:TransDimGrass").setHardness(0.6F).setStepSound(Block.soundGrassFootstep)
-//.setTextureName("Transcraft:Trans_grass")
-//.setCreativeTab(Transcraft.TranstabBlocks);
-
 
 	}
 }

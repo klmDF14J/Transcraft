@@ -71,8 +71,6 @@ public class Transcraft {
 	public static boolean TransmatterFurnace = true;
 
 	
-	
-	
 	// Listblocks here
 	public static Block TranscraftOre;
 	public static Block OilOre;
@@ -94,7 +92,9 @@ public class Transcraft {
 	public static Block ComTransmutterOre;
 	public static Block ComOilOre;
 	public static Block DriedTransmutter;
-
+	public static Block TransManiaOre;
+	
+	
 	public static Block Transcrafter;
 	
 	public static Block enderQuartz;
