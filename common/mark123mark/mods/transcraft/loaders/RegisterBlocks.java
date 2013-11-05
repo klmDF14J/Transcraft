@@ -44,6 +44,7 @@ public class RegisterBlocks {
 		LanguageRegistry.addName(Transcraft.StairenderQuartz, "Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.DimPortalBlock, "TransMania Portal");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape block");
 		LanguageRegistry.addName(Transcraft.TransManiaOre, "TransManiaOre");
@@ -52,6 +53,9 @@ public class RegisterBlocks {
 
 		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape Portal");
 
+=======
+		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape Portal");
+>>>>>>> 9fd17bbc480cf61c76de7356351c9ecddf7f0f87
 =======
 		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape Portal");
 >>>>>>> 9fd17bbc480cf61c76de7356351c9ecddf7f0f87
@@ -91,9 +95,12 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.DimPortalBlock, "DimPortalBlock");
 <<<<<<< HEAD
+<<<<<<< HEAD
 		GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock, "DimPortalEscapeBlock");
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
 =======
+=======
+>>>>>>> 9fd17bbc480cf61c76de7356351c9ecddf7f0f87
 		GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock, "DimPortalEscapePortal");
 		
 >>>>>>> 9fd17bbc480cf61c76de7356351c9ecddf7f0f87
