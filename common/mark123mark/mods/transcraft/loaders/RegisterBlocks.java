@@ -49,6 +49,8 @@ public class RegisterBlocks {
 
 		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape Portal");
 
+		LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock, "Transmania Escape Portal");
+
 		
 		
 		GameRegistry.registerBlock(Transcraft.TranscraftOre, "Transmuter Ore");
@@ -84,15 +86,10 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.StairRedenderQuartz, "StairRedEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.DimPortalBlock, "DimPortalBlock");
-
 		GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock, "DimPortalEscapeBlock");
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
 
 		GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock, "DimPortalEscapePortal");
-		
-
-
-		
 		
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		
