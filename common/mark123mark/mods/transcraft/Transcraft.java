@@ -115,7 +115,7 @@ public class Transcraft {
 	public static Block DimPortalEscapeBlock;
 	
 	
-	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain();
+	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
 	
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
