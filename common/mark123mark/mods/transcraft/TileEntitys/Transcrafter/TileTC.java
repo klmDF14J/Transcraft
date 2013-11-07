@@ -5,17 +5,20 @@ import net.minecraft.tileentity.TileEntity;
 
 	public class TileTC extends TileEntity
 	{
-    	public void readFromNBT(NBTTagCompound par1NBTTagCompound)
+    	@Override
+		public void readFromNBT(NBTTagCompound par1NBTTagCompound)
     	{
     	
     	}
     
-    	public void writeToNBT(NBTTagCompound par1NBTTagCompound)
+    	@Override
+		public void writeToNBT(NBTTagCompound par1NBTTagCompound)
     	{
     	
     	}
    
-    	public void updateEntity()
+    	@Override
+		public void updateEntity()
     	{
    
     	} 	

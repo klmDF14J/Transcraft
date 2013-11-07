@@ -109,38 +109,38 @@ EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",15, new in
 EnumArmorMaterial EnderEnum = EnumHelper.addArmorMaterial("Ender",9850, new int[] { 10000, 10000, 10000, 10000 }, 100);
 
 
-Transcraft.PlasticHelmet = (mark123mark.mods.transcraft.armor.ArmorPlasticHelmet) (new ArmorPlasticHelmet(
+Transcraft.PlasticHelmet = (new ArmorPlasticHelmet(
 		Config.PlasticHelmetID, PlasticEnum, 0, 0)).setUnlocalizedName(
 		"Transcraft:PlasticHelmet").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.PlasticChest = (mark123mark.mods.transcraft.armor.ArmorPlasticChestplate) (new ArmorPlasticChestplate(
+Transcraft.PlasticChest = (new ArmorPlasticChestplate(
 		Config.PlasticChestID, PlasticEnum, 0, 1)).setUnlocalizedName(
 		"Transcraft:PlasticChest").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.PlasticLegs = (mark123mark.mods.transcraft.armor.ArmorPlasticLegs) (new ArmorPlasticLegs(
+Transcraft.PlasticLegs = (new ArmorPlasticLegs(
 		Config.PlasticLegsID, PlasticEnum, 0, 2)).setUnlocalizedName(
 		"Transcraft:PlasticLegs").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.PlasticBoots = (mark123mark.mods.transcraft.armor.ArmorPlasticBoots) (new ArmorPlasticBoots(
+Transcraft.PlasticBoots = (new ArmorPlasticBoots(
 		Config.PlasticBootsID, PlasticEnum, 0, 3)).setUnlocalizedName(
 		"Transcraft:PlasticBoots").setCreativeTab(Transcraft.TranstabItems);
 
 
 
 
-Transcraft.EnderHelmet = (mark123mark.mods.transcraft.armor.ArmorEnderHelmet) (new ArmorEnderHelmet(
+Transcraft.EnderHelmet = (new ArmorEnderHelmet(
 		Config.EnderHelmetID, EnderEnum, 0, 0)).setUnlocalizedName(
 		"Transcraft:EnderHelmet").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.EnderChest = (mark123mark.mods.transcraft.armor.ArmorEnderChest) (new ArmorEnderChest(
+Transcraft.EnderChest = (new ArmorEnderChest(
 		Config.EnderChestID, EnderEnum, 0, 1)).setUnlocalizedName(
 		"Transcraft:EnderChest").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.EnderLegs = (mark123mark.mods.transcraft.armor.ArmorEnderLegs) (new ArmorEnderLegs(
+Transcraft.EnderLegs = (new ArmorEnderLegs(
 		Config.EnderLegsID, EnderEnum, 0, 2)).setUnlocalizedName(
 		"Transcraft:EnderLegs").setCreativeTab(Transcraft.TranstabItems);
 
-Transcraft.EnderBoots = (mark123mark.mods.transcraft.armor.ArmorEnderBoots) (new ArmorEnderBoots(
+Transcraft.EnderBoots = (new ArmorEnderBoots(
 		Config.EnderBootsID, EnderEnum, 0, 3)).setUnlocalizedName(
 		"Transcraft:EnderBoots").setCreativeTab(Transcraft.TranstabItems);
 

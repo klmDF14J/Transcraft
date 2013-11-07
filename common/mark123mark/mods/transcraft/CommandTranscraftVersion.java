@@ -13,6 +13,7 @@ public class CommandTranscraftVersion  extends Command {
 	}
 	
 	
+	@Override
 	public void processCommand(ICommandSender par1ICommandSender, String[] par2ArrayOfStr)
     {
 		 par1ICommandSender.sendChatToPlayer(ChatMessageComponent.createFromTranslationWithSubstitutions("----------Transcraft!----------"));
@@ -27,6 +28,7 @@ public class CommandTranscraftVersion  extends Command {
 	
 	
 
+	@Override
 	public String getCommandUsage(ICommandSender var1) {
 		return "/Tversion Gets the version of transcraft";
 	}

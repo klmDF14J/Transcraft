@@ -29,7 +29,8 @@ public class IronTorch extends Block
      * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
      * cleared to be reused)
      */
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
+    @Override
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
     {
         return null;
     }
@@ -38,7 +39,8 @@ public class IronTorch extends Block
      * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
      * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
      */
-    public boolean isOpaqueCube()
+    @Override
+	public boolean isOpaqueCube()
     {
         return false;
     }
@@ -46,7 +48,8 @@ public class IronTorch extends Block
     /**
      * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
      */
-    public boolean renderAsNormalBlock()
+    @Override
+	public boolean renderAsNormalBlock()
     {
         return false;
     }
@@ -54,7 +57,8 @@ public class IronTorch extends Block
     /**
      * The type of render function that is called for this block
      */
-    public int getRenderType()
+    @Override
+	public int getRenderType()
     {
         return 2;
     }
@@ -78,7 +82,8 @@ public class IronTorch extends Block
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
-    public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
+    @Override
+	public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
     {
         return par1World.isBlockSolidOnSide(par2 - 1, par3, par4, EAST,  true) ||
                par1World.isBlockSolidOnSide(par2 + 1, par3, par4, WEST,  true) ||
@@ -90,7 +95,8 @@ public class IronTorch extends Block
     /**
      * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
      */
-    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
+    @Override
+	public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
     {
         int j1 = par9;
 
@@ -125,7 +131,8 @@ public class IronTorch extends Block
     /**
      * Ticks the block if it's been scheduled
      */
-    public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
+    @Override
+	public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
         super.updateTick(par1World, par2, par3, par4, par5Random);
 
@@ -138,7 +145,8 @@ public class IronTorch extends Block
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
-    public void onBlockAdded(World par1World, int par2, int par3, int par4)
+    @Override
+	public void onBlockAdded(World par1World, int par2, int par3, int par4)
     {
         if (par1World.getBlockMetadata(par2, par3, par4) == 0)
         {
@@ -171,7 +179,8 @@ public class IronTorch extends Block
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    @Override
+	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
     {
         this.func_94397_d(par1World, par2, par3, par4, par5);
     }
@@ -251,7 +260,8 @@ public class IronTorch extends Block
      * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world,
      * x, y, z, startVec, endVec
      */
-    public MovingObjectPosition collisionRayTrace(World par1World, int par2, int par3, int par4, Vec3 par5Vec3, Vec3 par6Vec3)
+    @Override
+	public MovingObjectPosition collisionRayTrace(World par1World, int par2, int par3, int par4, Vec3 par5Vec3, Vec3 par6Vec3)
     {
         int l = par1World.getBlockMetadata(par2, par3, par4) & 7;
         float f = 0.15F;
@@ -281,7 +291,8 @@ public class IronTorch extends Block
         return super.collisionRayTrace(par1World, par2, par3, par4, par5Vec3, par6Vec3);
     }
 
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
 
     /**
      * A randomly called display update to be able to add particles or other items for display
@@ -289,9 +300,9 @@ public class IronTorch extends Block
     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
         int l = par1World.getBlockMetadata(par2, par3, par4);
-        double d0 = (double)((float)par2 + 0.5F);
-        double d1 = (double)((float)par3 + 0.7F);
-        double d2 = (double)((float)par4 + 0.5F);
+        double d0 = par2 + 0.5F;
+        double d1 = par3 + 0.7F;
+        double d2 = par4 + 0.5F;
         double d3 = 0.2199999988079071D;
         double d4 = 0.27000001072883606D;
 

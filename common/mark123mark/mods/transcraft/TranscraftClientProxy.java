@@ -15,12 +15,14 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	
 public static Minecraft mc = Minecraft.getMinecraft();
 
-	 public void registerHandlers()
+	 @Override
+	public void registerHandlers()
 		{
 		//	TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
 		}
 	
-	 public void registerTickHandlers()
+	 @Override
+	public void registerTickHandlers()
 		{
 			TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);	
 			TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);

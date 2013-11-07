@@ -10,6 +10,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class DimWorldProv extends WorldProvider //implements IWorldProvider
 {
+	@Override
 	public void registerWorldChunkManager()
 	{
 		this.worldChunkMgr = new WorldChunkManagerHell(Transcraft.FlatLands, 0.8F, 0.1F);

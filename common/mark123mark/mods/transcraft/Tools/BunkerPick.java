@@ -41,7 +41,8 @@ public class BunkerPick extends ItemPickaxe
     
     
     
-    public boolean onItemUse(ItemStack ist, EntityPlayer player, World world, int x, int y, int z, int side, float xOff, float yOff, float zOff) {
+    @Override
+	public boolean onItemUse(ItemStack ist, EntityPlayer player, World world, int x, int y, int z, int side, float xOff, float yOff, float zOff) {
 			
     	if (hasItems(player)) {
 			doExplosion(world, x, y, z, side, player);

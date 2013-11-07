@@ -24,6 +24,7 @@ public class GuiTransTab extends GuiScreen
 		world = w;
 	}
 	
+	@Override
 	public void initGui()
 	{
 		super.initGui();
@@ -52,6 +53,7 @@ public class GuiTransTab extends GuiScreen
 		}
 	}
 	
+	@Override
 	public void drawScreen(int i, int i1, float f)
 	{
 		//Fix
@@ -72,6 +74,7 @@ public class GuiTransTab extends GuiScreen
 
 	
 	
+	@Override
 	public void updateScreen()
 	{
 		super.updateScreen();
@@ -93,11 +96,13 @@ public class GuiTransTab extends GuiScreen
 		}
 	}
 	
+	@Override
 	public boolean doesGuiPauseGame()
 	{
 		return false;
 	}
 	
+	@Override
 	public void actionPerformed(GuiButton gui)
 	{
 		if(gui.id == next.id)

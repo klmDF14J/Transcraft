@@ -59,7 +59,8 @@ public class ContainerTC extends Container
     /**
      * Callback for when the crafting matrix is changed.
      */
-    public void onCraftMatrixChanged(IInventory par1IInventory)
+    @Override
+	public void onCraftMatrixChanged(IInventory par1IInventory)
     {
         this.craftResult.setInventorySlotContents(0, RecipesTC.getInstance().findMatchingRecipe(this.craftMatrix, this.worldObj));
     }
@@ -67,7 +68,8 @@ public class ContainerTC extends Container
     /**
      * Called when the container is closed.
      */
-    public void onContainerClosed(EntityPlayer par1EntityPlayer)
+    @Override
+	public void onContainerClosed(EntityPlayer par1EntityPlayer)
     {
         super.onContainerClosed(par1EntityPlayer);
 
@@ -85,15 +87,17 @@ public class ContainerTC extends Container
         }
     }
 
-    public boolean canInteractWith(EntityPlayer par1EntityPlayer)
+    @Override
+	public boolean canInteractWith(EntityPlayer par1EntityPlayer)
     {
-        return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != Transcraft.Transcrafter.blockID ? false : par1EntityPlayer.getDistanceSq((double)this.posX + 0.5D, (double)this.posY + 0.5D, (double)this.posZ + 0.5D) <= 64.0D;
+        return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != Transcraft.Transcrafter.blockID ? false : par1EntityPlayer.getDistanceSq(this.posX + 0.5D, this.posY + 0.5D, this.posZ + 0.5D) <= 64.0D;
     }
 
     /**
      * Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
      */
-    public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
+    @Override
+	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
     {
         ItemStack itemstack = null;
         Slot slot = (Slot)this.inventorySlots.get(par2);
@@ -151,7 +155,8 @@ public class ContainerTC extends Container
         return itemstack;
     }
 
-    public boolean func_94530_a(ItemStack par1ItemStack, Slot par2Slot)
+    @Override
+	public boolean func_94530_a(ItemStack par1ItemStack, Slot par2Slot)
     {
         return par2Slot.inventory != this.craftResult && super.func_94530_a(par1ItemStack, par2Slot);
     }

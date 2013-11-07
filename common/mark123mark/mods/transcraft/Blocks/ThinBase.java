@@ -72,12 +72,14 @@ public class ThinBase extends Block
         }
     }
 
-    public boolean isOpaqueCube ()
+    @Override
+	public boolean isOpaqueCube ()
     {
         return false;
     }
 
-    public boolean renderAsNormalBlock ()
+    @Override
+	public boolean renderAsNormalBlock ()
     {
         return false;
     }
@@ -87,7 +89,8 @@ public class ThinBase extends Block
   //      return PaneRender.model;
 //    }
 
-    public boolean shouldSideBeRendered (IBlockAccess iblockaccess, int i, int j, int k, int l)
+    @Override
+	public boolean shouldSideBeRendered (IBlockAccess iblockaccess, int i, int j, int k, int l)
     {
         int bID = iblockaccess.getBlockId(i, j, k);
         if (Block.blocksList[bID] instanceof ThinBase || Block.blocksList[bID] instanceof BlockPane)
@@ -139,12 +142,14 @@ public class ThinBase extends Block
         }
     }
 
-    public void setBlockBoundsForItemRender ()
+    @Override
+	public void setBlockBoundsForItemRender ()
     {
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);
     }
 
-    public void setBlockBoundsBasedOnState (IBlockAccess iblockaccess, int i, int j, int k)
+    @Override
+	public void setBlockBoundsBasedOnState (IBlockAccess iblockaccess, int i, int j, int k)
     {
         float f = 0.4375F;
         float f1 = 0.5625F;

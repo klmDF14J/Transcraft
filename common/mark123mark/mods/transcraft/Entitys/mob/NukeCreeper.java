@@ -49,7 +49,8 @@ public class NukeCreeper extends EntityCreeper {
 	 /**
      * Called when a lightning bolt hits the entity.
      */
-    public void onStruckByLightning(EntityLightningBolt par1EntityLightningBolt)
+    @Override
+	public void onStruckByLightning(EntityLightningBolt par1EntityLightningBolt)
     {
         if (!this.worldObj.isRemote)
         {
@@ -61,6 +62,7 @@ public class NukeCreeper extends EntityCreeper {
         }
     }
 	
+	@Override
 	protected void fall(float distance) {
 		if (!this.worldObj.isRemote) {
 			if (distance > 5) {
@@ -81,11 +83,13 @@ public class NukeCreeper extends EntityCreeper {
 		}
 	}
 
+	@Override
 	public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound) {
 		super.writeEntityToNBT(par1NBTTagCompound);
 		par1NBTTagCompound.setShort("Fuse", (short) this.fuseTime);
 	}
 
+	@Override
 	public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound) {
 		super.readEntityFromNBT(par1NBTTagCompound);
 
@@ -94,6 +98,7 @@ public class NukeCreeper extends EntityCreeper {
 		}
 	}
 
+	@Override
 	public void onUpdate() {
 		if (this.isEntityAlive()) {
 			this.lastActiveTime = this.timeSinceIgnited;
@@ -115,7 +120,7 @@ public class NukeCreeper extends EntityCreeper {
 
 			for (i = 0; i < 2; ++i)
 	        {
-	            this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
+	            this.worldObj.spawnParticle("portal", this.posX + (this.rand.nextDouble() - 0.5D) * this.width, this.posY + this.rand.nextDouble() * this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
 	        }
 			
 			
@@ -142,12 +147,14 @@ public class NukeCreeper extends EntityCreeper {
 		super.onUpdate();
 	}
 
+	@Override
 	public float getCreeperFlashIntensity(float par1) {
-		return ((float) this.lastActiveTime + (float) (this.timeSinceIgnited - this.lastActiveTime)
+		return (this.lastActiveTime + (this.timeSinceIgnited - this.lastActiveTime)
 				* par1)
-				/ (float) (this.fuseTime - 2);
+				/ (this.fuseTime - 2);
 	}
 
+	@Override
 	protected void dropFewItems(boolean par1, int par2) {
 		int j = this.getDropItemId();
 
@@ -189,7 +196,8 @@ public class NukeCreeper extends EntityCreeper {
 	/**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected int getDropItemId()
+    @Override
+	protected int getDropItemId()
     {
         return Transcraft.DarkEndershard.itemID;
     }
@@ -200,7 +208,7 @@ public class NukeCreeper extends EntityCreeper {
     protected boolean teleportRandomly()
     {
         double d0 = this.posX + (this.rand.nextDouble() - 0.5D) * 64.0D;
-        double d1 = this.posY + (double)(this.rand.nextInt(64) - 32);
+        double d1 = this.posY + (this.rand.nextInt(64) - 32);
         double d2 = this.posZ + (this.rand.nextDouble() - 0.5D) * 64.0D;
         return this.teleportTo(d0, d1, d2);
     }
@@ -268,14 +276,14 @@ public class NukeCreeper extends EntityCreeper {
 
             for (l = 0; l < short1; ++l)
             {
-                double d6 = (double)l / ((double)short1 - 1.0D);
+                double d6 = l / (short1 - 1.0D);
                 float f = (this.rand.nextFloat() - 0.5F) * 0.2F;
                 float f1 = (this.rand.nextFloat() - 0.5F) * 0.2F;
                 float f2 = (this.rand.nextFloat() - 0.5F) * 0.2F;
-                double d7 = d3 + (this.posX - d3) * d6 + (this.rand.nextDouble() - 0.5D) * (double)this.width * 2.0D;
-                double d8 = d4 + (this.posY - d4) * d6 + this.rand.nextDouble() * (double)this.height;
-                double d9 = d5 + (this.posZ - d5) * d6 + (this.rand.nextDouble() - 0.5D) * (double)this.width * 2.0D;
-                this.worldObj.spawnParticle("portal", d7, d8, d9, (double)f, (double)f1, (double)f2);
+                double d7 = d3 + (this.posX - d3) * d6 + (this.rand.nextDouble() - 0.5D) * this.width * 2.0D;
+                double d8 = d4 + (this.posY - d4) * d6 + this.rand.nextDouble() * this.height;
+                double d9 = d5 + (this.posZ - d5) * d6 + (this.rand.nextDouble() - 0.5D) * this.width * 2.0D;
+                this.worldObj.spawnParticle("portal", d7, d8, d9, f, f1, f2);
             }
 
             this.worldObj.playSoundEffect(d3, d4, d5, "mob.endermen.portal", 1.0F, 1.0F);

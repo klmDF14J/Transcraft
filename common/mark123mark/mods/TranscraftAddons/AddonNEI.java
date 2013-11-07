@@ -75,7 +75,8 @@ public class AddonNEI extends TemplateRecipeHandler
             return getCycledIngredients(cycleticks / 20, ingredients);
         }
         
-        @SideOnly(Side.CLIENT)
+        @Override
+		@SideOnly(Side.CLIENT)
         public PositionedStack getResult()
         {
             return result;
@@ -226,7 +227,8 @@ public class AddonNEI extends TemplateRecipeHandler
         return "crafting";
     }
     
-    public boolean hasOverlay(GuiContainer gui, Container container, int recipe)
+    @Override
+	public boolean hasOverlay(GuiContainer gui, Container container, int recipe)
     {
         return super.hasOverlay(gui, container, recipe) || 
                 isRecipe2x2(recipe) && RecipeInfo.hasDefaultOverlay(gui, "crafting2x2");

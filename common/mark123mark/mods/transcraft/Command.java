@@ -12,6 +12,7 @@ public class Command extends CommandBase {
 		this.name = name;
 	}
 	
+	@Override
 	public String getCommandName() {
 		return name;
 	}

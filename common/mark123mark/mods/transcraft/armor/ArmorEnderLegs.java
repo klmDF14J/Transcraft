@@ -20,7 +20,8 @@ public class ArmorEnderLegs extends ItemArmor //implements IArmorTextureProvider
 	}
 
 
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
+    @Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
 		return "Transcraft:armor/EnderArmor_2.png";
 	}

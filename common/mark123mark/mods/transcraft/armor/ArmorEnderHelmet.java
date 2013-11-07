@@ -19,7 +19,8 @@ public class ArmorEnderHelmet extends ItemArmor //implements IArmorTextureProvid
 		super(par1, par2EnumArmorMaterial, par3, par4);
 	}
 
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
+    @Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
 		return "Transcraft:armor/EnderArmor_1.png";
 	}

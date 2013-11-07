@@ -71,7 +71,8 @@ public class ModelEnderBat extends ModelBase
     /**
      * Sets the models various rotation angles then renders the model.
      */
-    public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
+    @Override
+	public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
     {
         EntityBat entitybat = (EntityBat)par1Entity;
         float f6;

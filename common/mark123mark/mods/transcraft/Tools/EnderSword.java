@@ -30,11 +30,13 @@ public class EnderSword extends ItemSword
     /**
      * returns the action that specifies what animation to play when the items is being used
      */
-    public EnumAction getItemUseAction(ItemStack par1ItemStack)
+    @Override
+	public EnumAction getItemUseAction(ItemStack par1ItemStack)
     {
         return EnumAction.block;
     }
     
+	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {
 		 if (par3EntityPlayer.isSneaking())

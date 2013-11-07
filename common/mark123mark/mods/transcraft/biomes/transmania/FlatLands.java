@@ -33,7 +33,8 @@ public class FlatLands extends BiomeGenBase
     	return 0x07D7FF;
     }
     
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
     public int getSkyColorByTemp(float par1)
     {
     		return 0x07D7FF;

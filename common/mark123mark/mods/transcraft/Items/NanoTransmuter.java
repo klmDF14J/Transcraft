@@ -19,6 +19,7 @@ public class NanoTransmuter extends Item {
 
 	
 	
+	@Override
 	public EnumRarity getRarity(ItemStack is){ //The colour of the item name (eg. with golden apples)
 		return EnumRarity.rare;
 		}

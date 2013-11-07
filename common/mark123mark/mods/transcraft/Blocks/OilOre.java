@@ -14,6 +14,7 @@ public class OilOre   extends Block
 		super(par1, Material.rock);
 	}
 
+	@Override
 	public int idDropped(int par1, Random random, int zero) {
         return Transcraft.Oil.itemID;
 }

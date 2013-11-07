@@ -29,7 +29,8 @@ public class ObsidianLever extends Block
      * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
      * cleared to be reused)
      */
-    public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
+    @Override
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
     {
         return null;
     }
@@ -38,7 +39,8 @@ public class ObsidianLever extends Block
      * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
      * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
      */
-    public boolean isOpaqueCube()
+    @Override
+	public boolean isOpaqueCube()
     {
         return false;
     }
@@ -46,7 +48,8 @@ public class ObsidianLever extends Block
     /**
      * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
      */
-    public boolean renderAsNormalBlock()
+    @Override
+	public boolean renderAsNormalBlock()
     {
         return false;
     }
@@ -54,7 +57,8 @@ public class ObsidianLever extends Block
     /**
      * The type of render function that is called for this block
      */
-    public int getRenderType()
+    @Override
+	public int getRenderType()
     {
         return 12;
     }
@@ -62,7 +66,8 @@ public class ObsidianLever extends Block
     /**
      * checks to see if you can place this block can be placed on that side of a block: BlockLever overrides
      */
-    public boolean canPlaceBlockOnSide(World par1World, int par2, int par3, int par4, int par5)
+    @Override
+	public boolean canPlaceBlockOnSide(World par1World, int par2, int par3, int par4, int par5)
     {
         ForgeDirection dir = ForgeDirection.getOrientation(par5);
         return (dir == DOWN  && par1World.isBlockSolidOnSide(par2, par3 + 1, par4, DOWN )) ||
@@ -76,7 +81,8 @@ public class ObsidianLever extends Block
     /**
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
-    public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
+    @Override
+	public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
     {
         return par1World.isBlockSolidOnSide(par2 - 1, par3, par4, EAST ) ||
                par1World.isBlockSolidOnSide(par2 + 1, par3, par4, WEST ) ||
@@ -89,7 +95,8 @@ public class ObsidianLever extends Block
     /**
      * Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
      */
-    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
+    @Override
+	public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
     {
         int j1 = par9 & 8;
         int k1 = par9 & 7;
@@ -139,7 +146,7 @@ public class ObsidianLever extends Block
 
         if (i1 == invertMetadata(1))
         {
-            if ((MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 1) == 0)
+            if ((MathHelper.floor_double(par5EntityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 1) == 0)
             {
                 par1World.setBlockMetadataWithNotify(par2, par3, par4, 5 | j1, 2);
             }
@@ -150,7 +157,7 @@ public class ObsidianLever extends Block
         }
         else if (i1 == invertMetadata(0))
         {
-            if ((MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 1) == 0)
+            if ((MathHelper.floor_double(par5EntityLiving.rotationYaw * 4.0F / 360.0F + 0.5D) & 1) == 0)
             {
                 par1World.setBlockMetadataWithNotify(par2, par3, par4, 7 | j1, 2);
             }
@@ -189,7 +196,8 @@ public class ObsidianLever extends Block
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor blockID
      */
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    @Override
+	public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
     {
         if (this.checkIfAttachedToBlock(par1World, par2, par3, par4))
         {
@@ -265,7 +273,8 @@ public class ObsidianLever extends Block
     /**
      * Updates the blocks bounds based on its current state. Args: world, x, y, z
      */
-    public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
+    @Override
+	public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
     {
         int l = par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 7;
         float f = 0.1875F;
@@ -304,7 +313,8 @@ public class ObsidianLever extends Block
     /**
      * Called upon block activation (right click on the block.)
      */
-    public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
+    @Override
+	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {
         if (par1World.isRemote)
         {
@@ -316,7 +326,7 @@ public class ObsidianLever extends Block
             int j1 = i1 & 7;
             int k1 = 8 - (i1 & 8);
             par1World.setBlockMetadataWithNotify(par2, par3, par4, j1 + k1, 3);
-            par1World.playSoundEffect((double)par2 + 0.5D, (double)par3 + 0.5D, (double)par4 + 0.5D, "random.click", 0.3F, k1 > 0 ? 0.6F : 0.5F);
+            par1World.playSoundEffect(par2 + 0.5D, par3 + 0.5D, par4 + 0.5D, "random.click", 0.3F, k1 > 0 ? 0.6F : 0.5F);
             par1World.notifyBlocksOfNeighborChange(par2, par3, par4, this.blockID);
 
             if (j1 == 1)
@@ -354,7 +364,8 @@ public class ObsidianLever extends Block
     /**
      * ejects contained items into the world, and notifies neighbours of an update, as appropriate
      */
-    public void breakBlock(World par1World, int par2, int par3, int par4, int par5, int par6)
+    @Override
+	public void breakBlock(World par1World, int par2, int par3, int par4, int par5, int par6)
     {
         if ((par6 & 8) > 0)
         {
@@ -398,7 +409,8 @@ public class ObsidianLever extends Block
      * returns true, standard redstone propagation rules will apply instead and this will not be called. Args: World, X,
      * Y, Z, side. Note that the side is reversed - eg it is 1 (up) when checking the bottom of the block.
      */
-    public int isProvidingWeakPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    @Override
+	public int isProvidingWeakPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
         return (par1IBlockAccess.getBlockMetadata(par2, par3, par4) & 8) > 0 ? 15 : 0;
     }
@@ -407,7 +419,8 @@ public class ObsidianLever extends Block
      * Returns true if the block is emitting direct/strong redstone power on the specified side. Args: World, X, Y, Z,
      * side. Note that the side is reversed - eg it is 1 (up) when checking the bottom of the block.
      */
-    public int isProvidingStrongPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    @Override
+	public int isProvidingStrongPower(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
         int i1 = par1IBlockAccess.getBlockMetadata(par2, par3, par4);
 
@@ -425,7 +438,8 @@ public class ObsidianLever extends Block
     /**
      * Can this block provide power. Only wire currently seems to have this change based on its state.
      */
-    public boolean canProvidePower()
+    @Override
+	public boolean canProvidePower()
     {
         return true;
     }

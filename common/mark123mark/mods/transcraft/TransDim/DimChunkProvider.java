@@ -324,7 +324,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * loads or generates the chunk at the chunk location specified
      */
-    public Chunk loadChunk(int par1, int par2)
+    @Override
+	public Chunk loadChunk(int par1, int par2)
     {
         return this.provideChunk(par1, par2);
     }
@@ -333,9 +334,10 @@ public class DimChunkProvider implements IChunkProvider
      * Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the
      * specified chunk from the map seed and chunk seed
      */
-    public Chunk provideChunk(int par1, int par2)
+    @Override
+	public Chunk provideChunk(int par1, int par2)
     {
-        this.rand.setSeed((long)par1 * 341873128712L + (long)par2 * 132897987541L);
+        this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
         byte[] abyte = new byte[32768];
         this.generateTerrain(par1, par2, abyte);
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
@@ -386,7 +388,7 @@ public class DimChunkProvider implements IChunkProvider
             {
                 for (int l1 = -2; l1 <= 2; ++l1)
                 {
-                    float f = 10.0F / MathHelper.sqrt_float((float)(k1 * k1 + l1 * l1) + 0.2F);
+                    float f = 10.0F / MathHelper.sqrt_float(k1 * k1 + l1 * l1 + 0.2F);
                     this.parabolicField[k1 + 2 + (l1 + 2) * 5] = f;
                 }
             }
@@ -471,13 +473,13 @@ public class DimChunkProvider implements IChunkProvider
 
                 for (int k3 = 0; k3 < par6; ++k3)
                 {
-                    double d3 = (double)f2;
-                    double d4 = (double)f1;
+                    double d3 = f2;
+                    double d4 = f1;
                     d3 += d2 * 0.2D;
-                    d3 = d3 * (double)par6 / 16.0D;
-                    double d5 = (double)par6 / 2.0D + d3 * 4.0D;
+                    d3 = d3 * par6 / 16.0D;
+                    double d5 = par6 / 2.0D + d3 * 4.0D;
                     double d6 = 0.0D;
-                    double d7 = ((double)k3 - d5) * 12.0D * 128.0D / 128.0D / d4;
+                    double d7 = (k3 - d5) * 12.0D * 128.0D / 128.0D / d4;
 
                     if (d7 < 0.0D)
                     {
@@ -505,7 +507,7 @@ public class DimChunkProvider implements IChunkProvider
 
                     if (k3 > par6 - 4)
                     {
-                        double d11 = (double)((float)(k3 - (par6 - 4)) / 3.0F);
+                        double d11 = (k3 - (par6 - 4)) / 3.0F;
                         d6 = d6 * (1.0D - d11) + -10.0D * d11;
                     }
 
@@ -521,7 +523,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Checks to see if a chunk exists at x, y
      */
-    public boolean chunkExists(int par1, int par2)
+    @Override
+	public boolean chunkExists(int par1, int par2)
     {
         return true;
     }
@@ -529,7 +532,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Populates chunk with ores etc etc
      */
-    public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
+    @Override
+	public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
     {
         BlockSand.fallInstantly = true;
         int k = par2 * 16;
@@ -538,7 +542,7 @@ public class DimChunkProvider implements IChunkProvider
         this.rand.setSeed(this.worldObj.getSeed());
         long i1 = this.rand.nextLong() / 2L * 2L + 1L;
         long j1 = this.rand.nextLong() / 2L * 2L + 1L;
-        this.rand.setSeed((long)par2 * i1 + (long)par3 * j1 ^ this.worldObj.getSeed());
+        this.rand.setSeed(par2 * i1 + par3 * j1 ^ this.worldObj.getSeed());
         boolean flag = false;
 
         MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(par1IChunkProvider, worldObj, rand, par2, par3, flag));
@@ -619,7 +623,8 @@ public class DimChunkProvider implements IChunkProvider
      * Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.
      * Return true if all chunks have been saved.
      */
-    public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate)
+    @Override
+	public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate)
     {
         return true;
     }
@@ -629,7 +634,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
      */
-    public boolean unloadQueuedChunks()
+    @Override
+	public boolean unloadQueuedChunks()
     {
         return false;
     }
@@ -637,7 +643,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Returns if the IChunkProvider supports saving.
      */
-    public boolean canSave()
+    @Override
+	public boolean canSave()
     {
         return true;
     }
@@ -645,7 +652,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Converts the instance data to a readable string.
      */
-    public String makeString()
+    @Override
+	public String makeString()
     {
         return "RandomLevelSource";
     }
@@ -653,7 +661,8 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Returns a list of creatures of the specified type that can spawn at the given location.
      */
-    public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4)
+    @Override
+	public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4)
     {
         BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(par2, par4);
         return biomegenbase == null ? null : (biomegenbase == BiomeGenBase.swampland && par1EnumCreatureType == EnumCreatureType.monster && this.scatteredFeatureGenerator.hasStructureAt(par2, par3, par4) ? this.scatteredFeatureGenerator.getScatteredFeatureSpawnList() : biomegenbase.getSpawnableList(par1EnumCreatureType));
@@ -662,17 +671,20 @@ public class DimChunkProvider implements IChunkProvider
     /**
      * Returns the location of the closest structure of the specified type. If not found returns null.
      */
-    public ChunkPosition findClosestStructure(World par1World, String par2Str, int par3, int par4, int par5)
+    @Override
+	public ChunkPosition findClosestStructure(World par1World, String par2Str, int par3, int par4, int par5)
     {
         return "Stronghold".equals(par2Str) && this.strongholdGenerator != null ? this.strongholdGenerator.getNearestInstance(par1World, par3, par4, par5) : null;
     }
 
-    public int getLoadedChunkCount()
+    @Override
+	public int getLoadedChunkCount()
     {
         return 0;
     }
 
-    public void recreateStructures(int par1, int par2)
+    @Override
+	public void recreateStructures(int par1, int par2)
     {
         if (this.mapFeaturesEnabled)
         {

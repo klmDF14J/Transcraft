@@ -20,7 +20,8 @@ public class ArmorPlasticLegs extends ItemArmor
 		maxStackSize = 1;
 	}
 
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
+    @Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
 		return "Transcraft:armor/PlasticArmor_2.png";
 	}

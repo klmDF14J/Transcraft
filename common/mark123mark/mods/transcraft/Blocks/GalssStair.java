@@ -12,12 +12,13 @@ public class GalssStair extends BlockStairs
 	public GalssStair(int par1, Block par2Block, int par3) {
 		super(par1, par2Block, par3);
 		
-		this.useNeighborBrightness[blockID] = true;
+		Block.useNeighborBrightness[blockID] = true;
 	}
 
 
 	 
-	    @SideOnly(Side.CLIENT)
+	    @Override
+		@SideOnly(Side.CLIENT)
 
 	    /**
 	     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
@@ -31,7 +32,8 @@ public class GalssStair extends BlockStairs
 	     * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
 	     * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	     */
-	    public boolean isOpaqueCube()
+	    @Override
+		public boolean isOpaqueCube()
 	    {
 	        return false;
 	    }
@@ -39,12 +41,14 @@ public class GalssStair extends BlockStairs
 	    /**
 	     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
 	     */
-	    public boolean renderAsNormalBlock()
+	    @Override
+		public boolean renderAsNormalBlock()
 	    {
 	        return false;
 	    }
 
-	    public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) //Renders neighbouring blocks
+	    @Override
+		public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) //Renders neighbouring blocks
 	    {
 
 	    int i = par1IBlockAccess.getBlockId(par2, par3, par4);

@@ -21,6 +21,7 @@ public class Transcrafter  extends BlockContainer
 		this.setHardness(2F);
 	}
 	
+	@Override
 	public Icon getIcon(int side, int meta)
 	{
 		if(side == 1 || side == 0)
@@ -33,6 +34,7 @@ public class Transcrafter  extends BlockContainer
 		}
 	}
 	
+	@Override
 	public void registerIcons(IconRegister i)
 	{
 		icons[0] = i.registerIcon("transcraft:TC_top");
@@ -40,6 +42,7 @@ public class Transcrafter  extends BlockContainer
 	}
 	
 	
+	@Override
 	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int par6, float par7, float par8, float par9)
 	{
 		if(p.isSneaking())

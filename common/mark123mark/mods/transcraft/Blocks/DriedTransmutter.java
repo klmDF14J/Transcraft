@@ -14,11 +14,13 @@ public class DriedTransmutter extends Block
 		super(par1, Material.rock);
 	}
 
+	@Override
 	public int idDropped(int par1, Random random, int zero) {
         return Config.LiquidTransmutterFluidStillID;
 }
 	
-	 protected boolean canSilkHarvest()
+	 @Override
+	protected boolean canSilkHarvest()
 	    {
 	        return true;
 	    }
