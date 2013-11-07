@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.loaders;
 
-import net.minecraft.block.Block;
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
@@ -8,8 +7,8 @@ import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.EscapePortalBlock;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
+import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class LoadBlocks {
 

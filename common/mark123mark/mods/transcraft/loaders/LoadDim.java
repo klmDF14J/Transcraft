@@ -1,8 +1,8 @@
 package mark123mark.mods.transcraft.loaders;
 
-import net.minecraftforge.common.DimensionManager;
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.TransDim.DimWorldProv;
+import net.minecraftforge.common.DimensionManager;
 
 public class LoadDim {
 

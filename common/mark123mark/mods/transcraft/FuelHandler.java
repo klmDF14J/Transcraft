@@ -11,8 +11,6 @@ public class FuelHandler implements IFuelHandler {
 		
 		if(var1 == Config.OilID){
 			return 300;
-//		}else if(var1 == TutorialMain.myFirstFuel.shiftedIndex){
-//			return 12000;
 		}else{
 			return 0;
 		}

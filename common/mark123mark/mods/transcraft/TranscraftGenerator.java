@@ -2,17 +2,15 @@ package mark123mark.mods.transcraft;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
-import cpw.mods.fml.common.IWorldGenerator;
-import mark123mark.mods.transcraft.*;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRingSphere;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRings;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRuins;
 import mark123mark.mods.transcraft.WorldGen.WorldGenTower;
 import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
+import cpw.mods.fml.common.IWorldGenerator;
 
 public class TranscraftGenerator implements IWorldGenerator {
 

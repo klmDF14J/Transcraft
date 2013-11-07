@@ -21,7 +21,6 @@ public class LoadBlockSettings {
 		MinecraftForge.setBlockHarvestLevel(Transcraft.ObsidianLever, "pickaxe", 4);
 		
 		
-		
 	}
 	
 	

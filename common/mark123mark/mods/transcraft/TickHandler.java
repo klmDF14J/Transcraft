@@ -2,11 +2,9 @@ package mark123mark.mods.transcraft;
 
 import java.util.EnumSet;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ChatMessageComponent;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 //import net.minecraft.client.Minecraft;
@@ -84,7 +82,7 @@ public class TickHandler implements ITickHandler
 	@Override
 	public String getLabel()
 	{
-		return "My_Tick_Handler";
+		return "Transcraft_Tick_Handler";
 	}
 
 
