@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mark123mark.mods.transcraft.Config;
-import mark123mark.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.LongHashMap;

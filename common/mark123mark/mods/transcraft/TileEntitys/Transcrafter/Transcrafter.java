@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 
-import cpw.mods.fml.common.FMLLog;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;

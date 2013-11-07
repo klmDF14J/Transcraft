@@ -5,7 +5,6 @@ import java.util.Random;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 
 public class OilOre   extends Block
 {

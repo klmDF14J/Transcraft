@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.Blocks;
 import java.util.Random;
 
 import mark123mark.mods.transcraft.Config;
-import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

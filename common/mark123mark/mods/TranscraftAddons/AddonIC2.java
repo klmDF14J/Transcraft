@@ -1,13 +1,5 @@
 package mark123mark.mods.TranscraftAddons;
 
-import ic2.api.item.Items;
-import ic2.api.recipe.IMachineRecipeManager;
-import ic2.api.recipe.Recipes;
-import mark123mark.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class AddonIC2 {
 	

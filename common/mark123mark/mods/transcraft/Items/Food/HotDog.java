@@ -1,7 +1,6 @@
 package mark123mark.mods.transcraft.Items.Food;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 
 public class HotDog extends ItemFood {

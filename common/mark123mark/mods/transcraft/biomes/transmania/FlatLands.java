@@ -1,23 +1,10 @@
 package mark123mark.mods.transcraft.biomes.transmania;
 
-import java.awt.Color;
-import java.util.Random;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import mark123mark.mods.transcraft.Config;
-import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
-import net.minecraft.block.Block;
 import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.ColorizerFoliage;
-import net.minecraft.world.ColorizerGrass;
-import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.SpawnListEntry;
-import net.minecraft.world.gen.feature.WorldGenDesertWells;
-import net.minecraft.world.gen.feature.WorldGenerator;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class FlatLands extends BiomeGenBase
 {

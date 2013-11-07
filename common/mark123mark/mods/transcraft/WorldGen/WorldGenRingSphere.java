@@ -2,17 +2,14 @@ package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
-import cpw.mods.fml.common.FMLLog;
-
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.ChatMessageComponent;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.FMLLog;
 
 public class WorldGenRingSphere extends FishyWorldGenBase {
 

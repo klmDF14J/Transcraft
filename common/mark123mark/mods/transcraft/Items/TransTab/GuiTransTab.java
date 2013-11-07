@@ -4,7 +4,6 @@ import mark123mark.mods.transcraft.TransmuterMode;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.ChatMessageComponent;
 import net.minecraft.world.World;
 
 public class GuiTransTab extends GuiScreen

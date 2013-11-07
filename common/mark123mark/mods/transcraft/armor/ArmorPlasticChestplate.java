@@ -1,8 +1,5 @@
 package mark123mark.mods.transcraft.armor;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import mark123mark.mods.transcraft.Items.ItemTexturedArmor;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.EnumArmorMaterial;

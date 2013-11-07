@@ -1,18 +1,12 @@
 package mark123mark.mods.transcraft.TransDim;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.api.IWorldProvider;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ChunkCoordinates;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
-import net.minecraft.world.chunk.IChunkProvider;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class DimWorldProv extends WorldProvider //implements IWorldProvider
 {

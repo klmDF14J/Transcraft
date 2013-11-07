@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.Blocks.TransDim;
 import java.util.Random;
 
 import mark123mark.mods.transcraft.Config;
-import mark123mark.mods.transcraft.TransDim.DimTp;
 import mark123mark.mods.transcraft.TransDim.DimTpEscape;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

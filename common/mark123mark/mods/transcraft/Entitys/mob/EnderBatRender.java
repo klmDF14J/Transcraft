@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft.Entitys.mob;
 
 import net.minecraft.client.model.ModelBat;
 import net.minecraft.client.renderer.entity.RenderBat;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.util.ResourceLocation;

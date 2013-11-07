@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.Blocks.FancyCrystalGlass;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Icon;

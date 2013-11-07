@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft.Blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.material.Material;
 
 public class BunkerStair  extends BlockStairs
 {

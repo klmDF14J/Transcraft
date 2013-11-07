@@ -8,9 +8,6 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
 public class GuiTC extends GuiContainer
 {
     private static final ResourceLocation field_110422_t = new ResourceLocation("transcraft","textures/gui/Transcrafter.png");

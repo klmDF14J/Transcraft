@@ -1,17 +1,10 @@
 package mark123mark.mods.transcraft;
 
-import net.minecraft.item.Item;
-import net.minecraftforge.common.Configuration;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import java.io.File;
 import java.io.IOException;
-import java.io.File;
-import cpw.mods.fml.common.registry.TickRegistry;
-import cpw.mods.fml.relauncher.Side;
 
 import net.minecraftforge.common.Configuration;
-
-import mark123mark.mods.transcraft.*;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
 

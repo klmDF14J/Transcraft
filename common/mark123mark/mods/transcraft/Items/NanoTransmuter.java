@@ -1,17 +1,9 @@
 package mark123mark.mods.transcraft.Items;
 
-import mark123mark.mods.transcraft.Config;
-import mark123mark.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.Icon;
-import net.minecraft.world.World;
 
 public class NanoTransmuter extends Item {
 

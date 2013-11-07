@@ -3,39 +3,19 @@ package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 import ic2.api.item.Items;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-
-
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.Loader;
-import cpw.mods.fml.common.registry.GameRegistry;
-
-import mark123mark.mods.TranscraftAddons.AddonIC2;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.crafting.RecipeFireworks;
-import net.minecraft.item.crafting.RecipesArmor;
-import net.minecraft.item.crafting.RecipesArmorDyes;
-import net.minecraft.item.crafting.RecipesCrafting;
-import net.minecraft.item.crafting.RecipesDyes;
-import net.minecraft.item.crafting.RecipesFood;
-import net.minecraft.item.crafting.RecipesIngots;
-import net.minecraft.item.crafting.RecipesMapCloning;
-import net.minecraft.item.crafting.RecipesMapExtending;
-import net.minecraft.item.crafting.RecipesTools;
-import net.minecraft.item.crafting.RecipesWeapons;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.world.World;
-import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.ShapedOreRecipe;
+import cpw.mods.fml.common.Loader;
 
 
 

@@ -2,10 +2,9 @@ package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
-import cpw.mods.fml.common.FMLLog;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.FMLLog;
 
 public class WorldGenRings extends FishyWorldGenBase {
 

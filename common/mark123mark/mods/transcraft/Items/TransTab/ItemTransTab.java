@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.Items.TransTab;
 
-import mark123mark.mods.transcraft.GuiIds;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

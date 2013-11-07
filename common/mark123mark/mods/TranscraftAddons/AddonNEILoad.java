@@ -1,7 +1,5 @@
 package mark123mark.mods.TranscraftAddons;
 
-import java.io.FileNotFoundException;
-
 import codechicken.nei.api.API;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
