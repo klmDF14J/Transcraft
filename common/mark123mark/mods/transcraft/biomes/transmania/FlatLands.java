@@ -29,12 +29,8 @@ public class FlatLands extends BiomeGenBase
         this.theBiomeDecorator.flowersPerChunk = 0;
         this.theBiomeDecorator.grassPerChunk = 8;
         this.spawnableMonsterList.clear();
-        
-      //  this.topBlock = (byte)Transcraft.TransDimGrass.blockID;
     }
  
-   
-
     
     @SideOnly(Side.CLIENT)
     @Override
