@@ -1,21 +1,6 @@
 package mark123mark.mods.transcraft;
 
-import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
-import mark123mark.mods.transcraft.Blocks.TranscraftOre;
-import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
-import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
-import mark123mark.mods.transcraft.Items.BasicTransmuter;
-import mark123mark.mods.transcraft.Items.TransTab.ItemTransTab;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
-import mark123mark.mods.transcraft.armor.ArmorEnderBoots;
-import mark123mark.mods.transcraft.armor.ArmorEnderChest;
-import mark123mark.mods.transcraft.armor.ArmorEnderHelmet;
-import mark123mark.mods.transcraft.armor.ArmorEnderLegs;
-import mark123mark.mods.transcraft.armor.ArmorPlasticBoots;
-import mark123mark.mods.transcraft.armor.ArmorPlasticChestplate;
-import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
-import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
@@ -28,25 +13,14 @@ import mark123mark.mods.transcraft.loaders.LoadOreDics;
 import mark123mark.mods.transcraft.loaders.RecipeLoader;
 import mark123mark.mods.transcraft.loaders.RegisterBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.StepSound;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenPlains;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.EnumHelper;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
-import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -57,9 +31,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
@@ -157,29 +129,7 @@ public class Transcraft {
 	public static int enderQuartzID;
 	public static int chiselEnderQuartzID;
 
-	
-	
-	
-	public static final StepSound soundPowderFootstep = new StepSound("stone",
-			1.0F, 1.0F);
-	public static final StepSound soundWoodFootstep = new StepSound("wood",
-			1.0F, 1.0F);
-	public static final StepSound soundGravelFootstep = new StepSound("gravel",
-			1.0F, 1.0F);
-	public static final StepSound soundGrassFootstep = new StepSound("grass",
-			1.0F, 1.0F);
-	public static final StepSound soundStoneFootstep = new StepSound("stone",
-			1.0F, 1.0F);
-	public static final StepSound soundMetalFootstep = new StepSound("stone",
-			1.0F, 1.5F);
-	public static final StepSound soundGlassFootstep = new StepSound("stone",
-			1.0F, 1.0F);
-	public static final StepSound soundClothFootstep = new StepSound("cloth",
-			1.0F, 1.0F);
-	public static final StepSound soundSandFootstep = new StepSound("sand",
-			1.0F, 1.0F);
-	public static final StepSound soundSnowFootstep = new StepSound("snow",
-			1.0F, 1.0F);
+
 	
 	
 	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
@@ -191,10 +141,6 @@ public class Transcraft {
 
 	@Instance("transcraft")
 	public static Transcraft instance;
-
-	
-	public static Block TransmatterFurnaceIdle;
-	public static Block TransmatterFurnaceBurning;
 
 	@SidedProxy(clientSide = "mark123mark.mods.transcraft.TranscraftClientProxy", serverSide = "mark123mark.mods.transcraft.TranscraftCommonProxy")
 	public static TranscraftCommonProxy Coproxy;
@@ -238,13 +184,8 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
 		
-
-     
 	}
 
-	
-	
-	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 
@@ -265,9 +206,6 @@ public class Transcraft {
 		
 	}
 
-
-	
-	
 	public static void oreRegistration() {
 		
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");
