@@ -236,7 +236,7 @@ Transcraft.DimPortalBlock = (new DimPortalBlock(Config.DimPortalBlockID))
 Transcraft.DimPortalEscapeBlock = (new EscapePortalBlock(Config.DimPortalEscapeBlockID))
 .setUnlocalizedName("Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
 .setTextureName("Transcraft:EscapePortal")
-.setCreativeTab(Transcraft.TranstabBlocks);
+.setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
 
 	}
 }

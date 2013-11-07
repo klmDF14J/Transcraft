@@ -297,6 +297,11 @@ public class Transcraft {
 	}
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
+		public boolean hasSearchBar()
+	     {
+	         return true;
+	     }
+		
 		public ItemStack getIconItemStack() {
 			return new ItemStack(EnderSword, 1, 0);
 
@@ -304,9 +309,15 @@ public class Transcraft {
 
 	};
 	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks") {
+		public boolean hasSearchBar()
+	     {
+	         return true;
+	     }
+		
 		public ItemStack getIconItemStack() {
 			return new ItemStack(TranscraftOre, 1, 0);
 		}
+		 
 
 	};
 	

@@ -40,8 +40,7 @@ public class FlatLands extends BiomeGenBase
     @Override
     public int getBiomeGrassColor()
     {
-       
-        return 0x07D7FF;
+    	  return 0x07D7FF;
     }
     
     @Override
@@ -54,7 +53,7 @@ public class FlatLands extends BiomeGenBase
     @SideOnly(Side.CLIENT)
     public int getSkyColorByTemp(float par1)
     {
-    	return 0x07D7FF;
+    		return 0x07D7FF;
     }
     
 }

@@ -88,14 +88,14 @@ public class RecipeLoader {
 		ItemStack GreenDye = new ItemStack(Item.dyePowder, 1, 2);
 		ItemStack OrangeDye = new ItemStack(Item.dyePowder, 1, 14);
 		
-		GameRegistry.addRecipe(new ItemStack(Transcraft.enderQuartz, 1), " q ", "qqq"," d ", 'd', GreenDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.chiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', Transcraft.enderQuartz, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.enderQuartz, 8), " q ", "qqq"," d ", 'd', GreenDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.chiselEnderQuartz, 8), " q ", "qqq"," d ", 'd', Transcraft.enderQuartz, 'q', Item.netherQuartz);
 		
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueenderQuartz, 1), " q ", "qqq"," d ", 'd', BlueDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BluechiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', Transcraft.BlueenderQuartz, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueenderQuartz, 8), " q ", "qqq"," d ", 'd', BlueDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.BluechiselEnderQuartz, 8), " q ", "qqq"," d ", 'd', Transcraft.BlueenderQuartz, 'q', Item.netherQuartz);
 		
-		GameRegistry.addRecipe(new ItemStack(Transcraft.RedenderQuartz, 1), " q ", "qqq"," d ", 'd', OrangeDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.RedchiselEnderQuartz, 1), " q ", "qqq"," d ", 'd', Transcraft.RedenderQuartz, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.RedenderQuartz, 8), " q ", "qqq"," d ", 'd', OrangeDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.RedchiselEnderQuartz, 8), " q ", "qqq"," d ", 'd', Transcraft.RedenderQuartz, 'q', Item.netherQuartz);
 		
 		
 		GameRegistry.addRecipe(new ItemStack(Transcraft.StairenderQuartz, 4), "b  ","bb ", "bbb", 'b', Transcraft.enderQuartz);
@@ -170,6 +170,10 @@ public class RecipeLoader {
 				"qqg", "qqr", 'q', Transcraft.QuadTransmuter, 'g',
 				Item.glowstone, 'r', Item.redstone);
 
+		
+		GameRegistry.addRecipe(new ItemStack(Transcraft.DimPortalBlock, 1), "dgd","bbb", "dgd", 'd', Item.diamond, 'g', Item.ingotGold,'b', Transcraft.BasicTransmuter);
+		
+		
 		// Smelting Recipes
 		GameRegistry.addSmelting(Transcraft.TranscraftOre.blockID, new ItemStack(
 				Transcraft.BasicTransmuter), 2.3f);
