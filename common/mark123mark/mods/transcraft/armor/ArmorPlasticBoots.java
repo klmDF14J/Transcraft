@@ -24,7 +24,7 @@ public class ArmorPlasticBoots extends ItemArmor
     @Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
-		return "Transcraft:textutres/armor/PlasticArmor_1.png";
+		return "Transcraft:textures/armor/PlasticArmor_1.png";
 	}
 
 	

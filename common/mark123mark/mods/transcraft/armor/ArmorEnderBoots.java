@@ -24,7 +24,7 @@ public class ArmorEnderBoots extends ItemArmor //implements IArmorTextureProvide
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 	{
-		return "Transcraft:textutres/armor/EnderArmor_1.png";
+		return "Transcraft:textures/armor/EnderArmor_1.png";
 	}
 	
 
