@@ -22,7 +22,7 @@ public class ArmorPlasticHelmet extends ItemArmor //implements IArmorTextureProv
     @Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
     {
-		return "Transcraft:armor/PlasticArmor_1.png";
+		return "Transcraft:textutres/armor/PlasticArmor_1.png";
 	}
 
 	@Override

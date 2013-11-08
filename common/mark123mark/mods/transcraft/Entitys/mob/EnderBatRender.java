@@ -40,7 +40,7 @@ public class EnderBatRender extends RenderBat
         this.func_82443_a((Enderbat)par1EntityLiving, par2, par4, par6, par8, par9);
     }
     
-    static final ResourceLocation texture = new ResourceLocation("transcraft", "mob/EnderBat.png");
+    static final ResourceLocation texture = new ResourceLocation("transcraft", "textutres/mob/EnderBat.png");
 
     @Override
     protected ResourceLocation getBatTextures(EntityBat par1EntityBat)
