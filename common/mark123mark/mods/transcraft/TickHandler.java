@@ -35,14 +35,13 @@ public class TickHandler implements ITickHandler
 		{
 			if(player.getCurrentArmor(2).itemID == Transcraft.EnderChest.itemID)
 			{
-//				player.capabilities.allowFlying = true;
+
 
 			} else {
 				
 				
 			}
 		}	
-		
 		
 		if(player.getCurrentArmor(1) != null)
 		{
@@ -52,6 +51,8 @@ public class TickHandler implements ITickHandler
 				{
 					player.addPotionEffect(new PotionEffect(1, 2, 8, true));
 				}
+				
+				
 		}	
 		
 	
