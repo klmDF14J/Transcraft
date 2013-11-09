@@ -37,7 +37,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 
 public class Transcraft {
-	public static final String VERSION = "1.6.4_V1.1.1_";
+	public static final String VERSION = "1.6.4_V1.2.0_";
 	public static final String STATE = "Release";
 	public static boolean SHOWDEVMESSGAE = false;
 	public static boolean TransmatterFurnace = true;
@@ -65,7 +65,6 @@ public class Transcraft {
 	public static Block DriedTransmutter;
 	public static Block TransManiaOre;
 	
-	
 	public static Block Transcrafter;
 	
 	public static Block enderQuartz;
@@ -84,7 +83,6 @@ public class Transcraft {
 	
 	public static Block DimPortalBlock;
 	public static Block DimPortalEscapeBlock;
-	
 	
 	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
 	
@@ -129,9 +127,6 @@ public class Transcraft {
 	public static int enderQuartzID;
 	public static int chiselEnderQuartzID;
 
-
-	
-	
 	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
 			"PlasticTool", 2, 750, 5.0F, 2, 0);
 	public static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
@@ -228,17 +223,12 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHanderTC());
 		
+		FMLLog.info("[TRANSCRAFT]	Adding new dims");
 		LoadDim.load();
-		
 		
 	}
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
-		@Override
-		public boolean hasSearchBar()
-	     {
-	         return true;
-	     }
 		
 		@Override
 		public ItemStack getIconItemStack() {
@@ -248,18 +238,12 @@ public class Transcraft {
 
 	};
 	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks") {
-		@Override
-		public boolean hasSearchBar()
-	     {
-	         return true;
-	     }
 		
 		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(TranscraftOre, 1, 0);
 		}
 		 
-
 	};
 	
 }
