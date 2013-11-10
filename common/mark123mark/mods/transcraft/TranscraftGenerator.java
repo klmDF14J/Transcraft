@@ -7,6 +7,7 @@ import mark123mark.mods.transcraft.WorldGen.WorldGenRings;
 import mark123mark.mods.transcraft.WorldGen.WorldGenRuins;
 import mark123mark.mods.transcraft.WorldGen.WorldGenTower;
 import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
+import mark123mark.mods.transcraft.WorldGen.TransManaia.OldHouse;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
@@ -58,6 +59,9 @@ public class TranscraftGenerator implements IWorldGenerator {
 		}
 
 		{
+			
+			
+			
 			if(random.nextInt(7500) == 0)
 			{
 				new WorldGenRingSphere(world, random).generate(i + 8, 0, j + 8);
@@ -109,6 +113,11 @@ private void generateTranDim(World world, Random random, int i, int j) {
 		
 
 		{
+			
+			int Xcoord1 = i + random.nextInt(16);
+			int Ycoord1 = random.nextInt(80);
+			int Zcoord1 = j + random.nextInt(16);
+			
 			if(random.nextInt(3500) == 0)
 			{
 				new WorldGenRingSphere(world, random).generate(i + 8, 0, j + 8);
@@ -129,7 +138,10 @@ private void generateTranDim(World world, Random random, int i, int j) {
 			{
 				new EscapePortal(world, random).generate(i + 8, 0, j + 8);
 			}
-			
+//			if(random.nextInt(150) == 0)
+//			{
+//				new OldHouse().generate(world, random, Xcoord1, Ycoord1, Zcoord1);
+//			}
 			
 			
 		}
