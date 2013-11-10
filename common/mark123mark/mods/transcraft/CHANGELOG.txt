@@ -1,0 +1,12 @@
+############1.6.4_V1.2.0_Release##########
+added enderbats
+Huge code clean up
+Added Transland Biome
+Added Transmaina
+Added Transmaina portlals
+Added Transmania Escape Portals
+Added Transmania world gen escape portals
+Added Changelog!
+Fixed the EnderSword eating is self
+Fixed server when nei is installed
+Removed unused Textures
