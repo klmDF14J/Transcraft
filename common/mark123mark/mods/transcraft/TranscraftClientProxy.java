@@ -6,6 +6,7 @@ import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
 import net.minecraft.client.Minecraft;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -28,7 +29,6 @@ public static Minecraft mc = Minecraft.getMinecraft();
 			TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
 			 RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class, new NukeCreeperRender());
 			 RenderingRegistry.registerEntityRenderingHandler(Enderbat.class, new EnderBatRender());
-			 
 		}
 	
 	 

@@ -55,6 +55,10 @@ public class TickHandler implements ITickHandler
 				
 		}	
 		
+			
+			
+			
+			
 	
 		if(player.getCurrentArmor(0) != null)
 		{

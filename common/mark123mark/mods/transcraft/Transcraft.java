@@ -13,6 +13,7 @@ import mark123mark.mods.transcraft.loaders.LoadOreDics;
 import mark123mark.mods.transcraft.loaders.RecipeLoader;
 import mark123mark.mods.transcraft.loaders.RegisterBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
@@ -20,13 +21,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
@@ -82,6 +86,8 @@ public class Transcraft {
 	
 	public static Block DimPortalBlock;
 	public static Block DimPortalEscapeBlock;
+			
+	public static Block ixpGrinder;		
 	
 	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
 	

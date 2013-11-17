@@ -59,6 +59,8 @@ public class Config {
 	public static int ComTransmutterOreID = 2023;
 	public static int ComOilOreID = 2024;
 
+	public static int ixpGrinderID =2025;
+	
 	public static int  LiquidTransmutterFluidStillID = 2101;
 
 	public static int  TranscrafterID = 2112;
@@ -177,6 +179,11 @@ public class Config {
        ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023).getInt();
        ComOilOreID = config.getBlock("Packed Oil Ore", 2024).getInt();
 
+       
+       
+       ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
+       
+       
        LiquidTransmutterFluidStillID = config.getBlock("LiquidTransmuterFluidStillID", 2101).getInt();
  
        

@@ -7,6 +7,7 @@ import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.EscapePortalBlock;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.TransDim.DimPortalBlock;
+import mark123mark.mods.transcraft.ixp.blocks.ixpGrinder;
 import net.minecraft.block.Block;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -236,6 +237,13 @@ Transcraft.DimPortalEscapeBlock = (new EscapePortalBlock(Config.DimPortalEscapeB
 .setUnlocalizedName("Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
 .setTextureName("Transcraft:EscapePortal")
 .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
+
+
+Transcraft.ixpGrinder = (new ixpGrinder(Config.ixpGrinderID))
+.setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
+.setTextureName("Transcraft:ixpGrinder")
+.setCreativeTab(Transcraft.TranstabBlocks);
+
 
 	}
 }
