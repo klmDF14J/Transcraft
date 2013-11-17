@@ -5,10 +5,6 @@
 // - ZeuX
 
 
-
-
-
-
 package mark123mark.mods.transcraft.models;
 
 import net.minecraft.client.model.ModelBase;
