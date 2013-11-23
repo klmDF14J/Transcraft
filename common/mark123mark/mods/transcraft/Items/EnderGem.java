@@ -44,7 +44,7 @@ public class EnderGem extends Item {
 	   {
 	 //   if(Minecraft.getMinecraft().objectMouseOver.entityHit instanceof EntityChicken)
 	   // {
-	     w.createExplosion(Minecraft.getMinecraft().objectMouseOver.entityHit, Minecraft.getMinecraft().objectMouseOver.entityHit.posX, Minecraft.getMinecraft().objectMouseOver.entityHit.posY, Minecraft.getMinecraft().objectMouseOver.entityHit.posZ, 30F, true);
+	     w.createExplosion(Minecraft.getMinecraft().objectMouseOver.entityHit, Minecraft.getMinecraft().objectMouseOver.entityHit.posX, Minecraft.getMinecraft().objectMouseOver.entityHit.posY, Minecraft.getMinecraft().objectMouseOver.entityHit.posZ, 3F, true);
 	  //  }
 	   }
 	  }
