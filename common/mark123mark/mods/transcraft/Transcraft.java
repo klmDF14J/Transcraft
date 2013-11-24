@@ -36,6 +36,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
@@ -203,6 +204,13 @@ public class Transcraft {
 		
 		FMLLog.info("[TRANSCRAFT]	Registering Player Editor");
 		NetworkRegistry.instance().registerConnectionHandler(new PlayerEditor());
+		
+		if (event.getSide() == Side.CLIENT)
+        {
+            MinecraftForge.EVENT_BUS.register(new EventCloakRender());
+        }
+
+		
 		
 	}
 
