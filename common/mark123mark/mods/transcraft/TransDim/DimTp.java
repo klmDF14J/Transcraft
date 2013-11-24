@@ -1195,9 +1195,15 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 5, j + 6, k + 2, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 6, k + 3, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 6, k + 4, Block.dirt.blockID);
-		worldServerInstance.setBlock(i + 5, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 5, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 5, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
+		
+		
+//		worldServerInstance.setBlock(i + 5, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
+//		worldServerInstance.setBlock(i + 5, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
+//		worldServerInstance.setBlock(i + 5, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
+		
+		
 		worldServerInstance.setBlock(i + 5, j + 6, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 6, k + 9, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 6, k + 10, Block.dirt.blockID);
@@ -1263,9 +1269,11 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 6, j + 6, k + 2, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 6, k + 3, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 6, k + 4, Block.dirt.blockID);
-		worldServerInstance.setBlock(i + 6, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 6, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 6, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
+	//	worldServerInstance.setBlock(i + 6, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
+	//	worldServerInstance.setBlock(i + 6, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
+	//	worldServerInstance.setBlock(i + 6, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
 		worldServerInstance.setBlock(i + 6, j + 6, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 6, k + 9, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 6, k + 10, Block.dirt.blockID);
@@ -1324,9 +1332,12 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 7, j + 6, k + 1, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 6, k + 2, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 6, k + 3, Block.dirt.blockID);
-		worldServerInstance.setBlock(i + 7, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 7, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
-		worldServerInstance.setBlock(i + 7, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
+//		worldServerInstance.setBlock(i + 7, j + 6, k + 5, Transcraft.DimPortalBlock.blockID);
+//		worldServerInstance.setBlock(i + 7, j + 6, k + 6, Transcraft.DimPortalBlock.blockID);
+//		worldServerInstance.setBlock(i + 7, j + 6, k + 7, Transcraft.DimPortalBlock.blockID);
+		
+		
 		worldServerInstance.setBlock(i + 7, j + 6, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 6, k + 9, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 6, k + 10, Block.dirt.blockID);

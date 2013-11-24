@@ -85,8 +85,8 @@ public class Transcraft {
 	public static Block StairRedenderQuartz;
 	public static Block StairRedchiselEnderQuartz;
 	
-	public static Block DimPortalBlock;
-	public static Block DimPortalEscapeBlock;
+//	public static Block DimPortalBlock;
+//	public static Block DimPortalEscapeBlock;
 			
 	public static Block ixpGrinder;		
 	
@@ -237,7 +237,7 @@ public class Transcraft {
 		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHanderTC());
 		
 		FMLLog.info("[TRANSCRAFT]	Adding new dims");
-		LoadDim.load();
+	//	LoadDim.load();
 		
 	}
 

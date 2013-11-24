@@ -171,7 +171,7 @@ public class RecipeLoader {
 				Item.glowstone, 'r', Item.redstone);
 
 		
-		GameRegistry.addRecipe(new ItemStack(Transcraft.DimPortalBlock, 1), "dgd","bbb", "dgd", 'd', Item.diamond, 'g', Item.ingotGold,'b', Transcraft.BasicTransmuter);
+//		GameRegistry.addRecipe(new ItemStack(Transcraft.DimPortalBlock, 1), "dgd","bbb", "dgd", 'd', Item.diamond, 'g', Item.ingotGold,'b', Transcraft.BasicTransmuter);
 		
 		
 		// Smelting Recipes

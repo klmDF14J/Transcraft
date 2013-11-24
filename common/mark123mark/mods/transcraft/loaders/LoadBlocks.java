@@ -226,6 +226,7 @@ Transcraft.StairRedchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.D
 .setTextureName("Transcraft:StairRedchiselenderquartz")
 .setCreativeTab(Transcraft.TranstabBlocks);
 
+/*
 
 Transcraft.DimPortalBlock = (new DimPortalBlock(Config.DimPortalBlockID))
 .setUnlocalizedName("Transcraft:DimPortalBlock").setHardness(1.0F)
@@ -233,12 +234,14 @@ Transcraft.DimPortalBlock = (new DimPortalBlock(Config.DimPortalBlockID))
 .setCreativeTab(Transcraft.TranstabBlocks);
 
 
+
+
 Transcraft.DimPortalEscapeBlock = (new EscapePortalBlock(Config.DimPortalEscapeBlockID))
 .setUnlocalizedName("Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
 .setTextureName("Transcraft:EscapePortal")
 .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
 
-
+*/
 Transcraft.ixpGrinder = (new ixpGrinder(Config.ixpGrinderID))
 .setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
 .setTextureName("Transcraft:ixpGrinder")
