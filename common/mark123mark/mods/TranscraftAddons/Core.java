@@ -1,6 +1,8 @@
 package mark123mark.mods.TranscraftAddons;
 
 
+import net.minecraftforge.common.MinecraftForge;
+import mark123mark.mods.transcraft.EventCloakRender;
 import mark123mark.mods.transcraft.Transcraft;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
@@ -28,15 +30,22 @@ public class Core {
 		@Instance("TranscraftAddons")
 		public static Core instance;
 		
-		@SideOnly(Side.CLIENT)
+		
 		@EventHandler
 		public void preInit(FMLPreInitializationEvent event) {
 		
-			if(Loader.isModLoaded("NotEnoughItems"));
-			{
-				AddonNEILoad.StartNei();
-				FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
-			}	
+			if (event.getSide() == Side.CLIENT)
+	        {
+				if(Loader.isModLoaded("NotEnoughItems"));
+				{
+					
+						AddonNEILoad.StartNei();
+						FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
+						
+				}
+	        }
+			
+			
 		}
 		
 		@EventHandler
@@ -52,6 +61,7 @@ public class Core {
 				
 	        }
 	       
+			
 			
 			if (Loader.isModLoaded("AppliedEnergistics"))
 	        {

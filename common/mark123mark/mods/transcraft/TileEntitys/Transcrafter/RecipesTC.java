@@ -1,6 +1,6 @@
 package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 
-import ic2.api.item.Items;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,7 +94,9 @@ public class RecipesTC {
 	        addRecipe(new ItemStack(Block.cobblestone, 3), "   ", "bcb", "   ",'b', Transcraft.BasicTransmuter, 'c', Block.cobblestone);
 	        
 	        addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ",'b', Transcraft.BasicTransmuter, 'e', Item.emerald);
-	       
+	     
+	        /*
+	        
 	        if (Loader.isModLoaded("TranscraftAddons"))
 	        {
 	        	if (Loader.isModLoaded("IC2"))
@@ -156,6 +158,7 @@ public class RecipesTC {
 	        
 	      //  , Character.valueOf('F'), ingotCopper
 	        
+	        */
 	        
 	    }
 
