@@ -241,12 +241,12 @@ Transcraft.DimPortalEscapeBlock = (new EscapePortalBlock(Config.DimPortalEscapeB
 .setTextureName("Transcraft:EscapePortal")
 .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
 
-*/
+
 Transcraft.ixpGrinder = (new ixpGrinder(Config.ixpGrinderID))
 .setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
 .setTextureName("Transcraft:ixpGrinder")
 .setCreativeTab(Transcraft.TranstabBlocks);
 
-
+*/
 	}
 }

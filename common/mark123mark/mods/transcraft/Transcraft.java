@@ -88,7 +88,7 @@ public class Transcraft {
 //	public static Block DimPortalBlock;
 //	public static Block DimPortalEscapeBlock;
 			
-	public static Block ixpGrinder;		
+//	public static Block ixpGrinder;		
 	
 	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
 	

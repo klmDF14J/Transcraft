@@ -49,8 +49,8 @@ public class Config {
 	public static int StairRedBlockEnderQuartzID = 2123;
 	public static int StairRedBlockChiselEnderQuartzID = 2124;
 	
-	public static int DimPortalBlockID = 2200;
-	public static int DimPortalEscapeBlockID = 2201;
+//	public static int DimPortalBlockID = 2200;
+//	public static int DimPortalEscapeBlockID = 2201;
 	
 	
 	
@@ -59,7 +59,7 @@ public class Config {
 	public static int ComTransmutterOreID = 2023;
 	public static int ComOilOreID = 2024;
 
-	public static int ixpGrinderID =2025;
+//	public static int ixpGrinderID =2025;
 	
 	public static int  LiquidTransmutterFluidStillID = 2101;
 
@@ -181,7 +181,7 @@ public class Config {
 
        
        
-       ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
+   //    ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
        
        
        LiquidTransmutterFluidStillID = config.getBlock("LiquidTransmuterFluidStillID", 2101).getInt();
@@ -189,8 +189,8 @@ public class Config {
        
        TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
       
-       DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
-       DimPortalEscapeBlockID = config.getBlock("Portal Escape Block", 2201).getInt();
+    //   DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
+    //   DimPortalEscapeBlockID = config.getBlock("Portal Escape Block", 2201).getInt();
        
 
        
