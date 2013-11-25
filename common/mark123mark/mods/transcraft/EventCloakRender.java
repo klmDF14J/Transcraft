@@ -27,10 +27,13 @@ public class EventCloakRender
     {
      //   buildCloakURLDatabase();
         instance = this;
-        cloaks.put("mark123mark", "https://dl.dropboxusercontent.com/s/da22y3de0unde5y/TranscraftCape.png?dl=1&token_hash=AAEh0n_TlvX8xZ0ygpbj402vXhNxcdTeF85NcFlz27Hu4Q");
-        cloaks.put("Drewzombie", "https://dl.dropboxusercontent.com/s/pni71ewt7r7bfjs/TranscraftCape2.png?dl=1&token_hash=AAGNCZskvTMdVKI9BUX2s3ev8g0SpLMXidpIPzqJDTKJkg");
-        cloaks.put("DrumBaseCZ", "https://dl.dropboxusercontent.com/s/pni71ewt7r7bfjs/TranscraftCape2.png?dl=1&token_hash=AAGNCZskvTMdVKI9BUX2s3ev8g0SpLMXidpIPzqJDTKJkg");
-        cloaks.put("shifu_", "https://dl.dropboxusercontent.com/s/pni71ewt7r7bfjs/TranscraftCape2.png?dl=1&token_hash=AAGNCZskvTMdVKI9BUX2s3ev8g0SpLMXidpIPzqJDTKJkg");
+        cloaks.put("mark123mark", "https://dl.dropboxusercontent.com/s/u32tnmr6pta5cx8/transcraft_dev.png?dl=1&token_hash=AAGmcRjgBcuQ548v6cMRRFbP0Rxp04pJvTVaKxJfUhOyaQ");
+        
+        cloaks.put("Drewzombie", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
+        cloaks.put("DrumBaseCZ", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
+        cloaks.put("shifu_", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
+        cloaks.put("newcommer24", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
+      //  cloaks.put("StokeMiner", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
     }
 
     @ForgeSubscribe
