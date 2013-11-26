@@ -34,6 +34,7 @@ public class EventCloakRender
         cloaks.put("shifu_", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
         cloaks.put("newcommer24", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
         cloaks.put("Stokeminer", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
+        cloaks.put("Fella001", "https://dl.dropboxusercontent.com/s/pare4eq4xxr79nm/transcraft_gen.png?dl=1&token_hash=AAGP-HI1tgv4m9PGWvInRz2icyUA-HdRNZtMW0KruU_rTw");
     }
 
     @ForgeSubscribe
