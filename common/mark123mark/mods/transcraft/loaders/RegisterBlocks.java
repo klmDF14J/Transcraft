@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft.loaders;
 
+import net.minecraft.item.Item;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -90,6 +91,41 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
 	//	GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
 		
+		
+		/*
+		 * 
+		
+		
+		GameRegistry.registerItem(Transcraft.BasicTransmuter, "BasicTransmutter" );
+		GameRegistry.registerItem(Transcraft.QuadTransmuter, "QuadTransmutter");
+		GameRegistry.registerItem(Transcraft.NanoTransmuter, "NanoTransmutter");
+		GameRegistry.registerItem(Transcraft.HotDog, "HotDog");
+		GameRegistry.registerItem(Transcraft.Oil, "Oil");
+		GameRegistry.registerItem(Transcraft.Plastic, "Plastic");
+		GameRegistry.registerItem(Transcraft.IronStick, "IronStick");
+		GameRegistry.registerItem(Transcraft.HardendPlastic, "HardendPlastic");
+		GameRegistry.registerItem(Transcraft.EnderGem, "EnderGem");
+		GameRegistry.registerItem(Transcraft.EnderQuartz, "EnderQuartz");
+		GameRegistry.registerItem(Transcraft.DarkEndershard, "DarkEndershard");
+		
+		GameRegistry.registerItem(Transcraft.PlasticAxe, "PlasticAxe");
+		GameRegistry.registerItem(Transcraft.PlasticHoe, "PlasticHoe");
+		GameRegistry.registerItem(Transcraft.PlasticPickaxe, "PlasticPickaxe");
+		GameRegistry.registerItem(Transcraft.PlasticShovel, "PlasticShovel");
+		GameRegistry.registerItem(Transcraft.PlasticSword, "PlasticSword");
+		GameRegistry.registerItem(Transcraft.BunkerPick, "BunkerPick");
+		GameRegistry.registerItem(Transcraft.EnderSword, "EnderSword");
+	
+		GameRegistry.registerItem(Transcraft.PlasticHelmet, "PlasticHelmet");
+		GameRegistry.registerItem(Transcraft.PlasticChest, "PlasticChest");
+		GameRegistry.registerItem(Transcraft.PlasticLegs, "PlasticLegs");
+		GameRegistry.registerItem(Transcraft.PlasticBoots, "PlasticBoots");
+		GameRegistry.registerItem(Transcraft.EnderHelmet, "EnderHelmet");
+		GameRegistry.registerItem(Transcraft.EnderChest, "EnderChest");
+		GameRegistry.registerItem(Transcraft.EnderLegs, "EnderLegs");
+		GameRegistry.registerItem(Transcraft.EnderBoots, "EnderBoots");
+		
+		 */
 		
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		

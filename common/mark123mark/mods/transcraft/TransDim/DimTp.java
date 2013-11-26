@@ -84,6 +84,10 @@ public class DimTp extends Teleporter
 		}
 		else
 		{
+		}	
+			/*
+			 * 
+			 
 			for (var48 = var15 - var9; var48 <= var15 + var9; ++var48)
 			{
 				double var21 = var48 + 0.5D - par1Entity.posX;
@@ -237,6 +241,8 @@ public class DimTp extends Teleporter
 			return true;
 		} else
 			return false;
+			*/
+		return var19;
 	}
 
 	@Override

@@ -34,22 +34,7 @@ public class EnderGem extends Item {
 			 itemIcon = par1IconRegister.registerIcon("Transcraft:EnderGem");
 		}
 	
-	 @Override
-	 public ItemStack onItemRightClick(ItemStack i, World w, EntityPlayer p)
-	 {
-		 
-	 if(Minecraft.getMinecraft().objectMouseOver != null)
-	  {
-	   if(Minecraft.getMinecraft().objectMouseOver.typeOfHit == EnumMovingObjectType.ENTITY)
-	   {
-	 //   if(Minecraft.getMinecraft().objectMouseOver.entityHit instanceof EntityChicken)
-	   // {
-	     w.createExplosion(Minecraft.getMinecraft().objectMouseOver.entityHit, Minecraft.getMinecraft().objectMouseOver.entityHit.posX, Minecraft.getMinecraft().objectMouseOver.entityHit.posY, Minecraft.getMinecraft().objectMouseOver.entityHit.posZ, 3F, true);
-	  //  }
-	   }
-	  }
-	return i;
-	 }
+	
   
 	
 }

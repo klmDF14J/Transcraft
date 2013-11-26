@@ -1,3 +1,7 @@
+############1.6.4_V1.3.0_Release##########
+Removed transmaina(will be back in 2.0)
+Removed Ic2 support(will be back in 2.0)
+added dev and tester cape
 ############1.6.4_V1.2.0_Release##########
 added enderbats
 Huge code clean up

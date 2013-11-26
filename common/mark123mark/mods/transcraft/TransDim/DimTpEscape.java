@@ -90,12 +90,12 @@ public class DimTpEscape extends Teleporter
 
 					for (int var26 = worldServerInstance.getActualHeight() - 1; var26 >= 0; --var26)
 					{
-						if (worldServerInstance.getBlockId(var48, var26, var23) == Config.DimPortalBlockID)
-						{
-							while (worldServerInstance.getBlockId(var48, var26 - 1, var23) == Config.DimPortalBlockID)
-							{
+	//					if (worldServerInstance.getBlockId(var48, var26, var23) == Config.DimPortalBlockID)
+	//					{
+	//						while (worldServerInstance.getBlockId(var48, var26 - 1, var23) == Config.DimPortalBlockID)
+	//						{
 								--var26;
-							}
+	//						}
 
 							var27 = var26 + 0.5D - par1Entity.posY;
 							double var29 = var21 * var21 + var27 * var27 + var24 * var24;
@@ -110,7 +110,7 @@ public class DimTpEscape extends Teleporter
 						}
 					}
 				}
-			}
+			//}
 		}
 
 		if (var10 >= 0.0D)
@@ -126,25 +126,25 @@ public class DimTpEscape extends Teleporter
 			var27 = k + 0.5D;
 			int var50 = -1;
 
-			if (worldServerInstance.getBlockId(i - 1, j, k) == Config.DimPortalBlockID)
-			{
-				var50 = 2;
-			}
+	//		if (worldServerInstance.getBlockId(i - 1, j, k) == Config.DimPortalBlockID)
+	//		{
+	//			var50 = 2;
+	//		}
 
-			if (worldServerInstance.getBlockId(i + 1, j, k) == Config.DimPortalBlockID)
-			{
-				var50 = 0;
-			}
+	//		if (worldServerInstance.getBlockId(i + 1, j, k) == Config.DimPortalBlockID)
+	//		{
+	//			var50 = 0;
+	//		}
 
-			if (worldServerInstance.getBlockId(i, j, k - 1) == Config.DimPortalBlockID)
-			{
-				var50 = 3;
-			}
+	//		if (worldServerInstance.getBlockId(i, j, k - 1) == Config.DimPortalBlockID)
+	//		{
+	//			var50 = 3;
+	//		}
 
-			if (worldServerInstance.getBlockId(i, j, k + 1) == Config.DimPortalBlockID)
-			{
-				var50 = 1;
-			}
+	//		if (worldServerInstance.getBlockId(i, j, k + 1) == Config.DimPortalBlockID)
+	//		{
+	//			var50 = 1;
+	//		}
 
 			int var30 = par1Entity.getTeleportDirection();
 

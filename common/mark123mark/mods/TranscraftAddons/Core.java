@@ -1,8 +1,6 @@
 package mark123mark.mods.TranscraftAddons;
 
 
-import net.minecraftforge.common.MinecraftForge;
-import mark123mark.mods.transcraft.EventCloakRender;
 import mark123mark.mods.transcraft.Transcraft;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
@@ -14,7 +12,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 
 @Mod(modid="TranscraftAddons", name="TranscraftAddons", version=Transcraft.VERSION + Transcraft.STATE , dependencies = "required-after:transcraft")
@@ -38,11 +35,13 @@ public class Core {
 	        {
 				if(Loader.isModLoaded("NotEnoughItems"));
 				{
-					
-						AddonNEILoad.StartNei();
-						FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
-						
+					if(Loader.isModLoaded("CodeChickenCore"));
+					{
+							AddonNEILoad.StartNei();
+							FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
+					}
 				}
+				
 	        }
 			
 			

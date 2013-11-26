@@ -95,8 +95,8 @@ public class RecipesTC {
 	        
 	        addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ",'b', Transcraft.BasicTransmuter, 'e', Item.emerald);
 	     
-	        /*
 	        
+	        /*
 	        if (Loader.isModLoaded("TranscraftAddons"))
 	        {
 	        	if (Loader.isModLoaded("IC2"))
@@ -134,32 +134,8 @@ public class RecipesTC {
 		        } 
 	        }
 	       
-	        if (Loader.isModLoaded("TranscraftAddons"))
-	        {
-	        	if (Loader.isModLoaded("AppliedEnergistics"))
-		        {
-	        	//	ItemStack blkQuartz = Materials.matQuartz.copy();
-	    		//	ItemStack blkQuartz24 =  Materials.matQuartz.copy();
-	    		//	blkQuartz24.stackSize = 24;
-	    			
-	    		//	addRecipe((blkQuartz24), "   ", "ndn", "   ",'n', Transcraft.NanoTransmuter, 'd', blkQuartz);
-	    		
-		        } 
-	        }
-	        
-	        if (Loader.isModLoaded("TranscraftAddons"))
-	        {
-	        	if (Loader.isModLoaded("Railcraft"))
-		        {
-	        	
-	    			//addRecipe(("ingotSteel"), "   ", "ndn", "   ",'n', Transcraft.NanoTransmuter, 'd', ":ingotSteel");
-		        } 
-	        }
-	        
-	      //  , Character.valueOf('F'), ingotCopper
-	        
 	        */
-	        
+	       
 	    }
 
 	    public ShapedRecipes addRecipe(ItemStack par1ItemStack, Object ... par2ArrayOfObj)

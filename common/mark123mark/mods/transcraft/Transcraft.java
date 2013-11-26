@@ -42,8 +42,8 @@ import cpw.mods.fml.relauncher.Side;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 
 public class Transcraft {
-	public static final String VERSION = "1.6.4_V1.2.0_";
-	public static final String STATE = "Release";
+	public static final String VERSION = "1.6.4_V1.3.0_";
+	public static final String STATE = "ALPHA";
 	public static boolean SHOWDEVMESSGAE = false;
 
 	// Listblocks here
@@ -100,7 +100,6 @@ public class Transcraft {
 	public static Item Plastic;
 	public static Item IronStick;
 	public static Item HardendPlastic;
-	public static Item IronTorchThrower;
 	public static Item EnderGem;
 	public static Item EnderQuartz;
 	public static Item DarkEndershard;
@@ -164,14 +163,17 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Loading Blocks");
 		LoadBlocks.LoadBlocks();
 		
+		FMLLog.info("[TRANSCRAFT]	Loading Items");
+		LoadItems.LoadItems();
+		
+		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
+		TranscraftFluids.init();
+		
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
 
-		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-		TranscraftFluids.init();
-
-		FMLLog.info("[TRANSCRAFT]	Loading Items");
-		LoadItems.LoadItems();
+		FMLLog.info("[TRANSCRAFT]	Registering Items with the LanguageRegistry");
+		LoadLang.loadlang();
 		
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
 		LoadBlockSettings.LoadSet();		
@@ -179,9 +181,6 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
 		RecipeLoader.LoadRecipe();
 		
-		FMLLog.info("[TRANSCRAFT]	Registering Items with the LanguageRegistry");
-		LoadLang.loadlang();
-
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
 		
