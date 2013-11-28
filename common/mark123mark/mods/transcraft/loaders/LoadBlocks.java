@@ -150,7 +150,7 @@ Transcraft.ComOilOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComOilOre(
 ;
 		
 Transcraft.Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(
-		Config.TranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F)
+		Config.TranscrafterID, "tcraft" ,false).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F)
 		.setUnlocalizedName("Transcraft:Transcrafter");
 GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
 

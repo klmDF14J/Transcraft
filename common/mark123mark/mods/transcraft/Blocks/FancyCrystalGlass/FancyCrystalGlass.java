@@ -1,5 +1,9 @@
 package mark123mark.mods.transcraft.Blocks.FancyCrystalGlass;
 
+import java.util.Random;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -571,9 +575,6 @@ public class FancyCrystalGlass extends Block
          //   }
     	}
     	
-    	
-    	
-
         return icons[0];
     }
 
@@ -623,5 +624,21 @@ public class FancyCrystalGlass extends Block
         icons[14] = par1IconRegister.registerIcon("Transcraft:glass/FancyGlass/glass_3_r");
         icons[15] = par1IconRegister.registerIcon("Transcraft:glass/FancyGlass/glass_4");
     }
+    
+    
+  
 
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+    {
+            super.randomDisplayTick(par1World, par2, par3, par4, par5Random);
+
+            if (par5Random.nextInt(1) == 0)
+            {
+            	//Transcraft.Clproxy.spawnParticle("glass", par2 + par5Random.nextFloat(), par3 + 1.0F, par4 + par5Random.nextFloat());
+            }
+    }
+    
 }

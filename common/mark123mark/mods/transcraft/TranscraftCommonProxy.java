@@ -30,4 +30,8 @@ public class TranscraftCommonProxy {
 		//		GameRegistry.registerTileEntity(TileEntityTF.class, "TileEntity");
 		}
 		
+		
+		public void spawnParticle(String string, double x, double y, double z)
+        {
+        }
 }	
