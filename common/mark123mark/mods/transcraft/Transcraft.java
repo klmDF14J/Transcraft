@@ -20,6 +20,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
@@ -182,6 +183,11 @@ public class Transcraft
 		LoadEntity.loadentity();
 
 		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.HILLS, Type.FOREST, Type.WATER);
+		GameRegistry.addBiome(TransmutterBiome);
+		BiomeManager.addSpawnBiome(TransmutterBiome);
+		BiomeManager.addStrongholdBiome(TransmutterBiome);
+
+		GameRegistry.addBiome(FlatLands);
 
 	}
 
