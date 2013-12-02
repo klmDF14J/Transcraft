@@ -187,7 +187,7 @@ public class Transcraft
 		BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
-		GameRegistry.addBiome(FlatLands);
+		// GameRegistry.addBiome(FlatLands);
 
 	}
 
