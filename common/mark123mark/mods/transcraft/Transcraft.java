@@ -90,7 +90,7 @@ public class Transcraft
 	// public static Block ixpGrinder;
 
 	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
-	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(190)).setBiomeName("TransmutterBiome");
+	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F, 0.4F);
 
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
