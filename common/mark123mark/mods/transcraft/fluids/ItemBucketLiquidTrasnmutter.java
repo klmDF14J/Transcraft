@@ -70,7 +70,7 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 			world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
 
 			return new ItemStack(
-				Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 2);
+				Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 1);
 		    }
 
 		    if (!player.inventory
@@ -80,7 +80,7 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 			world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
 
 			player.dropPlayerItem(new ItemStack(
-				Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 2));
+				Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 1));
 		    }
 
 		    return itemstack;
@@ -103,7 +103,8 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 		    return itemstack;
 
 		if (isFull < 0)
-		    return new ItemStack(Item.bucketEmpty);
+		    return new ItemStack(
+			    Fluids.ItemBucketLiquidTrasnmutter.get());
 
 		if (pos.sideHit == 0) {
 		    --j;
@@ -135,7 +136,8 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 		if (this.tryPlaceContainedLiquid(world, d0, d1, d2, i, j, k)
 			&& !player.capabilities.isCreativeMode) {
 		    if (itemstack.getItemDamage() != 2)
-			return new ItemStack(Item.bucketEmpty);
+			return new ItemStack(
+				Fluids.ItemBucketLiquidTrasnmutter.get());
 		    else
 			return new ItemStack(
 				Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 0);
@@ -227,7 +229,13 @@ public class ItemBucketLiquidTrasnmutter extends Item {
 
     @Override
     public Icon getIconFromDamage(int meta) {
-	return textures[meta];
+	if (meta == 0) {
+	    return textures[0];
+	} else if (meta == 1) {
+	    return textures[1];
+	}
+	return null;
+
     }
 
 }
