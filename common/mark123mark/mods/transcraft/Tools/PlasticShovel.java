@@ -1,13 +1,12 @@
 package mark123mark.mods.transcraft.Tools;
 
-
 import mark123mark.mods.transcraft.Config;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
-public class PlasticShovel extends ItemSpade 
+public class PlasticShovel extends ItemSpade
 {
 
 	public PlasticShovel(int par1, EnumToolMaterial par2EnumToolMaterial)
@@ -15,18 +14,18 @@ public class PlasticShovel extends ItemSpade
 		super(par1, par2EnumToolMaterial);
 	}
 
-    /**
-     * Return whether this item is repairable in an anvil.
-     */
+	/**
+	 * Return whether this item is repairable in an anvil.
+	 */
 	@Override
-    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
-    {
-        return par2ItemStack.itemID == Config.PlasticID;
-    }
+	public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+		return par2ItemStack.itemID == Config.PlasticID;
+	}
 
-    @Override
+	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		 itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticShovel");
+		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticShovel");
 	}
 }

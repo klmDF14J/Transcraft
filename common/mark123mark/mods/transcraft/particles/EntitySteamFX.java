@@ -13,8 +13,7 @@ public class EntitySteamFX extends EntityFX
 {
 	private static final String texture = "Transcraft:textures/particles/steam.png";
 
-
-    float steamParticleScale;
+	float steamParticleScale;
 
 	public EntitySteamFX(World par1World, double par2, double par4, double par6, double par8, double par10, double par12)
 	{
@@ -24,19 +23,19 @@ public class EntitySteamFX extends EntityFX
 	public EntitySteamFX(World par1World, double par2, double par4, double par6, double par8, double par10, double par12, float par14)
 	{
 		super(par1World, par2, par4, par6, 0.0D, 0.0D, 0.0D);
-        this.motionX *= 0.10000000149011612D;
-        this.motionY *= 0.10000000149011612D;
-        this.motionZ *= 0.10000000149011612D;
-        this.motionX += par8;
-        this.motionY += par10;
-        this.motionZ += par12;
-        this.particleRed = this.particleGreen = this.particleBlue = (float)(Math.random() * 0.30000001192092896D);
-        this.particleScale *= 0.75F;
-        this.particleScale *= par14;
-        this.steamParticleScale = this.particleScale;
-        this.particleMaxAge = (int)(8.0D / (Math.random() * 0.8D + 0.2D));
-        this.particleMaxAge = (int)(this.particleMaxAge * par14);
-        this.noClip = false;
+		this.motionX *= 0.10000000149011612D;
+		this.motionY *= 0.10000000149011612D;
+		this.motionZ *= 0.10000000149011612D;
+		this.motionX += par8;
+		this.motionY += par10;
+		this.motionZ += par12;
+		this.particleRed = this.particleGreen = this.particleBlue = (float) (Math.random() * 0.30000001192092896D);
+		this.particleScale *= 0.75F;
+		this.particleScale *= par14;
+		this.steamParticleScale = this.particleScale;
+		this.particleMaxAge = (int) (8.0D / (Math.random() * 0.8D + 0.2D));
+		this.particleMaxAge = (int) (this.particleMaxAge * par14);
+		this.noClip = false;
 	}
 
 	@Override
@@ -63,37 +62,36 @@ public class EntitySteamFX extends EntityFX
 		GL11.glEnable(3042);
 		GL11.glBlendFunc(770, 1);
 
-
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(texture));
-		
-        float f6 = this.particleTextureIndexX / 16.0F;
-        float f7 = f6 + 0.0624375F;
-        float f8 = this.particleTextureIndexY / 16.0F;
-        float f9 = f8 + 0.0624375F;
-        float f10 = 0.1F * this.particleScale;
 
-        if (this.particleIcon != null)
-        {
-            f6 = this.particleIcon.getMinU();
-            f7 = this.particleIcon.getMaxU();
-            f8 = this.particleIcon.getMinV();
-            f9 = this.particleIcon.getMaxV();
-        }
+		float f6 = this.particleTextureIndexX / 16.0F;
+		float f7 = f6 + 0.0624375F;
+		float f8 = this.particleTextureIndexY / 16.0F;
+		float f9 = f8 + 0.0624375F;
+		float f10 = 0.1F * this.particleScale;
 
-        float f11 = (float)(this.prevPosX + (this.posX - this.prevPosX) * par2 - interpPosX);
-        float f12 = (float)(this.prevPosY + (this.posY - this.prevPosY) * par2 - interpPosY);
-        float f13 = (float)(this.prevPosZ + (this.posZ - this.prevPosZ) * par2 - interpPosZ);
-        float f14 = 1.0F;
-        
+		if (this.particleIcon != null)
+		{
+			f6 = this.particleIcon.getMinU();
+			f7 = this.particleIcon.getMaxU();
+			f8 = this.particleIcon.getMinV();
+			f9 = this.particleIcon.getMaxV();
+		}
+
+		float f11 = (float) (this.prevPosX + (this.posX - this.prevPosX) * par2 - interpPosX);
+		float f12 = (float) (this.prevPosY + (this.posY - this.prevPosY) * par2 - interpPosY);
+		float f13 = (float) (this.prevPosZ + (this.posZ - this.prevPosZ) * par2 - interpPosZ);
+		float f14 = 1.0F;
+
 		tessellator.startDrawingQuads();
 		tessellator.setBrightness(10);
-        
-        tessellator.setColorRGBA_F(this.particleRed * f14, this.particleGreen * f14, this.particleBlue * f14, this.particleAlpha);
-        tessellator.addVertexWithUV(f11 - par3 * f10 - par6 * f10, f12 - par4 * f10, f13 - par5 * f10 - par7 * f10, f7, f9);
-        tessellator.addVertexWithUV(f11 - par3 * f10 + par6 * f10, f12 + par4 * f10, f13 - par5 * f10 + par7 * f10, f7, f8);
-        tessellator.addVertexWithUV(f11 + par3 * f10 + par6 * f10, f12 + par4 * f10, f13 + par5 * f10 + par7 * f10, f6, f8);
-        tessellator.addVertexWithUV(f11 + par3 * f10 - par6 * f10, f12 - par4 * f10, f13 + par5 * f10 - par7 * f10, f6, f9);
-        
+
+		tessellator.setColorRGBA_F(this.particleRed * f14, this.particleGreen * f14, this.particleBlue * f14, this.particleAlpha);
+		tessellator.addVertexWithUV(f11 - par3 * f10 - par6 * f10, f12 - par4 * f10, f13 - par5 * f10 - par7 * f10, f7, f9);
+		tessellator.addVertexWithUV(f11 - par3 * f10 + par6 * f10, f12 + par4 * f10, f13 - par5 * f10 + par7 * f10, f7, f8);
+		tessellator.addVertexWithUV(f11 + par3 * f10 + par6 * f10, f12 + par4 * f10, f13 + par5 * f10 + par7 * f10, f6, f8);
+		tessellator.addVertexWithUV(f11 + par3 * f10 - par6 * f10, f12 - par4 * f10, f13 + par5 * f10 - par7 * f10, f6, f9);
+
 		tessellator.draw();
 
 		GL11.glDisable(3042);
@@ -101,45 +99,44 @@ public class EntitySteamFX extends EntityFX
 
 		GL11.glPopMatrix();
 
-		
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation("textures/particle/particles.png"));
-		
+
 		tessellator.startDrawingQuads();
 	}
 
 	/**
 	 * Called to update the entity's position/logic.
 	 */
-	 @Override
-	 public void onUpdate()
-	 {
-		 prevPosX = posX;
-		 prevPosY = posY;
-		 prevPosZ = posZ;
+	@Override
+	public void onUpdate()
+	{
+		prevPosX = posX;
+		prevPosY = posY;
+		prevPosZ = posZ;
 
-		 if (particleAge++ >= particleMaxAge)
-		 {
-			 this.setDead();
-		 }
+		if (particleAge++ >= particleMaxAge)
+		{
+			this.setDead();
+		}
 
-		 this.setParticleTextureIndex(7 - particleAge * 8 / particleMaxAge);
-		 motionY += 0.004D;
-		 this.moveEntity(motionX, motionY, motionZ);
+		this.setParticleTextureIndex(7 - particleAge * 8 / particleMaxAge);
+		motionY += 0.004D;
+		this.moveEntity(motionX, motionY, motionZ);
 
-		 if (posY == prevPosY)
-		 {
-			 motionX *= 1.1D;
-			 motionZ *= 1.1D;
-		 }
+		if (posY == prevPosY)
+		{
+			motionX *= 1.1D;
+			motionZ *= 1.1D;
+		}
 
-		 motionX *= 0.9599999785423279D;
-		 motionY *= 0.9599999785423279D;
-		 motionZ *= 0.9599999785423279D;
+		motionX *= 0.9599999785423279D;
+		motionY *= 0.9599999785423279D;
+		motionZ *= 0.9599999785423279D;
 
-		 if (onGround)
-		 {
-			 motionX *= 0.699999988079071D;
-			 motionZ *= 0.699999988079071D;
-		 }
-	 }
+		if (onGround)
+		{
+			motionX *= 0.699999988079071D;
+			motionZ *= 0.699999988079071D;
+		}
+	}
 }

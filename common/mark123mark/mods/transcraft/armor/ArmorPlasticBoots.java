@@ -21,18 +21,17 @@ public class ArmorPlasticBoots extends ItemArmor
 		super(par1, par2EnumArmorMaterial, par3, par4);
 	}
 
-    @Override
+	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
-    {
+	{
 		return "Transcraft:textures/armor/PlasticArmor_1.png";
 	}
 
-	
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		 itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticBoots");
+		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticBoots");
 	}
 
 }

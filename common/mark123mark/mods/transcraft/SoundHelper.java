@@ -3,12 +3,12 @@ package mark123mark.mods.transcraft;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;
 
-public class SoundHelper {
+public class SoundHelper
+{
 	@ForgeSubscribe
 	public void onSound(SoundLoadEvent e)
 	{
 		e.manager.addSound("Transcraft:SwordHit.ogg");
 	}
-	
-	
+
 }

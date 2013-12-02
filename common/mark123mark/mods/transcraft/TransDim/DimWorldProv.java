@@ -8,7 +8,7 @@ import net.minecraft.world.biome.WorldChunkManagerHell;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DimWorldProv extends WorldProvider //implements IWorldProvider
+public class DimWorldProv extends WorldProvider // implements IWorldProvider
 {
 	@Override
 	public void registerWorldChunkManager()
@@ -16,8 +16,7 @@ public class DimWorldProv extends WorldProvider //implements IWorldProvider
 		this.worldChunkMgr = new WorldChunkManagerHell(Transcraft.FlatLands, 0.8F, 0.1F);
 		this.dimensionId = Config.DimID;
 	}
-	
-	
+
 	@Override
 	public String getDimensionName()
 	{
@@ -29,14 +28,13 @@ public class DimWorldProv extends WorldProvider //implements IWorldProvider
 	{
 		return false;
 	}
-	
-	@Override
-    public double getMovementFactor()
-    {
-        return 116.0;
-    }
 
-	
+	@Override
+	public double getMovementFactor()
+	{
+		return 116.0;
+	}
+
 	@Override
 	public float calculateCelestialAngle(long par1, float par3)
 	{
@@ -44,17 +42,15 @@ public class DimWorldProv extends WorldProvider //implements IWorldProvider
 	}
 
 	@SideOnly(Side.CLIENT)
-    public int getSkyColor()
-    {
+	public int getSkyColor()
+	{
 		return 0x07D7FF;
-    }
+	}
 
 	public boolean darkenSkyDuringRain()
 	{
 		return false;
 	}
-
-	
 
 	@Override
 	public ChunkCoordinates getEntrancePortalLocation()
@@ -79,12 +75,12 @@ public class DimWorldProv extends WorldProvider //implements IWorldProvider
 	{
 		return false;
 	}
-	
+
 	@Override
-    public boolean canCoordinateBeSpawn(int par1, int par2)
-    {
-        return false;
-    }
+	public boolean canCoordinateBeSpawn(int par1, int par2)
+	{
+		return false;
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -111,7 +107,4 @@ public class DimWorldProv extends WorldProvider //implements IWorldProvider
 		allowPeaceful = true;
 	}
 
-
-	
-	
 }

@@ -12,15 +12,16 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import cpw.mods.fml.common.FMLLog;
 
-public class OldHouse extends WorldGenerator {
+public class OldHouse extends WorldGenerator
+{
 
-	public OldHouse() {}
+	public OldHouse()
+	{
+	}
 
-
-	
 	@Override
-	public boolean generate(World world, Random rand, int i, int j, int k) {
-		
+	public boolean generate(World world, Random rand, int i, int j, int k)
+	{
 
 		world.setBlock(i + 0, j + 0, k + 0, 0);
 		world.setBlock(i + 0, j + 0, k + 1, 0);
@@ -1527,7 +1528,8 @@ public class OldHouse extends WorldGenerator {
 		return true;
 	}
 
-	public boolean generate2(World world, Random rand, int i, int j, int k) {
+	public boolean generate2(World world, Random rand, int i, int j, int k)
+	{
 		world.setBlock(i + 6, j + 4, k + 0, 0);
 		world.setBlock(i + 6, j + 4, k + 1, Block.stone.blockID);
 		world.setBlock(i + 6, j + 4, k + 2, Block.web.blockID);
@@ -3033,7 +3035,8 @@ public class OldHouse extends WorldGenerator {
 		return true;
 	}
 
-	public boolean generate3(World world, Random rand, int i, int j, int k) {
+	public boolean generate3(World world, Random rand, int i, int j, int k)
+	{
 		world.setBlock(i + 12, j + 10, k + 8, 0);
 		world.setBlock(i + 12, j + 10, k + 9, 0);
 		world.setBlock(i + 12, j + 10, k + 10, 0);
@@ -4539,7 +4542,8 @@ public class OldHouse extends WorldGenerator {
 		return true;
 	}
 
-	public boolean generate4(World world, Random rand, int i, int j, int k) {
+	public boolean generate4(World world, Random rand, int i, int j, int k)
+	{
 		world.setBlock(i + 18, j + 10, k + 9, 0);
 		world.setBlock(i + 18, j + 10, k + 10, 0);
 		world.setBlock(i + 18, j + 10, k + 11, 0);
@@ -5243,12 +5247,5 @@ public class OldHouse extends WorldGenerator {
 
 		return true;
 	}
-
-
-	
-	
-	
-	
-	
 
 }

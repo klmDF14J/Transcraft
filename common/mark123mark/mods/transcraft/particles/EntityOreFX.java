@@ -31,8 +31,8 @@ public class EntityOreFX extends EntityFX
 		motionZ += par12;
 		particleScale *= 0.75F;
 		particleScale *= par14;
-		particleMaxAge = (int)(8.0D / (Math.random() * 0.8D + 0.2D));
-		particleMaxAge = (int)(particleMaxAge * par14);
+		particleMaxAge = (int) (8.0D / (Math.random() * 0.8D + 0.2D));
+		particleMaxAge = (int) (particleMaxAge * par14);
 	}
 
 	@Override
@@ -59,14 +59,12 @@ public class EntityOreFX extends EntityFX
 		GL11.glEnable(3042);
 		GL11.glBlendFunc(770, 1);
 
-
-
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation(texture));
-		
+
 		float sizeFactor = 0.1F * particleScale;
-		float var13 = (float)(prevPosX + (posX - prevPosX) * par2 - EntityFX.interpPosX);
-		float var14 = (float)(prevPosY + (posY - prevPosY) * par2 - EntityFX.interpPosY);
-		float var15 = (float)(prevPosZ + (posZ - prevPosZ) * par2 - EntityFX.interpPosZ);
+		float var13 = (float) (prevPosX + (posX - prevPosX) * par2 - EntityFX.interpPosX);
+		float var14 = (float) (prevPosY + (posY - prevPosY) * par2 - EntityFX.interpPosY);
+		float var15 = (float) (prevPosZ + (posZ - prevPosZ) * par2 - EntityFX.interpPosZ);
 
 		tessellator.startDrawingQuads();
 		tessellator.setBrightness(10);
@@ -84,46 +82,44 @@ public class EntityOreFX extends EntityFX
 
 		GL11.glPopMatrix();
 
-	
-		
 		FMLClientHandler.instance().getClient().renderEngine.bindTexture(new ResourceLocation("textures/particle/particles.png"));
-		
+
 		tessellator.startDrawingQuads();
 	}
 
 	/**
 	 * Called to update the entity's position/logic.
 	 */
-	 @Override
-	 public void onUpdate()
-	 {
-		 prevPosX = posX;
-		 prevPosY = posY;
-		 prevPosZ = posZ;
+	@Override
+	public void onUpdate()
+	{
+		prevPosX = posX;
+		prevPosY = posY;
+		prevPosZ = posZ;
 
-		 if (particleAge++ >= particleMaxAge)
-		 {
-			 this.setDead();
-		 }
+		if (particleAge++ >= particleMaxAge)
+		{
+			this.setDead();
+		}
 
-		 this.setParticleTextureIndex(7 - particleAge * 8 / particleMaxAge);
-		 motionY += 0.004D;
-		 this.moveEntity(motionX, motionY, motionZ);
+		this.setParticleTextureIndex(7 - particleAge * 8 / particleMaxAge);
+		motionY += 0.004D;
+		this.moveEntity(motionX, motionY, motionZ);
 
-		 if (posY == prevPosY)
-		 {
-			 motionX *= 1.1D;
-			 motionZ *= 1.1D;
-		 }
+		if (posY == prevPosY)
+		{
+			motionX *= 1.1D;
+			motionZ *= 1.1D;
+		}
 
-		 motionX *= 0.9599999785423279D;
-		 motionY *= 0.9599999785423279D;
-		 motionZ *= 0.9599999785423279D;
+		motionX *= 0.9599999785423279D;
+		motionY *= 0.9599999785423279D;
+		motionZ *= 0.9599999785423279D;
 
-		 if (onGround)
-		 {
-			 motionX *= 0.699999988079071D;
-			 motionZ *= 0.699999988079071D;
-		 }
-	 }
+		if (onGround)
+		{
+			motionX *= 0.699999988079071D;
+			motionZ *= 0.699999988079071D;
+		}
+	}
 }

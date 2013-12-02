@@ -6,7 +6,8 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ArmorPlasticHelmet extends ItemArmor //implements IArmorTextureProvider
+public class ArmorPlasticHelmet extends ItemArmor // implements
+// IArmorTextureProvider
 {
 
 	private String LocationFile;
@@ -19,16 +20,16 @@ public class ArmorPlasticHelmet extends ItemArmor //implements IArmorTextureProv
 		super(par1, par2EnumArmorMaterial, par3, par4);
 	}
 
-    @Override
+	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
-    {
+	{
 		return "Transcraft:textures/armor/PlasticArmor_1.png";
 	}
 
 	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		 itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticHelmet");
+		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticHelmet");
 	}
 
 }

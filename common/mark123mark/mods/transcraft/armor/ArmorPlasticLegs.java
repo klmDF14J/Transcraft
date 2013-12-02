@@ -20,16 +20,16 @@ public class ArmorPlasticLegs extends ItemArmor
 		maxStackSize = 1;
 	}
 
-    @Override
+	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
-    {
+	{
 		return "Transcraft:textures/armor/PlasticArmor_2.png";
 	}
 
 	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		 itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticLegs");
+		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticLegs");
 	}
 
 }

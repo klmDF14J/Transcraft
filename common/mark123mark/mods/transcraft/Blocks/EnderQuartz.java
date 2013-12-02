@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class EnderQuartz extends Block
 {
-	public EnderQuartz(int par1) 
+	public EnderQuartz(int par1)
 	{
 		super(par1, Material.rock);
 	}

@@ -6,53 +6,54 @@ import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ClearGlass   extends Block
+public class ClearGlass extends Block
 {
 
-	public ClearGlass(int par1) 
+	public ClearGlass(int par1)
 	{
 		super(par1, Material.glass);
-		
+
 	}
 
+	@Override
+	@SideOnly(Side.CLIENT)
+	/**
+	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	 */
+	public int getRenderBlockPass()
+	{
+		return 0;
+	}
 
-	 
-	    @Override
-		@SideOnly(Side.CLIENT)
+	/**
+	 * Is this block (a) opaque and (b) a full 1m cube? This determines whether
+	 * or not to render the shared face of two adjacent blocks and also whether
+	 * the player can attach torches, redstone wire, etc to this block.
+	 */
+	@Override
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
 
-	    /**
-	     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
-	     */
-	    public int getRenderBlockPass()
-	    {
-	        return 0;
-	    }
+	/**
+	 * If this block doesn't render as an ordinary block it will return False
+	 * (examples: signs, buttons, stairs, etc)
+	 */
+	@Override
+	public boolean renderAsNormalBlock()
+	{
+		return false;
+	}
 
-	    /**
-	     * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
-	     * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
-	     */
-	    @Override
-		public boolean isOpaqueCube()
-	    {
-	        return false;
-	    }
+	@Override
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) // Renders
+																												// neighbouring
+																												// blocks
+	{
 
-	    /**
-	     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
-	     */
-	    @Override
-		public boolean renderAsNormalBlock()
-	    {
-	        return false;
-	    }
+		int i = par1IBlockAccess.getBlockId(par2, par3, par4);
 
-	    @Override
-		public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) //Renders neighbouring blocks
-	    {
-
-	    int i = par1IBlockAccess.getBlockId(par2, par3, par4);
-
-	    return i == blockID ? false:true;
-	    }
+		return i == blockID ? false : true;
+	}
 }

@@ -6,7 +6,8 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ArmorEnderChest extends ItemArmor //implements IArmorTextureProvider
+public class ArmorEnderChest extends ItemArmor // implements
+// IArmorTextureProvider
 {
 
 	private String LocationFile;
@@ -18,7 +19,7 @@ public class ArmorEnderChest extends ItemArmor //implements IArmorTextureProvide
 	{
 		super(par1, par2EnumArmorMaterial, par3, par4);
 	}
-	
+
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 	{
@@ -28,7 +29,7 @@ public class ArmorEnderChest extends ItemArmor //implements IArmorTextureProvide
 	@Override
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		 itemIcon = par1IconRegister.registerIcon("Transcraft:EnderChest");
+		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderChest");
 	}
 
 }

@@ -40,8 +40,8 @@ import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
-
-public class Transcraft {
+public class Transcraft
+{
 	public static final String VERSION = "1.6.4_V1.3.0_";
 	public static final String STATE = "ALPHA";
 	public static boolean SHOWDEVMESSGAE = false;
@@ -68,30 +68,30 @@ public class Transcraft {
 	public static Block ComOilOre;
 	public static Block DriedTransmutter;
 	public static Block TransManiaOre;
-	
+
 	public static Block Transcrafter;
-	
+
 	public static Block enderQuartz;
 	public static Block chiselEnderQuartz;
 	public static Block BlueenderQuartz;
 	public static Block BluechiselEnderQuartz;
 	public static Block RedenderQuartz;
 	public static Block RedchiselEnderQuartz;
-	
+
 	public static Block StairenderQuartz;
 	public static Block StairchiselEnderQuartz;
 	public static Block StairBlueenderQuartz;
 	public static Block StairBluechiselEnderQuartz;
 	public static Block StairRedenderQuartz;
 	public static Block StairRedchiselEnderQuartz;
-	
-//	public static Block DimPortalBlock;
-//	public static Block DimPortalEscapeBlock;
-			
-//	public static Block ixpGrinder;		
-	
+
+	// public static Block DimPortalBlock;
+	// public static Block DimPortalEscapeBlock;
+
+	// public static Block ixpGrinder;
+
 	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().setMinMaxHeight(0.3F, 10.5F);
-	
+
 	public static Item BasicTransmuter;
 	public static Item QuadTransmuter;
 	public static Item NanoTransmuter;
@@ -120,7 +120,7 @@ public class Transcraft {
 	public static Item EnderChest;
 	public static Item EnderLegs;
 	public static Item EnderBoots;
-	
+
 	public static int TrancraftOreID;
 	public static int OilOreID;
 	public static int BlueLighID;
@@ -132,12 +132,9 @@ public class Transcraft {
 	public static int enderQuartzID;
 	public static int chiselEnderQuartzID;
 
-	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
-			"PlasticTool", 2, 750, 5.0F, 2, 0);
-	public static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
-			"BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
-	public static EnumToolMaterial EnderToolEnum = EnumHelper.addToolMaterial(
-			"EnderToolEnum", 400, 10000, 80.0F, 46, 100);
+	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial("PlasticTool", 2, 750, 5.0F, 2, 0);
+	public static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial("BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
+	public static EnumToolMaterial EnderToolEnum = EnumHelper.addToolMaterial("EnderToolEnum", 400, 10000, 80.0F, 46, 100);
 
 	@Instance("transcraft")
 	public static Transcraft instance;
@@ -149,7 +146,8 @@ public class Transcraft {
 	private String field_111218_cA;
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event)
+	{
 
 		FMLLog.info("[TRANSCRAFT]	Starting Transcraft verison " + Transcraft.VERSION);
 
@@ -162,32 +160,33 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Loading Blocks");
 		LoadBlocks.LoadBlocks();
-		
+
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
 		LoadItems.LoadItems();
-		
+
 		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
 		TranscraftFluids.init();
-		
+
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Items with the LanguageRegistry");
 		LoadLang.loadlang();
-		
+
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
-		LoadBlockSettings.LoadSet();		
+		LoadBlockSettings.LoadSet();
 
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
 		RecipeLoader.LoadRecipe();
-		
+
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
-		
+
 	}
 
 	@EventHandler
-	public void init(FMLInitializationEvent event) {
+	public void init(FMLInitializationEvent event)
+	{
 
 		FMLLog.info("[TRANSCRAFT]	Registering  the Languages");
 		LoadLang.loadlang();
@@ -197,65 +196,70 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
 		GameRegistry.registerWorldGenerator(new TranscraftGenerator());
-		
+
 		FMLLog.info("[TRANSCRAFT]	Registering Fule handler");
 		GameRegistry.registerFuelHandler(new FuelHandler());
-		
+
 		FMLLog.info("[TRANSCRAFT]	Registering Player Editor");
 		NetworkRegistry.instance().registerConnectionHandler(new PlayerEditor());
-		
-		if (event.getSide() == Side.CLIENT)
-        {
-            MinecraftForge.EVENT_BUS.register(new EventCloakRender());
-        }
 
-		
-		
+		if (event.getSide() == Side.CLIENT)
+		{
+			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
+		}
+
 	}
 
-	public static void oreRegistration() {
-		
+	public static void oreRegistration()
+	{
+
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");
 		LoadOreDics.oredic();
-		
+
 	}
 
 	@ForgeSubscribe
 	@EventHandler
-	public void onServerStarting(FMLServerStartingEvent event , EntityPlayer player) {
-		
+	public void onServerStarting(FMLServerStartingEvent event, EntityPlayer player)
+	{
+
 		FMLLog.info("[TRANSCRAFT]	Adding new commands");
 		event.registerServerCommand(new CommandTranscraftVersion());
-		
+
 	}
 
 	@EventHandler
-	public void load(FMLInitializationEvent event) {
-		
+	public void load(FMLInitializationEvent event)
+	{
+
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHanderTC());
-		
+		NetworkRegistry.instance().registerGuiHandler(instance, new GuiHanderTC());
+
 		FMLLog.info("[TRANSCRAFT]	Adding new dims");
-	//	LoadDim.load();
-		
+		// LoadDim.load();
+
 	}
 
-	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
-		
+	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems")
+	{
+
 		@Override
-		public ItemStack getIconItemStack() {
+		public ItemStack getIconItemStack()
+		{
 			return new ItemStack(EnderSword, 1, 0);
 
 		}
 
 	};
-	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks") {
-		
+	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks")
+	{
+
 		@Override
-		public ItemStack getIconItemStack() {
+		public ItemStack getIconItemStack()
+		{
 			return new ItemStack(TranscraftOre, 1, 0);
 		}
-		 
+
 	};
-	
+
 }
