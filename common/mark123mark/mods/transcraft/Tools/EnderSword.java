@@ -15,6 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EnderSword extends ItemSword
 {
+
 	public EnderSword(int par1, EnumToolMaterial par2EnumToolMaterial)
 	{
 		super(par1, par2EnumToolMaterial);

@@ -71,6 +71,7 @@ public class BunkerPick extends ItemPickaxe
 						else
 						{
 							world.destroyBlock(x + xD, y + yD, z + zD, true);
+							player.inventory.consumeInventoryItem(Transcraft.NanoTransmuter.itemID);
 						}
 
 						if (world.rand.nextInt(2) == 0)
