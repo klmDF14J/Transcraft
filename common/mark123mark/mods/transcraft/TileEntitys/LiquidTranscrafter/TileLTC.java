@@ -35,7 +35,7 @@ public class TileLTC extends TileEntity implements IFluidHandler
 	public boolean canFill(ForgeDirection from, Fluid fluid)
 	{
 		// return tank.fill(fluid, false) > 0;
-		return false;
+		return true;
 	}
 
 	@Override
