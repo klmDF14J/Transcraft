@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.TileLTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -86,6 +87,8 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.StairBluechiselEnderQuartz, "StairBlueChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedenderQuartz, "StairRedEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
+		GameRegistry.registerBlock(Transcraft.LTranscrafter, "Liquid Transcrafter");
+		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");
 		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
@@ -123,6 +126,7 @@ public class RegisterBlocks
 		registerItem(Transcraft.EnderBoots);
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
+		GameRegistry.registerTileEntity(TileLTC.class, "TileEntityLTC");
 
 	}
 

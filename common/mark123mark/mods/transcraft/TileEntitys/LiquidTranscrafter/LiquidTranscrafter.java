@@ -48,8 +48,8 @@ public class LiquidTranscrafter extends BlockContainer
 	@Override
 	public void registerIcons(IconRegister i)
 	{
-		icons[0] = i.registerIcon("transcraft:TC_top");
-		icons[1] = i.registerIcon("transcraft:TC_side");
+		icons[0] = i.registerIcon("transcraft:LTC_top");
+		icons[1] = i.registerIcon("transcraft:LTC_side");
 	}
 
 	@Override

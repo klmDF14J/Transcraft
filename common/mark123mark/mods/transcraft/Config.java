@@ -59,6 +59,7 @@ public class Config
 	public static int LiquidTransmutterFluidStillID = 2101;
 
 	public static int TranscrafterID = 2112;
+	public static int LTranscrafterID = 2113;
 
 	public static int BasicTransmuterID = 5000;
 	public static int QuadTransmuterID = 5001;
@@ -173,6 +174,7 @@ public class Config
 		LiquidTransmutterFluidStillID = config.getBlock("LiquidTransmuterFluidStillID", 2101).getInt();
 
 		TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
+		LTranscrafterID = config.getBlock("Liquid Transcrafter", 2113).getInt();
 
 		// DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
 		// DimPortalEscapeBlockID = config.getBlock("Portal Escape Block",

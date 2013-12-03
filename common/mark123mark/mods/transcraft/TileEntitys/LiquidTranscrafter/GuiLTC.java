@@ -24,7 +24,7 @@ public class GuiLTC extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2)
 	{
-		this.fontRenderer.drawString(I18n.getString("Transcrafter"), 28, 6, 1210752);
+		this.fontRenderer.drawString(I18n.getString("Liquid Transcrafter"), 28, 6, 1210752);
 		this.fontRenderer.drawString(I18n.getString("container.inventory"), 8, this.ySize - 96 + 2, 1210752);
 	}
 

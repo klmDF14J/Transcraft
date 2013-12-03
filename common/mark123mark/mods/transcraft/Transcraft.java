@@ -69,6 +69,7 @@ public class Transcraft
 	public static Block TransManiaOre;
 
 	public static Block Transcrafter;
+	public static Block LTranscrafter;
 
 	public static Block enderQuartz;
 	public static Block chiselEnderQuartz;
