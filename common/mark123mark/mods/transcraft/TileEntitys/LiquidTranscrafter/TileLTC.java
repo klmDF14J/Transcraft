@@ -23,12 +23,14 @@ public class TileLTC extends TileEntity implements IFluidHandler
 	public FluidStack drain(ForgeDirection from, int maxDrain, boolean doDrain)
 	{
 		return null;
+
 	}
 
 	@Override
 	public FluidStack drain(ForgeDirection from, FluidStack resource, boolean doDrain)
 	{
-		return null;
+		return resource;
+
 	}
 
 	@Override
