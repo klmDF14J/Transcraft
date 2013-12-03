@@ -44,7 +44,7 @@ public class TranscraftFluids
 
 		Fluids.ItemBucketLiquidTrasnmutter = Optional.of((new ItemBucketLiquidTrasnmutter(Config.BucketLiquidTrasnmutterID).setMaxStackSize(1).setUnlocalizedName("transcraft.BucketLiquidTrasnmutter")).setCreativeTab(Transcraft.TranstabItems));
 
-		FluidContainerRegistry.registerFluidContainer(Fluids.LiquidTransmutterFluid.get(), new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 2), new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 0));
+		FluidContainerRegistry.registerFluidContainer(Fluids.LiquidTransmutterFluid.get(), new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 1), new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 0));
 	}
 
 	private static void registerBlocks()

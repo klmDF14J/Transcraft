@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft.biomes;
 
+import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeGenBase;
 
 public class TransmutterBiome extends BiomeGenBase
@@ -11,10 +12,12 @@ public class TransmutterBiome extends BiomeGenBase
 		super(par1);
 		theBiomeDecorator = new TranscraftBiomeDec(this);
 		customBiomeDecorator = (TranscraftBiomeDec) theBiomeDecorator;
-		customBiomeDecorator.TransmutterPerChunk = 7;
-		this.theBiomeDecorator.treesPerChunk = 3;
+		customBiomeDecorator.TransmutterPerChunk = 15;
+		this.theBiomeDecorator.treesPerChunk = -999;
 		this.theBiomeDecorator.flowersPerChunk = 12;
 		this.theBiomeDecorator.grassPerChunk = 10;
+		topBlock = (byte) Block.stone.blockID;
+		fillerBlock = (byte) Block.stone.blockID;
 	}
 
 	// @SideOnly(Side.CLIENT)
