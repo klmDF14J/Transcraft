@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
+package mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -8,7 +8,7 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
 
-public class TileTC extends TileEntity implements IFluidHandler
+public class TileLTC extends TileEntity implements IFluidHandler
 {
 
 	@Override

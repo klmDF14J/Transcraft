@@ -76,7 +76,7 @@ public class ItemBucketLiquidTrasnmutter extends Item
 						return new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 1);
 					}
 
-					if (!player.inventory.addItemStackToInventory(new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 2)))
+					if (!player.inventory.addItemStackToInventory(new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 1)))
 					{
 						world.setBlock(pos.blockX, pos.blockY, pos.blockZ, 0);
 
@@ -146,7 +146,7 @@ public class ItemBucketLiquidTrasnmutter extends Item
 
 				if (this.tryPlaceContainedLiquid(world, d0, d1, d2, i, j, k) && !player.capabilities.isCreativeMode)
 				{
-					if (itemstack.getItemDamage() != 2)
+					if (itemstack.getItemDamage() != 1)
 						return new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get());
 					else
 						return new ItemStack(Fluids.ItemBucketLiquidTrasnmutter.get(), 1, 0);
@@ -198,7 +198,7 @@ public class ItemBucketLiquidTrasnmutter extends Item
 	@Override
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack)
 	{
-		if (par1ItemStack.getItemDamage() == 0 || par1ItemStack.getItemDamage() == 2)
+		if (par1ItemStack.getItemDamage() == 0 || par1ItemStack.getItemDamage() == 1)
 		{
 			return false;
 		}
@@ -215,18 +215,35 @@ public class ItemBucketLiquidTrasnmutter extends Item
 		{
 			par3List.add(new ItemStack(par1, 1, i));
 		}
+
 	}
 
-	@Override
-	public String getUnlocalizedName(ItemStack itemStack)
-	{
-		int meta = itemStack.getItemDamage();
-		if (meta < 0 || meta >= bucketTypes.length)
-		{
-			meta = 0;
-		}
+	// @Override
+	// public String getUnlocalizedName(ItemStack itemStack)
+	// {
+	// int meta = itemStack.getItemDamage();
+	// if (meta < 0 || meta >= bucketTypes.length)
+	// {
+	// meta = 0;
+	// }
 
-		return super.getUnlocalizedName() + "." + bucketTypes[meta];
+	// return super.getUnlocalizedName() + "." + bucketTypes[meta];
+	// }
+
+	@Override
+	public String getUnlocalizedName(ItemStack itemstack)
+	{
+		int meta = itemstack.getItemDamage();
+
+		if (meta == 0)
+		{
+			return "Empty";
+		}
+		else if (meta == 1)
+		{
+			return "Transmutter";
+		}
+		return null;
 	}
 
 	@Override
