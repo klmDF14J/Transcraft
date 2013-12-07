@@ -6,10 +6,8 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
-import mark123mark.mods.transcraft.particles.GlassFX;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -48,7 +46,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy
 
 		if (string == "glass")
 		{
-			entityfx = new GlassFX(mc.theWorld, x, y, z, 0.0D, 0.0D, 0.0D);
+			// entityfx = new GlassFX(mc.theWorld, x, y, z, 0.0D, 0.0D, 0.0D);
 		}
 
 		mc.effectRenderer.addEffect(entityfx);

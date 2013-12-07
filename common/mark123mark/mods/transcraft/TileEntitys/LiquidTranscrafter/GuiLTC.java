@@ -10,7 +10,7 @@ import org.lwjgl.opengl.GL11;
 
 public class GuiLTC extends GuiContainer
 {
-	private static final ResourceLocation field_110422_t = new ResourceLocation("transcraft", "textures/gui/Transcrafter.png");
+	private static final ResourceLocation field_110422_t = new ResourceLocation("transcraft", "textures/gui/LTranscrafter.png");
 
 	public GuiLTC(InventoryPlayer par1InventoryPlayer, World par2World, int par3, int par4, int par5)
 	{

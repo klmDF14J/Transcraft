@@ -1,8 +1,5 @@
 package mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter;
 
-import mark123mark.mods.transcraft.GuiIds;
-import mark123mark.mods.transcraft.Items.TransTab.GuiTransTab;
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -17,16 +14,10 @@ public class GuiHanderLTC implements IGuiHandler
 	{
 		TileEntity te = world.getBlockTileEntity(x, y, z);
 
-		if (te instanceof TileTC)
+		if (te instanceof TileLTC)
 		{
 			return new ContainerLTC(player.inventory, world, x, y, z);
 		}
-
-		if (ID == GuiIds.TransTab)
-		{
-			return null;
-		}
-
 		else
 		{
 			return null;
@@ -41,11 +32,6 @@ public class GuiHanderLTC implements IGuiHandler
 		if (te instanceof TileLTC)
 		{
 			return new GuiLTC(player.inventory, world, x, y, z);
-		}
-
-		if (ID == GuiIds.TransTab)
-		{
-			return new GuiTransTab(player, world);
 		}
 
 		else

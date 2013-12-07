@@ -228,7 +228,7 @@ public class Transcraft
 
 	@ForgeSubscribe
 	@EventHandler
-	public void onServerStarting(FMLServerStartingEvent event, EntityPlayer player)
+	public void postinit(FMLServerStartingEvent event, EntityPlayer player)
 	{
 
 		FMLLog.info("[TRANSCRAFT]	Adding new commands");

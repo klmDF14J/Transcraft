@@ -69,7 +69,7 @@ public class LiquidTranscrafter extends BlockContainer
 		}
 		else
 		{
-			p.openGui(Transcraft.instance, 1, w, x, y, z);
+			p.openGui(Transcraft.instance, 2, w, x, y, z);
 		}
 
 		this.isMuliBlock(w, x, y, z);

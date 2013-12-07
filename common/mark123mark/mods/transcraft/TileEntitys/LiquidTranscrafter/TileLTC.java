@@ -9,8 +9,6 @@ import net.minecraftforge.fluids.IFluidHandler;
 
 public class TileLTC extends TileEntity implements IFluidHandler
 {
-	public TileLTC tank;
-	public int renderOffset;
 
 	@Override
 	public int fill(ForgeDirection from, FluidStack resource, boolean doFill)
@@ -64,11 +62,7 @@ public class TileLTC extends TileEntity implements IFluidHandler
 	@Override
 	public void updateEntity()
 	{
-		if (renderOffset > 0)
-		{
-			renderOffset -= 6;
-			worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
-		}
+
 	}
 
 }

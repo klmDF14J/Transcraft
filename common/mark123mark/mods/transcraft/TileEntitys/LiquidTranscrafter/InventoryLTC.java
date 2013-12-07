@@ -68,7 +68,7 @@ public class InventoryLTC implements IInventory
 	@Override
 	public String getInvName()
 	{
-		return "Transcrafer";
+		return "Liquid Transcrafer";
 	}
 
 	/**

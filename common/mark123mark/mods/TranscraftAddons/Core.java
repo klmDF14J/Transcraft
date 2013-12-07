@@ -27,7 +27,6 @@ public class Core
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-
 		if (event.getSide() == Side.CLIENT)
 		{
 			if (Loader.isModLoaded("NotEnoughItems"))
@@ -36,7 +35,9 @@ public class Core
 				if (Loader.isModLoaded("CodeChickenCore"))
 					;
 				{
+
 					AddonNEILoad.StartNei();
+
 					FMLLog.info("[Transcraft Addons]	NotEnoughItems was detected!");
 				}
 			}

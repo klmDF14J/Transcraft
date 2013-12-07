@@ -13,7 +13,15 @@ public class AddonNEILoad
 	{
 
 		LanguageRegistry.instance().addStringLocalization("nei.Transcrafter", "Transcrafter");
-		API.registerRecipeHandler(new AddonNEI());
+		try
+		{
+			API.registerRecipeHandler(new AddonNEI());
+
+		}
+		catch (Exception e)
+		{
+			// handling code
+		}
 
 	}
 
