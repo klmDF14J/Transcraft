@@ -5,9 +5,6 @@ import net.minecraft.entity.monster.IMob;
 
 public class GeneralHelper
 {
-
-
-
 	public static boolean isHostileEntity(EntityLivingBase entity)
 	{
 
