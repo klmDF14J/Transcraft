@@ -45,12 +45,8 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.StairBlueenderQuartz, "Blue Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.StairchiselEnderQuartz, "Chiseled Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.StairenderQuartz, "Ender Quartz Block Stair");
-		// LanguageRegistry.addName(Transcraft.DimPortalBlock,
-		// "TransMania Portal");
 
-		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
-		// "Transmania Escape block");
-		LanguageRegistry.addName(Transcraft.TransManiaOre, "TransManiaOre");
+		LanguageRegistry.addName(Transcraft.TransManiaOre, "Dried Transmutter Ore");
 
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");

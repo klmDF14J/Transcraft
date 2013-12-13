@@ -216,6 +216,8 @@ public class Transcraft
 			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		}
 
+		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
+
 	}
 
 	public static void oreRegistration()

@@ -7,7 +7,7 @@ public class BunkerBlock extends Block
 {
 	public BunkerBlock(int par1)
 	{
-		super(par1, Material.rock);
+		super(par1, Material.anvil);
 	}
 
 }

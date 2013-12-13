@@ -165,11 +165,17 @@ public class Transcrafter extends BlockContainer
 
 				w.playSoundEffect(xs, ys, zs, "random.explode", 4.0F, (1.0F + (w.rand.nextFloat() - w.rand.nextFloat()) * 0.2F) * 0.7F);
 
-				ItemStack Item = new ItemStack(Transcraft.LTranscrafter, 1);
-				EntityItem entityitem = new EntityItem(w, x, y + (double) 2, z, Item);
-				entityitem.delayBeforeCanPickup = 10;
-				w.spawnEntityInWorld(entityitem);
+				if (w.isRemote)
+				{
 
+				}
+				else
+				{
+					ItemStack Item = new ItemStack(Transcraft.LTranscrafter, 1);
+					EntityItem entityitem = new EntityItem(w, x, y + (double) 2, z, Item);
+					entityitem.delayBeforeCanPickup = 10;
+					w.spawnEntityInWorld(entityitem);
+				}
 			}
 
 			return true;

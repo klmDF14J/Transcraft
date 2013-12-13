@@ -55,7 +55,8 @@ public class TranscraftFluids
 
 	private static void registerItems()
 	{
-		registerItem(Fluids.ItemBucketLiquidTrasnmutter.get());
+		GameRegistry.registerItem(Fluids.ItemBucketLiquidTrasnmutter.get(), "Transbucket");
+		// registerItem(Fluids.ItemBucketLiquidTrasnmutter.get());
 	}
 
 	public static void registerItem(Item item)
