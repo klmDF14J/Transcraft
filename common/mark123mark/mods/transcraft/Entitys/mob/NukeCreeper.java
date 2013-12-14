@@ -4,8 +4,6 @@ import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.boss.EntityDragon;
-import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.nbt.NBTTagCompound;
@@ -18,11 +16,11 @@ import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 
 public class NukeCreeper extends EntityCreeper
 {
-	protected int fuseTime = 8;
+	protected int fuseTime = 12;
 	protected int timeSinceIgnited;
 	protected int lastActiveTime;
 
-	public float explosionRadius = 2f;
+	public float explosionRadius = 3f;
 
 	public NukeCreeper(World world)
 	{
@@ -44,22 +42,6 @@ public class NukeCreeper extends EntityCreeper
 	protected boolean isValidLightLevel()
 	{
 		return true; // lets it spawn during the day
-	}
-
-	/**
-	 * Called when a lightning bolt hits the entity.
-	 */
-	@Override
-	public void onStruckByLightning(EntityLightningBolt par1EntityLightningBolt)
-	{
-		if (!this.worldObj.isRemote)
-		{
-
-			EntityDragon EntityDragon = new EntityDragon(this.worldObj);
-			EntityDragon.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, this.rotationPitch);
-			this.worldObj.spawnEntityInWorld(EntityDragon);
-			this.setDead();
-		}
 	}
 
 	@Override
