@@ -8,7 +8,6 @@ import net.minecraft.potion.PotionEffect;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 
-//import net.minecraft.client.Minecraft;
 
 public class TickHandler implements ITickHandler
 {
