@@ -20,6 +20,12 @@ public class TickHandler implements ITickHandler
 	public void tickStart(EnumSet<TickType> type, Object... tickData)
 	{
 
+		
+	}
+
+	@Override
+	public void tickEnd(EnumSet<TickType> type, Object... tickData)
+	{
 		EntityPlayer player = (EntityPlayer) tickData[0];
 
 		if (player.getCurrentArmor(3) != null)
@@ -65,12 +71,6 @@ public class TickHandler implements ITickHandler
 			}
 
 		}
-	}
-
-	@Override
-	public void tickEnd(EnumSet<TickType> type, Object... tickData)
-	{
-
 	}
 
 	@Override
