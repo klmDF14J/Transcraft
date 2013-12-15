@@ -2,26 +2,28 @@ package mark123mark.mods.transcraft.Blocks;
 
 import java.util.Random;
 
+import mark123mark.mods.transcraft.Renders.particles.OreParticle;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.EntityFX;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TranscraftOre extends Block
 {
-
+	public static Minecraft mc = Minecraft.getMinecraft();
 	public TranscraftOre(int par1)
 	{
 		super(par1, Material.rock);
 	}
 
+
+	 
 	@Override
 	@SideOnly(Side.CLIENT)
-	/**
-	 * A randomly called display update to be able to add particles or other items for display
-	 */
+	
 	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	{
 
@@ -50,4 +52,8 @@ public class TranscraftOre extends Block
 		}
 
 	}
+	
+	
+	
+	
 }
