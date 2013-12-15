@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;

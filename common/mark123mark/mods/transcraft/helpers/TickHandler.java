@@ -1,7 +1,8 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
 import java.util.EnumSet;
 
+import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;

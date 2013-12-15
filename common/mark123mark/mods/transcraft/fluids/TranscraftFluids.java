@@ -1,9 +1,8 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.fluids;
 
+import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.api.Fluids;
-import mark123mark.mods.transcraft.fluids.BlockFluidLiquidTransmuter;
-import mark123mark.mods.transcraft.fluids.ItemBucketLiquidTrasnmutter;
-import mark123mark.mods.transcraft.fluids.LiquidTransmutterFluid;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,13 +1,10 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.WorldGen.WorldGenRingSphere;
-import mark123mark.mods.transcraft.WorldGen.WorldGenRings;
-import mark123mark.mods.transcraft.WorldGen.WorldGenRuins;
-import mark123mark.mods.transcraft.WorldGen.WorldGenTower;
 import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
 import mark123mark.mods.transcraft.WorldGen.TransManaia.OldHouse;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;

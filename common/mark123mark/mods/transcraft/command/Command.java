@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.command;
 
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;

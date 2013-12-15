@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
 import cpw.mods.fml.common.Loader;
 import java.awt.*;

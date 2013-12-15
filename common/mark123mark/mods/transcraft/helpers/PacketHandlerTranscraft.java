@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;

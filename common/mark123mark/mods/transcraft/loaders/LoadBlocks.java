@@ -1,10 +1,10 @@
 package mark123mark.mods.transcraft.loaders;
 
-import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 
 public class LoadBlocks

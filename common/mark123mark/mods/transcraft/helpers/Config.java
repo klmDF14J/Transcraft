@@ -1,8 +1,9 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
 import java.io.File;
 import java.io.IOException;
 
+import mark123mark.mods.transcraft.TranscraftCommonProxy;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 

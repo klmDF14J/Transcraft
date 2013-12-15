@@ -1,5 +1,6 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.helpers;
 
+import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 

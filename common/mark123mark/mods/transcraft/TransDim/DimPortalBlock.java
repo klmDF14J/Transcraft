@@ -2,7 +2,7 @@ package mark123mark.mods.transcraft.TransDim;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.Config;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;

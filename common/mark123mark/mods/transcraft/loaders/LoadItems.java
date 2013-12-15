@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.loaders;
 
-import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
 import mark123mark.mods.transcraft.armor.ArmorEnderBoots;
@@ -11,6 +10,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticBoots;
 import mark123mark.mods.transcraft.armor.ArmorPlasticChestplate;
 import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
 import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraftforge.common.EnumHelper;
 

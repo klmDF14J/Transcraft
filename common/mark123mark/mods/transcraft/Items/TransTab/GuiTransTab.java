@@ -1,6 +1,6 @@
 package mark123mark.mods.transcraft.Items.TransTab;
 
-import mark123mark.mods.transcraft.TransmuterMode;
+import mark123mark.mods.transcraft.helpers.TransmuterMode;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;

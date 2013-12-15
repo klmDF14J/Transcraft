@@ -2,8 +2,8 @@ package mark123mark.mods.transcraft.WorldGen;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

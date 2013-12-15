@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft;
+package mark123mark.mods.transcraft.WorldGen;
 
 import java.io.BufferedReader;
 import java.io.File;

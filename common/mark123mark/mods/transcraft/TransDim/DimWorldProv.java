@@ -1,7 +1,7 @@
 package mark123mark.mods.transcraft.TransDim;
 
-import mark123mark.mods.transcraft.Config;
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
