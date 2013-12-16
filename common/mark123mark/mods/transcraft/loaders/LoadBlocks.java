@@ -1,8 +1,9 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
-import mark123mark.mods.transcraft.Blocks.TransMultiColorBlock;
+import mark123mark.mods.transcraft.Blocks.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
@@ -31,7 +32,7 @@ public class LoadBlocks
 
 		Transcraft.IronTorch = new mark123mark.mods.transcraft.Blocks.IronTorch(Config.IronTorchID).setUnlocalizedName("Transcraft:IronTorch").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(1.0F).setLightOpacity(0).setTextureName("Transcraft:IronTorch");
 
-		Transcraft.ClearGlass = new mark123mark.mods.transcraft.Blocks.ClearGlass(Config.ClearGlassID).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:ClearGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
+		Transcraft.ClearGlass = new mark123mark.mods.transcraft.Blocks.CrystalGlass(Config.ClearGlassID).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:ClearGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
 
 		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(Config.FancyCrystalGlassID, "clear", false).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:FancyCrystalGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:FancyCrystalGlass");
 
@@ -61,7 +62,9 @@ public class LoadBlocks
 
 		Transcraft.LTranscrafter = new mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.LiquidTranscrafter(Config.LTranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F).setUnlocalizedName("Transcraft:LTranscrafter");
 
-		Transcraft.enderQuartz = new TransMultiColorBlock(Config.BlockEnderQuartzID,"enderQuartz").setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
+		Transcraft.enderQuartz = new EnderQuartz(Config.BlockEnderQuartzID,"enderQuartz").setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
+		
+		Transcraft.CutenderQuartz = new CutEnderQuartz(Config.BlockCutEnderQuartzID,"CutEnderQuartz").setUnlocalizedName("Transcraft:CutEnderQuartz").setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
 
 		
 		

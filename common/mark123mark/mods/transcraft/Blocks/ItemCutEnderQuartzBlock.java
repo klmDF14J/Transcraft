@@ -3,10 +3,10 @@ package mark123mark.mods.transcraft.Blocks;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemTransBlocks extends ItemBlock {
+public class ItemCutEnderQuartzBlock extends ItemBlock {
 
 	
-	public ItemTransBlocks(int par1) {
+	public ItemCutEnderQuartzBlock(int par1) {
 		super(par1);
 		setHasSubtypes(true);
 	}

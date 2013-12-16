@@ -20,20 +20,21 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class TransMultiColorBlock extends Block {
+public class CutEnderQuartz extends Block {
 
 	public static String[] types = {
 		  "White", "Orange",  "Magenta", "Light Blue", "Yellow", "Light Green",
 		  "Pink", "Dark Grey", "Light Grey", "Cyan", "Purple", "Blue", "Brown",
 		  "Green", "Red", "Black"
 		 };
+	
 	public static String texName;
 	
-	public TransMultiColorBlock(int par1 , String texture) {
+	public CutEnderQuartz(int par1 , String texture) {
 		super(par1, Material.rock);
 		texName = texture;
+
 		
-//		Arrays.flip(types);
 	}
 	
 	private int nextNum;

@@ -1,7 +1,9 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.Blocks.ItemTransBlocks;
+import mark123mark.mods.transcraft.Blocks.ItemCrystalGlass;
+import mark123mark.mods.transcraft.Blocks.ItemCutEnderQuartzBlock;
+import mark123mark.mods.transcraft.Blocks.ItemEnderQuartzBlock;
 import mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.TileLTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
@@ -20,11 +22,11 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.OrangeLight, "Orange Light");
 		LanguageRegistry.addName(Transcraft.DarkLight, "Dark Light");
 		LanguageRegistry.addName(Transcraft.IronTorch, "Iron Torch");
-		LanguageRegistry.addName(Transcraft.ClearGlass, "Crystal Glass");
 		LanguageRegistry.addName(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
 		LanguageRegistry.addName(Transcraft.ThinClearGlass, "Thin Crystal Glass");
 		LanguageRegistry.addName(Transcraft.BunkerBlock, "Bunker Block");
 		LanguageRegistry.addName(Transcraft.BunkerStair, "Bunker Stair");
+		LanguageRegistry.addName(Transcraft.ClearGlass, "Clear Glass");
 		LanguageRegistry.addName(Transcraft.SmoothBunkerStair, "Smooth Bunker Stair");
 		LanguageRegistry.addName(Transcraft.ObsidianLever, "Obsidian Lever");
 		LanguageRegistry.addName(Transcraft.SmoothBunkerBlock, "Smooth Bunker Block");
@@ -49,7 +51,6 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.OrangeLight, "Orange Light");
 		GameRegistry.registerBlock(Transcraft.DarkLight, "Dark Light");
 		GameRegistry.registerBlock(Transcraft.IronTorch, "IronTorch");
-		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
 		GameRegistry.registerBlock(Transcraft.ThinClearGlass, "Thin Clear Glass");
 		GameRegistry.registerBlock(Transcraft.BunkerBlock, "Bunker Block");
@@ -62,9 +63,15 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.BunkerStair, "Bunker Stair");
 		GameRegistry.registerBlock(Transcraft.ObsidianLever, "Obsidian Lever");
 		GameRegistry.registerBlock(Transcraft.SmoothBunkerBlock, "Smooth Bunker Block");
+		
 		GameRegistry.registerBlock(Transcraft.enderQuartz, "EnderQuartz");
+		GameRegistry.registerBlock(Transcraft.enderQuartz, ItemEnderQuartzBlock.class);
+		
+		GameRegistry.registerBlock(Transcraft.CutenderQuartz, "CutEnderQuartz");
+		GameRegistry.registerBlock(Transcraft.CutenderQuartz, ItemCutEnderQuartzBlock.class);
+		
+		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
 
-		GameRegistry.registerBlock(Transcraft.enderQuartz, ItemTransBlocks.class);
 		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");

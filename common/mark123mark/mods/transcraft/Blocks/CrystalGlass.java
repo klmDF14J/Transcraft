@@ -1,18 +1,25 @@
 package mark123mark.mods.transcraft.Blocks;
 
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ClearGlass extends Block
+public class CrystalGlass extends Block
 {
 
-	public ClearGlass(int par1)
+	public static String texName;
+	
+	public CrystalGlass(int par1)
 	{
 		super(par1, Material.glass);
-
 	}
 
 	@Override
@@ -47,13 +54,13 @@ public class ClearGlass extends Block
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) // Renders
-																												// neighbouring
-																												// blocks
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5) // Renders																										// blocks
 	{
-
 		int i = par1IBlockAccess.getBlockId(par2, par3, par4);
 
 		return i == blockID ? false : true;
 	}
+	
+
+	
 }
