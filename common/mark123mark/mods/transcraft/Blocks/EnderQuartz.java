@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -33,8 +34,93 @@ public class EnderQuartz extends Block {
 	public EnderQuartz(int par1 , String texture) {
 		super(par1, Material.rock);
 		texName = texture;
-
-		
+	}
+	
+	
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i, float a, float b, float c) 
+	{		
+		if (world.getBlockMetadata(x, y, z) == 0) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 1);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 1) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 2);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 2) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 3);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 3) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 4);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 4) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 5);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 5) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 6);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 6) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 7);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 7) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 8);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 8) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 9);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 9) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 10);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 10) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 11);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 11) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 12);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 12) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 13);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 13) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 14);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 14) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 15);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		if (world.getBlockMetadata(x, y, z) == 15) {
+			world.setBlockMetadataWithNotify(x, y, z, Transcraft.enderQuartz.blockID, 0);
+			world.markBlockForRenderUpdate(x, y, z);
+			return true;
+		}
+		return false;
 	}
 	
 	private int nextNum;

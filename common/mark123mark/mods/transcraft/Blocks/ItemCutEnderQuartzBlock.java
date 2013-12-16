@@ -21,6 +21,4 @@ public class ItemCutEnderQuartzBlock extends ItemBlock {
 		return  "_" + stack.getItemDamage();
 	}
 
-	
-	
 }
