@@ -76,6 +76,7 @@ public class Transcraft
 	public static Block ComOilOre;
 	public static Block DriedTransmutter;
 	public static Block TransManiaOre;
+	public static Block ColourTest;
 
 	public static Block Transcrafter;
 	public static Block LTranscrafter;

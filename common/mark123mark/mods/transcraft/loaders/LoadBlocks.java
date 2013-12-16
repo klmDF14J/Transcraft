@@ -2,10 +2,12 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
+import mark123mark.mods.transcraft.Blocks.TransBlocks;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockColored;
 
 public class LoadBlocks
 {
@@ -83,6 +85,9 @@ public class LoadBlocks
 
 		Transcraft.StairRedchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairRedBlockChiselEnderQuartzID, Transcraft.RedchiselEnderQuartz, 0)).setUnlocalizedName("Transcraft:StairRedchiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:StairRedchiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
 
+		
+		Transcraft.ColourTest = new TransBlocks(Config.ColourTestID).setUnlocalizedName("Transcraft:ColourTest").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setTextureName("Transcraft:ColourTest");
+		
 		/*
 		 * 
 		 * Transcraft.DimPortalBlock = (new

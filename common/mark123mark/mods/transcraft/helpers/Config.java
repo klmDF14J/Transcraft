@@ -46,6 +46,8 @@ public class Config
 
 	public static int StairRedBlockEnderQuartzID = 2123;
 	public static int StairRedBlockChiselEnderQuartzID = 2124;
+	
+	public static int ColourTestID = 2125;
 
 	// public static int DimPortalBlockID = 2200;
 	// public static int DimPortalEscapeBlockID = 2201;
@@ -165,6 +167,9 @@ public class Config
 		StairRedBlockEnderQuartzID = config.getBlock("Stair Red Ender Quartz", 2123).getInt();
 		StairRedBlockChiselEnderQuartzID = config.getBlock("Stair Red Chisel Ender Quartz", 2124).getInt();
 
+		
+		ColourTestID = config.getBlock("SColourTest", 2125).getInt();
+		
 		ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
 		ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();
 		ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023).getInt();

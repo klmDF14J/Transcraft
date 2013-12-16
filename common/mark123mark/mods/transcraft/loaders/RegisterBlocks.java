@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.ItemTransBlocks;
 import mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.TileLTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
@@ -45,6 +46,7 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.StairBlueenderQuartz, "Blue Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.StairchiselEnderQuartz, "Chiseled Ender Quartz Block Stair");
 		LanguageRegistry.addName(Transcraft.StairenderQuartz, "Ender Quartz Block Stair");
+		LanguageRegistry.addName(Transcraft.ColourTest, "ColourTest");
 
 		LanguageRegistry.addName(Transcraft.TransManiaOre, "Dried Transmutter Ore");
 
@@ -85,6 +87,9 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
 		GameRegistry.registerBlock(Transcraft.LTranscrafter, "Liquid Transcrafter");
 		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
+		GameRegistry.registerBlock(Transcraft.ColourTest, "ColourTest");
+		GameRegistry.registerBlock(Transcraft.ColourTest, ItemTransBlocks.class);
+		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");
 		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
