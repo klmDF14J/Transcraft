@@ -36,7 +36,8 @@ public class EnderQuartz extends Block {
 		texName = texture;
 	}
 	
-	
+/*
+ 3
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i, float a, float b, float c) 
 	{		
@@ -122,6 +123,9 @@ public class EnderQuartz extends Block {
 		}
 		return false;
 	}
+	
+	
+	 */
 	
 	private int nextNum;
 	

@@ -31,7 +31,8 @@ public class Config
 
 	public static int BlockEnderQuartzID = 2113;
 	public static int BlockCutEnderQuartzID = 2114;
-
+	public static int BlockEnderQuartzBrickID = 2115;
+	
 	// public static int DimPortalBlockID = 2200;
 	// public static int DimPortalEscapeBlockID = 2201;
 

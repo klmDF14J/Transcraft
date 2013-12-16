@@ -5,6 +5,7 @@ import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.CrystalGlass;
 import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.EnderQuartz;
+import mark123mark.mods.transcraft.Blocks.EnderQuartzBrick;
 import mark123mark.mods.transcraft.api.Fluids;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -55,6 +56,11 @@ public class LoadLang
 			LanguageRegistry.addName(new ItemStack(Transcraft.CutenderQuartz, 1, i), CutEnderQuartz.types[i] + " Cut Ender Quartz");
 		}
 
+		for(int i = 0; i < EnderQuartzBrick.types.length; i++) {
+			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Bricks");
+		}
+		
+		
 		
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");

@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
+import mark123mark.mods.transcraft.Blocks.EnderQuartzBrick;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
@@ -66,9 +67,8 @@ public class LoadBlocks
 		
 		Transcraft.CutenderQuartz = new CutEnderQuartz(Config.BlockCutEnderQuartzID,"CutEnderQuartz").setUnlocalizedName("Transcraft:CutEnderQuartz").setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
 
-		
-		
-		/*
+		Transcraft.EnderQuartzBrick = new EnderQuartzBrick(Config.BlockEnderQuartzBrickID,"EnderQuartzBricks").setUnlocalizedName("Transcraft:EnderQuartzBricks").setTextureName("Transcraft:EnderQuartzBricks").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
+	/*
 		 * 
 		 * Transcraft.DimPortalBlock = (new
 		 * DimPortalBlock(Config.DimPortalBlockID))

@@ -82,6 +82,7 @@ public class Transcraft
 
 	public static Block enderQuartz;
 	public static Block CutenderQuartz;
+	public static Block EnderQuartzBrick;
 
 
 	// public static Block DimPortalBlock;
