@@ -2,7 +2,7 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
-import mark123mark.mods.transcraft.Blocks.TransBlocks;
+import mark123mark.mods.transcraft.Blocks.TransMultiColorBlock;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
@@ -61,32 +61,9 @@ public class LoadBlocks
 
 		Transcraft.LTranscrafter = new mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.LiquidTranscrafter(Config.LTranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F).setUnlocalizedName("Transcraft:LTranscrafter");
 
-		Transcraft.enderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.BlockEnderQuartzID).setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.chiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.BlockChiselEnderQuartzID).setUnlocalizedName("Transcraft:chiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:chiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.BlueenderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.BlueBlockEnderQuartzID).setUnlocalizedName("Transcraft:Blueenderquartz").setHardness(1.0F).setTextureName("Transcraft:Blueenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.BluechiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.BlueBlockChiselEnderQuartzID).setUnlocalizedName("Transcraft:Bluechiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:Bluechiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.RedenderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.RedBlockEnderQuartzID).setUnlocalizedName("Transcraft:Redenderquartz").setHardness(1.0F).setTextureName("Transcraft:Redenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.RedchiselEnderQuartz = new mark123mark.mods.transcraft.Blocks.EnderQuartz(Config.RedBlockChiselEnderQuartzID).setUnlocalizedName("Transcraft:Redchiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:Redchiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairBlockEnderQuartzID, Transcraft.enderQuartz, 0)).setUnlocalizedName("Transcraft:Stairenderquartz").setHardness(1.0F).setTextureName("Transcraft:Stairenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairBlockChiselEnderQuartzID, Transcraft.chiselEnderQuartz, 0)).setUnlocalizedName("Transcraft:Stairchiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:Stairchiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairBlueenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairBlueBlockEnderQuartzID, Transcraft.BlueenderQuartz, 0)).setUnlocalizedName("Transcraft:StairBlueenderquartz").setHardness(1.0F).setTextureName("Transcraft:StairBlueenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairBluechiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairBlueBlockChiselEnderQuartzID, Transcraft.BluechiselEnderQuartz, 0)).setUnlocalizedName("Transcraft:StairBluechiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:StairBluechiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairRedenderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairRedBlockEnderQuartzID, Transcraft.RedenderQuartz, 0)).setUnlocalizedName("Transcraft:StairRedenderquartz").setHardness(1.0F).setTextureName("Transcraft:StairRedenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
-
-		Transcraft.StairRedchiselEnderQuartz = (new mark123mark.mods.transcraft.Blocks.DefultStair(Config.StairRedBlockChiselEnderQuartzID, Transcraft.RedchiselEnderQuartz, 0)).setUnlocalizedName("Transcraft:StairRedchiselenderquartz").setHardness(1.0F).setTextureName("Transcraft:StairRedchiselenderquartz").setCreativeTab(Transcraft.TranstabBlocks);
+		Transcraft.enderQuartz = new TransMultiColorBlock(Config.BlockEnderQuartzID,"enderQuartz").setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
 
 		
-		Transcraft.ColourTest = new TransBlocks(Config.ColourTestID).setUnlocalizedName("Transcraft:ColourTest").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setTextureName("Transcraft:ColourTest");
 		
 		/*
 		 * 

@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.Blocks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import net.minecraft.block.Block;
@@ -19,12 +20,20 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class TransBlocks extends Block {
+public class TransMultiColorBlock extends Block {
 
-	public static String[] types = {"black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"};
+	public static String[] types = {
+		  "White", "Orange",  "Magenta", "Light Blue", "Yellow", "Light Green",
+		  "Pink", "Dark Grey", "Light Grey", "Cyan", "Purple", "Blue", "Brown",
+		  "Green", "Red", "Black"
+		 };
+	public static String texName;
 	
-	public TransBlocks(int par1) {
+	public TransMultiColorBlock(int par1 , String texture) {
 		super(par1, Material.rock);
+		texName = texture;
+		
+//		Arrays.flip(types);
 	}
 	
 	private int nextNum;
@@ -42,8 +51,7 @@ public class TransBlocks extends Block {
 	public void registerIcons(IconRegister icon) {
 		for(int i = 0; i < types.length; i++) {
 			String type = types[i].toLowerCase();
-//			tex[i] = icon.registerIcon("transcraft:ColourTest_" + type);
-			tex[i] = icon.registerIcon("transcraft:ColourTest");
+			tex[i] = icon.registerIcon("transcraft:" + texName);
 		}
 	}
 	

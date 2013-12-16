@@ -5,6 +5,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemTransBlocks extends ItemBlock {
 
+	
 	public ItemTransBlocks(int par1) {
 		super(par1);
 		setHasSubtypes(true);
@@ -17,7 +18,7 @@ public class ItemTransBlocks extends ItemBlock {
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		return "Block_" + stack.getItemDamage();
+		return  "_" + stack.getItemDamage();
 	}
 
 	

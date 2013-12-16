@@ -35,18 +35,7 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.ComTransmutterOre, "Packed Transmuter Ore");
 		LanguageRegistry.addName(Transcraft.ComOilOre, "Packed Oil Ore");
 		LanguageRegistry.addName(Transcraft.enderQuartz, "Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.chiselEnderQuartz, "Chiseled Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.BlueenderQuartz, "Blue Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.BluechiselEnderQuartz, "Blue Chiseled Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.RedenderQuartz, "Red Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.RedchiselEnderQuartz, "Red Chiseled Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.StairRedchiselEnderQuartz, "Red Chiseled Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.StairRedenderQuartz, "Red Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.StairBluechiselEnderQuartz, "Blue Chiseled Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.StairBlueenderQuartz, "Blue Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.StairchiselEnderQuartz, "Chiseled Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.StairenderQuartz, "Ender Quartz Block Stair");
-		LanguageRegistry.addName(Transcraft.ColourTest, "ColourTest");
+
 
 		LanguageRegistry.addName(Transcraft.TransManiaOre, "Dried Transmutter Ore");
 
@@ -74,21 +63,8 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.ObsidianLever, "Obsidian Lever");
 		GameRegistry.registerBlock(Transcraft.SmoothBunkerBlock, "Smooth Bunker Block");
 		GameRegistry.registerBlock(Transcraft.enderQuartz, "EnderQuartz");
-		GameRegistry.registerBlock(Transcraft.chiselEnderQuartz, "ChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.BlueenderQuartz, "BlueEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.BluechiselEnderQuartz, "BlueChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.RedenderQuartz, "RedEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.RedchiselEnderQuartz, "RedChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairenderQuartz, "StairEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairchiselEnderQuartz, "StairChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairBlueenderQuartz, "StairBlueEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairBluechiselEnderQuartz, "StairBlueChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairRedenderQuartz, "StairRedEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.StairRedchiselEnderQuartz, "StairRedChiselEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.LTranscrafter, "Liquid Transcrafter");
-		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
-		GameRegistry.registerBlock(Transcraft.ColourTest, "ColourTest");
-		GameRegistry.registerBlock(Transcraft.ColourTest, ItemTransBlocks.class);
+
+		GameRegistry.registerBlock(Transcraft.enderQuartz, ItemTransBlocks.class);
 		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");

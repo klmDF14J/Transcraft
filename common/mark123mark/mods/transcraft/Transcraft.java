@@ -82,18 +82,7 @@ public class Transcraft
 	public static Block LTranscrafter;
 
 	public static Block enderQuartz;
-	public static Block chiselEnderQuartz;
-	public static Block BlueenderQuartz;
-	public static Block BluechiselEnderQuartz;
-	public static Block RedenderQuartz;
-	public static Block RedchiselEnderQuartz;
 
-	public static Block StairenderQuartz;
-	public static Block StairchiselEnderQuartz;
-	public static Block StairBlueenderQuartz;
-	public static Block StairBluechiselEnderQuartz;
-	public static Block StairRedenderQuartz;
-	public static Block StairRedchiselEnderQuartz;
 
 	// public static Block DimPortalBlock;
 	// public static Block DimPortalEscapeBlock;

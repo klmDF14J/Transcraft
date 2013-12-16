@@ -65,22 +65,7 @@ public class RecipeLoader
 		ItemStack OrangeDye = new ItemStack(Item.dyePowder, 1, 14);
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.enderQuartz, 8), " q ", "qqq", " d ", 'd', GreenDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.chiselEnderQuartz, 8), " q ", "qqq", " d ", 'd', Transcraft.enderQuartz, 'q', Item.netherQuartz);
-
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueenderQuartz, 8), " q ", "qqq", " d ", 'd', BlueDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BluechiselEnderQuartz, 8), " q ", "qqq", " d ", 'd', Transcraft.BlueenderQuartz, 'q', Item.netherQuartz);
-
-		GameRegistry.addRecipe(new ItemStack(Transcraft.RedenderQuartz, 8), " q ", "qqq", " d ", 'd', OrangeDye, 'q', Item.netherQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.RedchiselEnderQuartz, 8), " q ", "qqq", " d ", 'd', Transcraft.RedenderQuartz, 'q', Item.netherQuartz);
-
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairenderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.enderQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairchiselEnderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.chiselEnderQuartz);
-
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairBlueenderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.BlueenderQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairBluechiselEnderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.BluechiselEnderQuartz);
-
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairRedenderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.RedenderQuartz);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.StairRedchiselEnderQuartz, 4), "b  ", "bb ", "bbb", 'b', Transcraft.RedchiselEnderQuartz);
+		
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueLight, 8), "prp", "pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b', BlueDye);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.GreenLight, 8), "prp", "pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b', GreenDye);
