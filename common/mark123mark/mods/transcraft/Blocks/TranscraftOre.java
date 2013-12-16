@@ -55,35 +55,7 @@ public class TranscraftOre extends Block
 		}
 
 	}
-	
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-    public int getBlockColor()
-    {
 
-        return 0x07D7FF;
-    }
+
 	
-	@Override
-	@SideOnly(Side.CLIENT)
-	    /**
-	     * Returns the color this block should be rendered. Used by leaves.
-	     */
-	    public int getRenderColor(int par1)
-	    {
-	        return 0x07D7FF;
-	    }
-
-	@Override
-	@SideOnly(Side.CLIENT)
-
-	    /**
-	     * Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called
-	     * when first determining what to render.
-	     */
-	    public int colorMultiplier(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
-	    {
-	        return 0x07D7FF;
-	    }
 }

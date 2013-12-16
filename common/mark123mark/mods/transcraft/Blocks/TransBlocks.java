@@ -71,31 +71,50 @@ public class TransBlocks extends Block {
 	     */
 	    public int colorMultiplier(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
 	    {
-		int meta = par1IBlockAccess.getBlockMetadata(par2, par3, par4);
-
-		if (meta == 0)
-		{
-			return 0x000000; //black
-		}
-		if (meta == 1)
-		{
-			return 0xff0000; //red
-		}
-		if (meta == 2)
-		{
-			return 0x00ff06; //green
-		}
-		if (meta == 3)
-		{
-			return 0x631111; //brown
-		}
-		if (meta == 4)
-		{
-			return 0x0000ff; //blue
-		}
-		
-	        return 0xffffff;
+		switch(par1IBlockAccess.getBlockMetadata(par2, par3, par4))
+		  {
+		  case 0: return 0xFFFFFF;
+		  case 1: return 0xFF9900;
+		  case 2: return 0xCC00CC;
+		  case 3: return 0x6699FF;
+		  case 4: return 0xFFFF00;
+		  case 5: return 0x99CC00; 
+		  case 6: return 0xFF66FF;
+		  case 7: return 0x585858;
+		  case 8: return 0xA8A8A8;
+		  case 9: return 0x00CC99;
+		  case 10: return 0x990066;
+		  case 11: return 0x3333CC;
+		  case 12: return 0x663300;
+		  case 13: return 0x336600;
+		  case 14: return 0xCC0000;
+		  case 15: return 0x505050;
+		  default: return 0xFFFFFF;
+		  }
 	    }
 	
-	
+	@Override
+	 public int getRenderColor(int i)
+	 {
+	  switch(i)
+	  {
+	  case 0: return 0xFFFFFF;
+	  case 1: return 0xFF9900;
+	  case 2: return 0xCC00CC;
+	  case 3: return 0x6699FF;
+	  case 4: return 0xFFFF00;
+	  case 5: return 0x99CC00; 
+	  case 6: return 0xFF66FF;
+	  case 7: return 0x585858;
+	  case 8: return 0xA8A8A8;
+	  case 9: return 0x00CC99;
+	  case 10: return 0x990066;
+	  case 11: return 0x3333CC;
+	  case 12: return 0x663300;
+	  case 13: return 0x336600;
+	  case 14: return 0xCC0000;
+	  case 15: return 0x505050;
+	  default: return 0xFFFFFF;
+	  }
+	 }
 }
