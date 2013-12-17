@@ -280,7 +280,7 @@ public class Transcraft
 		@Override
 		public ItemStack getIconItemStack()
 		{
-			return new ItemStack(EnderQuartzBigBrick, 1, 0);
+			return new ItemStack(EnderQuartzBigBrick, 1, 11);
 		}
 
 	};
