@@ -5,7 +5,6 @@ import mark123mark.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
-import mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.TileLTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -116,7 +115,6 @@ public class RegisterBlocks
 		registerItem(Transcraft.EnderBoots);
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
-		GameRegistry.registerTileEntity(TileLTC.class, "TileEntityLTC");
 
 	}
 

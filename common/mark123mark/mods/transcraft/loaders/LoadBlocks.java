@@ -61,7 +61,6 @@ public class LoadBlocks
 
 		Transcraft.Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(Config.TranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F).setUnlocalizedName("Transcraft:Transcrafter");
 
-		Transcraft.LTranscrafter = new mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.LiquidTranscrafter(Config.LTranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F).setUnlocalizedName("Transcraft:LTranscrafter");
 
 		Transcraft.enderQuartz = new EnderQuartz(Config.BlockEnderQuartzID,"EnderQuartz").setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 		

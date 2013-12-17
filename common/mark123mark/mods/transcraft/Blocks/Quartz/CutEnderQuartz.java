@@ -6,20 +6,19 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
 public class CutEnderQuartz extends Block {
 
-	public static String[] types = {
-		  "White", "Orange",  "Magenta", "Light Blue", "Yellow", "Light Green",
-		  "Pink", "Dark Grey", "Light Grey", "Cyan", "Purple", "Blue", "Brown",
-		  "Green", "Red", "Black"
-		 };
+	public static String[] types = {"black", "red", "green", "brown", "blue", "purple", "cyan", "silver", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white"};
 	
 	public static String texName;
 	
@@ -31,6 +30,22 @@ public class CutEnderQuartz extends Block {
 	}
 	
 	private int nextNum;
+	
+	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int i, float f, float f1, float f2)
+	{
+		if(p.getHeldItem().getItem() == Item.dyePowder)
+		{
+			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem().getItemDamage(), 3);
+			w.markBlockForRenderUpdate(x, y, z);
+			w.markBlockForUpdate(x, y, z);
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
 	
 	@Override
 	public int damageDropped (int metadata) {
