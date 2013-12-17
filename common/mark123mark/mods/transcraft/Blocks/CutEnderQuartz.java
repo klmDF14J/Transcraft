@@ -97,7 +97,7 @@ public class CutEnderQuartz extends Block {
 		  case 12: return 0x663300;
 		  case 13: return 0x336600;
 		  case 14: return 0xCC0000;
-		  case 15: return 0x505050;
+		  case 15: return 0x0f0f0f;
 		  default: return 0xFFFFFF;
 		  }
 	    }
@@ -122,7 +122,7 @@ public class CutEnderQuartz extends Block {
 	  case 12: return 0x663300;
 	  case 13: return 0x336600;
 	  case 14: return 0xCC0000;
-	  case 15: return 0x505050;
+	  case 15: return 0x0f0f0f;
 	  default: return 0xFFFFFF;
 	  }
 	 }
