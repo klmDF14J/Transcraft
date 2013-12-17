@@ -1,13 +1,12 @@
 package mark123mark.mods.transcraft.loaders;
 
-import net.minecraft.item.ItemStack;
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.Blocks.CrystalGlass;
 import mark123mark.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.api.Fluids;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class LoadLang

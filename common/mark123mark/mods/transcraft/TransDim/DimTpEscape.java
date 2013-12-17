@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.TransDim;
 import java.util.ArrayList;
 import java.util.List;
 
-import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.LongHashMap;

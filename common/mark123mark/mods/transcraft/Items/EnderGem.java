@@ -1,14 +1,8 @@
 package mark123mark.mods.transcraft.Items;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumMovingObjectType;
 import net.minecraft.util.Icon;
-import net.minecraft.world.World;
 
 public class EnderGem extends Item
 {

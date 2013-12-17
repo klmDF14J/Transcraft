@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft.WorldGen.TransManaia;
 
 import java.util.Random;
 
-import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.WorldGen.FishyWorldGenBase;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;

@@ -10,7 +10,6 @@ import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockColored;
 
 public class LoadBlocks
 {

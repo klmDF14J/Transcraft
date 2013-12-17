@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.WorldGen;
 import java.util.Random;
 
 import mark123mark.mods.transcraft.WorldGen.TransManaia.EscapePortal;
-import mark123mark.mods.transcraft.WorldGen.TransManaia.OldHouse;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
