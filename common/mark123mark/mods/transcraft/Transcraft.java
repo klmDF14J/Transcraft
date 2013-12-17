@@ -262,6 +262,7 @@ public class Transcraft
 		}
 
 	};
+	
 	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks")
 	{
 
@@ -272,5 +273,17 @@ public class Transcraft
 		}
 
 	};
+	
+	public static CreativeTabs TranstabDecBlocks = new CreativeTabs("TranstabDecBlocks")
+	{
+
+		@Override
+		public ItemStack getIconItemStack()
+		{
+			return new ItemStack(EnderQuartzBigBrick, 1, 0);
+		}
+
+	};
+	
 
 }

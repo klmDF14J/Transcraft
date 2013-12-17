@@ -17,7 +17,8 @@ public class LoadLang
 	{
 		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabItems", "en_US", "Transcraft Items");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabBlocks", "en_US", "Transcraft Blocks");
-
+		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabDecBlocks", "en_US", "Transcraft Decorative Blocks");
+		
 		LanguageRegistry.addName(Transcraft.BasicTransmuter, "Basic Transmuter");
 		LanguageRegistry.addName(Transcraft.QuadTransmuter, "QuadTransmuter");
 		LanguageRegistry.addName(Transcraft.NanoTransmuter, "NanoTransmuter");
