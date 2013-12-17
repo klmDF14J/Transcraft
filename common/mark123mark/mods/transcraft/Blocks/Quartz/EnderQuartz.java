@@ -160,6 +160,26 @@ public class EnderQuartz extends Block {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see net.minecraft.block.Block#getBlockBrightness(net.minecraft.world.IBlockAccess, int, int, int)
+	
+	
+	@Override
+    @SideOnly(Side.CLIENT)
+    public float getBlockBrightness(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
+    {
+        return 30F;
+    }
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public int getMixedBrightnessForBlock(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
+	{
+		return blockID;	
+	}
+	
+	 */
 	
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -179,7 +199,7 @@ public class EnderQuartz extends Block {
 		  case 4: return 0xFFFF00;
 		  case 5: return 0x99CC00; 
 		  case 6: return 0xFF66FF;
-		  case 7: return 0x585858;
+		  case 7: return 0x7c7c7c;
 		  case 8: return 0xA8A8A8;
 		  case 9: return 0x00CC99;
 		  case 10: return 0x990066;
@@ -187,7 +207,7 @@ public class EnderQuartz extends Block {
 		  case 12: return 0x663300;
 		  case 13: return 0x336600;
 		  case 14: return 0xCC0000;
-		  case 15: return 0x0f0f0f;
+		  case 15: return 0x444444;
 		  default: return 0xFFFFFF;
 		  }
 	    }
@@ -204,7 +224,7 @@ public class EnderQuartz extends Block {
 	  case 4: return 0xFFFF00;
 	  case 5: return 0x99CC00; 
 	  case 6: return 0xFF66FF;
-	  case 7: return 0x585858;
+	  case 7: return 0x7c7c7c;
 	  case 8: return 0xA8A8A8;
 	  case 9: return 0x00CC99;
 	  case 10: return 0x990066;
@@ -212,7 +232,7 @@ public class EnderQuartz extends Block {
 	  case 12: return 0x663300;
 	  case 13: return 0x336600;
 	  case 14: return 0xCC0000;
-	  case 15: return 0x0f0f0f;
+	  case 15: return 0x444444;
 	  default: return 0xFFFFFF;
 	  }
 	 }

@@ -1,9 +1,9 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
+import mark123mark.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
