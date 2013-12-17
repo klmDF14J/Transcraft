@@ -1,0 +1,43 @@
+To use the API read this guide.
+
+To add support for Zaet Items or Blocks.
+
+Make a EventHandler with the ZaetRegister event:
+
+@ForgeSubscribe
+public void tutorial(ZaetRegisterEvent event)
+{
+	if(event.type = RegisterType.BLOCKS)
+	{
+		Block[] blocks = (Block[]) event.blocksOrItems;
+		String[] names = event.names;
+		
+		int length = names.length - 1;
+		
+		for(int temp = 0; length >= 0; length--)
+		{
+			String name = names[length];
+			Block block = blocks[length];
+			
+			if(name == "REDBRICK")
+			{
+				TutorialMod.redBrickId = block.blockID;
+			}
+		}
+	}
+}
+
+In that example, we used a register event to get the id of Red Brick and to use it in our tutorial mod for crafting, etc.
+
+In your main mod file in PreInit you would write
+
+@EventHandler
+public void preInit(FMLPreInitializationEvent event)
+{
+	if(Loader.isModLoaded("Zaet")
+	{
+		MinecraftForge.EVENT_BUS.register(new TutorialEventHandler());
+	}
+}
+
+That is crucial for the event handler to load the Red Brick id correctly.

@@ -1,11 +1,14 @@
 package mark123mark.mods.transcraft.loaders;
 
+import org.zaet.api.ColoredBlockUtil;
+
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.Quartz.CutEnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.api.Fluids;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -53,10 +56,11 @@ public class LoadLang
 			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartz, 1, i), EnderQuartz.types[i] + " Ender Quartz");
 		}
 		
-		for(int i = 0; i < CutEnderQuartz.types.length; i++) {
-			LanguageRegistry.addName(new ItemStack(Transcraft.CutenderQuartz, 1, i), CutEnderQuartz.types[i] + " Cut Ender Quartz");
-		}
 
+
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.CutenderQuartz, 1).getItem(), "Brick");
+		
+		
 		for(int i = 0; i < EnderQuartzBrick.types.length; i++) {
 			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Bricks");
 		}
