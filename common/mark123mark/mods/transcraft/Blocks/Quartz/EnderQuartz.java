@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.Blocks;
+package mark123mark.mods.transcraft.Blocks.Quartz;
 
 import java.util.ArrayList;
 import java.util.Arrays;

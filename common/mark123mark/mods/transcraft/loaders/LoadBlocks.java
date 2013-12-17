@@ -2,10 +2,11 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
-import mark123mark.mods.transcraft.Blocks.EnderQuartzBrick;
 import mark123mark.mods.transcraft.Blocks.ThinCrystalGlass;
-import mark123mark.mods.transcraft.Blocks.EnderQuartz;
 import mark123mark.mods.transcraft.Blocks.TranscraftOre;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
@@ -68,6 +69,8 @@ public class LoadBlocks
 		Transcraft.CutenderQuartz = new CutEnderQuartz(Config.BlockCutEnderQuartzID,"CutEnderQuartz").setUnlocalizedName("Transcraft:CutEnderQuartz").setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
 
 		Transcraft.EnderQuartzBrick = new EnderQuartzBrick(Config.BlockEnderQuartzBrickID,"EnderQuartzBrick").setUnlocalizedName("Transcraft:EnderQuartzBricks").setTextureName("Transcraft:EnderQuartzBricks").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
+		
+		Transcraft.EnderQuartzBigBrick = new EnderQuartzBigBrick(Config.BlockEnderQuartzBigBrickID,"EnderQuartzBrick2").setUnlocalizedName("Transcraft:EnderQuartzBigBricks").setTextureName("Transcraft:EnderQuartzBigBricks").setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks);
 	/*
 		 * 
 		 * Transcraft.DimPortalBlock = (new

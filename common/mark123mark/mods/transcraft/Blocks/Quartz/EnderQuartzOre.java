@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.Blocks;
+package mark123mark.mods.transcraft.Blocks.Quartz;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

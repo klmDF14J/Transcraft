@@ -1,9 +1,10 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.Blocks.ItemCutEnderQuartzBlock;
-import mark123mark.mods.transcraft.Blocks.ItemEnderQuartzBlock;
-import mark123mark.mods.transcraft.Blocks.ItemEnderQuartzBrick;
+import mark123mark.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
+import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
+import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
+import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
 import mark123mark.mods.transcraft.TileEntitys.LiquidTranscrafter.TileLTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import net.minecraft.item.Item;
@@ -74,7 +75,8 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick, "EnderQuartzBricks");
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick, ItemEnderQuartzBrick.class);
 
-		
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, "EnderQuartzBigBricks");
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, ItemEnderQuartzBigBrick.class);
 		
 		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,

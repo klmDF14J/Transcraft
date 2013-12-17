@@ -1,12 +1,12 @@
-package mark123mark.mods.transcraft.Blocks;
+package mark123mark.mods.transcraft.Blocks.Quartz;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 
-public class ItemCutEnderQuartzBlock extends ItemBlock {
+public class ItemEnderQuartzBrick extends ItemBlock {
 
 	
-	public ItemCutEnderQuartzBlock(int par1) {
+	public ItemEnderQuartzBrick(int par1) {
 		super(par1);
 		setHasSubtypes(true);
 	}

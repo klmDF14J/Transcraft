@@ -32,6 +32,7 @@ public class Config
 	public static int BlockEnderQuartzID = 2113;
 	public static int BlockCutEnderQuartzID = 2114;
 	public static int BlockEnderQuartzBrickID = 2115;
+	public static int BlockEnderQuartzBigBrickID = 2116;
 	
 	// public static int DimPortalBlockID = 2200;
 	// public static int DimPortalEscapeBlockID = 2201;
@@ -135,6 +136,9 @@ public class Config
 
 		BlockEnderQuartzID = config.getBlock("Ender Quartz", 2113).getInt();
 		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114).getInt();
+		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115).getInt();
+		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick", 2116).getInt();
+		
 		
 		ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
 		ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();

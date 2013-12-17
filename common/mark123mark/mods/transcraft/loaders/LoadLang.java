@@ -4,8 +4,9 @@ import net.minecraft.item.ItemStack;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.CrystalGlass;
 import mark123mark.mods.transcraft.Blocks.CutEnderQuartz;
-import mark123mark.mods.transcraft.Blocks.EnderQuartz;
-import mark123mark.mods.transcraft.Blocks.EnderQuartzBrick;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
+import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.api.Fluids;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -60,6 +61,9 @@ public class LoadLang
 			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Bricks");
 		}
 		
+		for(int i = 0; i < EnderQuartzBigBrick.types.length; i++) {
+			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBigBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Big Bricks");
+		}
 		
 		
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,

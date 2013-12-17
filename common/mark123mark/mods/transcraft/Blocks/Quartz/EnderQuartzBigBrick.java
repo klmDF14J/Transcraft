@@ -1,4 +1,4 @@
-package mark123mark.mods.transcraft.Blocks;
+package mark123mark.mods.transcraft.Blocks.Quartz;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,7 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 
-public class EnderQuartzBrick extends Block {
+public class EnderQuartzBigBrick extends Block {
 
 	public static String[] types = {
 		  "White", "Orange",  "Magenta", "Light Blue", "Yellow", "Light Green",
@@ -30,7 +30,7 @@ public class EnderQuartzBrick extends Block {
 	
 	public static String texName;
 	
-	public EnderQuartzBrick(int par1 , String texture) {
+	public EnderQuartzBigBrick(int par1 , String texture) {
 		super(par1, Material.rock);
 		texName = texture;
 
