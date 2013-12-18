@@ -15,7 +15,15 @@
   "screenshots": [
   ],
   "parent":"",
+  "requiredMods": [
+      "Forge",
+      "ForgeMultipart",
+      "CodeChickenCore"
+  ],
   "dependencies": [
-  ]
+      "ForgeMultipart",
+      "CodeChickenCore",
+  ],
+  "useDependencyInformation": "true"
 }
 ]

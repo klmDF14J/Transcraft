@@ -46,7 +46,7 @@ import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE)
+@Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION + Transcraft.STATE , useMetadata = true , dependencies = "required-after:CodeChickenCore;required-after:NotEnoughItems")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 public class Transcraft
 {

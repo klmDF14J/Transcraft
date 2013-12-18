@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.ItemCrystalGlass;
 import mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.ItemFancyCryastalGlass;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
@@ -49,8 +50,7 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.OrangeLight, "Orange Light");
 		GameRegistry.registerBlock(Transcraft.DarkLight, "Dark Light");
 		GameRegistry.registerBlock(Transcraft.IronTorch, "IronTorch");
-		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
+	
 		GameRegistry.registerBlock(Transcraft.ThinClearGlass, "Thin Clear Glass");
 		GameRegistry.registerBlock(Transcraft.BunkerBlock, "Bunker Block");
 		GameRegistry.registerBlock(Transcraft.SmoothBunkerStair, "Smooth Bunker Stair");
@@ -75,8 +75,12 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, "EnderQuartzBigBricks");
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, ItemEnderQuartzBigBrick.class);
 		
+		
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, ItemFancyCryastalGlass.class);
 		
+		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, ItemCrystalGlass.class);
 		
 		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,

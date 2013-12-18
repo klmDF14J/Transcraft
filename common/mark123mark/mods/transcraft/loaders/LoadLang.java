@@ -64,6 +64,8 @@ public class LoadLang
 		
 		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.FancyCrystalGlass, 1).getItem(), "Fancy Crystal Glass");
 		
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
+		
 
 		
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,

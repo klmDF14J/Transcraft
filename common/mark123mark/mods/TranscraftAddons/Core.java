@@ -1,6 +1,8 @@
 package mark123mark.mods.TranscraftAddons;
 
+
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -10,6 +12,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "TranscraftAddons", name = "TranscraftAddons", version = Transcraft.VERSION + Transcraft.STATE, dependencies = "required-after:transcraft")
@@ -44,6 +47,7 @@ public class Core
 
 		}
 
+		
 	}
 
 	@EventHandler
@@ -59,18 +63,21 @@ public class Core
 
 		}
 
-		if (Loader.isModLoaded("AppliedEnergistics"))
-		{
-			FMLLog.info("[Transcraft Addons]	AppliedEnergistics was detected!");
-			AddonAE.addAE();
-
-		}
-
-		if (Loader.isModLoaded("Railcraft"))
-		{
-			FMLLog.info("[Transcraft Addons]	Railcraft was detected!");
-
-		}
 	}
 
+	@EventHandler
+	public void load(FMLInitializationEvent event)
+	{
+
+		if (Loader.isModLoaded("ForgeMultipart"))
+		{
+			FMLLog.info("[Transcraft Addons]	ForgeMultipart was detected!");
+			
+			AddonFMP.registerBlocks();
+			
+		}
+
+	}
+	
+	
 }

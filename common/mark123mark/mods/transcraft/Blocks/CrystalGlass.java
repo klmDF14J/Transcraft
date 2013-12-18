@@ -1,12 +1,14 @@
 package mark123mark.mods.transcraft.Blocks;
 
+import org.zaet.api.IColoredBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CrystalGlass extends Block
+public class CrystalGlass extends IColoredBlock
 {
 
 	public static String texName;
