@@ -13,50 +13,44 @@ import net.minecraft.world.PortalPosition;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-public class DimTp extends Teleporter
-{
+public class DimTp extends Teleporter {
 	private final WorldServer worldServerInstance;
 	private final LongHashMap field_85191_c = new LongHashMap();
 	@SuppressWarnings("rawtypes")
 	private final List field_85190_d = new ArrayList();
 	private final boolean falling;
 
-	public DimTp(WorldServer worldServer)
-	{
+	public DimTp(WorldServer worldServer) {
 		super(worldServer);
 		falling = false;
 		worldServerInstance = worldServer;
 	}
 
-	public DimTp(WorldServer worldServer, boolean fall)
-	{
+	public DimTp(WorldServer worldServer, boolean fall) {
 		super(worldServer);
 		falling = fall;
 		worldServerInstance = worldServer;
 	}
 
 	@Override
-	public void placeInPortal(Entity par1Entity, double x, double y, double z, float par8)
-	{
-		if (!falling)
-		{
-			if (!this.placeInExistingPortal(par1Entity, x, y, z, par8))
-			{
+	public void placeInPortal(Entity par1Entity, double x, double y, double z,
+			float par8) {
+		if (!falling) {
+			if (!this.placeInExistingPortal(par1Entity, x, y, z, par8)) {
 				this.makePortal(par1Entity);
 				this.placeInExistingPortal(par1Entity, x, y, z, par8);
 			}
-		}
-		else
-		{
-			par1Entity.setLocationAndAngles(x, 256.0, z, par1Entity.rotationYaw, 0.0F);
+		} else {
+			par1Entity.setLocationAndAngles(x, 256.0, z,
+					par1Entity.rotationYaw, 0.0F);
 			par1Entity.motionX = par1Entity.motionY = par1Entity.motionZ = 0.0D;
 		}
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public boolean placeInExistingPortal(Entity par1Entity, double x, double y, double z, float par8)
-	{
+	public boolean placeInExistingPortal(Entity par1Entity, double x, double y,
+			double z, float par8) {
 		short var9 = 128;
 		double var10 = -1.0D;
 		int i = 0;
@@ -69,18 +63,17 @@ public class DimTp extends Teleporter
 		double var27;
 		int var48;
 
-		if (field_85191_c.containsItem(var17))
-		{
-			PortalPosition portalposition = (PortalPosition) field_85191_c.getValueByKey(var17);
+		if (field_85191_c.containsItem(var17)) {
+			PortalPosition portalposition = (PortalPosition) field_85191_c
+					.getValueByKey(var17);
 			var10 = 0.0D;
 			i = portalposition.posX;
 			j = 131;
 			k = portalposition.posZ;
-			portalposition.lastUpdateTime = worldServerInstance.getTotalWorldTime();
+			portalposition.lastUpdateTime = worldServerInstance
+					.getTotalWorldTime();
 			var19 = false;
-		}
-		else
-		{
+		} else {
 		}
 		/*
 		 * 
@@ -176,8 +169,7 @@ public class DimTp extends Teleporter
 	}
 
 	@Override
-	public boolean makePortal(Entity par1Entity)
-	{
+	public boolean makePortal(Entity par1Entity) {
 		int i = MathHelper.floor_double(par1Entity.posX - 8);
 		int j = 120;
 		int k = MathHelper.floor_double(par1Entity.posZ - 8);
@@ -1294,39 +1286,67 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 4, j + 7, k + 2, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 3, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 4, Block.dirt.blockID);
-		worldServerInstance.setBlock(i + 4, j + 7, k + 5, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 7, k + 6, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 7, k + 7, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 7, k + 5,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 7, k + 6,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 7, k + 7,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 9, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 11, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 4, j + 7, k + 12, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 4, j + 8, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 8, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 8, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 8, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 9, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 9, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 9, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 9, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 10, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 10, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 10, k + 6, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 10, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 10, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 11, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 11, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 11, k + 6, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 11, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 4, j + 11, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 12, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 12, k + 5, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 12, k + 6, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 12, k + 7, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 12, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 13, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 4, j + 13, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 8, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 8, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 8, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 8, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 9, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 9, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 9, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 9, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 10, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 10, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 10, k + 6,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 10, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 10, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 11, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 11, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 11, k + 6,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 11, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 4, j + 11, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 12, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 12, k + 5,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 12, k + 6,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 12, k + 7,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 12, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 13, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 4, j + 13, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 5, j + 0, k + 5, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 0, k + 7, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 5, j + 1, k + 5, Block.dirt.blockID);
@@ -1381,26 +1401,38 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 5, j + 7, k + 1, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 2, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 3, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 5, j + 7, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 5, j + 7, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 5, j + 7, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 5, j + 7, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 9, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 11, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 12, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 7, k + 13, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 5, j + 8, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 8, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 9, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 9, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 10, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 10, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 11, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 11, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 5, j + 12, k + 4, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 5, j + 8, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 8, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 9, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 9, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 10, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 10, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 11, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 11, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 5, j + 12, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 5, j + 12, k + 5, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 12, k + 6, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 5, j + 12, k + 7, Block.glass.blockID);
-		worldServerInstance.setBlock(i + 5, j + 12, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 5, j + 12, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 6, j + 0, k + 6, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 0, k + 7, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 6, j + 1, k + 4, Block.dirt.blockID);
@@ -1455,21 +1487,29 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 6, j + 7, k + 1, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 2, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 3, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 6, j + 7, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 6, j + 7, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 6, j + 7, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 6, j + 7, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 9, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 11, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 7, k + 12, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 6, j + 10, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 6, j + 10, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 6, j + 11, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 6, j + 11, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 6, j + 12, k + 4, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 6, j + 10, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 6, j + 10, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 6, j + 11, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 6, j + 11, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 6, j + 12, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 6, j + 12, k + 5, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 12, k + 6, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 6, j + 12, k + 7, Block.glass.blockID);
-		worldServerInstance.setBlock(i + 6, j + 12, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 6, j + 12, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 7, j + 1, k + 5, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 1, k + 6, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 7, j + 2, k + 4, Block.dirt.blockID);
@@ -1520,26 +1560,38 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 7, j + 7, k + 1, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 2, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 3, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 7, j + 7, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 7, j + 7, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 7, j + 7, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 7, j + 7, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 9, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 11, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 12, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 7, k + 13, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 7, j + 8, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 8, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 9, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 9, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 10, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 10, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 11, k + 4, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 11, k + 8, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 7, j + 12, k + 4, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 7, j + 8, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 8, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 9, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 9, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 10, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 10, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 11, k + 4,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 11, k + 8,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 7, j + 12, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 7, j + 12, k + 5, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 12, k + 6, Block.glass.blockID);
 		worldServerInstance.setBlock(i + 7, j + 12, k + 7, Block.glass.blockID);
-		worldServerInstance.setBlock(i + 7, j + 12, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 7, j + 12, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 8, j + 2, k + 5, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 8, j + 2, k + 6, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 8, j + 3, k + 4, Block.dirt.blockID);
@@ -1580,39 +1632,67 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 8, j + 7, k + 2, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 3, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 4, Block.dirt.blockID);
-		worldServerInstance.setBlock(i + 8, j + 7, k + 5, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 7, k + 6, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 7, k + 7, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 7, k + 5,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 7, k + 6,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 7, k + 7,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 9, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 11, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 8, j + 7, k + 12, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 8, j + 8, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 8, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 8, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 8, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 9, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 9, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 9, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 9, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 10, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 10, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 10, k + 6, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 10, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 10, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 11, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 11, k + 5, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 11, k + 6, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 11, k + 7, Block.fenceIron.blockID);
-		worldServerInstance.setBlock(i + 8, j + 11, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 12, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 12, k + 5, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 12, k + 6, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 12, k + 7, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 12, k + 8, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 13, k + 4, Transcraft.BlueenderQuartz.blockID);
-		worldServerInstance.setBlock(i + 8, j + 13, k + 8, Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 8, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 8, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 8, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 8, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 9, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 9, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 9, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 9, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 10, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 10, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 10, k + 6,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 10, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 10, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 11, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 11, k + 5,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 11, k + 6,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 11, k + 7,
+				Block.fenceIron.blockID);
+		worldServerInstance.setBlock(i + 8, j + 11, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 12, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 12, k + 5,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 12, k + 6,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 12, k + 7,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 12, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 13, k + 4,
+				Transcraft.BlueenderQuartz.blockID);
+		worldServerInstance.setBlock(i + 8, j + 13, k + 8,
+				Transcraft.BlueenderQuartz.blockID);
 		worldServerInstance.setBlock(i + 9, j + 2, k + 9, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 9, j + 3, k + 5, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 9, j + 3, k + 6, Block.dirt.blockID);
@@ -1678,7 +1758,8 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 10, j + 7, k + 7, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 10, j + 7, k + 8, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 10, j + 7, k + 9, Block.grass.blockID);
-		worldServerInstance.setBlock(i + 10, j + 7, k + 10, Block.grass.blockID);
+		worldServerInstance
+				.setBlock(i + 10, j + 7, k + 10, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 11, j + 6, k + 6, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 11, j + 6, k + 7, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 11, j + 6, k + 8, Block.dirt.blockID);
@@ -1693,14 +1774,22 @@ public class DimTp extends Teleporter
 		worldServerInstance.setBlock(i + 12, j + 7, k + 3, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 12, j + 7, k + 4, Block.grass.blockID);
 		worldServerInstance.setBlock(i + 12, j + 7, k + 6, Block.grass.blockID);
-		worldServerInstance.setBlockMetadataWithNotify(i + 3, j + 12, k + 4, Block.torchRedstoneActive.blockID, 2);
-		worldServerInstance.setBlockMetadataWithNotify(i + 3, j + 12, k + 8, Block.torchRedstoneActive.blockID, 2);
-		worldServerInstance.setBlockMetadataWithNotify(i + 4, j + 12, k + 3, Block.torchRedstoneActive.blockID, 4);
-		worldServerInstance.setBlockMetadataWithNotify(i + 4, j + 12, k + 9, Block.torchRedstoneActive.blockID, 3);
-		worldServerInstance.setBlockMetadataWithNotify(i + 8, j + 12, k + 3, Block.torchRedstoneActive.blockID, 4);
-		worldServerInstance.setBlockMetadataWithNotify(i + 8, j + 12, k + 9, Block.torchRedstoneActive.blockID, 3);
-		worldServerInstance.setBlockMetadataWithNotify(i + 9, j + 12, k + 4, Block.torchRedstoneActive.blockID, 1);
-		worldServerInstance.setBlockMetadataWithNotify(i + 9, j + 12, k + 8, Block.torchRedstoneActive.blockID, 1);
+		worldServerInstance.setBlockMetadataWithNotify(i + 3, j + 12, k + 4,
+				Block.torchRedstoneActive.blockID, 2);
+		worldServerInstance.setBlockMetadataWithNotify(i + 3, j + 12, k + 8,
+				Block.torchRedstoneActive.blockID, 2);
+		worldServerInstance.setBlockMetadataWithNotify(i + 4, j + 12, k + 3,
+				Block.torchRedstoneActive.blockID, 4);
+		worldServerInstance.setBlockMetadataWithNotify(i + 4, j + 12, k + 9,
+				Block.torchRedstoneActive.blockID, 3);
+		worldServerInstance.setBlockMetadataWithNotify(i + 8, j + 12, k + 3,
+				Block.torchRedstoneActive.blockID, 4);
+		worldServerInstance.setBlockMetadataWithNotify(i + 8, j + 12, k + 9,
+				Block.torchRedstoneActive.blockID, 3);
+		worldServerInstance.setBlockMetadataWithNotify(i + 9, j + 12, k + 4,
+				Block.torchRedstoneActive.blockID, 1);
+		worldServerInstance.setBlockMetadataWithNotify(i + 9, j + 12, k + 8,
+				Block.torchRedstoneActive.blockID, 1);
 
 		return true;
 	}

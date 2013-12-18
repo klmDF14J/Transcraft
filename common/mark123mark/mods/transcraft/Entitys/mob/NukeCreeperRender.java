@@ -4,19 +4,17 @@ import net.minecraft.client.renderer.entity.RenderCreeper;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-public class NukeCreeperRender extends RenderCreeper
-{
+public class NukeCreeperRender extends RenderCreeper {
 
-	public NukeCreeperRender()
-	{
+	public NukeCreeperRender() {
 		super();
 	}
 
-	protected ResourceLocation func_110775_a(Entity par1Entity)
-	{
+	protected ResourceLocation func_110775_a(Entity par1Entity) {
 		return texture;
 	}
 
-	static final ResourceLocation texture = new ResourceLocation("transcraft", "textures/mob/NukeCreeper.png");
+	static final ResourceLocation texture = new ResourceLocation("transcraft",
+			"textures/mob/NukeCreeper.png");
 
 }

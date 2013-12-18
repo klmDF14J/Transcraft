@@ -1,6 +1,5 @@
 package mark123mark.mods.TranscraftAddons;
 
-
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import cpw.mods.fml.common.FMLLog;
@@ -15,10 +14,10 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-@Mod(modid = "TranscraftAddons", name = "TranscraftAddons", version = Transcraft.VERSION + Transcraft.STATE, dependencies = "required-after:transcraft")
+@Mod(modid = "TranscraftAddons", name = "TranscraftAddons", version = Transcraft.VERSION
+		+ Transcraft.STATE, dependencies = "required-after:transcraft")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class Core
-{
+public class Core {
 
 	@SidedProxy(clientSide = "mark123mark.mods.TranscraftAddons.ClientProxy", serverSide = "mark123mark.mods.TranscraftAddons.CommonProxy")
 	public static CommonProxy Coproxy;
@@ -28,10 +27,8 @@ public class Core
 	public static Core instance;
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
-		if (event.getSide() == Side.CLIENT)
-		{
+	public void preInit(FMLPreInitializationEvent event) {
+		if (event.getSide() == Side.CLIENT) {
 			if (Loader.isModLoaded("NotEnoughItems"))
 				;
 			{
@@ -47,17 +44,15 @@ public class Core
 
 		}
 
-		
 	}
 
 	@EventHandler
-	public void init(FMLInitializationEvent event)
-	{
+	public void init(FMLInitializationEvent event) {
 
-		FMLLog.info("[Transcraft Addons]	Starting Transcraft Addons verison " + Transcraft.VERSION + Transcraft.STATE);
+		FMLLog.info("[Transcraft Addons]	Starting Transcraft Addons verison "
+				+ Transcraft.VERSION + Transcraft.STATE);
 
-		if (Loader.isModLoaded("IC2"))
-		{
+		if (Loader.isModLoaded("IC2")) {
 			FMLLog.info("[Transcraft Addons]	IC2 was detected!");
 			AddonIC2.addIC2();
 
@@ -66,18 +61,15 @@ public class Core
 	}
 
 	@EventHandler
-	public void load(FMLInitializationEvent event)
-	{
+	public void load(FMLInitializationEvent event) {
 
-		if (Loader.isModLoaded("ForgeMultipart"))
-		{
+		if (Loader.isModLoaded("ForgeMultipart")) {
 			FMLLog.info("[Transcraft Addons]	ForgeMultipart was detected!");
-			
+
 			AddonFMP.registerBlocks();
-			
+
 		}
 
 	}
-	
-	
+
 }

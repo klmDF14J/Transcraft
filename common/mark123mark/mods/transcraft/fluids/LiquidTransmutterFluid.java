@@ -5,24 +5,20 @@ import net.minecraftforge.fluids.Fluid;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class LiquidTransmutterFluid extends Fluid
-{
-	public LiquidTransmutterFluid(String fluidName)
-	{
+public class LiquidTransmutterFluid extends Fluid {
+	public LiquidTransmutterFluid(String fluidName) {
 		super(fluidName);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Icon getStillIcon()
-	{
+	public Icon getStillIcon() {
 		return BlockFluidLiquidTransmuter.springWaterStillIcon;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public Icon getFlowingIcon()
-	{
+	public Icon getFlowingIcon() {
 		return BlockFluidLiquidTransmuter.springWaterFlowingIcon;
 	}
 

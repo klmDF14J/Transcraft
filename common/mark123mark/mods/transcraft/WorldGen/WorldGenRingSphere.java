@@ -11,17 +11,14 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
 
-public class WorldGenRingSphere extends FishyWorldGenBase
-{
+public class WorldGenRingSphere extends FishyWorldGenBase {
 
-	public WorldGenRingSphere(World worldObj, Random rand)
-	{
+	public WorldGenRingSphere(World worldObj, Random rand) {
 		super(worldObj, rand);
 	}
 
 	@Override
-	public void generate(int i, int j, int k)
-	{
+	public void generate(int i, int j, int k) {
 
 		FMLLog.info("[TRANSCRAFT]	GENERATING RingSphere!");
 		// MinecraftServer.getServer().getConfigurationManager().sendChatMsg(ChatMessageComponent.func_111082_b("Someone has found a mystical secret!"));
@@ -29,42 +26,46 @@ public class WorldGenRingSphere extends FishyWorldGenBase
 		int height = +rand.nextInt(30) + 10;
 
 		j = getTerrainHeightAt(i, k);
-		if (rand.nextInt(6) != 0)
-		{
+		if (rand.nextInt(6) != 0) {
 			j += height;
 		}
 
 		int ringSize = height / 3 + rand.nextInt(6);
 
-		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize, ringSize - 1.5F, 0, true);
-		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize, ringSize - 1.5F, 1, true);
-		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize, ringSize - 1.5F, 2, true);
+		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize,
+				ringSize - 1.5F, 0, true);
+		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize,
+				ringSize - 1.5F, 1, true);
+		genCircle(i, j, k, Config.DriedTransmutterID, 0, ringSize,
+				ringSize - 1.5F, 2, true);
 
 		int halfRingSize = ringSize / 2;
-		placeBlockWithNotify(i - halfRingSize, j, k - halfRingSize, Config.LiquidTransmutterFluidStillID, 0);
-		placeBlockWithNotify(i - halfRingSize, j, k + halfRingSize, Config.LiquidTransmutterFluidStillID, 0);
-		placeBlockWithNotify(i + halfRingSize, j, k + halfRingSize, Config.LiquidTransmutterFluidStillID, 0);
-		placeBlockWithNotify(i + halfRingSize, j, k - halfRingSize, Config.LiquidTransmutterFluidStillID, 0);
+		placeBlockWithNotify(i - halfRingSize, j, k - halfRingSize,
+				Config.LiquidTransmutterFluidStillID, 0);
+		placeBlockWithNotify(i - halfRingSize, j, k + halfRingSize,
+				Config.LiquidTransmutterFluidStillID, 0);
+		placeBlockWithNotify(i + halfRingSize, j, k + halfRingSize,
+				Config.LiquidTransmutterFluidStillID, 0);
+		placeBlockWithNotify(i + halfRingSize, j, k - halfRingSize,
+				Config.LiquidTransmutterFluidStillID, 0);
 
 		j += ringSize;
 
 		placeBlock(i, j, k, Block.chest.blockID, 0);
 
-		TileEntityChest chest = (TileEntityChest) worldObj.getBlockTileEntity(i, j, k);
-		if (chest != null)
-		{
+		TileEntityChest chest = (TileEntityChest) worldObj.getBlockTileEntity(
+				i, j, k);
+		if (chest != null) {
 			int amountOfItem = 3 + rand.nextInt(4);
-			for (int a = 0; a < amountOfItem; a++)
-			{
-				chest.setInventorySlotContents(rand.nextInt(chest.getSizeInventory()), getItem());
+			for (int a = 0; a < amountOfItem; a++) {
+				chest.setInventorySlotContents(
+						rand.nextInt(chest.getSizeInventory()), getItem());
 			}
 		}
 	}
 
-	private ItemStack getItem()
-	{
-		switch (rand.nextInt(10))
-		{
+	private ItemStack getItem() {
+		switch (rand.nextInt(10)) {
 		case 0:
 			return new ItemStack(Item.appleRed, rand.nextInt(5) + 2, 0);
 		case 1:
@@ -82,11 +83,14 @@ public class WorldGenRingSphere extends FishyWorldGenBase
 		case 7:
 			return new ItemStack(Item.eyeOfEnder, rand.nextInt(5) + 2, 0);
 		case 8:
-			return new ItemStack(Transcraft.QuadTransmuter, rand.nextInt(2) + 2, 0);
+			return new ItemStack(Transcraft.QuadTransmuter,
+					rand.nextInt(2) + 2, 0);
 		case 9:
-			return new ItemStack(Transcraft.BasicTransmuter, rand.nextInt(6) + 2, 0);
+			return new ItemStack(Transcraft.BasicTransmuter,
+					rand.nextInt(6) + 2, 0);
 		case 10:
-			return new ItemStack(Transcraft.NanoTransmuter, rand.nextInt(1) + 1, 0);
+			return new ItemStack(Transcraft.NanoTransmuter,
+					rand.nextInt(1) + 1, 0);
 		default:
 			return new ItemStack(Item.porkCooked, rand.nextInt(5) + 2, 0);
 		}

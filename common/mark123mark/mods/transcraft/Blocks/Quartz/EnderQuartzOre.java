@@ -3,11 +3,9 @@ package mark123mark.mods.transcraft.Blocks.Quartz;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class EnderQuartzOre extends Block
-{
+public class EnderQuartzOre extends Block {
 
-	public EnderQuartzOre(int par1)
-	{
+	public EnderQuartzOre(int par1) {
 		super(par1, Material.rock);
 	}
 

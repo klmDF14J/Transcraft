@@ -17,15 +17,12 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-
 public class EnderQuartz extends IColoredBlock {
 
-	
-	
 	public static String texName;
-	
+
 	public EnderQuartz(int par1) {
 		super(par1);
 	}
-	
+
 }

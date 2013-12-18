@@ -9,22 +9,19 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-public class RenderEnderSword implements IItemRenderer
-{
+public class RenderEnderSword implements IItemRenderer {
 	protected EnderSwordModel EnderSwordModel;
 
-	private static final ResourceLocation texCamera = new ResourceLocation("transcraft", "textures/models/EnderSwoadModelTexture.png");
+	private static final ResourceLocation texCamera = new ResourceLocation(
+			"transcraft", "textures/models/EnderSwoadModelTexture.png");
 
-	public RenderEnderSword()
-	{
+	public RenderEnderSword() {
 		EnderSwordModel = new EnderSwordModel();
 	}
 
 	@Override
-	public boolean handleRenderType(ItemStack item, ItemRenderType type)
-	{
-		switch (type)
-		{
+	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+		switch (type) {
 		case EQUIPPED:
 			return true;
 		default:
@@ -33,18 +30,15 @@ public class RenderEnderSword implements IItemRenderer
 	}
 
 	@Override
-	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item, ItemRendererHelper helper)
-	{
+	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item,
+			ItemRendererHelper helper) {
 		return false;
 	}
 
 	@Override
-	public void renderItem(ItemRenderType type, ItemStack item, Object... data)
-	{
-		switch (type)
-		{
-		case EQUIPPED:
-		{
+	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+		switch (type) {
+		case EQUIPPED: {
 			GL11.glPushMatrix();
 			Minecraft.getMinecraft().getTextureManager().bindTexture(texCamera);
 			GL11.glRotatef(0F, 1.0F, 0.0F, 0.0F);
@@ -53,7 +47,8 @@ public class RenderEnderSword implements IItemRenderer
 			GL11.glTranslatef(0.8F, .20F, 0.08F);
 			float scale = 0.5F;
 			GL11.glScalef(scale, scale, scale);
-			EnderSwordModel.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+			EnderSwordModel.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F,
+					0.0F, 0.0625F);
 			// GL11.glPopMatrix();
 		}
 		default:

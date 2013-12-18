@@ -6,8 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.util.MathHelper;
 
-public class ModelEnderBat extends ModelBase
-{
+public class ModelEnderBat extends ModelBase {
 	private ModelRenderer batHead;
 
 	/** The body box of the bat model. */
@@ -25,8 +24,7 @@ public class ModelEnderBat extends ModelBase
 	/** The outer left wing box of the bat model. */
 	private ModelRenderer batOuterLeftWing;
 
-	public ModelEnderBat()
-	{
+	public ModelEnderBat() {
 		this.textureWidth = 64;
 		this.textureHeight = 64;
 		this.batHead = new ModelRenderer(this, 0, 0);
@@ -40,7 +38,8 @@ public class ModelEnderBat extends ModelBase
 		this.batHead.addChild(modelrenderer1);
 		this.batBody = new ModelRenderer(this, 0, 16);
 		this.batBody.addBox(-3.0F, 4.0F, -3.0F, 6, 12, 6);
-		this.batBody.setTextureOffset(0, 34).addBox(-5.0F, 16.0F, 0.0F, 10, 6, 1);
+		this.batBody.setTextureOffset(0, 34).addBox(-5.0F, 16.0F, 0.0F, 10, 6,
+				1);
 		this.batRightWing = new ModelRenderer(this, 42, 0);
 		this.batRightWing.addBox(-12.0F, 1.0F, 1.5F, 10, 16, 1);
 		this.batOuterRightWing = new ModelRenderer(this, 24, 16);
@@ -64,8 +63,7 @@ public class ModelEnderBat extends ModelBase
 	 * would be recreated if the value changed and it seems a good match for a
 	 * bats size
 	 */
-	public int getBatSize()
-	{
+	public int getBatSize() {
 		return 36;
 	}
 
@@ -73,16 +71,16 @@ public class ModelEnderBat extends ModelBase
 	 * Sets the models various rotation angles then renders the model.
 	 */
 	@Override
-	public void render(Entity par1Entity, float par2, float par3, float par4, float par5, float par6, float par7)
-	{
+	public void render(Entity par1Entity, float par2, float par3, float par4,
+			float par5, float par6, float par7) {
 		EntityBat entitybat = (EntityBat) par1Entity;
 		float f6;
 
-		if (entitybat.getIsBatHanging())
-		{
+		if (entitybat.getIsBatHanging()) {
 			f6 = (180F / (float) Math.PI);
 			this.batHead.rotateAngleX = par6 / (180F / (float) Math.PI);
-			this.batHead.rotateAngleY = (float) Math.PI - par5 / (180F / (float) Math.PI);
+			this.batHead.rotateAngleY = (float) Math.PI - par5
+					/ (180F / (float) Math.PI);
 			this.batHead.rotateAngleZ = (float) Math.PI;
 			this.batHead.setRotationPoint(0.0F, -2.0F, 0.0F);
 			this.batRightWing.setRotationPoint(-3.0F, 0.0F, 3.0F);
@@ -94,9 +92,7 @@ public class ModelEnderBat extends ModelBase
 			this.batLeftWing.rotateAngleX = this.batRightWing.rotateAngleX;
 			this.batLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY;
 			this.batOuterLeftWing.rotateAngleY = -this.batOuterRightWing.rotateAngleY;
-		}
-		else
-		{
+		} else {
 			f6 = (180F / (float) Math.PI);
 			this.batHead.rotateAngleX = par6 / (180F / (float) Math.PI);
 			this.batHead.rotateAngleY = par5 / (180F / (float) Math.PI);
@@ -104,9 +100,11 @@ public class ModelEnderBat extends ModelBase
 			this.batHead.setRotationPoint(0.0F, 0.0F, 0.0F);
 			this.batRightWing.setRotationPoint(0.0F, 0.0F, 0.0F);
 			this.batLeftWing.setRotationPoint(0.0F, 0.0F, 0.0F);
-			this.batBody.rotateAngleX = ((float) Math.PI / 4F) + MathHelper.cos(par4 * 0.1F) * 0.15F;
+			this.batBody.rotateAngleX = ((float) Math.PI / 4F)
+					+ MathHelper.cos(par4 * 0.1F) * 0.15F;
 			this.batBody.rotateAngleY = 0.0F;
-			this.batRightWing.rotateAngleY = MathHelper.cos(par4 * 1.3F) * (float) Math.PI * 0.25F;
+			this.batRightWing.rotateAngleY = MathHelper.cos(par4 * 1.3F)
+					* (float) Math.PI * 0.25F;
 			this.batLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY;
 			this.batOuterRightWing.rotateAngleY = this.batRightWing.rotateAngleY * 0.5F;
 			this.batOuterLeftWing.rotateAngleY = -this.batRightWing.rotateAngleY * 0.5F;

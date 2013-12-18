@@ -10,17 +10,14 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLLog;
 
-public class WorldGenTower extends FishyWorldGenBase
-{
+public class WorldGenTower extends FishyWorldGenBase {
 
-	public WorldGenTower(World worldObj, Random rand)
-	{
+	public WorldGenTower(World worldObj, Random rand) {
 		super(worldObj, rand);
 	}
 
 	@Override
-	public void generate(int i, int j, int k)
-	{
+	public void generate(int i, int j, int k) {
 
 		FMLLog.info("[TRANSCRAFT]	GENERATING TOWER!");
 
@@ -31,18 +28,15 @@ public class WorldGenTower extends FishyWorldGenBase
 		int towerHeight = (rand.nextInt(6) + 8 * (floorHeight));
 		int topHeight = (rand.nextInt(2) + 2) * (floorHeight);
 
-		for (int y = j; y < towerHeight + j; y++)
-		{
+		for (int y = j; y < towerHeight + j; y++) {
 			int inner = towerRadius;
-			if ((y - j) % floorHeight == 0)
-			{
+			if ((y - j) % floorHeight == 0) {
 				inner = 0;
 			}
-			if (y - j > towerHeight - topHeight)
-			{
-				genCircle(i, y, k, Block.stone.blockID, 0, towerRadius + 1, inner, 0, true);
-				if (rand.nextBoolean())
-				{
+			if (y - j > towerHeight - topHeight) {
+				genCircle(i, y, k, Block.stone.blockID, 0, towerRadius + 1,
+						inner, 0, true);
+				if (rand.nextBoolean()) {
 					// placeBlock(i, y, k + 2, Block.mobSpawner.blockID, 0);
 					// TileEntityMobSpawner spawner = (TileEntityMobSpawner)
 					// worldObj.getBlockTileEntity(i, y, k + 2);
@@ -51,36 +45,33 @@ public class WorldGenTower extends FishyWorldGenBase
 						// spawner.func_98049_a().setMobID(getMob());
 					}
 				}
-			}
-			else
-			{
-				genCircle(i, y, k, Block.stone.blockID, 0, towerRadius, inner - 1, 0, true);
+			} else {
+				genCircle(i, y, k, Block.stone.blockID, 0, towerRadius,
+						inner - 1, 0, true);
 			}
 			System.out.println((y - j) + ", " + (towerHeight - floorHeight));
-			if (y - j <= towerHeight - floorHeight)
-			{
+			if (y - j <= towerHeight - floorHeight) {
 				placeBlock(i, y, k + 1, Block.stone.blockID, 0);
 				placeBlock(i, y, k, Block.ladder.blockID, 2);
 			}
 		}
 
-		placeBlock(i, j + towerHeight - floorHeight + 1, k - 2, Block.chest.blockID, 0);
+		placeBlock(i, j + towerHeight - floorHeight + 1, k - 2,
+				Block.chest.blockID, 0);
 
-		TileEntityChest chest = (TileEntityChest) worldObj.getBlockTileEntity(i, j + towerHeight - floorHeight + 1, k - 2);
-		if (chest != null)
-		{
+		TileEntityChest chest = (TileEntityChest) worldObj.getBlockTileEntity(
+				i, j + towerHeight - floorHeight + 1, k - 2);
+		if (chest != null) {
 			int amountOfItem = 3 + rand.nextInt(4);
-			for (int a = 0; a < amountOfItem; a++)
-			{
-				chest.setInventorySlotContents(rand.nextInt(chest.getSizeInventory()), getItem());
+			for (int a = 0; a < amountOfItem; a++) {
+				chest.setInventorySlotContents(
+						rand.nextInt(chest.getSizeInventory()), getItem());
 			}
 		}
 	}
 
-	private ItemStack getItem()
-	{
-		switch (rand.nextInt(10))
-		{
+	private ItemStack getItem() {
+		switch (rand.nextInt(10)) {
 		case 0:
 			return new ItemStack(Item.appleRed, rand.nextInt(5) + 2, 0);
 		case 1:
@@ -98,20 +89,21 @@ public class WorldGenTower extends FishyWorldGenBase
 		case 7:
 			return new ItemStack(Item.eyeOfEnder, rand.nextInt(5) + 2, 0);
 		case 8:
-			return new ItemStack(Transcraft.QuadTransmuter, rand.nextInt(2) + 2, 0);
+			return new ItemStack(Transcraft.QuadTransmuter,
+					rand.nextInt(2) + 2, 0);
 		case 9:
-			return new ItemStack(Transcraft.BasicTransmuter, rand.nextInt(6) + 2, 0);
+			return new ItemStack(Transcraft.BasicTransmuter,
+					rand.nextInt(6) + 2, 0);
 		case 10:
-			return new ItemStack(Transcraft.NanoTransmuter, rand.nextInt(1) + 1, 0);
+			return new ItemStack(Transcraft.NanoTransmuter,
+					rand.nextInt(1) + 1, 0);
 		default:
 			return new ItemStack(Item.porkCooked, rand.nextInt(5) + 2, 0);
 		}
 	}
 
-	private String getMob()
-	{
-		switch (rand.nextInt(3))
-		{
+	private String getMob() {
+		switch (rand.nextInt(3)) {
 		case 0:
 			return "zombie";
 		case 1:

@@ -3,11 +3,9 @@ package mark123mark.mods.transcraft.Items;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class IronStick extends Item
-{
+public class IronStick extends Item {
 
-	public IronStick(int id)
-	{
+	public IronStick(int id) {
 		super(id);
 		// Constructor Configuration
 		maxStackSize = 64;
@@ -16,8 +14,7 @@ public class IronStick extends Item
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister)
-	{
+	public void registerIcons(IconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:IronStick");
 	}
 

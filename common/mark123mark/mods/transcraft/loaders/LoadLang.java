@@ -12,16 +12,19 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class LoadLang
-{
+public class LoadLang {
 
-	public static void loadlang()
-	{
-		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabItems", "en_US", "Transcraft Items");
-		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabBlocks", "en_US", "Transcraft Blocks");
-		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabDecBlocks", "en_US", "Transcraft Decorative Blocks");
-		
-		LanguageRegistry.addName(Transcraft.BasicTransmuter, "Basic Transmuter");
+	public static void loadlang() {
+		LanguageRegistry.instance().addStringLocalization(
+				"itemGroup.TranstabItems", "en_US", "Transcraft Items");
+		LanguageRegistry.instance().addStringLocalization(
+				"itemGroup.TranstabBlocks", "en_US", "Transcraft Blocks");
+		LanguageRegistry.instance().addStringLocalization(
+				"itemGroup.TranstabDecBlocks", "en_US",
+				"Transcraft Decorative Blocks");
+
+		LanguageRegistry
+				.addName(Transcraft.BasicTransmuter, "Basic Transmuter");
 		LanguageRegistry.addName(Transcraft.QuadTransmuter, "QuadTransmuter");
 		LanguageRegistry.addName(Transcraft.NanoTransmuter, "NanoTransmuter");
 		LanguageRegistry.addName(Transcraft.HotDog, "Hot Dog");
@@ -32,7 +35,8 @@ public class LoadLang
 		LanguageRegistry.addName(Transcraft.EnderQuartz, "Ender Quartz");
 		LanguageRegistry.addName(Transcraft.EnderGem, "Ender Gem");
 		LanguageRegistry.addName(Transcraft.DarkEndershard, "DarkEnder Shard");
-		LanguageRegistry.addName(Fluids.ItemBucketLiquidTrasnmutter.get(), "Transbucket");
+		LanguageRegistry.addName(Fluids.ItemBucketLiquidTrasnmutter.get(),
+				"Transbucket");
 
 		LanguageRegistry.addName(Transcraft.PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(Transcraft.PlasticHoe, "Plastic Hoe");
@@ -52,22 +56,28 @@ public class LoadLang
 		LanguageRegistry.addName(Transcraft.EnderLegs, "Ender Legs");
 		LanguageRegistry.addName(Transcraft.EnderBoots, "Ender Boots");
 
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+				Transcraft.enderQuartzBlock, 1).getItem(), "Ender Quartz");
 
-		
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.enderQuartzBlock, 1).getItem(), "Ender Quartz");
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+				Transcraft.CutenderQuartz, 1).getItem(), "Cut Ender Quartz");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.CutenderQuartz, 1).getItem(), "Cut Ender Quartz");
-		
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.EnderQuartzBrick, 1).getItem(), "Ender Quartz Brick");
-		
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.EnderQuartzBigBrick, 1).getItem(), "Ender Quartz Big Brick");
-		
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.FancyCrystalGlass, 1).getItem(), "Fancy Crystal Glass");
-		
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
-		
+		ColoredBlockUtil
+				.addLocalizationsForBlock((ItemBlock) new ItemStack(
+						Transcraft.EnderQuartzBrick, 1).getItem(),
+						"Ender Quartz Brick");
 
-		
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+				Transcraft.EnderQuartzBigBrick, 1).getItem(),
+				"Ender Quartz Big Brick");
+
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+				Transcraft.FancyCrystalGlass, 1).getItem(),
+				"Fancy Crystal Glass");
+
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
+				Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
+
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");
 		// LanguageRegistry.addName(Transcraft.DimPortalBlock,

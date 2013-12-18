@@ -13,10 +13,8 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DimPortalBlock extends Block
-{
-	public DimPortalBlock(int par1)
-	{
+public class DimPortalBlock extends Block {
+	public DimPortalBlock(int par1) {
 		super(par1, Material.portal);
 	}
 
@@ -25,8 +23,7 @@ public class DimPortalBlock extends Block
 	/**
 	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
 	 */
-	public int getRenderBlockPass()
-	{
+	public int getRenderBlockPass() {
 		return 1;
 	}
 
@@ -36,9 +33,10 @@ public class DimPortalBlock extends Block
 	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given
 	 * coordinates.  Args: blockAccess, x, y, z, side
 	 */
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
-	{
-		return super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4, 1 - par5);
+	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
+			int par2, int par3, int par4, int par5) {
+		return super.shouldSideBeRendered(par1IBlockAccess, par2, par3, par4,
+				1 - par5);
 	}
 
 	/**
@@ -46,8 +44,8 @@ public class DimPortalBlock extends Block
 	 * box can change after the pool has been cleared to be reused)
 	 */
 	@Override
-	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
-	{
+	public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World,
+			int par2, int par3, int par4) {
 		return null;
 	}
 
@@ -57,26 +55,33 @@ public class DimPortalBlock extends Block
 	 * the player can attach torches, redstone wire, etc to this block.
 	 */
 	@Override
-	public boolean isOpaqueCube()
-	{
+	public boolean isOpaqueCube() {
 		return false;
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
-	{
-		if (par5Entity.ridingEntity == null && par5Entity.riddenByEntity == null)
-		{
-			if (par5Entity instanceof EntityPlayerMP)
-			{
+	public void onEntityCollidedWithBlock(World par1World, int par2, int par3,
+			int par4, Entity par5Entity) {
+		if (par5Entity.ridingEntity == null
+				&& par5Entity.riddenByEntity == null) {
+			if (par5Entity instanceof EntityPlayerMP) {
 				EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
-				if (par5Entity.dimension != Config.DimID)
-				{
-					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, Config.DimID, new DimTp(thePlayer.mcServer.worldServerForDimension(Config.DimID)));
-				}
-				else
-				{
-					thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new DimTp(thePlayer.mcServer.worldServerForDimension(0)));
+				if (par5Entity.dimension != Config.DimID) {
+					thePlayer.mcServer
+							.getConfigurationManager()
+							.transferPlayerToDimension(
+									thePlayer,
+									Config.DimID,
+									new DimTp(
+											thePlayer.mcServer
+													.worldServerForDimension(Config.DimID)));
+				} else {
+					thePlayer.mcServer.getConfigurationManager()
+							.transferPlayerToDimension(
+									thePlayer,
+									0,
+									new DimTp(thePlayer.mcServer
+											.worldServerForDimension(0)));
 				}
 			}
 		}
@@ -87,11 +92,10 @@ public class DimPortalBlock extends Block
 	/**
 	 * A randomly called display update to be able to add particles or other items for display
 	 */
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
-	{
+	public void randomDisplayTick(World par1World, int par2, int par3,
+			int par4, Random par5Random) {
 
-		for (int l = 0; l < 20; ++l)
-		{
+		for (int l = 0; l < 20; ++l) {
 			double d0 = par2 + par5Random.nextFloat();
 			double d1 = par3 + par5Random.nextFloat();
 			d0 = par4 + par5Random.nextFloat();

@@ -3,11 +3,9 @@ package mark123mark.mods.transcraft.Items;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class EnderQuartz extends Item
-{
+public class EnderQuartz extends Item {
 
-	public EnderQuartz(int id)
-	{
+	public EnderQuartz(int id) {
 		super(id);
 		// Constructor Configuration
 		maxStackSize = 16;
@@ -16,8 +14,7 @@ public class EnderQuartz extends Item
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister)
-	{
+	public void registerIcons(IconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderQuartz");
 	}
 

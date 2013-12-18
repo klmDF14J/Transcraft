@@ -17,11 +17,10 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-
 public class EnderQuartzBigBrick extends IColoredBlock {
 
 	public EnderQuartzBigBrick(int par1) {
 		super(par1);
 	}
-	
+
 }

@@ -3,12 +3,10 @@ package mark123mark.mods.transcraft.biomes;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.BiomeGenBase;
 
-public class TransmutterBiome extends BiomeGenBase
-{
+public class TransmutterBiome extends BiomeGenBase {
 	private TranscraftBiomeDec customBiomeDecorator;
 
-	public TransmutterBiome(int par1)
-	{
+	public TransmutterBiome(int par1) {
 		super(par1);
 		theBiomeDecorator = new TranscraftBiomeDec(this);
 		customBiomeDecorator = (TranscraftBiomeDec) theBiomeDecorator;

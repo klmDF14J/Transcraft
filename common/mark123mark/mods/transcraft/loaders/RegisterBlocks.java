@@ -12,11 +12,9 @@ import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class RegisterBlocks
-{
+public class RegisterBlocks {
 
-	public static void RegisterBlocks()
-	{
+	public static void RegisterBlocks() {
 		LanguageRegistry.addName(Transcraft.TranscraftOre, "Transmutter Ore");
 		LanguageRegistry.addName(Transcraft.OilOre, "Oil Ore");
 		LanguageRegistry.addName(Transcraft.BlueLight, "Blue Light");
@@ -24,21 +22,28 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.OrangeLight, "Orange Light");
 		LanguageRegistry.addName(Transcraft.DarkLight, "Dark Light");
 		LanguageRegistry.addName(Transcraft.IronTorch, "Iron Torch");
-		LanguageRegistry.addName(Transcraft.ThinClearGlass, "Thin Crystal Glass");
+		LanguageRegistry.addName(Transcraft.ThinClearGlass,
+				"Thin Crystal Glass");
 		LanguageRegistry.addName(Transcraft.BunkerBlock, "Bunker Block");
 		LanguageRegistry.addName(Transcraft.BunkerStair, "Bunker Stair");
 		LanguageRegistry.addName(Transcraft.ClearGlass, "Clear Glass");
-		LanguageRegistry.addName(Transcraft.SmoothBunkerStair, "Smooth Bunker Stair");
+		LanguageRegistry.addName(Transcraft.SmoothBunkerStair,
+				"Smooth Bunker Stair");
 		LanguageRegistry.addName(Transcraft.ObsidianLever, "Obsidian Lever");
-		LanguageRegistry.addName(Transcraft.SmoothBunkerBlock, "Smooth Bunker Block");
-		LanguageRegistry.addName(Transcraft.DriedTransmutter, "Dried Transmuter");
+		LanguageRegistry.addName(Transcraft.SmoothBunkerBlock,
+				"Smooth Bunker Block");
+		LanguageRegistry.addName(Transcraft.DriedTransmutter,
+				"Dried Transmuter");
 		LanguageRegistry.addName(Transcraft.Transcrafter, "Transcrafter");
 		LanguageRegistry.addName(Transcraft.ComIronOre, "Packed Iron Ore");
 		LanguageRegistry.addName(Transcraft.ComGoldOre, "Packed Gold Ore");
-		LanguageRegistry.addName(Transcraft.ComTransmutterOre, "Packed Transmuter Ore");
+		LanguageRegistry.addName(Transcraft.ComTransmutterOre,
+				"Packed Transmuter Ore");
 		LanguageRegistry.addName(Transcraft.ComOilOre, "Packed Oil Ore");
-		LanguageRegistry.addName(Transcraft.enderQuartzBlock, "Ender Quartz Block");
-		LanguageRegistry.addName(Transcraft.TransManiaOre, "Dried Transmutter Ore");
+		LanguageRegistry.addName(Transcraft.enderQuartzBlock,
+				"Ender Quartz Block");
+		LanguageRegistry.addName(Transcraft.TransManiaOre,
+				"Dried Transmutter Ore");
 
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");
@@ -50,39 +55,51 @@ public class RegisterBlocks
 		GameRegistry.registerBlock(Transcraft.OrangeLight, "Orange Light");
 		GameRegistry.registerBlock(Transcraft.DarkLight, "Dark Light");
 		GameRegistry.registerBlock(Transcraft.IronTorch, "IronTorch");
-	
-		GameRegistry.registerBlock(Transcraft.ThinClearGlass, "Thin Clear Glass");
+
+		GameRegistry.registerBlock(Transcraft.ThinClearGlass,
+				"Thin Clear Glass");
 		GameRegistry.registerBlock(Transcraft.BunkerBlock, "Bunker Block");
-		GameRegistry.registerBlock(Transcraft.SmoothBunkerStair, "Smooth Bunker Stair");
-		GameRegistry.registerBlock(Transcraft.DriedTransmutter, "Dried Transmuter");
+		GameRegistry.registerBlock(Transcraft.SmoothBunkerStair,
+				"Smooth Bunker Stair");
+		GameRegistry.registerBlock(Transcraft.DriedTransmutter,
+				"Dried Transmuter");
 		GameRegistry.registerBlock(Transcraft.ComIronOre, "Packed Iron Ore");
 		GameRegistry.registerBlock(Transcraft.ComGoldOre, "Packed Gold Ore");
-		GameRegistry.registerBlock(Transcraft.ComTransmutterOre, "Packed Transmuter Ore");
+		GameRegistry.registerBlock(Transcraft.ComTransmutterOre,
+				"Packed Transmuter Ore");
 		GameRegistry.registerBlock(Transcraft.ComOilOre, "Packed Oil Ore");
 		GameRegistry.registerBlock(Transcraft.BunkerStair, "Bunker Stair");
 		GameRegistry.registerBlock(Transcraft.ObsidianLever, "Obsidian Lever");
-		GameRegistry.registerBlock(Transcraft.SmoothBunkerBlock, "Smooth Bunker Block");
-		
-		GameRegistry.registerBlock(Transcraft.enderQuartzBlock, "EnderQuartz");
-		GameRegistry.registerBlock(Transcraft.enderQuartzBlock, ItemEnderQuartzBlock.class);
-		
-		GameRegistry.registerBlock(Transcraft.CutenderQuartz, "CutEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.CutenderQuartz, ItemCutEnderQuartzBlock.class);
-		
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick, "EnderQuartzBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick, ItemEnderQuartzBrick.class);
+		GameRegistry.registerBlock(Transcraft.SmoothBunkerBlock,
+				"Smooth Bunker Block");
 
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, "EnderQuartzBigBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, ItemEnderQuartzBigBrick.class);
-		
-		
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, ItemFancyCryastalGlass.class);
-		
+		GameRegistry.registerBlock(Transcraft.enderQuartzBlock, "EnderQuartz");
+		GameRegistry.registerBlock(Transcraft.enderQuartzBlock,
+				ItemEnderQuartzBlock.class);
+
+		GameRegistry.registerBlock(Transcraft.CutenderQuartz, "CutEnderQuartz");
+		GameRegistry.registerBlock(Transcraft.CutenderQuartz,
+				ItemCutEnderQuartzBlock.class);
+
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,
+				"EnderQuartzBricks");
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,
+				ItemEnderQuartzBrick.class);
+
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,
+				"EnderQuartzBigBricks");
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,
+				ItemEnderQuartzBigBrick.class);
+
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
+				"Fancy Crystal Glass");
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
+				ItemFancyCryastalGlass.class);
+
 		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, ItemCrystalGlass.class);
-		
-		
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
+				ItemCrystalGlass.class);
+
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");
 		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
@@ -123,9 +140,9 @@ public class RegisterBlocks
 
 	}
 
-	public static void registerItem(Item item)
-	{
-		GameRegistry.registerItem(item, item.getUnlocalizedName().replace("item.", ""));
+	public static void registerItem(Item item) {
+		GameRegistry.registerItem(item,
+				item.getUnlocalizedName().replace("item.", ""));
 	}
 
 }

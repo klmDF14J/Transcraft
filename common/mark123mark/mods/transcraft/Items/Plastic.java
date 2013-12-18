@@ -3,11 +3,9 @@ package mark123mark.mods.transcraft.Items;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class Plastic extends Item
-{
+public class Plastic extends Item {
 
-	public Plastic(int id)
-	{
+	public Plastic(int id) {
 		super(id);
 		// Constructor Configuration
 		maxStackSize = 64;
@@ -16,8 +14,7 @@ public class Plastic extends Item
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister)
-	{
+	public void registerIcons(IconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:Plastic");
 	}
 

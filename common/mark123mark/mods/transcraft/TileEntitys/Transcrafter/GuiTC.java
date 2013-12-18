@@ -8,12 +8,12 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-public class GuiTC extends GuiContainer
-{
-	private static final ResourceLocation field_110422_t = new ResourceLocation("transcraft", "textures/gui/Transcrafter.png");
+public class GuiTC extends GuiContainer {
+	private static final ResourceLocation field_110422_t = new ResourceLocation(
+			"transcraft", "textures/gui/Transcrafter.png");
 
-	public GuiTC(InventoryPlayer par1InventoryPlayer, World par2World, int par3, int par4, int par5)
-	{
+	public GuiTC(InventoryPlayer par1InventoryPlayer, World par2World,
+			int par3, int par4, int par5) {
 		super(new ContainerTC(par1InventoryPlayer, par2World, par3, par4, par5));
 	}
 
@@ -22,10 +22,11 @@ public class GuiTC extends GuiContainer
 	 * the items)
 	 */
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2)
-	{
-		this.fontRenderer.drawString(I18n.getString("Transcrafter"), 28, 6, 1210752);
-		this.fontRenderer.drawString(I18n.getString("container.inventory"), 8, this.ySize - 96 + 2, 1210752);
+	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+		this.fontRenderer.drawString(I18n.getString("Transcrafter"), 28, 6,
+				1210752);
+		this.fontRenderer.drawString(I18n.getString("container.inventory"), 8,
+				this.ySize - 96 + 2, 1210752);
 	}
 
 	/**
@@ -33,8 +34,8 @@ public class GuiTC extends GuiContainer
 	 * items)
 	 */
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3)
-	{
+	protected void drawGuiContainerBackgroundLayer(float par1, int par2,
+			int par3) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.mc.renderEngine.bindTexture(field_110422_t);
 		int k = (this.width - this.xSize) / 2;

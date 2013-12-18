@@ -13,14 +13,12 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ixpGrinder extends Block
-{
+public class ixpGrinder extends Block {
 
 	@SideOnly(Side.CLIENT)
 	public static Icon[] texture;
 
-	public ixpGrinder(int ID)
-	{
+	public ixpGrinder(int ID) {
 		super(ID, Material.iron);
 		setCreativeTab(Transcraft.TranstabBlocks);
 
@@ -35,9 +33,9 @@ public class ixpGrinder extends Block
 	/**
 	 * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
 	 */
-	public Icon getIcon(int par1, int par2)
-	{
-		return par1 == 0 ? this.BotIc : (par1 == 1 ? this.TopIc : this.blockIcon);
+	public Icon getIcon(int par1, int par2) {
+		return par1 == 0 ? this.BotIc : (par1 == 1 ? this.TopIc
+				: this.blockIcon);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -45,32 +43,29 @@ public class ixpGrinder extends Block
 	 * When this method is called, your block should register all the icons it needs with the given IconRegister. This
 	 * is the only chance you get to register icons.
 	 */
-	public void registerIcons(IconRegister par1IconRegister)
-	{
+	public void registerIcons(IconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon("transcraft:ixpGrinder"); // side
 		this.TopIc = par1IconRegister.registerIcon("transcraft:ixpGrinder_top");// top
 		this.BotIc = par1IconRegister.registerIcon("minecraft:cobblestone");// bottom
 	}
 
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int i, float a, float b, float c)
-	{
+	public boolean onBlockActivated(World world, int x, int y, int z,
+			EntityPlayer player, int i, float a, float b, float c) {
 
-		if (player.getHeldItem() != null)
-		{
+		if (player.getHeldItem() != null) {
 
-			if (player.getHeldItem().itemID == Block.cloth.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 32)
-				{
+			if (player.getHeldItem().itemID == Block.cloth.blockID) {
+				if (player.getHeldItem().stackSize >= 32) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 32;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -79,19 +74,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Item.flint.itemID)
-			{
-				if (player.getHeldItem().stackSize >= 16)
-				{
+			if (player.getHeldItem().itemID == Item.flint.itemID) {
+				if (player.getHeldItem().stackSize >= 16) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 16;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -99,19 +93,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Item.flint.itemID)
-			{
-				if (player.getHeldItem().stackSize >= 16)
-				{
+			if (player.getHeldItem().itemID == Item.flint.itemID) {
+				if (player.getHeldItem().stackSize >= 16) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 16;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -119,19 +112,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.cobblestone.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.cobblestone.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -139,19 +131,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.dirt.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.dirt.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -159,19 +150,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.netherrack.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.netherrack.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -179,19 +169,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.gravel.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.gravel.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -199,19 +188,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.whiteStone.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.whiteStone.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -219,19 +207,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.wood.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 64)
-				{
+			if (player.getHeldItem().itemID == Block.wood.blockID) {
+				if (player.getHeldItem().stackSize >= 64) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 64;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 
@@ -239,19 +226,18 @@ public class ixpGrinder extends Block
 				}
 			}
 
-			if (player.getHeldItem().itemID == Block.netherBrick.blockID)
-			{
-				if (player.getHeldItem().stackSize >= 32)
-				{
+			if (player.getHeldItem().itemID == Block.netherBrick.blockID) {
+				if (player.getHeldItem().stackSize >= 32) {
 					player.getHeldItem().stackSize = player.getHeldItem().stackSize - 32;
 
-					if (!world.isRemote)
-					{
+					if (!world.isRemote) {
 
-						world.playSoundAtEntity(player, "random.explode", 0.5F, 0.4F * 0.4F + 0.8F);
+						world.playSoundAtEntity(player, "random.explode", 0.5F,
+								0.4F * 0.4F + 0.8F);
 
 						ItemStack ItemStack = new ItemStack(Item.expBottle, 1);
-						EntityItem entityitem = new EntityItem(world, x, y + (double) 1.5, z, ItemStack);
+						EntityItem entityitem = new EntityItem(world, x, y
+								+ (double) 1.5, z, ItemStack);
 						entityitem.delayBeforeCanPickup = 10;
 						world.spawnEntityInWorld(entityitem);
 

@@ -1,10 +1,8 @@
 package mark123mark.mods.TranscraftAddons;
 
-public class AddonIC2
-{
+public class AddonIC2 {
 
-	public static void addIC2()
-	{
+	public static void addIC2() {
 		// ItemStack nuke = Items.getItem("nuke");
 		// ItemStack nuke2 = Items.getItem("nuke").copy();
 		// nuke2.stackSize = 2;

@@ -8,8 +8,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class AddonFMP {
 
-	public static void registerBlocks()
-	{
+	public static void registerBlocks() {
 		BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.OilOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.BlueLight);
@@ -28,29 +27,24 @@ public class AddonFMP {
 
 		/*
 		 * 
-		
-		
-		for(int i = 15; i >= 0; i--)
-		{
-			BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
-		}
+		 * 
+		 * 
+		 * for(int i = 15; i >= 0; i--) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.enderQuartzBlock, i);
+		 * }
+		 * 
+		 * for(int i = 15; i >= 0; i--) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz ,i); }
+		 * 
+		 * for(int i = 15; i >= 0; i--) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
+		 * }
+		 * 
+		 * for(int i = 15; i >= 0; i--) {
+		 * BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick,
+		 * i); }
+		 */
 
-		for(int i = 15; i >= 0; i--)
-		{
-			BlockMicroMaterial.createAndRegister(Transcraft.CutenderQuartz ,i);
-		}
-
-		for(int i = 15; i >= 0; i--)
-		{
-			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBrick, i);
-		}
-
-		for(int i = 15; i >= 0; i--)
-		{
-			BlockMicroMaterial.createAndRegister(Transcraft.EnderQuartzBigBrick, i);
-		}
- */
-	
 	}
-	
+
 }

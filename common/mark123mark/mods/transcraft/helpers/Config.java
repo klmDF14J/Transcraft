@@ -6,8 +6,7 @@ import java.io.IOException;
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-public class Config
-{
+public class Config {
 
 	public static int TranscraftOreID = 2000;
 	public static int OilOreID = 2001;
@@ -32,7 +31,7 @@ public class Config
 	public static int BlockCutEnderQuartzID = 2114;
 	public static int BlockEnderQuartzBrickID = 2115;
 	public static int BlockEnderQuartzBigBrickID = 2116;
-	
+
 	// public static int DimPortalBlockID = 2200;
 	// public static int DimPortalEscapeBlockID = 2201;
 
@@ -82,32 +81,29 @@ public class Config
 
 	public static boolean WorldGen = true;
 
-	public static File getMinecraftDir()
-	{
+	public static File getMinecraftDir() {
 		return new File(".");
 	}
 
-	public static void init(FMLPreInitializationEvent event)
-	{
-		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+	public static void init(FMLPreInitializationEvent event) {
+		Configuration config = new Configuration(
+				event.getSuggestedConfigurationFile());
 	}
 
 	// config.load();
 
-	public static void initConfig()
-	{
+	public static void initConfig() {
 
 		// File fileDir = new File(proxy.getMinecraftDir() +
 		// "/Transcraft/config/");
 		// fileDir.mkdir();
-		File cfgFile = new File(mark123mark.mods.transcraft.TranscraftCommonProxy.getMinecraftDir() + "/config/Transcraft.cfg");
+		File cfgFile = new File(
+				mark123mark.mods.transcraft.TranscraftCommonProxy
+						.getMinecraftDir() + "/config/Transcraft.cfg");
 
-		try
-		{
+		try {
 			cfgFile.createNewFile();
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			System.out.println(e);
 		}
 
@@ -126,27 +122,34 @@ public class Config
 		ObsidianLeverID = config.getBlock("ObsidianLever", 2004).getInt();
 		BunkerBlockID = config.getBlock("BunkerBlock", 2002).getInt();
 		BunkerStairID = config.getBlock("BunkerStair", 2005).getInt();
-		SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006).getInt();
-		SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007).getInt();
+		SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006)
+				.getInt();
+		SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007)
+				.getInt();
 		DriedTransmutterID = config.getBlock("Dried Transmuter", 2008).getInt();
 		ThinClearGlassID = config.getBlock("Thin Crystal Glass", 2009).getInt();
-		FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010).getInt();
+		FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010)
+				.getInt();
 		TransManiaOreID = config.getBlock("TransMania Ore", 2011).getInt();
 
 		BlockEnderQuartzID = config.getBlock("Ender Quartz", 2113).getInt();
-		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114).getInt();
-		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115).getInt();
-		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick", 2116).getInt();
-		
-		
+		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114)
+				.getInt();
+		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115)
+				.getInt();
+		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick",
+				2116).getInt();
+
 		ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
 		ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();
-		ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023).getInt();
+		ComTransmutterOreID = config.getBlock("Packed Transmuter Ore", 2023)
+				.getInt();
 		ComOilOreID = config.getBlock("Packed Oil Ore", 2024).getInt();
 
 		// ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
 
-		LiquidTransmutterFluidStillID = config.getBlock("LiquidTransmuterFluidStillID", 2101).getInt();
+		LiquidTransmutterFluidStillID = config.getBlock(
+				"LiquidTransmuterFluidStillID", 2101).getInt();
 
 		TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
 		LTranscrafterID = config.getBlock("Liquid Transcrafter", 2113).getInt();
@@ -168,7 +171,8 @@ public class Config
 		EnderQuartzID = config.getItem("EnderQuartz", 5017).getInt();
 		DarkEndershardID = config.getItem("DarkEndershard", 5018).getInt();
 
-		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter", 5017).getInt();
+		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter",
+				5017).getInt();
 
 		PlasticAxeID = config.getItem("PlasticAxe", 5031).getInt();
 		PlasticHoeID = config.getItem("PlasticHoe", 5032).getInt();

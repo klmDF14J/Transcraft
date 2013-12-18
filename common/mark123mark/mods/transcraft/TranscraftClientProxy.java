@@ -14,40 +14,36 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
-public class TranscraftClientProxy extends TranscraftCommonProxy
-{
+public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	public static Minecraft mc = Minecraft.getMinecraft();
 
 	@Override
-	public void registerHandlers()
-	{
+	public void registerHandlers() {
 		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
 	}
 
 	@Override
-	public void registerTickHandlers()
-	{
+	public void registerTickHandlers() {
 		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
 		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
-		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class, new NukeCreeperRender());
-		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class, new EnderBatRender());
+		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
+				new NukeCreeperRender());
+		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,
+				new EnderBatRender());
 	}
 
-	public void registerRenderer()
-	{
+	public void registerRenderer() {
 
 	}
 
 	@Override
-	public void spawnParticle(String string, double x, double y, double z)
-	{
+	public void spawnParticle(String string, double x, double y, double z) {
 		EntityFX entityfx = null;
 
 		Random rand = new Random();
 
-		if (string == "glass")
-		{
+		if (string == "glass") {
 			// entityfx = new GlassFX(mc.theWorld, x, y, z, 0.0D, 0.0D, 0.0D);
 		}
 
