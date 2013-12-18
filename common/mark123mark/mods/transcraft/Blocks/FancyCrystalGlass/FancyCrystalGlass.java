@@ -2,6 +2,8 @@ package mark123mark.mods.transcraft.Blocks.FancyCrystalGlass;
 
 import java.util.Random;
 
+import org.zaet.api.IColoredBlock;
+
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -13,7 +15,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class FancyCrystalGlass extends Block
+public class FancyCrystalGlass extends IColoredBlock
 {
 	private Icon[] icons = new Icon[16];
 	private boolean shouldRenderSelectionBox = true;

@@ -35,7 +35,7 @@ public class LoadBlocks
 
 		Transcraft.ClearGlass = new mark123mark.mods.transcraft.Blocks.CrystalGlass(Config.ClearGlassID).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:ClearGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
 
-		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(Config.FancyCrystalGlassID, "clear", false).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:FancyCrystalGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:FancyCrystalGlass");
+		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(Config.FancyCrystalGlassID, "clear", false).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:FancyCrystalGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabDecBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:FancyCrystalGlass");
 
 		Transcraft.ThinClearGlass = new ThinCrystalGlass(Config.ThinClearGlassID).setStepSound(Block.soundGlassFootstep).setUnlocalizedName("Transcraft:ThinClearGlass").setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F).setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
 

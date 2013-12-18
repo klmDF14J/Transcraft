@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.ItemFancyCryastalGlass;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemCutEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
@@ -22,7 +23,6 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.OrangeLight, "Orange Light");
 		LanguageRegistry.addName(Transcraft.DarkLight, "Dark Light");
 		LanguageRegistry.addName(Transcraft.IronTorch, "Iron Torch");
-		LanguageRegistry.addName(Transcraft.FancyCrystalGlass, "Fancy Crystal Glass");
 		LanguageRegistry.addName(Transcraft.ThinClearGlass, "Thin Crystal Glass");
 		LanguageRegistry.addName(Transcraft.BunkerBlock, "Bunker Block");
 		LanguageRegistry.addName(Transcraft.BunkerStair, "Bunker Stair");
@@ -37,8 +37,6 @@ public class RegisterBlocks
 		LanguageRegistry.addName(Transcraft.ComTransmutterOre, "Packed Transmuter Ore");
 		LanguageRegistry.addName(Transcraft.ComOilOre, "Packed Oil Ore");
 		LanguageRegistry.addName(Transcraft.enderQuartzBlock, "Ender Quartz Block");
-
-
 		LanguageRegistry.addName(Transcraft.TransManiaOre, "Dried Transmutter Ore");
 
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
@@ -76,6 +74,9 @@ public class RegisterBlocks
 
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, "EnderQuartzBigBricks");
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick, ItemEnderQuartzBigBrick.class);
+		
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass, ItemFancyCryastalGlass.class);
+		
 		
 		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
