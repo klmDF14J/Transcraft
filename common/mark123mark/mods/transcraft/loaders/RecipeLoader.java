@@ -64,7 +64,7 @@ public class RecipeLoader
 		ItemStack GreenDye = new ItemStack(Item.dyePowder, 1, 2);
 		ItemStack OrangeDye = new ItemStack(Item.dyePowder, 1, 14);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.enderQuartz, 8), " q ", "qqq", " d ", 'd', GreenDye, 'q', Item.netherQuartz);
+		GameRegistry.addRecipe(new ItemStack(Transcraft.enderQuartzBlock, 8), " q ", "qqq", " d ", 'd', GreenDye, 'q', Item.netherQuartz);
 		
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueLight, 8), "prp", "pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b', BlueDye);

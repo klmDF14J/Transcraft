@@ -62,13 +62,13 @@ public class LoadBlocks
 		Transcraft.Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(Config.TranscrafterID).setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F).setUnlocalizedName("Transcraft:Transcrafter");
 
 
-		Transcraft.enderQuartz = new EnderQuartz(Config.BlockEnderQuartzID,"EnderQuartz").setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+		Transcraft.enderQuartzBlock = new EnderQuartz(Config.BlockEnderQuartzID).setUnlocalizedName("Transcraft:enderquartz").setTextureName("Transcraft:enderquartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 		
-		Transcraft.CutenderQuartz = new CutEnderQuartz(Config.BlockCutEnderQuartzID,"CutEnderQuartz").setUnlocalizedName("Transcraft:CutEnderQuartz").setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+		Transcraft.CutenderQuartz = new CutEnderQuartz(Config.BlockCutEnderQuartzID).setUnlocalizedName("Transcraft:CutEnderQuartz").setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 
-		Transcraft.EnderQuartzBrick = new EnderQuartzBrick(Config.BlockEnderQuartzBrickID,"EnderQuartzBrick").setUnlocalizedName("Transcraft:EnderQuartzBricks").setTextureName("Transcraft:EnderQuartzBricks").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+		Transcraft.EnderQuartzBrick = new EnderQuartzBrick(Config.BlockEnderQuartzBrickID).setUnlocalizedName("Transcraft:EnderQuartzBrick").setTextureName("Transcraft:EnderQuartzBrick").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 		
-		Transcraft.EnderQuartzBigBrick = new EnderQuartzBigBrick(Config.BlockEnderQuartzBigBrickID,"EnderQuartzBrick2").setUnlocalizedName("Transcraft:EnderQuartzBigBricks").setTextureName("Transcraft:EnderQuartzBigBricks").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+		Transcraft.EnderQuartzBigBrick = new EnderQuartzBigBrick(Config.BlockEnderQuartzBigBrickID).setUnlocalizedName("Transcraft:EnderQuartzBigBricks").setTextureName("Transcraft:EnderQuartzBrick2").setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 	/*
 		 * 
 		 * Transcraft.DimPortalBlock = (new

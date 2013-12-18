@@ -52,23 +52,17 @@ public class LoadLang
 		LanguageRegistry.addName(Transcraft.EnderLegs, "Ender Legs");
 		LanguageRegistry.addName(Transcraft.EnderBoots, "Ender Boots");
 
-		for(int i = 0; i < EnderQuartz.types.length; i++) {
-			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartz, 1, i), EnderQuartz.types[i] + " Ender Quartz");
-		}
+
+		
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.enderQuartzBlock, 1).getItem(), "Ender Quartz");
+
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.CutenderQuartz, 1).getItem(), "Cut Ender Quartz");
+		
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.EnderQuartzBrick, 1).getItem(), "Ender Quartz Brick");
+		
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.EnderQuartzBigBrick, 1).getItem(), "Ender Quartz Big Brick");
 		
 
-
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.CutenderQuartz, 1).getItem(), "Brick");
-		
-		
-		for(int i = 0; i < EnderQuartzBrick.types.length; i++) {
-			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Bricks");
-		}
-		
-		for(int i = 0; i < EnderQuartzBigBrick.types.length; i++) {
-			LanguageRegistry.addName(new ItemStack(Transcraft.EnderQuartzBigBrick, 1, i), EnderQuartzBrick.types[i] + " Ender Quartz Big Bricks");
-		}
-		
 		
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");

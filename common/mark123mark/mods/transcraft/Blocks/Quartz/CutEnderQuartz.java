@@ -20,12 +20,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class CutEnderQuartz extends IColoredBlock {
 
-	public static String texName;
+
 	
-	public CutEnderQuartz(int par1 , String texture) {
+	public CutEnderQuartz(int par1) {
 		super(par1);
-		texName = texture;
-	
+
 	}
 
 }
