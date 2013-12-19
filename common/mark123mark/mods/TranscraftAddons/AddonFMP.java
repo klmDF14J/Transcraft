@@ -4,9 +4,15 @@ import net.minecraft.item.ItemStack;
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
 import codechicken.microblock.BlockMicroMaterial;
+import codechicken.microblock.MicroMaterialRegistry;
+import codechicken.multipart.MultiPartRegistry;
+import codechicken.multipart.MultiPartRegistry.IPartFactory;
+import codechicken.multipart.TMultiPart;
+import codechicken.multipart.minecraft.TorchPart;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class AddonFMP {
+public class AddonFMP implements  IPartFactory 
+{
 
 	public static void registerBlocks() {
 		BlockMicroMaterial.createAndRegister(Transcraft.TranscraftOre);
@@ -24,6 +30,9 @@ public class AddonFMP {
 		BlockMicroMaterial.createAndRegister(Transcraft.ComTransmutterOre);
 		BlockMicroMaterial.createAndRegister(Transcraft.DriedTransmutter);
 		BlockMicroMaterial.createAndRegister(Transcraft.TransManiaOre);
+		
+		
+		
 
 		/*
 		 * 
@@ -45,6 +54,12 @@ public class AddonFMP {
 		 * i); }
 		 */
 
+	}
+
+	@Override
+	public TMultiPart createPart(String arg0, boolean arg1) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

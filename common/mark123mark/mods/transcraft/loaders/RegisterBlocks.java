@@ -100,6 +100,8 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
 				ItemCrystalGlass.class);
 
+		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
+		
 		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
 		// "DimPortalBlock");
 		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
