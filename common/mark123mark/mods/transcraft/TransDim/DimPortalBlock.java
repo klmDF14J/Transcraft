@@ -66,6 +66,7 @@ public class DimPortalBlock extends Block {
 				&& par5Entity.riddenByEntity == null) {
 			if (par5Entity instanceof EntityPlayerMP) {
 				EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
+				
 				if (par5Entity.dimension != Config.DimID) {
 					thePlayer.mcServer
 							.getConfigurationManager()

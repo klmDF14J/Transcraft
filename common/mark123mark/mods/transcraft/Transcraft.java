@@ -92,6 +92,7 @@ public class Transcraft {
 	public static final BiomeGenBase FlatLands = (new FlatLands(189))
 			.setBiomeName("TransLands").setDisableRain()
 			.setMinMaxHeight(0.3F, 10.5F);
+	
 	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
@@ -150,7 +151,6 @@ public class Transcraft {
 	public static TranscraftCommonProxy Coproxy;
 	public static TranscraftClientProxy Clproxy;
 
-	private String field_111218_cA;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -211,7 +211,7 @@ public class Transcraft {
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
 		GameRegistry.registerWorldGenerator(new TranscraftGenerator());
 
-		FMLLog.info("[TRANSCRAFT]	Registering Fule handler");
+		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
 		GameRegistry.registerFuelHandler(new FuelHandler());
 
 		FMLLog.info("[TRANSCRAFT]	Registering Player Editor");
@@ -249,17 +249,15 @@ public class Transcraft {
 		NetworkRegistry.instance().registerGuiHandler(instance,
 				new GuiHanderTC());
 
-		FMLLog.info("[TRANSCRAFT]	Adding new dims");
+	//	FMLLog.info("[TRANSCRAFT]	Adding new dims");
 		// LoadDim.load();
 
 	}
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
-
 		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(EnderSword, 1, 0);
-
 		}
 
 	};

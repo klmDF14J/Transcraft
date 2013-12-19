@@ -3,9 +3,12 @@ package mark123mark.mods.transcraft.helpers;
 import java.util.EnumSet;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.TransDim.DimTp;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ChatMessageComponent;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 
@@ -16,7 +19,21 @@ public class TickHandler implements ITickHandler {
 
 	@Override
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
-
+		EntityPlayer player = (EntityPlayer) tickData[0];
+		EntityPlayerMP thePlayer = (EntityPlayerMP) tickData[0];
+		if(thePlayer.dimension == 0)
+		{
+			if(player.posY < -5)
+			{
+				player.moveEntity(player.posX, player.posY + 32, player.posZ);
+				player.travelToDimension(-1);
+			}	
+		}
+		else
+		{
+			
+		}
+		
 	}
 
 	@Override
@@ -54,6 +71,9 @@ public class TickHandler implements ITickHandler {
 				}
 			}
 
+			
+			
+			
 		}
 	}
 
