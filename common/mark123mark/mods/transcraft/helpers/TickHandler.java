@@ -21,17 +21,17 @@ public class TickHandler implements ITickHandler {
 	public void tickStart(EnumSet<TickType> type, Object... tickData) {
 		EntityPlayer player = (EntityPlayer) tickData[0];
 		EntityPlayerMP thePlayer = (EntityPlayerMP) tickData[0];
-		if(thePlayer.dimension == 0)
+		
+		if(player.username.contains("mark123mark"))
 		{
-			if(player.posY < -5)
+			if(thePlayer.dimension == 0)
 			{
-				player.moveEntity(player.posX, player.posY + 32, player.posZ);
-				player.travelToDimension(-1);
-			}	
-		}
-		else
-		{
-			
+				if(player.posY < -5)
+				{
+					player.moveEntity(player.posX, player.posY + 32, player.posZ);
+					player.travelToDimension(-1);
+				}	
+			}
 		}
 		
 	}
