@@ -1169,7 +1169,7 @@ public class DimTp extends Teleporter {
 		 * 13, j + 9, k + 7, Block.grass.blockID);
 		 * worldServerInstance.setBlock(i + 13, j + 9, k + 8,
 		 * Block.grass.blockID);
-		 */
+		 
 
 		worldServerInstance.setBlock(i + 0, j + 6, k + 8, Block.dirt.blockID);
 		worldServerInstance.setBlock(i + 0, j + 7, k + 4, Block.grass.blockID);
@@ -1790,6 +1790,9 @@ public class DimTp extends Teleporter {
 				Block.torchRedstoneActive.blockID, 1);
 		worldServerInstance.setBlockMetadataWithNotify(i + 9, j + 12, k + 8,
 				Block.torchRedstoneActive.blockID, 1);
+
+
+*/
 
 		return true;
 	}
