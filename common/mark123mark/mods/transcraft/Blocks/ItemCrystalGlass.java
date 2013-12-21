@@ -1,6 +1,6 @@
 package mark123mark.mods.transcraft.Blocks;
 
-import org.zaet.api.IColoredItemBlock;
+import mark123mark.zaetApi.api.IColoredItemBlock;
 
 public class ItemCrystalGlass extends IColoredItemBlock {
 

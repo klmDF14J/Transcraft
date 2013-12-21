@@ -2,10 +2,8 @@ package mark123mark.mods.transcraft.Blocks.FancyCrystalGlass;
 
 import java.util.Random;
 
-import org.zaet.api.IColoredBlock;
-
 import mark123mark.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
+import mark123mark.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.AxisAlignedBB;

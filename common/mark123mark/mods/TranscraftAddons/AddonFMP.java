@@ -1,15 +1,6 @@
 package mark123mark.mods.TranscraftAddons;
 
-import net.minecraft.item.ItemStack;
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartz;
-import codechicken.microblock.BlockMicroMaterial;
-import codechicken.microblock.MicroMaterialRegistry;
-import codechicken.multipart.MultiPartRegistry;
-import codechicken.multipart.MultiPartRegistry.IPartFactory;
-import codechicken.multipart.TMultiPart;
-import codechicken.multipart.minecraft.TorchPart;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class AddonFMP implements  IPartFactory 
 {

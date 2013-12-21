@@ -1,8 +1,6 @@
 package mark123mark.mods.transcraft.Blocks;
 
-import org.zaet.api.IColoredBlock;
-
-import net.minecraft.block.Block;
+import mark123mark.zaetApi.api.IColoredBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 import cpw.mods.fml.relauncher.Side;

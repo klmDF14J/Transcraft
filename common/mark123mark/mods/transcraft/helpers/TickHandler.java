@@ -3,12 +3,10 @@ package mark123mark.mods.transcraft.helpers;
 import java.util.EnumSet;
 
 import mark123mark.mods.transcraft.Transcraft;
-import mark123mark.mods.transcraft.TransDim.DimTp;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ChatMessageComponent;
 import cpw.mods.fml.common.ITickHandler;
 import cpw.mods.fml.common.TickType;
 

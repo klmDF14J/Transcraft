@@ -1,9 +1,6 @@
 package mark123mark.mods.transcraft.Blocks.Quartz;
 
-import org.zaet.api.IColoredItemBlock;
-
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
+import mark123mark.zaetApi.api.IColoredItemBlock;
 
 public class ItemCutEnderQuartzBlock extends IColoredItemBlock {
 

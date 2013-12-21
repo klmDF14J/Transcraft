@@ -1,7 +1,4 @@
-package org.zaet.api;
-
-import org.apache.commons.lang3.ArrayUtils;
-import org.zaet.Zaet;
+package mark123mark.zaetApi.api;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
