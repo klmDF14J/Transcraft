@@ -74,31 +74,25 @@ public class RegisterBlocks {
 				"Smooth Bunker Block");
 
 		GameRegistry.registerBlock(Transcraft.enderQuartzBlock, "EnderQuartz");
-		GameRegistry.registerBlock(Transcraft.enderQuartzBlock,
-				ItemEnderQuartzBlock.class);
+		GameRegistry.registerBlock(Transcraft.enderQuartzBlock,ItemEnderQuartzBlock.class , "ItemEnderQuartzBlock");
 
 		GameRegistry.registerBlock(Transcraft.CutenderQuartz, "CutEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.CutenderQuartz,
-				ItemCutEnderQuartzBlock.class);
+		GameRegistry.registerBlock(Transcraft.CutenderQuartz,ItemCutEnderQuartzBlock.class ,"ItemCutEnderQuartzBlock");
 
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,
 				"EnderQuartzBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,
-				ItemEnderQuartzBrick.class);
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,ItemEnderQuartzBrick.class ,"ItemEnderQuartzBrick");
 
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,
 				"EnderQuartzBigBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,
-				ItemEnderQuartzBigBrick.class);
+		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,ItemEnderQuartzBigBrick.class , "ItemEnderQuartzBigBrick");
 
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
 				"Fancy Crystal Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
-				ItemFancyCryastalGlass.class);
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemFancyCryastalGlass.class , "ItemFancyCryastalGlass");
 
 		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
-				ItemCrystalGlass.class);
+		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemCrystalGlass.class ,"ItemCrystalGlass");
 
 		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
 		

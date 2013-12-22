@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "Minecraft Forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
+    }
+}
+
+
+
+apply plugin: 'forge'
+
+dependencies {
+    compile name: 'ForgeMultipart', version: "1.6.4-1.0.0.220", ext: 'jar'
+    compile name: 'CodeChickenLib', version: "1.6.4-1.0.0.36", ext: 'jar'
+    compile name: 'NotEnoughItems', version: "1.6.1.5", type: 'jar'
+}
+
+minecraft {
+    version = '1.6.4-9.11.1.964'
+}
+
+group = 'transcraft'
+version = '1.6.4_V2.0.0_BROKEN'

@@ -29,8 +29,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
 		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
 				new NukeCreeperRender());
-		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,
-				new EnderBatRender());
+		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,new  EnderBatRender());
 	}
 
 	public void registerRenderer() {

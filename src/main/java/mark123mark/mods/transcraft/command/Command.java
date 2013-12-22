@@ -4,7 +4,7 @@ import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.command.WrongUsageException;
 
-public class Command extends CommandBase {
+public abstract class Command extends CommandBase {
 	public final String name;
 
 	public Command(String name) {
