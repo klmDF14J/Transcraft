@@ -4,7 +4,7 @@ import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.ChatMessageComponent;
 
-public abstract class CommandTranscraftVersion extends Command {
+public class CommandTranscraftVersion extends Command {
 
 	public CommandTranscraftVersion() {
 		super("Tversion");
