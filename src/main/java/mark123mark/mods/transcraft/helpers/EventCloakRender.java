@@ -61,6 +61,11 @@ public class EventCloakRender {
 
 	@ForgeSubscribe
 	public void onPreRenderSpecials(RenderPlayerEvent.Specials.Pre event) {
+	
+		/*
+		 * 
+		 
+		
 		if (Loader.isModLoaded("shadersmod")) {
 			return;
 		}
@@ -84,9 +89,15 @@ public class EventCloakRender {
 				event.renderCape = true;
 			}
 		}
+		
+		*/
 	}
 
 	public void buildCloakURLDatabase() {
+		
+		/*
+		 * 
+		
 		URL url;
 		try {
 			url = new URL(serverLocation);
@@ -120,6 +131,7 @@ public class EventCloakRender {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		 */
 	}
 
 	private class CloakThread implements Runnable {
@@ -134,6 +146,11 @@ public class EventCloakRender {
 
 		@Override
 		public void run() {
+			
+			/*
+			 * 
+		
+			
 			try {
 				Image cape = new ImageIcon(new URL(cloakURL)).getImage();
 				BufferedImage bo = new BufferedImage(cape.getWidth(null),
@@ -144,6 +161,8 @@ public class EventCloakRender {
 			} catch (MalformedURLException e) {
 				e.printStackTrace();
 			}
+			
+				 */
 		}
 	}
 

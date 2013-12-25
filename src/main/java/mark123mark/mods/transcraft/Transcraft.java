@@ -217,9 +217,16 @@ public class Transcraft {
 		NetworkRegistry.instance()
 				.registerConnectionHandler(new PlayerEditor());
 
+		
+		/*
+
+		REMOVED DUE TO BASE EDIT IN DEV ENV SO WONT BULID
+		
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		}
+
+ */
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 

@@ -10,21 +10,8 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.0-SNAPSHOT'
     }
 }
-repositories {
-    ivy {
-        name 'Forge FS legacy'
-        artifactPattern "http://files.minecraftforge.net/[module]/[module]-dev-[revision].[ext]"
-    }
-    maven {
-        name 'ForgeFS'
-        url 'http://files.minecraftforge.net/maven'
-     }
-}
-
 
 apply plugin: 'forge'
-
-
 
 minecraft {
     version = '1.6.4-9.11.1.964'

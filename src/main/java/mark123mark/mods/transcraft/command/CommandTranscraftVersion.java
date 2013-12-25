@@ -33,4 +33,10 @@ public class CommandTranscraftVersion extends Command {
 		return "/Tversion Gets the version of transcraft";
 	}
 
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
