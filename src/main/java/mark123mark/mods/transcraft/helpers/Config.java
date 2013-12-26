@@ -40,7 +40,7 @@ public class Config {
 	public static int ComTransmutterOreID = 2023;
 	public static int ComOilOreID = 2024;
 
-	// public static int ixpGrinderID =2025;
+	 public static int ixpGrinderID =2025;
 
 	public static int LiquidTransmutterFluidStillID = 2101;
 

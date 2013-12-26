@@ -78,6 +78,8 @@ public class LoadLang {
 		// LanguageRegistry.addName(Transcraft.DimPortalBlock,
 		// "TransMania Portal");
 
+		LanguageRegistry.addName(Transcraft.ixpGrinder, "Ixp Grinder");
+		
 		LanguageRegistry.addName(Transcraft.TransManiaOre, "TransManiaOre");
 	}
 

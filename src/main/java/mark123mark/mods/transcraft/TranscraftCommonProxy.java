@@ -29,4 +29,11 @@ public class TranscraftCommonProxy {
 
 	public void spawnParticle(String string, double x, double y, double z) {
 	}
+	
+	
+	public void renderThings()
+	{
+		
+	}
+	
 }

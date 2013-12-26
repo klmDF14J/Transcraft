@@ -8,6 +8,7 @@ import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
+import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -101,7 +102,7 @@ public class RegisterBlocks {
 		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
 		// "DimPortalEscapeBlock");
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
-		// GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
+		 GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
 
 		registerItem(Transcraft.BasicTransmuter);
 		registerItem(Transcraft.QuadTransmuter);
@@ -133,7 +134,8 @@ public class RegisterBlocks {
 		registerItem(Transcraft.EnderBoots);
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
-
+		GameRegistry.registerTileEntity(TileIXP.class, "TileIXP");
+		
 	}
 
 	public static void registerItem(Item item) {

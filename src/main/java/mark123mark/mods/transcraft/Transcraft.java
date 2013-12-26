@@ -9,8 +9,13 @@ import mark123mark.mods.transcraft.helpers.Config;
 import mark123mark.mods.transcraft.helpers.EventCloakRender;
 import mark123mark.mods.transcraft.helpers.EventMobDeath;
 import mark123mark.mods.transcraft.helpers.FuelHandler;
+import mark123mark.mods.transcraft.helpers.GuiHand;
 import mark123mark.mods.transcraft.helpers.PacketHandlerTranscraft;
 import mark123mark.mods.transcraft.helpers.PlayerEditor;
+import mark123mark.mods.transcraft.ixp.Tiles.GuiHanderIXP;
+import mark123mark.mods.transcraft.ixp.Tiles.ItemTileIxpRender;
+import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
+import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
@@ -27,12 +32,14 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ForgeSubscribe;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -86,7 +93,7 @@ public class Transcraft {
 	// public static Block DimPortalBlock;
 	// public static Block DimPortalEscapeBlock;
 
-	// public static Block ixpGrinder;
+	 public static Block ixpGrinder;
 
 	public static final BiomeGenBase FlatLands = (new FlatLands(189))
 			.setBiomeName("TransLands").setDisableRain()
@@ -187,6 +194,9 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
 		LoadEntity.loadentity();
+		
+		
+		
 
 		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.HILLS,
 				Type.FOREST, Type.WATER);
@@ -217,6 +227,10 @@ public class Transcraft {
 		NetworkRegistry.instance()
 				.registerConnectionHandler(new PlayerEditor());
 
+		Coproxy.renderThings();
+		
+		
+		
 		
 		/*
 
@@ -253,7 +267,8 @@ public class Transcraft {
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
 		NetworkRegistry.instance().registerGuiHandler(instance,
-				new GuiHanderTC());
+				new GuiHand());
+
 
 	//	FMLLog.info("[TRANSCRAFT]	Adding new dims");
 		// LoadDim.load();

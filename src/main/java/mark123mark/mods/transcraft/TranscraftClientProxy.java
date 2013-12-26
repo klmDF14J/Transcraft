@@ -6,10 +6,17 @@ import mark123mark.mods.transcraft.Entitys.mob.EnderBatRender;
 import mark123mark.mods.transcraft.Entitys.mob.Enderbat;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import mark123mark.mods.transcraft.Entitys.mob.NukeCreeperRender;
+import mark123mark.mods.transcraft.helpers.Config;
 import mark123mark.mods.transcraft.helpers.ServerTickHandler;
 import mark123mark.mods.transcraft.helpers.TickHandler;
+import mark123mark.mods.transcraft.ixp.Tiles.ItemTileIxpRender;
+import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
+import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
+import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
+import net.minecraftforge.client.MinecraftForgeClient;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -32,8 +39,12 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,new  EnderBatRender());
 	}
 
-	public void registerRenderer() {
-
+	
+	public void renderThings()
+	{
+		ClientRegistry.bindTileEntitySpecialRenderer(TileIXP.class, new TileECRender());
+		MinecraftForgeClient.registerItemRenderer(Config.ixpGrinderID, new ItemTileIxpRender());
+		
 	}
 
 	@Override

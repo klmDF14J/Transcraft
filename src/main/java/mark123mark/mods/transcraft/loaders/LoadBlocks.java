@@ -9,6 +9,7 @@ import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBigBrick;
 import mark123mark.mods.transcraft.Blocks.Quartz.EnderQuartzBrick;
 import mark123mark.mods.transcraft.Blocks.TransDim.TransManiaOre;
 import mark123mark.mods.transcraft.helpers.Config;
+import mark123mark.mods.transcraft.ixp.Tiles.IXPGrinderMk2;
 import net.minecraft.block.Block;
 
 public class LoadBlocks {
@@ -173,6 +174,11 @@ public class LoadBlocks {
 				.setUnlocalizedName("Transcraft:EnderQuartzBigBricks")
 				.setTextureName("Transcraft:EnderQuartzBrick2")
 				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+		
+		
+		
+		
+		
 		/*
 		 * 
 		 * Transcraft.DimPortalBlock = (new
@@ -190,12 +196,14 @@ public class LoadBlocks {
 		 * "Transcraft:DimPortalEscapeBlock").setHardness(1.0F)
 		 * .setTextureName("Transcraft:EscapePortal")
 		 * .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
-		 * 
-		 * 
-		 * Transcraft.ixpGrinder = (new ixpGrinder(Config.ixpGrinderID))
-		 * .setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
-		 * .setTextureName("Transcraft:ixpGrinder")
-		 * .setCreativeTab(Transcraft.TranstabBlocks);
-		 */
+		*/
+		 
+		Transcraft.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0).setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
+				  .setTextureName("Transcraft:ixpGrinder")
+					 .setCreativeTab(Transcraft.TranstabBlocks);
+		
+		
+		  
+		 
 	}
 }
