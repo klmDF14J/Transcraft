@@ -305,16 +305,22 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
     	int slot = 1;
     	
-    	for(int j = 0; slot < 36; slot++)
+    	for(int j = 0; slot < 9; slot++)
     	{
-    		if(getStackInSlot(slot) != null && getStackInSlot(0) != null)
+    		if (getStackInSlot(0).itemID != Item.expBottle.itemID)
     		{
-    			int IXP = 1;
-    			if(IXP != 0 &&  getStackInSlot(0).stackSize <= 64)
-    			{
-    				CurrentIXPValue=CurrentIXPValue+IXP;
-    				decrStackSize(slot, 1);
-    			}
+    		}
+    		else
+    		{
+    			if(getStackInSlot(slot) != null && getStackInSlot(0) != null)
+        		{
+        			int IXP = 1;
+        			if(IXP != 0 &&  getStackInSlot(0).stackSize <= 64)
+        			{
+        				CurrentIXPValue=CurrentIXPValue+IXP;
+        				decrStackSize(slot, 1);
+        			}
+        		}
     		}
     	}
     }

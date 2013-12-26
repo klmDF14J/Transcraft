@@ -20,6 +20,8 @@ public class ContainerIXP extends Container
 		this.tileEntity = tile;
 		lowerChestInventory = this.tileEntity;
 		
+	
+		
 		this.addSlotToContainer(new Slot(this.tileEntity, 0, 8, 24));
 
 		for (int y = 0; y < 1; y++) {
