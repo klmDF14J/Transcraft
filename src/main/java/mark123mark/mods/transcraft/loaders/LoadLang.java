@@ -10,16 +10,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class LoadLang {
 
 	public static void loadlang() {
-		LanguageRegistry.instance().addStringLocalization(
-				"itemGroup.TranstabItems", "en_US", "Transcraft Items");
-		LanguageRegistry.instance().addStringLocalization(
-				"itemGroup.TranstabBlocks", "en_US", "Transcraft Blocks");
-		LanguageRegistry.instance().addStringLocalization(
-				"itemGroup.TranstabDecBlocks", "en_US",
-				"Transcraft Decorative Blocks");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabItems", "en_US", "Transcraft Items");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabBlocks", "en_US", "Transcraft Blocks");
+		LanguageRegistry.instance().addStringLocalization("itemGroup.TranstabDecBlocks", "en_US","Transcraft Decorative Blocks");
 
-		LanguageRegistry
-				.addName(Transcraft.BasicTransmuter, "Basic Transmuter");
+		LanguageRegistry.addName(Transcraft.BasicTransmuter, "Basic Transmuter");
 		LanguageRegistry.addName(Transcraft.QuadTransmuter, "QuadTransmuter");
 		LanguageRegistry.addName(Transcraft.NanoTransmuter, "NanoTransmuter");
 		LanguageRegistry.addName(Transcraft.HotDog, "Hot Dog");
@@ -30,9 +25,10 @@ public class LoadLang {
 		LanguageRegistry.addName(Transcraft.EnderQuartz, "Ender Quartz");
 		LanguageRegistry.addName(Transcraft.EnderGem, "Ender Gem");
 		LanguageRegistry.addName(Transcraft.DarkEndershard, "DarkEnder Shard");
-		LanguageRegistry.addName(Fluids.ItemBucketLiquidTrasnmutter.get(),
-				"Transbucket");
-
+		LanguageRegistry.addName(Fluids.ItemBucketLiquidTrasnmutter.get(),"Transbucket");
+		LanguageRegistry.addName(Transcraft.Transpedia, "Transpedia");
+		
+		
 		LanguageRegistry.addName(Transcraft.PlasticAxe, "Plastic Axe");
 		LanguageRegistry.addName(Transcraft.PlasticHoe, "Plastic Hoe");
 		LanguageRegistry.addName(Transcraft.PlasticPickaxe, "Plastic Pickaxe");

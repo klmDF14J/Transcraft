@@ -55,10 +55,11 @@ public class Config {
 	public static int PlasticID = 5012;
 	public static int IronStickID = 5013;
 	public static int HardendPlasticID = 5014;
-	public static int EnderGemID = 5016;
-	public static int EnderQuartzID = 5017;
-	public static int DarkEndershardID = 5018;
-	public static int BucketLiquidTrasnmutterID = 5017;
+	public static int EnderGemID = 5015;
+	public static int EnderQuartzID = 5016;
+	public static int DarkEndershardID = 5017;
+	public static int BucketLiquidTrasnmutterID = 5018;
+	public static int TranspeadiaID = 5019;
 
 	public static int PlasticAxeID = 5031;
 	public static int PlasticHoeID = 5032;
@@ -122,23 +123,17 @@ public class Config {
 		ObsidianLeverID = config.getBlock("ObsidianLever", 2004).getInt();
 		BunkerBlockID = config.getBlock("BunkerBlock", 2002).getInt();
 		BunkerStairID = config.getBlock("BunkerStair", 2005).getInt();
-		SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006)
-				.getInt();
-		SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007)
-				.getInt();
+		SmoothBunkerBlockID = config.getBlock("SmoothBunkerBlock", 2006).getInt();
+		SmoothBunkerStairID = config.getBlock("SmoothBunkerStair", 2007).getInt();
 		DriedTransmutterID = config.getBlock("Dried Transmuter", 2008).getInt();
 		ThinClearGlassID = config.getBlock("Thin Crystal Glass", 2009).getInt();
-		FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010)
-				.getInt();
+		FancyCrystalGlassID = config.getBlock("Fancy Crystal Glass", 2010).getInt();
 		TransManiaOreID = config.getBlock("TransMania Ore", 2011).getInt();
 
 		BlockEnderQuartzID = config.getBlock("Ender Quartz", 2113).getInt();
-		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114)
-				.getInt();
-		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115)
-				.getInt();
-		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick",
-				2116).getInt();
+		BlockCutEnderQuartzID = config.getBlock("Cut Ender Quartz", 2114)	.getInt();
+		BlockEnderQuartzBrickID = config.getBlock("Ender Quartz Brick", 2115)	.getInt();
+		BlockEnderQuartzBigBrickID = config.getBlock("Big Ender Quartz Brick",	2116).getInt();
 
 		ComIronOreID = config.getBlock("Packed Iron Ore", 2021).getInt();
 		ComGoldOreID = config.getBlock("Packed Gold Ore", 2022).getInt();
@@ -146,7 +141,7 @@ public class Config {
 				.getInt();
 		ComOilOreID = config.getBlock("Packed Oil Ore", 2024).getInt();
 
-		// ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
+		 ixpGrinderID = config.getBlock("iXP Grinder", 2025).getInt();
 
 		LiquidTransmutterFluidStillID = config.getBlock(
 				"LiquidTransmuterFluidStillID", 2101).getInt();
@@ -167,12 +162,13 @@ public class Config {
 		PlasticID = config.getItem("Plastic", 5012).getInt();
 		IronStickID = config.getItem("IronStick", 5013).getInt();
 		HardendPlasticID = config.getItem("HardendPlastic", 5014).getInt();
-		EnderGemID = config.getItem("EnderGem", 5016).getInt();
-		EnderQuartzID = config.getItem("EnderQuartz", 5017).getInt();
-		DarkEndershardID = config.getItem("DarkEndershard", 5018).getInt();
-
-		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter",
-				5017).getInt();
+		EnderGemID = config.getItem("EnderGem", 5015).getInt();
+		EnderQuartzID = config.getItem("EnderQuartz", 5016).getInt();
+		DarkEndershardID = config.getItem("DarkEndershard", 5017).getInt();
+		BucketLiquidTrasnmutterID = config.getItem("BucketLiquidTrasnmutter",5018).getInt();
+		TranspeadiaID = config.getItem("Transpeadia", 5019).getInt();
+		
+		
 
 		PlasticAxeID = config.getItem("PlasticAxe", 5031).getInt();
 		PlasticHoeID = config.getItem("PlasticHoe", 5032).getInt();

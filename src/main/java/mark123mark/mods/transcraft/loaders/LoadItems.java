@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
 import mark123mark.mods.transcraft.Items.BasicTransmuter;
+import mark123mark.mods.transcraft.Items.Transpeadia;
 import mark123mark.mods.transcraft.armor.ArmorEnderBoots;
 import mark123mark.mods.transcraft.armor.ArmorEnderChest;
 import mark123mark.mods.transcraft.armor.ArmorEnderHelmet;
@@ -151,6 +152,10 @@ public class LoadItems {
 				EnderEnum, 0, 3)).setUnlocalizedName("Transcraft:EnderBoots")
 				.setCreativeTab(Transcraft.TranstabItems);
 
+	
+		Transcraft.Transpedia = new Transpeadia(Config.TranspeadiaID).setUnlocalizedName("Transcraft:Transpedia").setCreativeTab(Transcraft.TranstabItems).setTextureName("transcraft:Transpedia");
+	
+	
 	}
 
 }

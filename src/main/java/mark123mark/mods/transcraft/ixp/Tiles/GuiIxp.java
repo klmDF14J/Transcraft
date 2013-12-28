@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.ixp.Tiles;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 
+import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
@@ -16,6 +17,9 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import com.google.common.io.ByteArrayDataOutput;
+import com.google.common.io.ByteStreams;
 
 import cpw.mods.fml.common.network.PacketDispatcher;
 import cpw.mods.fml.relauncher.Side;
@@ -55,6 +59,9 @@ public class GuiIxp extends GuiContainer
         this.fontRenderer.drawString("Inventory", 8, this.ySize - 130, 4210752);
         this.fontRenderer.drawString("IXP: "+te.getIXPValue(), 167, 10, 4210752);
         
+        
+        
+        
         this.fontRenderer.drawString("1. Put in a Bottle o' Enchanting", 26, this.ySize - 230, 4210752);
         this.fontRenderer.drawString("2. Put items in the next 9 slots", 8, this.ySize - 180, 4210752);
         this.fontRenderer.drawString("3. When your Ixp vaule hits 256", 8, this.ySize - 170, 4210752);
@@ -62,6 +69,15 @@ public class GuiIxp extends GuiContainer
         this.fontRenderer.drawString("4. Put more items in!", 8, this.ySize - 151, 4210752);
     }
 
+    @SuppressWarnings("unchecked")
+	@Override
+	public void initGui() {
+		super.initGui();
+		
+	}
+    
+    
+    
     public void drawScreen(int par1, int par2, float par3) {
         super.drawScreen(par1, par2, par3);
         this.xSize_lo = (float) par1;
@@ -124,6 +140,8 @@ public class GuiIxp extends GuiContainer
             GL11.glDisable(GL11.GL_TEXTURE_2D);
             OpenGlHelper.setActiveTexture(OpenGlHelper.defaultTexUnit);
     }
+    
+    
     
     
 }

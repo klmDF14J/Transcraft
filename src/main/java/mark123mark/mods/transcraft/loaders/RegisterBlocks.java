@@ -115,7 +115,8 @@ public class RegisterBlocks {
 		registerItem(Transcraft.EnderGem);
 		registerItem(Transcraft.EnderQuartz);
 		registerItem(Transcraft.DarkEndershard);
-
+		registerItem(Transcraft.Transpedia);
+		
 		registerItem(Transcraft.PlasticAxe);
 		registerItem(Transcraft.PlasticHoe);
 		registerItem(Transcraft.PlasticPickaxe);

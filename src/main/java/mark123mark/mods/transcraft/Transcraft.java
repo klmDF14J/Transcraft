@@ -114,6 +114,7 @@ public class Transcraft {
 	public static Item EnderGem;
 	public static Item EnderQuartz;
 	public static Item DarkEndershard;
+	public static Item Transpedia;
 
 	public static Item PlasticAxe;
 	public static Item PlasticHoe;

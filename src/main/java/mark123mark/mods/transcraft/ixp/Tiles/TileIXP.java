@@ -25,7 +25,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     /** The current angle of the lid (between 0 and 1) */
     public float lidAngle;
     
-    private double CurrentIXPValue = 0;
+    public static double CurrentIXPValue = 0;
 
     /** The angle of the lid last tick */
     public float prevLidAngle;
@@ -313,7 +313,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     		else
     		{
     			if(getStackInSlot(slot) != null && getStackInSlot(0) != null)
-        		{
+        	{
         			int IXP = 1;
         			if(IXP != 0 &&  getStackInSlot(0).stackSize <= 64)
         			{
