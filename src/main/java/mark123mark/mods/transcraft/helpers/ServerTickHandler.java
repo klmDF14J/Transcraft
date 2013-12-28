@@ -2,7 +2,7 @@ package mark123mark.mods.transcraft.helpers;
 
 import java.util.EnumSet;
 
-public class ServerTickHandler implements ITickHandler {
+public class ServerTickHandler implements TickEvent {
 	private boolean raining;
 
 	@Override

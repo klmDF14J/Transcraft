@@ -43,7 +43,7 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 	public int TransmutterPerChunk;
 
 	public TranscraftBiomeDec(BiomeGenBase par1BiomeGenBase) {
-		super(par1BiomeGenBase);
+		super();
 		TransmutterPerChunk = 0;
 		biome = par1BiomeGenBase;
 	}
@@ -53,15 +53,16 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 	 * ChunkProviderGenerate.populate
 	 */
 	@Override
-	public void decorate(World par1World, Random par2Random, int par3, int par4) {
+	public void func_150512_a(World p_150512_1_, Random p_150512_2_, BiomeGenBase p_150512_3_, int p_150512_4_, int p_150512_5_)
+	{
 		if (currentWorld != null)
 			return;
 		else {
-			currentWorld = par1World;
-			randomGenerator = par2Random;
-			chunk_X = par3;
-			chunk_Z = par4;
-			this.decorate();
+			currentWorld = p_150512_1_;
+			randomGenerator = p_150512_2_;
+			chunk_X = p_150512_4_;
+			chunk_Z = p_150512_5_;
+			this.func_150513_a(p_150512_3_);
 			currentWorld = null;
 			randomGenerator = null;
 		}
@@ -73,7 +74,7 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 	 */
 
 	@Override
-	protected void decorate() {
+	protected void func_150513_a(BiomeGenBase p_150513_1_) {
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(currentWorld,
 				randomGenerator, chunk_X, chunk_Z));
 		// Added
@@ -94,8 +95,7 @@ public class TranscraftBiomeDec extends BiomeDecorator {
 			var4 = randomGenerator.nextInt(randomGenerator
 					.nextInt(randomGenerator.nextInt(112) + 8) + 8);
 			var5 = chunk_Z + randomGenerator.nextInt(16) + 8;
-			(new WorldGenLakes(Fluids.LiquidTransmutter.get().blockID))
-					.generate(currentWorld, randomGenerator, var3, var4, var5);
+			(new WorldGenLakes(Fluids.LiquidTransmutter.get())).generate(currentWorld, randomGenerator, var3, var4, var5);
 
 		}
 
