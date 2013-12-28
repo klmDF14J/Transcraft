@@ -1,6 +1,5 @@
 package mark123mark.mods.transcraft.helpers;
 
-import mark123mark.mods.transcraft.Items.ContanierTranspedia;
 import mark123mark.mods.transcraft.Items.gui.TranspediaGui;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.ContainerTC;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiTC;

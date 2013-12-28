@@ -1,8 +1,8 @@
 package mark123mark.mods.transcraft.Items;
 
-import net.minecraft.client.renderer.texture.IconRegister;
+import javax.swing.Icon;
+
 import net.minecraft.item.Item;
-import net.minecraft.util.Icon;
 
 public class EnderGem extends Item {
 

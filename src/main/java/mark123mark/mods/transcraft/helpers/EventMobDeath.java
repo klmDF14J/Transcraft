@@ -3,7 +3,6 @@ package mark123mark.mods.transcraft.helpers;
 import java.util.Random;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class EventMobDeath {

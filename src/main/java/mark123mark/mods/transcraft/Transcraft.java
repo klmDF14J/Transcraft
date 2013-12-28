@@ -1,21 +1,14 @@
 package mark123mark.mods.transcraft;
 
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
 import mark123mark.mods.transcraft.helpers.Config;
-import mark123mark.mods.transcraft.helpers.EventCloakRender;
 import mark123mark.mods.transcraft.helpers.EventMobDeath;
 import mark123mark.mods.transcraft.helpers.FuelHandler;
 import mark123mark.mods.transcraft.helpers.GuiHand;
 import mark123mark.mods.transcraft.helpers.PacketHandlerTranscraft;
-import mark123mark.mods.transcraft.helpers.PlayerEditor;
-import mark123mark.mods.transcraft.ixp.Tiles.GuiHanderIXP;
-import mark123mark.mods.transcraft.ixp.Tiles.ItemTileIxpRender;
-import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
-import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
@@ -28,18 +21,16 @@ import mark123mark.mods.transcraft.loaders.RegisterBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumToolMaterial;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
-import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.ForgeSubscribe;
-import cpw.mods.fml.client.registry.ClientRegistry;
+import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -48,56 +39,53 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = true)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
 public class Transcraft {
 	public static final String VERSION = "1.6.4_V2.0.0_";
 	public static final String STATE = "BROKEN";
 	public static boolean SHOWDEVMESSGAE = false;
 
 	// Listblocks here
-	public static Block TranscraftOre;
-	public static Block OilOre;
-	public static Block BlueLight;
-	public static Block GreenLight;
-	public static Block OrangeLight;
-	public static Block DarkLight;
-	public static Block IronTorch;
-	public static Block ClearGlass;
-	public static Block ThinClearGlass;
-	public static Block FancyCrystalGlass;
-	public static Block BunkerBlock;
-	public static Block BunkerStair;
-	public static Block SmoothBunkerBlock;
-	public static Block SmoothBunkerStair;
-	public static Block ObsidianLever;
-	public static Block ComIronOre;
-	public static Block ComGoldOre;
-	public static Block ComTransmutterOre;
-	public static Block ComOilOre;
-	public static Block DriedTransmutter;
-	public static Block TransManiaOre;
+	public static Blocks TranscraftOre;
+	public static Blocks OilOre;
+	public static Blocks BlueLight;
+	public static Blocks GreenLight;
+	public static Blocks OrangeLight;
+	public static Blocks DarkLight;
+	public static Blocks IronTorch;
+	public static Blocks ClearGlass;
+	public static Blocks ThinClearGlass;
+	public static Blocks FancyCrystalGlass;
+	public static Blocks BunkerBlock;
+	public static Blocks BunkerStair;
+	public static Blocks SmoothBunkerBlock;
+	public static Blocks SmoothBunkerStair;
+	public static Blocks ObsidianLever;
+	public static Blocks ComIronOre;
+	public static Blocks ComGoldOre;
+	public static Blocks ComTransmutterOre;
+	public static Blocks ComOilOre;
+	public static Blocks DriedTransmutter;
+	public static Blocks TransManiaOre;
 
-	public static Block Transcrafter;
+	public static Blocks Transcrafter;
 
-	public static Block enderQuartzBlock;
-	public static Block CutenderQuartz;
-	public static Block EnderQuartzBrick;
-	public static Block EnderQuartzBigBrick;
+	public static Blocks enderQuartzBlock;
+	public static Blocks CutenderQuartz;
+	public static Blocks EnderQuartzBrick;
+	public static Blocks EnderQuartzBigBrick;
 
 	// public static Block DimPortalBlock;
 	// public static Block DimPortalEscapeBlock;
 
-	 public static Block ixpGrinder;
+	 public static Blocks ixpGrinder;
 
-	public static final BiomeGenBase FlatLands = (new FlatLands(189))
-			.setBiomeName("TransLands").setDisableRain()
-			.setMinMaxHeight(0.3F, 10.5F);
+	public static final BiomeGenBase.Height FlatLandsHight = new BiomeGenBase.Height(0.3F, 10.5F);
+	 
+	public static final BiomeGenBase FlatLands = (new FlatLands(189)).setBiomeName("TransLands").setDisableRain().func_150570_a(FlatLandsHight);
 	
 	public static final BiomeGenBase TransmutterBiome = (new mark123mark.mods.transcraft.biomes.TransmutterBiome(
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
@@ -144,12 +132,9 @@ public class Transcraft {
 	public static int enderQuartzID;
 	public static int chiselEnderQuartzID;
 
-	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
-			"PlasticTool", 2, 750, 5.0F, 2, 0);
-	public static EnumToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial(
-			"BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
-	public static EnumToolMaterial EnderToolEnum = EnumHelper.addToolMaterial(
-			"EnderToolEnum", 400, 10000, 80.0F, 46, 100);
+	public static ToolMaterial PlasticTool = EnumHelper.addToolMaterial("PlasticTool", 2, 750, 5.0F, 2, 0);
+	public static ToolMaterial BunkerToolEnum = EnumHelper.addToolMaterial("BunkerToolEnum", 4, 1000, 20.0F, 4, 0);
+	public static ToolMaterial EnderToolEnum = EnumHelper.addToolMaterial("EnderToolEnum", 400, 10000, 80.0F, 46, 100);
 
 	@Instance("transcraft")
 	public static Transcraft instance;
@@ -201,8 +186,8 @@ public class Transcraft {
 
 		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.HILLS,
 				Type.FOREST, Type.WATER);
-		GameRegistry.addBiome(TransmutterBiome);
-		BiomeManager.addSpawnBiome(TransmutterBiome);
+		
+	//	BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
 		// GameRegistry.addBiome(FlatLands);
@@ -219,29 +204,13 @@ public class Transcraft {
 		LoadChestGen.LoadChest();
 
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
-		GameRegistry.registerWorldGenerator(new TranscraftGenerator());
+		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
 
 		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
 		GameRegistry.registerFuelHandler(new FuelHandler());
 
-		FMLLog.info("[TRANSCRAFT]	Registering Player Editor");
-		NetworkRegistry.instance()
-				.registerConnectionHandler(new PlayerEditor());
-
 		Coproxy.renderThings();
-		
-		
-		
-		
-		/*
 
-		REMOVED DUE TO BASE EDIT IN DEV ENV SO WONT BULID
-		
-		if (event.getSide() == Side.CLIENT) {
-			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
-		}
-
- */
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
@@ -254,7 +223,6 @@ public class Transcraft {
 
 	}
 
-	@ForgeSubscribe
 	@EventHandler
 	public void postinit(FMLServerStartingEvent event, EntityPlayer player) {
 
@@ -267,8 +235,7 @@ public class Transcraft {
 	public void load(FMLInitializationEvent event) {
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-		NetworkRegistry.instance().registerGuiHandler(instance,
-				new GuiHand());
+		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHand());
 
 
 	//	FMLLog.info("[TRANSCRAFT]	Adding new dims");
@@ -278,28 +245,33 @@ public class Transcraft {
 
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
 		@Override
-		public ItemStack getIconItemStack() {
-			return new ItemStack(EnderSword, 1, 0);
+		public Item getTabIconItem() {
+			return EnderSword;
 		}
+
+		
 
 	};
 
 	public static CreativeTabs TranstabBlocks = new CreativeTabs(
 			"TranstabBlocks") {
 
+
+
 		@Override
-		public ItemStack getIconItemStack() {
-			return new ItemStack(TranscraftOre, 1, 0);
+		public Item getTabIconItem() {
+			return EnderSword;
 		}
 
 	};
 
-	public static CreativeTabs TranstabDecBlocks = new CreativeTabs(
-			"TranstabDecBlocks") {
+	public static CreativeTabs TranstabDecBlocks = new CreativeTabs("TranstabDecBlocks") {
+
+
 
 		@Override
-		public ItemStack getIconItemStack() {
-			return new ItemStack(EnderQuartzBigBrick, 1, 11);
+		public Item getTabIconItem() {
+			return EnderSword;
 		}
 
 	};

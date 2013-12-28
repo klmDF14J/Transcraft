@@ -2,7 +2,6 @@ package mark123mark.mods.transcraft.command;
 
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.util.ChatMessageComponent;
 
 public class CommandTranscraftVersion extends Command {
 

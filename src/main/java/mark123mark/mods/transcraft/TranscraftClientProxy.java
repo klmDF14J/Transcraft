@@ -14,11 +14,9 @@ import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.EntityFX;
-import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 public class TranscraftClientProxy extends TranscraftCommonProxy {

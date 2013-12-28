@@ -1,7 +1,5 @@
 package mark123mark.mods.transcraft.Tools;
 
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemPickaxe;
 
 public class BunkerPick extends ItemPickaxe {

@@ -3,13 +3,10 @@ package mark123mark.mods.transcraft.TransDim;
 import java.util.ArrayList;
 import java.util.List;
 
-import mark123mark.mods.transcraft.Transcraft;
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.LongHashMap;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.PortalPosition;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 

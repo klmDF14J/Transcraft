@@ -1,7 +1,5 @@
 package mark123mark.mods.transcraft.Items;
 
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 

@@ -5,7 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class ComOilOre extends Block {
 	public ComOilOre(int par1) {
-		super(par1, Material.rock);
+		super(Material.field_151576_e);
 	}
 
 }

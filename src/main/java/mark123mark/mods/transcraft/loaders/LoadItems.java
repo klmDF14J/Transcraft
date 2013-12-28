@@ -12,8 +12,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticChestplate;
 import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
 import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
 import mark123mark.mods.transcraft.helpers.Config;
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class LoadItems {
 

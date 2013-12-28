@@ -1,8 +1,6 @@
 package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 
 
-import mark123mark.mods.transcraft.ixp.Tiles.GuiIxp;
-import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

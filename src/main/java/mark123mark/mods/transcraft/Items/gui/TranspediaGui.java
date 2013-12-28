@@ -1,13 +1,12 @@
 package mark123mark.mods.transcraft.Items.gui;
 
-import org.lwjgl.opengl.GL11;
-
-import mark123mark.mods.transcraft.helpers.TransmuterMode;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
+import org.lwjgl.opengl.GL11;
 
 
 public class TranspediaGui extends GuiScreen

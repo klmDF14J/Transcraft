@@ -5,6 +5,6 @@ import net.minecraft.block.material.Material;
 
 public class ComIronOre extends Block {
 	public ComIronOre(int par1) {
-		super(par1, Material.rock);
+		super(Material.field_151576_e);
 	}
 }
