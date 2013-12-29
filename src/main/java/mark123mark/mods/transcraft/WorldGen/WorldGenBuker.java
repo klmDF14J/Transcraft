@@ -74,14 +74,11 @@ public class WorldGenBuker extends FishyWorldGenBase {
 		case 7:
 			return new ItemStack(Item.eyeOfEnder, rand.nextInt(5) + 2, 0);
 		case 8:
-			return new ItemStack(Transcraft.QuadTransmuter,
-					rand.nextInt(2) + 2, 0);
+			return new ItemStack(Transcraft.QuadTransmuter,rand.nextInt(2) + 2, 0);
 		case 9:
-			return new ItemStack(Transcraft.BasicTransmuter,
-					rand.nextInt(6) + 2, 0);
+			return new ItemStack(Transcraft.BasicTransmuter,rand.nextInt(6) + 2, 0);
 		case 10:
-			return new ItemStack(Transcraft.NanoTransmuter,
-					rand.nextInt(1) + 1, 0);
+			return new ItemStack(Transcraft.NanoTransmuter,rand.nextInt(1) + 1, 0);
 		default:
 			return new ItemStack(Item.porkCooked, rand.nextInt(5) + 2, 0);
 		}
