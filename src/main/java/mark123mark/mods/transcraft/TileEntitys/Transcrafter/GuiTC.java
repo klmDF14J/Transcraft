@@ -22,25 +22,20 @@ public class GuiTC extends GuiContainer {
 	 * the items)
 	 */
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRenderer.drawString(I18n.getString("Transcrafter"), 28, 6,
-				1210752);
-		this.fontRenderer.drawString(I18n.getString("container.inventory"), 8,
-				this.ySize - 96 + 2, 1210752);
-	}
-
-	/**
-	 * Draw the background layer for the GuiContainer (everything behind the
-	 * items)
-	 */
+	 protected void func_146979_b(int p_146979_1_, int p_146979_2_)
+	    {
+	        this.field_146289_q.drawString(I18n.getStringParams("Transcrafter", new Object[0]), 28, 6, 4210752);
+	        this.field_146289_q.drawString(I18n.getStringParams("container.inventory", new Object[0]), 8, this.field_147000_g - 96 + 2, 4210752);
+	    }
+	
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2,
-			int par3) {
-		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-		this.mc.renderEngine.bindTexture(field_110422_t);
-		int k = (this.width - this.xSize) / 2;
-		int l = (this.height - this.ySize) / 2;
-		this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
-	}
+	    protected void func_146976_a(float p_146976_1_, int p_146976_2_, int p_146976_3_)
+	    {
+	        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+	        this.field_146297_k.getTextureManager().bindTexture(field_110422_t);
+	        int k = (this.field_146294_l - this.field_146999_f) / 2;
+	        int l = (this.field_146295_m - this.field_147000_g) / 2;
+	        this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f, this.field_147000_g);
+	    }
 
 }

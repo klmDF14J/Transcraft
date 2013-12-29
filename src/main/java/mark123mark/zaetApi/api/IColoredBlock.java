@@ -23,9 +23,9 @@ public class IColoredBlock extends Block {
 	 * 
 	 */
 	public IColoredBlock(int id) {
-		super(id, Material.rock);
-		setHardness(3.0F);
-		setResistance(4.0F);
+		super(Material.field_151574_g);
+		func_149711_c(3.0F);
+		func_149752_b(4.0F);
 	}
 
 	/***
@@ -37,9 +37,9 @@ public class IColoredBlock extends Block {
 	 * 
 	 */
 	public IColoredBlock(int id, Material m) {
-		super(id, m);
-		setHardness(3.0F);
-		setResistance(4.0F);
+		super(m);
+		func_149711_c(3.0F);
+		func_149752_b(4.0F);
 	}
 
 	/***
@@ -136,9 +136,10 @@ public class IColoredBlock extends Block {
 	/***
 	 * Get's the block dropped from ID.
 	 */
-	public int idDropped(int i, Random r, int j) {
-		return blockID;
-	}
+	
+//	public int idDropped(int i, Random r, int j) {
+//		return blockID;
+//	}
 
 	/***
 	 * Get's the color from the metadata and ID.
@@ -147,7 +148,7 @@ public class IColoredBlock extends Block {
 			int metadata, int fortune) {
 		ArrayList<ItemStack> list = new ArrayList<ItemStack>();
 
-		list.add(new ItemStack(blockID, 1, metadata));
+	//	list.add(new ItemStack(blockID, 1, metadata));
 
 		return list;
 	}
@@ -162,12 +163,12 @@ public class IColoredBlock extends Block {
 		}
 	}
 
-	public boolean onBlockActivated(World w, int x, int y, int z,
-			EntityPlayer p, int i, float f, float f1, float f2) {
+	public boolean onBlockActivated(World w, int x, int y, int z,EntityPlayer p, int i, float f, float f1, float f2) {
 		if (p.getHeldItem().getItem() == Item.dyePowder) {
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem()
 					.getItemDamage(), 3);
 			w.markBlockForUpdate(x, y, z);
+			
 			w.markBlockForRenderUpdate(x, y, z);
 			return true;
 		} else {

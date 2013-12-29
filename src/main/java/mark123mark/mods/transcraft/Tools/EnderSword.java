@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft.Tools;
 
 import java.util.List;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
@@ -13,12 +14,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EnderSword extends ItemSword {
 
-	public EnderSword(int par1, EnumToolMaterial par2EnumToolMaterial) {
-		super(par1, par2EnumToolMaterial);
+	public EnderSword(int par1, ToolMaterial par2EnumToolMaterial) {
+		super(par2EnumToolMaterial);
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:EnderSword");
 	}
 

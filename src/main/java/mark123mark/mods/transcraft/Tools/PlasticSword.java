@@ -1,13 +1,14 @@
 package mark123mark.mods.transcraft.Tools;
 
 import mark123mark.mods.transcraft.helpers.Config;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
 public class PlasticSword extends ItemSword {
 
-	public PlasticSword(int par1, EnumToolMaterial par2EnumToolMaterial) {
-		super(par1, par2EnumToolMaterial);
+	public PlasticSword(int par1, ToolMaterial par2EnumToolMaterial) {
+		super(par2EnumToolMaterial);
 	}
 
 	/**
@@ -16,11 +17,11 @@ public class PlasticSword extends ItemSword {
 	@Override
 	public boolean getIsRepairable(ItemStack par1ItemStack,
 			ItemStack par2ItemStack) {
-		return par2ItemStack.itemID == Config.PlasticID;
+		return par2ItemStack.getItem() == Config.PlasticID;
 	}
 
 	@Override
-	public void registerIcons(IconRegister par1IconRegister) {
+	public void registerIcons(IIconRegister par1IconRegister) {
 		itemIcon = par1IconRegister.registerIcon("Transcraft:PlasticSword");
 	}
 }

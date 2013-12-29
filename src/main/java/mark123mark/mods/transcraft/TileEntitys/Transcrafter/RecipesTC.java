@@ -6,6 +6,8 @@ import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -30,97 +32,97 @@ public class RecipesTC {
 	}
 
 	public RecipesTC() {
-		ItemStack dirtStack = new ItemStack(Block.dirt);
-		ItemStack gravelStack = new ItemStack(Block.gravel);
-		ItemStack CStoneStack = new ItemStack(Block.cobblestone);
-		ItemStack CoalStack = new ItemStack(Item.coal);
-		ItemStack GoldIStack = new ItemStack(Item.ingotGold);
-		ItemStack IronIStack = new ItemStack(Item.ingotIron);
-		ItemStack neatherbrickStack = new ItemStack(Block.netherBrick);
-		ItemStack ObsidianStack = new ItemStack(Block.obsidian);
-		ItemStack Water = new ItemStack(Item.bucketWater);
-		ItemStack sponge = new ItemStack(Block.sponge);
-		ItemStack DiamondBlock = new ItemStack(Block.blockDiamond);
-		ItemStack Owood = new ItemStack(Block.wood);
-		ItemStack Swood = new ItemStack(Block.wood, 1, 1);
-		ItemStack Bwood = new ItemStack(Block.wood, 1, 2);
-		ItemStack Jwood = new ItemStack(Block.wood, 1, 3);
+		ItemStack dirtStack = new ItemStack(Blocks.dirt);
+		ItemStack gravelStack = new ItemStack(Blocks.gravel);
+		ItemStack CStoneStack = new ItemStack(Blocks.cobblestone);
+		ItemStack CoalStack = new ItemStack(Items.coal);
+		ItemStack GoldIStack = new ItemStack(Items.gold_ingot);
+		ItemStack IronIStack = new ItemStack(Items.iron_ingot);
+		ItemStack neatherbrickStack = new ItemStack(Blocks.nether_brick);
+		ItemStack ObsidianStack = new ItemStack(Blocks.obsidian);
+		ItemStack Water = new ItemStack(Items.water_bucket);
+		ItemStack sponge = new ItemStack(Blocks.sponge);
+		ItemStack DiamondBlock = new ItemStack(Blocks.diamond_block);
+		ItemStack Owood = new ItemStack(Blocks.log);
+		ItemStack Swood = new ItemStack(Blocks.log, 1, 1);
+		ItemStack Bwood = new ItemStack(Blocks.log, 1, 2);
+		ItemStack Jwood = new ItemStack(Blocks.log, 1, 3);
 
-		addRecipe(new ItemStack(Item.coal, 10), "   ", "qcq", "   ", 'q',
-				Transcraft.QuadTransmuter, 'c', Item.coal);
+		addRecipe(new ItemStack(Items.coal, 10), "   ", "qcq", "   ", 'q',
+				Transcraft.QuadTransmuter, 'c', Items.coal);
 		addRecipe(new ItemStack(Transcraft.Oil, 10), "   ", "qoq", "   ", 'q',
 				Transcraft.QuadTransmuter, 'o', Transcraft.Oil);
-		addRecipe(new ItemStack(Item.ingotIron, 4), "   ", "qiq", "   ", 'q',
-				Transcraft.QuadTransmuter, 'i', Item.ingotIron);
-		addRecipe(new ItemStack(Item.ingotGold, 6), "   ", "qgq", "   ", 'q',
-				Transcraft.QuadTransmuter, 'g', Item.ingotGold);
-		addRecipe(new ItemStack(Block.glass, 6), "   ", "qgq", "   ", 'q',
-				Transcraft.QuadTransmuter, 'g', Block.glass);
-		addRecipe(new ItemStack(Item.redstone, 4), "   ", "qrq", "   ", 'q',
-				Transcraft.QuadTransmuter, 'r', Item.redstone);
-		addRecipe(new ItemStack(Block.dirt, 32), "   ", "bdb", "   ", 'b',
-				Transcraft.QuadTransmuter, 'd', Block.dirt);
-		addRecipe(new ItemStack(Block.sand, 16), "   ", "bsb", "   ", 'b',
-				Transcraft.QuadTransmuter, 's', Block.sand);
-		addRecipe(new ItemStack(Block.cobblestone, 25), "   ", "bcb", "   ",
-				'b', Transcraft.QuadTransmuter, 'c', Block.cobblestone);
-		addRecipe(new ItemStack(Block.wood, 5), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Items.iron_ingot, 4), "   ", "qiq", "   ", 'q',
+				Transcraft.QuadTransmuter, 'i', Items.iron_ingot);
+		addRecipe(new ItemStack(Items.gold_ingot, 6), "   ", "qgq", "   ", 'q',
+				Transcraft.QuadTransmuter, 'g', Items.gold_ingot);
+		addRecipe(new ItemStack(Blocks.glass, 6), "   ", "qgq", "   ", 'q',
+				Transcraft.QuadTransmuter, 'g', Blocks.glass);
+		addRecipe(new ItemStack(Items.redstone, 4), "   ", "qrq", "   ", 'q',
+				Transcraft.QuadTransmuter, 'r', Items.redstone);
+		addRecipe(new ItemStack(Blocks.dirt, 32), "   ", "bdb", "   ", 'b',
+				Transcraft.QuadTransmuter, 'd', Blocks.dirt);
+		addRecipe(new ItemStack(Blocks.sand, 16), "   ", "bsb", "   ", 'b',
+				Transcraft.QuadTransmuter, 's', Blocks.sand);
+		addRecipe(new ItemStack(Blocks.cobblestone, 25), "   ", "bcb", "   ",
+				'b', Transcraft.QuadTransmuter, 'c', Blocks.cobblestone);
+		addRecipe(new ItemStack(Blocks.log, 5), "   ", "bcb", "   ", 'b',
 				Transcraft.QuadTransmuter, 'c', Owood);
-		addRecipe(new ItemStack(Block.wood, 5, 1), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 5, 1), "   ", "bcb", "   ", 'b',
 				Transcraft.QuadTransmuter, 'c', Swood);
-		addRecipe(new ItemStack(Block.wood, 5, 2), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 5, 2), "   ", "bcb", "   ", 'b',
 				Transcraft.QuadTransmuter, 'c', Bwood);
-		addRecipe(new ItemStack(Block.wood, 5, 3), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 5, 3), "   ", "bcb", "   ", 'b',
 				Transcraft.QuadTransmuter, 'c', Jwood);
-		addRecipe(new ItemStack(Item.appleRed, 10), "   ", "bcb", "   ", 'b',
-				Transcraft.QuadTransmuter, 'c', Item.appleRed);
-		addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ", 'b',
-				Transcraft.QuadTransmuter, 'e', Item.emerald);
-		addRecipe(new ItemStack(Item.arrow, 5), "   ", "bcb", "   ", 'b',
-				Transcraft.QuadTransmuter, 'c', Item.arrow);
+		addRecipe(new ItemStack(Items.apple, 10), "   ", "bcb", "   ", 'b',
+				Transcraft.QuadTransmuter, 'c', Items.apple);
+		addRecipe(new ItemStack(Items.diamond, 1), "   ", "ebe", "   ", 'b',
+				Transcraft.QuadTransmuter, 'e', Items.emerald);
+		addRecipe(new ItemStack(Items.arrow, 5), "   ", "bcb", "   ", 'b',
+				Transcraft.QuadTransmuter, 'c', Items.arrow);
 
-		addRecipe(new ItemStack(Item.diamond, 4), "   ", "ndn", "   ", 'n',
-				Transcraft.NanoTransmuter, 'd', Item.diamond);
-		addRecipe(new ItemStack(Item.emerald, 4), " n ", "ndn", " n ", 'n',
-				Transcraft.NanoTransmuter, 'd', Item.emerald);
-		addRecipe(new ItemStack(Item.redstone, 32), " n ", "nrn", " n ", 'n',
-				Transcraft.NanoTransmuter, 'r', Item.redstone);
-		addRecipe(new ItemStack(Item.ingotIron, 10), "   ", "nin", "   ", 'n',
-				Transcraft.NanoTransmuter, 'i', Item.ingotIron);
-		addRecipe(new ItemStack(Item.coal, 24), "   ", "qcq", "   ", 'q',
-				Transcraft.NanoTransmuter, 'c', Item.coal);
-		addRecipe(new ItemStack(Block.glass, 24), "   ", "qgq", "   ", 'q',
-				Transcraft.NanoTransmuter, 'g', Block.glass);
-		addRecipe(new ItemStack(Block.dirt, 64), "   ", "bdb", "   ", 'b',
-				Transcraft.NanoTransmuter, 'd', Block.dirt);
-		addRecipe(new ItemStack(Block.sand, 32), "   ", "bsb", "   ", 'b',
-				Transcraft.NanoTransmuter, 's', Block.sand);
-		addRecipe(new ItemStack(Block.cobblestone, 64), "   ", "bcb", "   ",
-				'b', Transcraft.NanoTransmuter, 'c', Block.cobblestone);
-		addRecipe(new ItemStack(Block.wood, 25), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Items.diamond, 4), "   ", "ndn", "   ", 'n',
+				Transcraft.NanoTransmuter, 'd', Items.diamond);
+		addRecipe(new ItemStack(Items.emerald, 4), " n ", "ndn", " n ", 'n',
+				Transcraft.NanoTransmuter, 'd', Items.emerald);
+		addRecipe(new ItemStack(Items.redstone, 32), " n ", "nrn", " n ", 'n',
+				Transcraft.NanoTransmuter, 'r', Items.redstone);
+		addRecipe(new ItemStack(Items.iron_ingot, 10), "   ", "nin", "   ", 'n',
+				Transcraft.NanoTransmuter, 'i', Items.iron_ingot);
+		addRecipe(new ItemStack(Items.coal, 24), "   ", "qcq", "   ", 'q',
+				Transcraft.NanoTransmuter, 'c', Items.coal);
+		addRecipe(new ItemStack(Blocks.glass, 24), "   ", "qgq", "   ", 'q',
+				Transcraft.NanoTransmuter, 'g', Blocks.glass);
+		addRecipe(new ItemStack(Blocks.dirt, 64), "   ", "bdb", "   ", 'b',
+				Transcraft.NanoTransmuter, 'd', Blocks.dirt);
+		addRecipe(new ItemStack(Blocks.sand, 32), "   ", "bsb", "   ", 'b',
+				Transcraft.NanoTransmuter, 's', Blocks.sand);
+		addRecipe(new ItemStack(Blocks.cobblestone, 64), "   ", "bcb", "   ",
+				'b', Transcraft.NanoTransmuter, 'c', Blocks.cobblestone);
+		addRecipe(new ItemStack(Blocks.log, 25), "   ", "bcb", "   ", 'b',
 				Transcraft.NanoTransmuter, 'c', Owood);
-		addRecipe(new ItemStack(Block.wood, 25, 1), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 25, 1), "   ", "bcb", "   ", 'b',
 				Transcraft.NanoTransmuter, 'c', Swood);
-		addRecipe(new ItemStack(Block.wood, 25, 2), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 25, 2), "   ", "bcb", "   ", 'b',
 				Transcraft.NanoTransmuter, 'c', Bwood);
-		addRecipe(new ItemStack(Block.wood, 25, 3), "   ", "bcb", "   ", 'b',
+		addRecipe(new ItemStack(Blocks.log, 25, 3), "   ", "bcb", "   ", 'b',
 				Transcraft.NanoTransmuter, 'c', Jwood);
-		addRecipe(new ItemStack(Item.appleRed, 25), "   ", "bcb", "   ", 'b',
-				Transcraft.NanoTransmuter, 'c', Item.appleRed);
-		addRecipe(new ItemStack(Item.slimeBall, 15), "   ", "bcb", "   ", 'b',
-				Transcraft.NanoTransmuter, 'c', Item.slimeBall);
-		addRecipe(new ItemStack(Item.enderPearl, 2), "   ", "bcb", "   ", 'b',
-				Transcraft.NanoTransmuter, 'c', Item.enderPearl);
+		addRecipe(new ItemStack(Items.apple, 25), "   ", "bcb", "   ", 'b',
+				Transcraft.NanoTransmuter, 'c', Items.apple);
+		addRecipe(new ItemStack(Items.slime_ball, 15), "   ", "bcb", "   ", 'b',
+				Transcraft.NanoTransmuter, 'c', Items.slime_ball);
+		addRecipe(new ItemStack(Items.ender_pearl, 2), "   ", "bcb", "   ", 'b',
+				Transcraft.NanoTransmuter, 'c', Items.ender_pearl);
 
-		addRecipe(new ItemStack(Block.dirt, 8), "   ", "bdb", "   ", 'b',
-				Transcraft.BasicTransmuter, 'd', Block.dirt);
-		addRecipe(new ItemStack(Block.sand, 2), "   ", "bsb", "   ", 'b',
-				Transcraft.BasicTransmuter, 's', Block.sand);
-		addRecipe(new ItemStack(Block.cobblestone, 3), "   ", "bcb", "   ",
-				'b', Transcraft.BasicTransmuter, 'c', Block.cobblestone);
+		addRecipe(new ItemStack(Blocks.dirt, 8), "   ", "bdb", "   ", 'b',
+				Transcraft.BasicTransmuter, 'd', Blocks.dirt);
+		addRecipe(new ItemStack(Blocks.sand, 2), "   ", "bsb", "   ", 'b',
+				Transcraft.BasicTransmuter, 's', Blocks.sand);
+		addRecipe(new ItemStack(Blocks.cobblestone, 3), "   ", "bcb", "   ",
+				'b', Transcraft.BasicTransmuter, 'c', Blocks.cobblestone);
 
-		addRecipe(new ItemStack(Item.diamond, 1), "   ", "ebe", "   ", 'b',
-				Transcraft.BasicTransmuter, 'e', Item.emerald);
+		addRecipe(new ItemStack(Items.diamond, 1), "   ", "ebe", "   ", 'b',
+				Transcraft.BasicTransmuter, 'e', Items.emerald);
 
 		/*
 		 * if (Loader.isModLoaded("TranscraftAddons")) { if
@@ -271,20 +273,20 @@ public class RecipesTC {
 			}
 		}
 
-		if (i == 2 && itemstack.itemID == itemstack1.itemID
+		if (i == 2 && itemstack.getItem() == itemstack1.getItem()
 				&& itemstack.stackSize == 1 && itemstack1.stackSize == 1
 				&& Item.itemsList[itemstack.itemID].isRepairable()) {
-			Item item = Item.itemsList[itemstack.itemID];
-			int k = item.getMaxDamage() - itemstack.getItemDamageForDisplay();
-			int l = item.getMaxDamage() - itemstack1.getItemDamageForDisplay();
-			int i1 = k + l + item.getMaxDamage() * 5 / 100;
-			int j1 = item.getMaxDamage() - i1;
+			Item item = Items.itemsList[itemstack.itemID];
+			int k = Items.getMaxDamage() - itemstack.getItemDamageForDisplay();
+			int l = Items.getMaxDamage() - itemstack1.getItemDamageForDisplay();
+			int i1 = k + l + Items.getMaxDamage() * 5 / 100;
+			int j1 = Items.getMaxDamage() - i1;
 
 			if (j1 < 0) {
 				j1 = 0;
 			}
 
-			return new ItemStack(itemstack.itemID, 1, j1);
+			return new ItemStack(itemstack.getItem(), 1, j1);
 		} else {
 			for (j = 0; j < this.recipes.size(); ++j) {
 				IRecipe irecipe = (IRecipe) this.recipes.get(j);

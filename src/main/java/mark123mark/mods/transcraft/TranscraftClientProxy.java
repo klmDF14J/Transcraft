@@ -27,7 +27,8 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	@Override
 	public void registerHandlers() {
-		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
+		// MinecraftForge.EVENT_BUS.register(new TickHandler());
+
 	}
 
 	@Override

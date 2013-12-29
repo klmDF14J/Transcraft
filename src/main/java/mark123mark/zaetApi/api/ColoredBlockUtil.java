@@ -19,7 +19,7 @@ public class ColoredBlockUtil {
 		for (int i = 15; i >= 0; i--) {
 			LanguageRegistry.instance().addStringLocalization(
 					itemBlock.getUnlocalizedName(new ItemStack(
-							itemBlock.itemID, 1, i)) + ".name",
+							itemBlock, 1, i)) + ".name",
 					getColorNameByMetadata(i) + " " + suffix);
 		}
 	}

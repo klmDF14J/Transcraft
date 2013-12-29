@@ -75,8 +75,7 @@ public class LoadItems {
 				Config.HotdogID).setUnlocalizedName("Transcraft:HotDog")
 				.setCreativeTab(Transcraft.TranstabItems);
 
-		Transcraft.PlasticAxe = new mark123mark.mods.transcraft.Tools.PlasticAxe(
-				Config.PlasticAxeID, Transcraft.PlasticTool)
+		Transcraft.PlasticAxe = new mark123mark.mods.transcraft.Tools.PlasticAxe(Config.PlasticAxeID, Transcraft.PlasticTool)
 				.setUnlocalizedName("Transcraft:PlasticAxe").setCreativeTab(
 						Transcraft.TranstabItems);
 

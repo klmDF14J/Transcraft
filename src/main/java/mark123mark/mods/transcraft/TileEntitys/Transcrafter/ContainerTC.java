@@ -70,21 +70,23 @@ public class ContainerTC extends Container {
 	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
 		super.onContainerClosed(par1EntityPlayer);
 
-		if (!this.worldObj.isRemote) {
-			for (int i = 0; i < 9; ++i) {
-				ItemStack itemstack = this.craftMatrix
-						.getStackInSlotOnClosing(i);
+        if (!this.worldObj.isRemote)
+        {
+            for (int i = 0; i < 9; ++i)
+            {
+                ItemStack itemstack = this.craftMatrix.getStackInSlotOnClosing(i);
 
-				if (itemstack != null) {
-					par1EntityPlayer.dropPlayerItem(itemstack);
-				}
-			}
-		}
+                if (itemstack != null)
+                {
+                    par1EntityPlayer.dropPlayerItemWithRandomChoice(itemstack, false);
+                }
+            }
+        }
 	}
 
 	@Override
 	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.worldObj.getBlockId(this.posX, this.posY, this.posZ) != Transcraft.Transcrafter.blockID ? false
+		return this.worldObj.func_147439_a(this.posX, this.posY, this.posZ) != Transcraft.Transcrafter ? false
 				: par1EntityPlayer.getDistanceSq(this.posX + 0.5D,
 						this.posY + 0.5D, this.posZ + 0.5D) <= 64.0D;
 	}

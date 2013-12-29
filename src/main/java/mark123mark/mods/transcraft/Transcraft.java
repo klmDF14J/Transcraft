@@ -236,8 +236,7 @@ public class Transcraft {
 	public void load(FMLInitializationEvent event) {
 
 		FMLLog.info("[TRANSCRAFT]	Adding gui hander");
-		NetworkRegistry.instance().registerGuiHandler(instance,new GuiHand());
-
+		MinecraftForge.EVENT_BUS.register(new GuiHand());
 
 	//	FMLLog.info("[TRANSCRAFT]	Adding new dims");
 		// LoadDim.load();
