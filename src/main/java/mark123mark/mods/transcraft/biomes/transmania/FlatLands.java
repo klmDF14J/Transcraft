@@ -2,6 +2,8 @@ package mark123mark.mods.transcraft.biomes.transmania;
 
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.BiomeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -18,13 +20,13 @@ public class FlatLands extends BiomeGenBase {
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public int getBiomeGrassColor() {
+	public int getModdedBiomeGrassColor(int original) {
 		return 0x07D7FF;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public int getBiomeFoliageColor() {
+	public int getModdedBiomeFoliageColor(int original) {
 		return 0x07D7FF;
 	}
 

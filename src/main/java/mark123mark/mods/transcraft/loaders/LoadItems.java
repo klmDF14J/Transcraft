@@ -12,6 +12,7 @@ import mark123mark.mods.transcraft.armor.ArmorPlasticChestplate;
 import mark123mark.mods.transcraft.armor.ArmorPlasticHelmet;
 import mark123mark.mods.transcraft.armor.ArmorPlasticLegs;
 import mark123mark.mods.transcraft.helpers.Config;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class LoadItems {
@@ -109,13 +110,12 @@ public class LoadItems {
 				.setUnlocalizedName("Transcraft:EnderSword")
 				.setCreativeTab(Transcraft.TranstabItems).setFull3D();
 
-		EnumArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
+		ArmorMaterial PlasticEnum = EnumHelper.addArmorMaterial("Plastic",
 				15, new int[] { 3, 5, 5, 2 }, 5);
-		EnumArmorMaterial EnderEnum = EnumHelper.addArmorMaterial("Ender",
+		ArmorMaterial EnderEnum = EnumHelper.addArmorMaterial("Ender",
 				9850, new int[] { 10000, 10000, 10000, 10000 }, 100);
 
-		Transcraft.PlasticHelmet = (new ArmorPlasticHelmet(
-				Config.PlasticHelmetID, PlasticEnum, 0, 0)).setUnlocalizedName(
+		Transcraft.PlasticHelmet = (new ArmorPlasticHelmet(Config.PlasticHelmetID, PlasticEnum, 0, 0)).setUnlocalizedName(
 				"Transcraft:PlasticHelmet").setCreativeTab(
 				Transcraft.TranstabItems);
 

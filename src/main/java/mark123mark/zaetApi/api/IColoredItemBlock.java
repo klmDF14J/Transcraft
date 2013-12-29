@@ -1,4 +1,4 @@
-package org.zaet.api;
+package mark123mark.zaetApi.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
