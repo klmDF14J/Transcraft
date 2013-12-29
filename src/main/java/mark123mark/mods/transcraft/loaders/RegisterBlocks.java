@@ -75,25 +75,25 @@ public class RegisterBlocks {
 				"Smooth Bunker Block");
 
 		GameRegistry.registerBlock(Transcraft.enderQuartzBlock, "EnderQuartz");
-		GameRegistry.registerBlock(Transcraft.enderQuartzBlock,ItemEnderQuartzBlock.class , "ItemEnderQuartzBlock");
+//		GameRegistry.registerBlock(Transcraft.enderQuartzBlock,ItemEnderQuartzBlock.class , "ItemEnderQuartzBlock");
 
 		GameRegistry.registerBlock(Transcraft.CutenderQuartz, "CutEnderQuartz");
-		GameRegistry.registerBlock(Transcraft.CutenderQuartz,ItemCutEnderQuartzBlock.class ,"ItemCutEnderQuartzBlock");
+//		GameRegistry.registerBlock(Transcraft.CutenderQuartz,ItemCutEnderQuartzBlock.class ,"ItemCutEnderQuartzBlock");
 
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,
 				"EnderQuartzBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,ItemEnderQuartzBrick.class ,"ItemEnderQuartzBrick");
+//		GameRegistry.registerBlock(Transcraft.EnderQuartzBrick,ItemEnderQuartzBrick.class ,"ItemEnderQuartzBrick");
 
 		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,
 				"EnderQuartzBigBricks");
-		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,ItemEnderQuartzBigBrick.class , "ItemEnderQuartzBigBrick");
+//		GameRegistry.registerBlock(Transcraft.EnderQuartzBigBrick,ItemEnderQuartzBigBrick.class , "ItemEnderQuartzBigBrick");
 
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,
 				"Fancy Crystal Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemFancyCryastalGlass.class , "ItemFancyCryastalGlass");
+//		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemFancyCryastalGlass.class , "ItemFancyCryastalGlass");
 
 		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
-		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemCrystalGlass.class ,"ItemCrystalGlass");
+//		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemCrystalGlass.class ,"ItemCrystalGlass");
 
 		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
 		
@@ -104,6 +104,10 @@ public class RegisterBlocks {
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
 		 GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
 
+/*
+ * 		 
+
+		 
 		registerItem(Transcraft.BasicTransmuter);
 		registerItem(Transcraft.QuadTransmuter);
 		registerItem(Transcraft.NanoTransmuter);
@@ -134,6 +138,8 @@ public class RegisterBlocks {
 		registerItem(Transcraft.EnderLegs);
 		registerItem(Transcraft.EnderBoots);
 
+
+ */
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		GameRegistry.registerTileEntity(TileIXP.class, "TileIXP");
 		

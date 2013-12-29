@@ -63,12 +63,18 @@ public class LoadBlocks {
 				.func_149647_a(Transcraft.TranstabBlocks)
 				.func_149713_g(0).func_149658_d("Transcraft:ClearGlass");
 
+		/*
+		 * 
+		
+		
 		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(
 				Config.FancyCrystalGlassID, "clear", false)
 				.func_149663_c("Transcraft:FancyCrystalGlass")
 				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabDecBlocks)
 				.func_149713_g(0)
 				.func_149658_d("Transcraft:FancyCrystalGlass");
+
+ */
 
 		Transcraft.ThinClearGlass = new ThinCrystalGlass(
 				Config.ThinClearGlassID)

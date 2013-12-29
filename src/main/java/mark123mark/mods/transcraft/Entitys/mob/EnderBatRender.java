@@ -25,11 +25,11 @@ public class EnderBatRender extends RenderBat {
 			this.mainModel = new ModelBat();
 		}
 
-		super.doRenderLiving(par1EntityBat, par2, par4, par6, par8, par9);
+		super.doRender(par1EntityBat, par2, par4, par6, par8, par9);
 	}
 
 	@Override
-	public void doRenderLiving(EntityLiving par1EntityLiving, double par2,
+	public void doRender(EntityLiving par1EntityLiving, double par2,
 			double par4, double par6, float par8, float par9) {
 		this.func_82443_a((Enderbat) par1EntityLiving, par2, par4, par6, par8,
 				par9);
@@ -39,8 +39,9 @@ public class EnderBatRender extends RenderBat {
 			"textures/mob/EnderBat.png");
 
 	@Override
-	protected ResourceLocation getBatTextures(EntityBat par1EntityBat) {
-		return texture;
-	}
+	protected ResourceLocation getEntityTexture(EntityBat par1EntityBat)
+    {
+        return texture;
+    }
 
 }

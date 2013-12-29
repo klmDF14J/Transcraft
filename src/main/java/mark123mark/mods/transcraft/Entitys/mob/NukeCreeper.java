@@ -5,6 +5,8 @@ import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntityIronGolem;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSource;
@@ -88,8 +90,8 @@ public class NukeCreeper extends EntityCreeper {
 				this.timeSinceIgnited = 0;
 			}
 
-			int difficulty = worldObj.difficultySetting;
-			int lengthBoost = 4 * (3 - difficulty);
+
+			int lengthBoost = 4 ;
 			int powered = this.getPowered() ? 12 : 0;
 
 			for (i = 0; i < 2; ++i) {
@@ -104,7 +106,7 @@ public class NukeCreeper extends EntityCreeper {
 						(this.rand.nextDouble() - 0.5D) * 2.0D);
 			}
 
-			if (this.timeSinceIgnited >= this.fuseTime + difficulty + powered) {
+			if (this.timeSinceIgnited >= this.fuseTime + powered) {
 				this.timeSinceIgnited = this.fuseTime;
 
 				if (!this.worldObj.isRemote) {
@@ -134,36 +136,7 @@ public class NukeCreeper extends EntityCreeper {
 				/ (this.fuseTime - 2);
 	}
 
-	@Override
-	protected void dropFewItems(boolean par1, int par2) {
-		int j = this.getDropItemId();
 
-		if (j > 0) {
-			int k = this.rand.nextInt(4) + 2;
-
-			if (par2 > 0) {
-				k += this.rand.nextInt(par2 + 1);
-			}
-
-			for (int l = 0; l < k; ++l) {
-				this.dropItem(j, 1);
-			}
-		}
-
-		if (this.getPowered()) {
-			if (j > 0) {
-				int k = this.rand.nextInt(40) + 20;
-
-				if (par2 > 0) {
-					k += this.rand.nextInt(par2 * 6 + 1);
-				}
-
-				for (int l = 0; l < k; ++l) {
-					this.dropItem(j, 1);
-				}
-			}
-		}
-	}
 
 	public boolean attackEntityFrom(DamageSource source, int damage) {
 		if (source instanceof EntityDamageSource
@@ -177,8 +150,11 @@ public class NukeCreeper extends EntityCreeper {
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	@Override
-	protected int getDropItemId() {
-		return Transcraft.DarkEndershard.itemID;
-	}
+	protected Item func_146068_u()
+    {
+        return Transcraft.DarkEndershard;
+    }
+
+	
 
 }

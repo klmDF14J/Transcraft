@@ -45,7 +45,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = true)
 public class Transcraft {
-	public static final String VERSION = "1.6.4_V2.0.0_";
+	public static final String VERSION = "1.7.2_V2.0.0_";
 	public static final String STATE = "BROKEN";
 	public static boolean SHOWDEVMESSGAE = false;
 
@@ -162,10 +162,10 @@ public class Transcraft {
 		LoadBlocks.LoadBlocks();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
-//		LoadItems.LoadItems();
+		LoadItems.LoadItems();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-//		TranscraftFluids.init();
+		TranscraftFluids.init();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
@@ -174,13 +174,13 @@ public class Transcraft {
 		LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
-//		LoadBlockSettings.LoadSet();
+		LoadBlockSettings.LoadSet();
 
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
-//		RecipeLoader.LoadRecipe();
+		RecipeLoader.LoadRecipe();
 
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
-//		LoadEntity.loadentity();
+		LoadEntity.loadentity();
 		
 		
 		
@@ -188,10 +188,10 @@ public class Transcraft {
 		BiomeDictionary.registerBiomeType(TransmutterBiome, Type.HILLS,
 				Type.FOREST, Type.WATER);
 		
-	//	BiomeManager.addSpawnBiome(TransmutterBiome);
+		BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
-		// GameRegistry.addBiome(FlatLands);
+//		 GameRegistry.addBiome(FlatLands);
 
 	}
 
@@ -202,16 +202,15 @@ public class Transcraft {
 		LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Adding Chest gen hooks");
-//		LoadChestGen.LoadChest();
+		LoadChestGen.LoadChest();
 
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
-//		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
+		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
 
 		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
-//		GameRegistry.registerFuelHandler(new FuelHandler());
+		GameRegistry.registerFuelHandler(new FuelHandler());
 
-//		Coproxy.renderThings();
-
+		Coproxy.renderThings();
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
@@ -220,7 +219,7 @@ public class Transcraft {
 	public static void oreRegistration() {
 
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");
-//		LoadOreDics.oredic();
+		LoadOreDics.oredic();
 
 	}
 
@@ -243,6 +242,9 @@ public class Transcraft {
 
 	}
 
+	 
+	
+	
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
 		@Override
 		public Item getTabIconItem() {
@@ -275,5 +277,7 @@ public class Transcraft {
 		}
 
 	};
+
+
 
 }

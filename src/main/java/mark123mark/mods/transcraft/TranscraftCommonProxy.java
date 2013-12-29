@@ -14,12 +14,12 @@ public class TranscraftCommonProxy {
 	}
 
 	public void registerHandlers() {
-		MinecraftForge.EVENT_BUS.register(new TickHandler());
-		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
+		
 		
 	}
 
 	public void registerTickHandlers() {
+		MinecraftForge.EVENT_BUS.register(new TickHandler());
 		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
 	}
 

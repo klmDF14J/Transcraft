@@ -20,26 +20,26 @@ public class FancyCrystalGlass extends IColoredBlock {
 	private int renderPass;
 
 	public FancyCrystalGlass(int par1, String location, boolean hasAlpha) {
-		super(par1, Material.glass);
-		this.setStepSound(soundGlassFootstep);
+		super(par1, Material.field_151588_w);
+		
 
 		renderPass = hasAlpha ? 1 : 0;
-		this.setCreativeTab(Transcraft.TranstabBlocks);
-		this.setHardness(0.3f);
+		this.func_149647_a(Transcraft.TranstabBlocks);
+		this.func_149711_c(0.3f);
 	}
 
 	@Override
-	public boolean isOpaqueCube() {
+	public boolean func_149662_c() {
 		return false;
 	}
 
 	@Override
-	public boolean renderAsNormalBlock() {
+	public boolean  func_149686_d() {
 		return false;
 	}
 
 	@Override
-	public int getRenderBlockPass() {
+	public int func_149701_w() {
 		return renderPass;
 	}
 

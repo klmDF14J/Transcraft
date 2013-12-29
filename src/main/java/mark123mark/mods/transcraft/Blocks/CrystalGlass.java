@@ -19,7 +19,7 @@ public class CrystalGlass extends IColoredBlock {
 	/**
 	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
 	 */
-	public int getRenderBlockPass() {
+	public int  func_149701_w() {
 		return 0;
 	}
 
@@ -29,7 +29,7 @@ public class CrystalGlass extends IColoredBlock {
 	 * the player can attach torches, redstone wire, etc to this block.
 	 */
 	@Override
-	public boolean isOpaqueCube() {
+	public boolean func_149662_c() {
 		return false;
 	}
 
@@ -38,17 +38,18 @@ public class CrystalGlass extends IColoredBlock {
 	 * (examples: signs, buttons, stairs, etc)
 	 */
 	@Override
-	public boolean renderAsNormalBlock() {
+	public boolean func_149686_d() {
 		return false;
 	}
 
 	@Override
-	public boolean shouldSideBeRendered(IBlockAccess par1IBlockAccess,
-			int par2, int par3, int par4, int par5) // Renders // blocks
+	public boolean func_149646_a(IBlockAccess par1IBlockAccess,int par2, int par3, int par4, int par5) // Renders // blocks
 	{
-		int i = par1IBlockAccess.getBlockId(par2, par3, par4);
+		int i = par1IBlockAccess.getBlockMetadata(par2, par3, par4);
 
-		return i == blockID ? false : true;
+	//	return i == blockID ? false : true;
+		
+		return true;
 	}
 
 }
