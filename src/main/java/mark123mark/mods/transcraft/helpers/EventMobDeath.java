@@ -10,7 +10,7 @@ public class EventMobDeath {
 	public static double rand;
 	public Random random = new Random();
 
-	@ForgeSubscribe
+	
 	public void onEntityDrop(LivingDropsEvent event) {
 
 		if (event.source.getDamageType().equals("player")) {

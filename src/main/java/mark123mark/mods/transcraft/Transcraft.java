@@ -152,8 +152,8 @@ public class Transcraft {
 				+ Transcraft.VERSION);
 
 		FMLLog.info("[TRANSCRAFT]	Loading Handlers");
-		Coproxy.registerHandlers();
-		Coproxy.registerTickHandlers();
+//		Coproxy.registerHandlers();
+//		Coproxy.registerTickHandlers();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Config");
 		Config.initConfig();
@@ -162,10 +162,10 @@ public class Transcraft {
 		LoadBlocks.LoadBlocks();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Items");
-		LoadItems.LoadItems();
+//		LoadItems.LoadItems();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Fluids");
-		TranscraftFluids.init();
+//		TranscraftFluids.init();
 
 		FMLLog.info("[TRANSCRAFT]	Registering Blocks");
 		RegisterBlocks.RegisterBlocks();
@@ -174,13 +174,13 @@ public class Transcraft {
 		LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Loading Block Settings");
-		LoadBlockSettings.LoadSet();
+//		LoadBlockSettings.LoadSet();
 
 		FMLLog.info("[TRANSCRAFT]	Adding Recipes");
-		RecipeLoader.LoadRecipe();
+//		RecipeLoader.LoadRecipe();
 
 		FMLLog.info("[TRANSCRAFT]	Loading entitys");
-		LoadEntity.loadentity();
+//		LoadEntity.loadentity();
 		
 		
 		
@@ -202,15 +202,15 @@ public class Transcraft {
 		LoadLang.loadlang();
 
 		FMLLog.info("[TRANSCRAFT]	Adding Chest gen hooks");
-		LoadChestGen.LoadChest();
+//		LoadChestGen.LoadChest();
 
 		FMLLog.info("[TRANSCRAFT]	Registering world gen");
-		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
+//		GameRegistry.registerWorldGenerator(new TranscraftGenerator(), 0);
 
 		FMLLog.info("[TRANSCRAFT]	Registering Fuel handler");
-		GameRegistry.registerFuelHandler(new FuelHandler());
+//		GameRegistry.registerFuelHandler(new FuelHandler());
 
-		Coproxy.renderThings();
+//		Coproxy.renderThings();
 
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
@@ -220,7 +220,7 @@ public class Transcraft {
 	public static void oreRegistration() {
 
 		FMLLog.info("[TRANSCRAFT]	Adding Ore dic support");
-		LoadOreDics.oredic();
+//		LoadOreDics.oredic();
 
 	}
 

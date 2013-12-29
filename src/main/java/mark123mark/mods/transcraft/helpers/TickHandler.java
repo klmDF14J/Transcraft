@@ -8,7 +8,7 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 
-public class TickHandler implements ITickHandler {
+public class TickHandler implements TickEvent  {
 	ItemStack currentItemStack = null;
 
 	public static boolean adminfly = false;

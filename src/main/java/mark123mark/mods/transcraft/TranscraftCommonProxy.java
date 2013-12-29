@@ -2,6 +2,7 @@ package mark123mark.mods.transcraft;
 
 import java.io.File;
 
+import net.minecraftforge.common.MinecraftForge;
 import mark123mark.mods.transcraft.helpers.ServerTickHandler;
 import mark123mark.mods.transcraft.helpers.TickHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -13,17 +14,17 @@ public class TranscraftCommonProxy {
 	}
 
 	public void registerHandlers() {
-		TickRegistry.registerTickHandler(new TickHandler(), Side.SERVER);
-		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
+		MinecraftForge.EVENT_BUS.register(new TickHandler());
+		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
+		
 	}
 
 	public void registerTickHandlers() {
-		// TickRegistry.registerTickHandler(new TickHandler(), Side.CLIENT);
-		TickRegistry.registerTickHandler(new ServerTickHandler(), Side.SERVER);
+		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
 	}
 
 	public void register() {
-		// GameRegistry.registerTileEntity(TileEntityTF.class, "TileEntity");
+
 	}
 
 	public void spawnParticle(String string, double x, double y, double z) {

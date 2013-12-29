@@ -27,7 +27,7 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 
 	@Override
 	public void registerHandlers() {
-		// MinecraftForge.EVENT_BUS.register(new TickHandler());
+		 MinecraftForge.EVENT_BUS.register(new TickHandler());
 
 	}
 
@@ -35,11 +35,10 @@ public class TranscraftClientProxy extends TranscraftCommonProxy {
 	public void registerTickHandlers() {
 		
 		
-//		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
-//		MinecraftForge.EVENT_BUS.register(new TickHandler());
+		MinecraftForge.EVENT_BUS.register(new ServerTickHandler());
+		MinecraftForge.EVENT_BUS.register(new TickHandler());
 
-		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,
-				new NukeCreeperRender());
+		RenderingRegistry.registerEntityRenderingHandler(NukeCreeper.class,new NukeCreeperRender());
 		RenderingRegistry.registerEntityRenderingHandler(Enderbat.class,new  EnderBatRender());
 	}
 

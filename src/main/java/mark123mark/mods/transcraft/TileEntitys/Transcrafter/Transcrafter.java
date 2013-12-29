@@ -2,10 +2,13 @@ package mark123mark.mods.transcraft.TileEntitys.Transcrafter;
 
 import javax.swing.Icon;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -15,9 +18,8 @@ public class Transcrafter extends BlockContainer {
 	public int multiblock;
 
 	public Transcrafter(int id) {
-		super(id, Material.rock);
-		this.setStepSound(Block.soundStoneFootstep);
-		this.setHardness(2F);
+		super(Material.field_151574_g);
+		this.func_149711_c(2F);
 
 	}
 
@@ -29,6 +31,7 @@ public class Transcrafter extends BlockContainer {
 			return icons[1];
 		}
 	}
+	
 
 	public int tickRate(World par1World) {
 		return 2;
@@ -41,7 +44,7 @@ public class Transcrafter extends BlockContainer {
 	}
 
 	@Override
-	public boolean onBlockActivated(World w, int x, int y, int z,
+	public boolean func_149727_a(World w, int x, int y, int z,
 			EntityPlayer p, int par6, float par7, float par8, float par9) {
 		int xs = 0;
 		int ys = 0;
@@ -65,5 +68,7 @@ public class Transcrafter extends BlockContainer {
 	public TileEntity createNewTileEntity(World world) {
 		return new TileTC();
 	}
+
+
 
 }
