@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.helpers;
 import java.io.File;
 import java.io.IOException;
 
+import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config {
@@ -111,6 +112,11 @@ public class Config {
 		config.load();
 
 		// Blocks
+		
+		/*
+		 * 
+		
+		
 		TranscraftOreID = config.getBlock("TransmutterOre", 2000).getInt();
 		OilOreID = config.getBlock("OilOre", 2001).getInt();
 		BlueLightID = config.getBlock("BlueLight", 2011).getInt();
@@ -185,6 +191,8 @@ public class Config {
 		EnderChestID = config.getItem("EnderChest", 5046).getInt();
 		EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
 		EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
+
+ */
 
 		config.save();
 	}

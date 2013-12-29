@@ -11,7 +11,7 @@ public class CrystalGlass extends IColoredBlock {
 	public static String texName;
 
 	public CrystalGlass(int par1) {
-		super(par1, Material.glass);
+		super(Material.field_151588_w);
 	}
 
 	@Override

@@ -16,166 +16,168 @@ public class LoadBlocks {
 
 	public static void LoadBlocks() {
 
-		Transcraft.TranscraftOre = new TranscraftOre(Config.TranscraftOreID)
-				.setUnlocalizedName("Transcraft:TranscraftOre")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:TranscraftOre");
+		Transcraft.TranscraftOre = new TranscraftOre(Config.TranscraftOreID).func_149663_c("Transcraft:TranscraftOre").func_149711_c(1.5F).func_149647_a(Transcraft.TranstabBlocks).func_149658_d("Transcraft:TranscraftOre");
 
 		Transcraft.TransManiaOre = new TransManiaOre(Config.TransManiaOreID)
-				.setUnlocalizedName("Transcraft:TransManiaOre")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:TransManiaOre");
+				.func_149663_c("Transcraft:TransManiaOre")
+				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:TransManiaOre");
 
 		Transcraft.OilOre = new mark123mark.mods.transcraft.Blocks.OilOre(
-				Config.OilOreID).setUnlocalizedName("Transcraft:OilOre")
-				.setHardness(1.5F).setTextureName("Transcraft:OilOre");
+				Config.OilOreID).func_149663_c("Transcraft:OilOre")
+				.func_149711_c(1.5F).func_149658_d("Transcraft:OilOre");
 
 		Transcraft.BlueLight = new mark123mark.mods.transcraft.Blocks.Lights.BlueLight(
-				Config.BlueLightID).setUnlocalizedName("Transcraft:BlueLight")
-				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setLightValue(1.0F).setLightOpacity(0)
-				.setTextureName("Transcraft:BlueLight");
+				Config.BlueLightID).func_149663_c("Transcraft:BlueLight")
+				.func_149711_c(1.0F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149715_a(1.0F).func_149713_g(0)
+				.func_149658_d("Transcraft:BlueLight");
 
 		Transcraft.GreenLight = new mark123mark.mods.transcraft.Blocks.Lights.GreenLight(
 				Config.GreenLightID)
-				.setUnlocalizedName("Transcraft:GreenLight").setHardness(1.0F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(1.0F)
-				.setLightOpacity(0).setTextureName("Transcraft:GreenLight");
+				.func_149663_c("Transcraft:GreenLight").func_149711_c(1.0F)
+				.func_149647_a(Transcraft.TranstabBlocks).func_149715_a(1.0F)
+				.func_149713_g(0).func_149658_d("Transcraft:GreenLight");
 
 		Transcraft.OrangeLight = new mark123mark.mods.transcraft.Blocks.Lights.OrangeLight(
 				Config.OrangeLightID)
-				.setUnlocalizedName("Transcraft:OrangeLight").setHardness(1.0F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(1.0F)
-				.setLightOpacity(0).setTextureName("Transcraft:OrangeLight");
+				.func_149663_c("Transcraft:OrangeLight").func_149711_c(1.0F)
+				.func_149647_a(Transcraft.TranstabBlocks).func_149715_a(1.0F)
+				.func_149713_g(0).func_149658_d("Transcraft:OrangeLight");
 
 		Transcraft.DarkLight = new mark123mark.mods.transcraft.Blocks.Lights.DarkLight(
-				Config.DarkLightID).setUnlocalizedName("Transcraft:DarkLight")
-				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setLightValue(1.0F).setLightOpacity(0)
-				.setTextureName("Transcraft:DarkLight");
+				Config.DarkLightID).func_149663_c("Transcraft:DarkLight")
+				.func_149711_c(1.0F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149715_a(1.0F).func_149713_g(0)
+				.func_149658_d("Transcraft:DarkLight");
 
 		Transcraft.IronTorch = new mark123mark.mods.transcraft.Blocks.IronTorch(
-				Config.IronTorchID).setUnlocalizedName("Transcraft:IronTorch")
-				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setLightValue(1.0F).setLightOpacity(0)
-				.setTextureName("Transcraft:IronTorch");
+				Config.IronTorchID).func_149663_c("Transcraft:IronTorch")
+				.func_149711_c(1.0F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149715_a(1.0F).func_149713_g(0)
+				.func_149658_d("Transcraft:IronTorch");
 
 		Transcraft.ClearGlass = new mark123mark.mods.transcraft.Blocks.CrystalGlass(
-				Config.ClearGlassID).setStepSound(Block.soundGlassFootstep)
-				.setUnlocalizedName("Transcraft:ClearGlass").setHardness(1.5F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F)
-				.setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
+				Config.ClearGlassID)
+				.func_149663_c("Transcraft:ClearGlass").func_149711_c(1.5F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149713_g(0).func_149658_d("Transcraft:ClearGlass");
 
 		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(
 				Config.FancyCrystalGlassID, "clear", false)
-				.setStepSound(Block.soundGlassFootstep)
-				.setUnlocalizedName("Transcraft:FancyCrystalGlass")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabDecBlocks)
-				.setLightValue(0.0F).setLightOpacity(0)
-				.setTextureName("Transcraft:FancyCrystalGlass");
+				.func_149663_c("Transcraft:FancyCrystalGlass")
+				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabDecBlocks)
+				.func_149713_g(0)
+				.func_149658_d("Transcraft:FancyCrystalGlass");
 
 		Transcraft.ThinClearGlass = new ThinCrystalGlass(
-				Config.ThinClearGlassID).setStepSound(Block.soundGlassFootstep)
-				.setUnlocalizedName("Transcraft:ThinClearGlass")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setLightValue(0.0F).setLightOpacity(0)
-				.setTextureName("Transcraft:ClearGlass");
+				Config.ThinClearGlassID)
+				.func_149663_c("Transcraft:ThinClearGlass")
+				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149713_g(0)
+				.func_149658_d("Transcraft:ClearGlass");
 
 		Transcraft.BunkerBlock = new mark123mark.mods.transcraft.Blocks.BunkerBlock(
 				Config.BunkerBlockID)
-				.setUnlocalizedName("Transcraft:BunkerBlock")
-				.setHardness(10.0F).setResistance(999999999999999999999.0F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F)
-				.setLightOpacity(0).setTextureName("Transcraft:BunkerBlock");
+				.func_149663_c("Transcraft:BunkerBlock")
+				.func_149711_c(10.0F).func_149752_b(999999999999999999999.0F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149713_g(0).func_149658_d("Transcraft:BunkerBlock");
 
 		Transcraft.BunkerStair = (new mark123mark.mods.transcraft.Blocks.BunkerStair(
 				Config.BunkerStairID, Transcraft.BunkerBlock, 0))
-				.setUnlocalizedName("Transcraft:BunkerStair")
-				.setCreativeTab(Transcraft.TranstabBlocks).setHardness(10.0F)
-				.setResistance(999999999999.0F)
-				.setTextureName("Transcraft:BunkerStair");
+				.func_149663_c("Transcraft:BunkerStair")
+				.func_149647_a(Transcraft.TranstabBlocks).func_149711_c(10.0F)
+				.func_149752_b(999999999999.0F)
+				.func_149658_d("Transcraft:BunkerStair");
 
 		Transcraft.ObsidianLever = new mark123mark.mods.transcraft.Blocks.ObsidianLever(
 				Config.ObsidianLeverID)
-				.setUnlocalizedName("Transcraft:ObsidianLever")
-				.setHardness(50.0F).setResistance(999999999999999999999.0F)
-				.setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:ObsidianLever");
+				.func_149663_c("Transcraft:ObsidianLever")
+				.func_149711_c(50.0F).func_149752_b(999999999999999999999.0F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:ObsidianLever");
 
 		Transcraft.SmoothBunkerBlock = new mark123mark.mods.transcraft.Blocks.SmoothBunkerBlock(
 				Config.SmoothBunkerBlockID)
-				.setUnlocalizedName("Transcraft:SmoothBunkerBlock")
-				.setHardness(10.0F).setResistance(999999999999999999999.0F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F)
-				.setLightOpacity(0)
-				.setTextureName("Transcraft:SmoothBunkerBlock");
+				.func_149663_c("Transcraft:SmoothBunkerBlock")
+				.func_149711_c(10.0F).func_149752_b(999999999999999999999.0F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149713_g(0)
+				.func_149658_d("Transcraft:SmoothBunkerBlock");
 
 		Transcraft.SmoothBunkerStair = (new mark123mark.mods.transcraft.Blocks.SmoothBunkerStair(
 				Config.SmoothBunkerStairID, Transcraft.SmoothBunkerBlock, 0))
-				.setUnlocalizedName("Transcraft:SmoothBunkerStair")
-				.setCreativeTab(Transcraft.TranstabBlocks).setHardness(10.0F)
-				.setResistance(999999999999999999999.0F)
-				.setTextureName("Transcraft:SmoothBunkerStair");
+				.func_149663_c("Transcraft:SmoothBunkerStair")
+				.func_149647_a(Transcraft.TranstabBlocks).func_149711_c(10.0F)
+				.func_149752_b(999999999999999999999.0F)
+				.func_149658_d("Transcraft:SmoothBunkerStair");
 
 		Transcraft.DriedTransmutter = (new mark123mark.mods.transcraft.Blocks.DriedTransmutter(
 				Config.DriedTransmutterID)
-				.setUnlocalizedName("Transcraft:DriedTransmutter")
-				.setCreativeTab(Transcraft.TranstabBlocks).setHardness(3.0F)
-				.setResistance(9.0F).setLightValue(1.0F)
-				.setTextureName("Transcraft:DriedTransmutter"));
+				.func_149663_c("Transcraft:DriedTransmutter")
+				.func_149647_a(Transcraft.TranstabBlocks).func_149711_c(3.0F)
+				.func_149752_b(9.0F).func_149715_a(1.0F)
+				.func_149658_d("Transcraft:DriedTransmutter"));
 
 		Transcraft.ComIronOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComIronOre(
 				Config.ComIronOreID)
-				.setUnlocalizedName("Transcraft:ComIronOre").setHardness(1.5F)
-				.setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:ComIronOre");
+				.func_149663_c("Transcraft:ComIronOre").func_149711_c(1.5F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:ComIronOre");
 
 		Transcraft.ComGoldOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComGoldOre(
 				Config.ComGoldOreID)
-				.setUnlocalizedName("Transcraft:ComGoldOre").setHardness(1.5F)
-				.setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:ComGoldOre");
+				.func_149663_c("Transcraft:ComGoldOre").func_149711_c(1.5F)
+				.func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:ComGoldOre");
 
 		Transcraft.ComTransmutterOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComTransmutterOre(
 				Config.ComTransmutterOreID)
-				.setUnlocalizedName("Transcraft:ComTransmutterOre")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:ComTransmutterOre");
+				.func_149663_c("Transcraft:ComTransmutterOre")
+				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:ComTransmutterOre");
 
 		Transcraft.ComOilOre = new mark123mark.mods.transcraft.Blocks.ComOres.ComOilOre(
-				Config.ComOilOreID).setUnlocalizedName("Transcraft:ComOilOre")
-				.setHardness(1.5F).setCreativeTab(Transcraft.TranstabBlocks)
-				.setTextureName("Transcraft:ComOilOre");
+				Config.ComOilOreID).func_149663_c("Transcraft:ComOilOre")
+				.func_149711_c(1.5F).func_149647_a(Transcraft.TranstabBlocks)
+				.func_149658_d("Transcraft:ComOilOre");
 
 		Transcraft.Transcrafter = new mark123mark.mods.transcraft.TileEntitys.Transcrafter.Transcrafter(
 				Config.TranscrafterID)
-				.setCreativeTab(Transcraft.TranstabBlocks).setHardness(1.0F)
-				.setUnlocalizedName("Transcraft:Transcrafter");
+				.func_149647_a(Transcraft.TranstabBlocks).func_149711_c(1.0F)
+				.func_149663_c("Transcraft:Transcrafter");
 
 		Transcraft.enderQuartzBlock = new EnderQuartz(Config.BlockEnderQuartzID)
-				.setUnlocalizedName("Transcraft:enderquartz")
-				.setTextureName("Transcraft:enderquartz").setHardness(1.0F)
-				.setCreativeTab(Transcraft.TranstabDecBlocks);
+				.func_149663_c("Transcraft:enderquartz")
+				.func_149658_d("Transcraft:enderquartz").func_149711_c(1.0F)
+				.func_149647_a(Transcraft.TranstabDecBlocks);
 
 		Transcraft.CutenderQuartz = new CutEnderQuartz(
 				Config.BlockCutEnderQuartzID)
-				.setUnlocalizedName("Transcraft:CutEnderQuartz")
-				.setTextureName("Transcraft:CutEnderQuartz").setHardness(1.0F)
-				.setCreativeTab(Transcraft.TranstabDecBlocks);
+				.func_149663_c("Transcraft:CutEnderQuartz")
+				.func_149658_d("Transcraft:CutEnderQuartz").func_149711_c(1.0F)
+				.func_149647_a(Transcraft.TranstabDecBlocks);
 
 		Transcraft.EnderQuartzBrick = new EnderQuartzBrick(
 				Config.BlockEnderQuartzBrickID)
-				.setUnlocalizedName("Transcraft:EnderQuartzBrick")
-				.setTextureName("Transcraft:EnderQuartzBrick")
-				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+				.func_149663_c("Transcraft:EnderQuartzBrick")
+				.func_149658_d("Transcraft:EnderQuartzBrick")
+				.func_149711_c(1.0F).func_149647_a(Transcraft.TranstabDecBlocks);
 
 		Transcraft.EnderQuartzBigBrick = new EnderQuartzBigBrick(
 				Config.BlockEnderQuartzBigBrickID)
-				.setUnlocalizedName("Transcraft:EnderQuartzBigBricks")
-				.setTextureName("Transcraft:EnderQuartzBrick2")
-				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
+				.func_149663_c("Transcraft:EnderQuartzBigBricks")
+				.func_149658_d("Transcraft:EnderQuartzBrick2")
+				.func_149711_c(1.0F).func_149647_a(Transcraft.TranstabDecBlocks);
 		
+	
+		 
+		Transcraft.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0).func_149663_c("Transcraft:ixpGrinder").func_149711_c(1.0F)
+				  .func_149658_d("Transcraft:ixpGrinder")
+					 .func_149647_a(Transcraft.TranstabBlocks);
 		
+	
 		
 		
 		
@@ -197,12 +199,6 @@ public class LoadBlocks {
 		 * .setTextureName("Transcraft:EscapePortal")
 		 * .setCreativeTab(Transcraft.TranstabBlocks).setBlockUnbreakable();
 		*/
-		 
-		Transcraft.ixpGrinder = new IXPGrinderMk2(Config.ixpGrinderID, 0).setUnlocalizedName("Transcraft:ixpGrinder").setHardness(1.0F)
-				  .setTextureName("Transcraft:ixpGrinder")
-					 .setCreativeTab(Transcraft.TranstabBlocks);
-		
-		
 		  
 		 
 	}

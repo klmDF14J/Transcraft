@@ -5,8 +5,7 @@ import net.minecraft.block.material.Material;
 
 public class ThinCrystalGlass extends BlockPane {
 	public ThinCrystalGlass(int id) {
-		super(id, "transcraft:ClearGlass", "transcraft:ClearGlass",
-				Material.glass, true);
+		super( "transcraft:ClearGlass", "transcraft:ClearGlass",	Material.field_151588_w, true);
 
 	}
 }

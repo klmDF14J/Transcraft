@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EscapePortalBlock extends Block {
 	public EscapePortalBlock(int par1) {
-		super(par1, Material.portal);
+		super(Material.portal);
 	}
 
 	@Override

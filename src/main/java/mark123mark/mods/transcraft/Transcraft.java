@@ -50,39 +50,39 @@ public class Transcraft {
 	public static boolean SHOWDEVMESSGAE = false;
 
 	// Listblocks here
-	public static Blocks TranscraftOre;
-	public static Blocks OilOre;
-	public static Blocks BlueLight;
-	public static Blocks GreenLight;
-	public static Blocks OrangeLight;
-	public static Blocks DarkLight;
-	public static Blocks IronTorch;
-	public static Blocks ClearGlass;
-	public static Blocks ThinClearGlass;
-	public static Blocks FancyCrystalGlass;
-	public static Blocks BunkerBlock;
-	public static Blocks BunkerStair;
-	public static Blocks SmoothBunkerBlock;
-	public static Blocks SmoothBunkerStair;
-	public static Blocks ObsidianLever;
-	public static Blocks ComIronOre;
-	public static Blocks ComGoldOre;
-	public static Blocks ComTransmutterOre;
-	public static Blocks ComOilOre;
-	public static Blocks DriedTransmutter;
-	public static Blocks TransManiaOre;
+	public static Block TranscraftOre;
+	public static Block OilOre;
+	public static Block BlueLight;
+	public static Block GreenLight;
+	public static Block OrangeLight;
+	public static Block DarkLight;
+	public static Block IronTorch;
+	public static Block ClearGlass;
+	public static Block ThinClearGlass;
+	public static Block FancyCrystalGlass;
+	public static Block BunkerBlock;
+	public static Block BunkerStair;
+	public static Block SmoothBunkerBlock;
+	public static Block SmoothBunkerStair;
+	public static Block ObsidianLever;
+	public static Block ComIronOre;
+	public static Block ComGoldOre;
+	public static Block ComTransmutterOre;
+	public static Block ComOilOre;
+	public static Block DriedTransmutter;
+	public static Block TransManiaOre;
 
-	public static Blocks Transcrafter;
+	public static Block Transcrafter;
 
-	public static Blocks enderQuartzBlock;
-	public static Blocks CutenderQuartz;
-	public static Blocks EnderQuartzBrick;
-	public static Blocks EnderQuartzBigBrick;
+	public static Block enderQuartzBlock;
+	public static Block CutenderQuartz;
+	public static Block EnderQuartzBrick;
+	public static Block EnderQuartzBigBrick;
 
 	// public static Block DimPortalBlock;
 	// public static Block DimPortalEscapeBlock;
 
-	 public static Blocks ixpGrinder;
+	 public static Block ixpGrinder;
 
 	public static final BiomeGenBase.Height FlatLandsHight = new BiomeGenBase.Height(0.3F, 10.5F);
 	 
@@ -92,35 +92,35 @@ public class Transcraft {
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
 
-	public static Items BasicTransmuter;
-	public static Items QuadTransmuter;
-	public static Items NanoTransmuter;
-	public static Items HotDog;
-	public static Items Oil;
-	public static Items Plastic;
-	public static Items IronStick;
-	public static Items HardendPlastic;
-	public static Items EnderGem;
-	public static Items EnderQuartz;
-	public static Items DarkEndershard;
-	public static Items Transpedia;
+	public static Item BasicTransmuter;
+	public static Item QuadTransmuter;
+	public static Item NanoTransmuter;
+	public static Item HotDog;
+	public static Item Oil;
+	public static Item Plastic;
+	public static Item IronStick;
+	public static Item HardendPlastic;
+	public static Item EnderGem;
+	public static Item EnderQuartz;
+	public static Item DarkEndershard;
+	public static Item Transpedia;
 
-	public static Items PlasticAxe;
-	public static Items PlasticHoe;
-	public static Items PlasticPickaxe;
-	public static Items PlasticShovel;
-	public static Items PlasticSword;
-	public static Items BunkerPick;
-	public static Items EnderSword;
+	public static Item PlasticAxe;
+	public static Item PlasticHoe;
+	public static Item PlasticPickaxe;
+	public static Item PlasticShovel;
+	public static Item PlasticSword;
+	public static Item BunkerPick;
+	public static Item EnderSword;
 
-	public static Items PlasticHelmet;
-	public static Items PlasticChest;
-	public static Items PlasticLegs;
-	public static Items PlasticBoots;
-	public static Items EnderHelmet;
-	public static Items EnderChest;
-	public static Items EnderLegs;
-	public static Items EnderBoots;
+	public static Item PlasticHelmet;
+	public static Item PlasticChest;
+	public static Item PlasticLegs;
+	public static Item PlasticBoots;
+	public static Item EnderHelmet;
+	public static Item EnderChest;
+	public static Item EnderLegs;
+	public static Item EnderBoots;
 
 	public static int TrancraftOreID;
 	public static int OilOreID;
