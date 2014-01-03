@@ -9,6 +9,7 @@ import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBlock;
 import mark123mark.mods.transcraft.Blocks.Quartz.ItemEnderQuartzBrick;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.TileTC;
 import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
+import mark123mark.zaetApi.api.IColoredItemBlock;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -92,7 +93,7 @@ public class RegisterBlocks {
 				"Fancy Crystal Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemFancyCryastalGlass.class , "ItemFancyCryastalGlass");
 
-		GameRegistry.registerBlock(Transcraft.ClearGlass, "Clear Glass");
+		GameRegistry.registerBlock(Transcraft.ClearGlass, IColoredItemBlock.class, "Clear Glass");
 		GameRegistry.registerBlock(Transcraft.FancyCrystalGlass,ItemCrystalGlass.class ,"ItemCrystalGlass");
 
 		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
