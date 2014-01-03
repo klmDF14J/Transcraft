@@ -51,7 +51,7 @@ public class LoadLang {
 				Transcraft.enderQuartzBlock, 1).getItem(), "Ender Quartz");
 
 		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
-				Transcraft.CutenderQuartz, 1).getItem(), "Cut Ender Quartz");
+				Transcraft.CutenderQuartz, 1).getItem(), "Chiseled Ender Quartz");
 
 		ColoredBlockUtil
 				.addLocalizationsForBlock((ItemBlock) new ItemStack(
@@ -62,12 +62,10 @@ public class LoadLang {
 				Transcraft.EnderQuartzBigBrick, 1).getItem(),
 				"Ender Quartz Big Brick");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
-				Transcraft.FancyCrystalGlass, 1).getItem(),
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.FancyCrystalGlass, 1).getItem(),
 				"Fancy Crystal Glass");
 
-		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(
-				Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
+		ColoredBlockUtil.addLocalizationsForBlock((ItemBlock) new ItemStack(Transcraft.ClearGlass, 1).getItem(), "Crystal Glass");
 
 		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
 		// "Transmania Escape Portal");

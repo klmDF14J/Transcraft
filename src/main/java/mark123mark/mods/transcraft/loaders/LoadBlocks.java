@@ -63,7 +63,7 @@ public class LoadBlocks {
 		Transcraft.ClearGlass = new mark123mark.mods.transcraft.Blocks.CrystalGlass(
 				Config.ClearGlassID).setStepSound(Block.soundGlassFootstep)
 				.setUnlocalizedName("Transcraft:ClearGlass").setHardness(1.5F)
-				.setCreativeTab(Transcraft.TranstabBlocks).setLightValue(0.0F)
+				.setCreativeTab(Transcraft.TranstabDecBlocks).setLightValue(0.0F)
 				.setLightOpacity(0).setTextureName("Transcraft:ClearGlass");
 
 		Transcraft.FancyCrystalGlass = new mark123mark.mods.transcraft.Blocks.FancyCrystalGlass.FancyCrystalGlass(
