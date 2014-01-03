@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.ixp.Tiles;
 import java.util.Iterator;
 import java.util.List;
 
+import mark123mark.mods.transcraft.Transcraft;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -307,13 +308,13 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	
     	for(int j = 0; slot < 9; slot++)
     	{
-    		if (getStackInSlot(0).itemID != Item.expBottle.itemID)
+    		if (getStackInSlot(0).itemID != Transcraft.BasicTransmuter.itemID)
     		{
     		}
     		else
     		{
     			if(getStackInSlot(slot) != null && getStackInSlot(0) != null)
-        	{
+    				{
         			int IXP = 1;
         			if(IXP != 0 &&  getStackInSlot(0).stackSize <= 64)
         			{
@@ -330,21 +331,51 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	int slot = 0;
     	int mainSlot = 1;
     	
+    	int BASIC = 256;
+    	int QUAD = 256;
+    	int NANO = 256;
+    	
     	if(getStackInSlot(0) != null)
     	{
-    		int IXP = 256;
-    		if (getStackInSlot(0).itemID == Item.expBottle.itemID)
+    		if (getStackInSlot(0).itemID == Transcraft.BasicTransmuter.itemID)
     		{
-    			if(IXP != 0 && getStackInSlot(0).stackSize <=  64)
+    			if(BASIC != 0 && getStackInSlot(0).stackSize <=  64)
         		{
-        			if(CurrentIXPValue >= IXP)
+        			if(CurrentIXPValue >= BASIC)
         			{
-        				CurrentIXPValue=CurrentIXPValue-IXP;
+        				CurrentIXPValue=CurrentIXPValue-BASIC;
         				incrStackSize(0, 1);
         				
         			}
         		}
     		}
+    		
+    		if (getStackInSlot(0).itemID == Transcraft.QuadTransmuter.itemID)
+    		{
+    			if(QUAD != 0 && getStackInSlot(0).stackSize <=  64)
+        		{
+        			if(CurrentIXPValue >= QUAD)
+        			{
+        				CurrentIXPValue=CurrentIXPValue-QUAD;
+        				incrStackSize(0, 1);
+        				
+        			}
+        		}
+    		}
+    		
+    		if (getStackInSlot(0).itemID == Transcraft.NanoTransmuter.itemID)
+    		{
+    			if(NANO != 0 && getStackInSlot(0).stackSize <=  64)
+        		{
+        			if(CurrentIXPValue >= NANO)
+        			{
+        				CurrentIXPValue=CurrentIXPValue-NANO;
+        				incrStackSize(0, 1);
+        				
+        			}
+        		}
+    		}
+    		
     	}
     }
     /**
