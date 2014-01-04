@@ -28,7 +28,7 @@ public class LoadBlocks {
 
 		Transcraft.OilOre = new mark123mark.mods.transcraft.Blocks.OilOre(
 				Config.OilOreID).setUnlocalizedName("Transcraft:OilOre")
-				.setHardness(1.5F).setTextureName("Transcraft:OilOre");
+				.setHardness(1.5F).setTextureName("Transcraft:OilOre").setCreativeTab(Transcraft.TranstabBlocks);
 
 		Transcraft.BlueLight = new mark123mark.mods.transcraft.Blocks.Lights.BlueLight(
 				Config.BlueLightID).setUnlocalizedName("Transcraft:BlueLight")
