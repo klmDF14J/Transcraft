@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,40 +16,20 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class IColoredBlock extends Block
+public class IColoredStairs extends BlockStairs
 {
 	/***
 	 * 
 	 * @param id Block ID
 	 * 
 	 */
-	public IColoredBlock(int id)
+	public IColoredStairs(int id, Block block)
 	{
-		super(id, Material.rock);
+		super(id, block, 0);
 		setHardness(3.0F);
 		setResistance(4.0F);
 	}
-	
-	/***
-	 * 
-	 * @param id Block ID
-	 * @param m Material
-	 * 
-	 */
-	public IColoredBlock(int id, Material m)
-	{
-		super(id, m);
-		setHardness(3.0F);
-		setResistance(4.0F);
-	}
-		
-	@Override
-	public boolean shouldSideBeRendered(IBlockAccess access, int par0, int par1, int par2, int par3)
-	{
-		return true;
-		
-	}
-	
+			
 	/***
 	 * Get's the color from the metadata.
 	 */
@@ -144,7 +125,7 @@ public class IColoredBlock extends Block
 	
 	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int i, float f, float f1, float f2)
 	{
-		if(p.getHeldItem() != null && p.getHeldItem().getItem() == Item.dyePowder)
+		if(p.getHeldItem().getItem() == Item.dyePowder)
 		{
 			w.setBlockMetadataWithNotify(x, y, z, p.getHeldItem().getItemDamage(), 3);
 			w.markBlockForUpdate(x, y, z);
