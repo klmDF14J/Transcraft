@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.WorldGen;
 import java.util.Random;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -83,13 +84,13 @@ public class WorldGenRingSphere extends FishyWorldGenBase {
 		case 7:
 			return new ItemStack(Item.eyeOfEnder, rand.nextInt(5) + 2, 0);
 		case 8:
-			return new ItemStack(Transcraft.QuadTransmuter,
+			return new ItemStack(TranscraftItems.QuadTransmuter,
 					rand.nextInt(2) + 2, 0);
 		case 9:
-			return new ItemStack(Transcraft.BasicTransmuter,
+			return new ItemStack(TranscraftItems.BasicTransmuter,
 					rand.nextInt(6) + 2, 0);
 		case 10:
-			return new ItemStack(Transcraft.NanoTransmuter,
+			return new ItemStack(TranscraftItems.NanoTransmuter,
 					rand.nextInt(1) + 1, 0);
 		default:
 			return new ItemStack(Item.porkCooked, rand.nextInt(5) + 2, 0);

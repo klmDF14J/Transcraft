@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.Entitys.mob;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.monster.EntityCreeper;
@@ -178,7 +179,7 @@ public class NukeCreeper extends EntityCreeper {
 	 */
 	@Override
 	protected int getDropItemId() {
-		return Transcraft.DarkEndershard.itemID;
+		return TranscraftItems.DarkEndershard.itemID;
 	}
 
 }

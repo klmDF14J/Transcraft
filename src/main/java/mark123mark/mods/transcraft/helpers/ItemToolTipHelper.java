@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.helpers;
 import java.text.DecimalFormat;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 
@@ -23,7 +24,7 @@ public class ItemToolTipHelper {
 	        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
 	        {
 
-	            if (Transcraft.BasicTransmuter != null)
+	            if (TranscraftItems.BasicTransmuter != null)
 	            {
 	                event.toolTip.add("TEST");
 	            }

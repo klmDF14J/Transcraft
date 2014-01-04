@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.helpers;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 
@@ -14,7 +15,7 @@ public class ItemHelper {
 			rand = Math.random();
 
 			if (rand < 0.15d) {
-				entity.dropItem(Transcraft.BasicTransmuter.itemID, 1);
+				entity.dropItem(TranscraftItems.BasicTransmuter.itemID, 1);
 			}
 		}
 	}

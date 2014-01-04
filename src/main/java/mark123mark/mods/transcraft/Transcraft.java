@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft;
 
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
@@ -105,46 +106,8 @@ public class Transcraft {
 			190)).setBiomeName("TransmutterBiome").setTemperatureRainfall(0.8F,
 			0.4F);
 
-	public static Item BasicTransmuter;
-	public static Item QuadTransmuter;
-	public static Item NanoTransmuter;
-	public static Item HotDog;
-	public static Item Oil;
-	public static Item Plastic;
-	public static Item IronStick;
-	public static Item HardendPlastic;
-	public static Item EnderGem;
-	public static Item EnderQuartz;
-	public static Item DarkEndershard;
-	public static Item Transpedia;
 
-	public static Item PlasticAxe;
-	public static Item PlasticHoe;
-	public static Item PlasticPickaxe;
-	public static Item PlasticShovel;
-	public static Item PlasticSword;
-	public static Item BunkerPick;
-	public static Item EnderSword;
 
-	public static Item PlasticHelmet;
-	public static Item PlasticChest;
-	public static Item PlasticLegs;
-	public static Item PlasticBoots;
-	public static Item EnderHelmet;
-	public static Item EnderChest;
-	public static Item EnderLegs;
-	public static Item EnderBoots;
-
-	public static int TrancraftOreID;
-	public static int OilOreID;
-	public static int BlueLighID;
-	public static int GreenLightID;
-	public static int OrangeLightID;
-	public static int DarkLightID;
-	public static int ClearGlassID;
-	public static int BunkerBlockID;
-	public static int enderQuartzID;
-	public static int chiselEnderQuartzID;
 
 	public static EnumToolMaterial PlasticTool = EnumHelper.addToolMaterial(
 			"PlasticTool", 2, 750, 5.0F, 2, 0);
@@ -279,7 +242,7 @@ public class Transcraft {
 	public static CreativeTabs TranstabItems = new CreativeTabs("TranstabItems") {
 		@Override
 		public ItemStack getIconItemStack() {
-			return new ItemStack(EnderSword, 1, 0);
+			return new ItemStack(TranscraftItems.EnderSword, 1, 0);
 		}
 
 	};

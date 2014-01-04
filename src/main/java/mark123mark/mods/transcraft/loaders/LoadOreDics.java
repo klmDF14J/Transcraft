@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -9,7 +10,7 @@ public class LoadOreDics {
 	public static void oredic() {
 		OreDictionary.registerOre("TRANS-oreTranscraft", new ItemStack(
 				Transcraft.TranscraftOre));
-		OreDictionary.registerOre("TRANS-Oil", new ItemStack(Transcraft.Oil));
+		OreDictionary.registerOre("TRANS-Oil", new ItemStack(TranscraftItems.Oil));
 		OreDictionary.registerOre("TRANS-oreOil", new ItemStack(
 				Transcraft.OilOre));
 		OreDictionary.registerOre("TRANS-BlockBlueLight", new ItemStack(
@@ -44,36 +45,36 @@ public class LoadOreDics {
 				Transcraft.DriedTransmutter);
 
 		OreDictionary.registerOre("TRANS-BasicTransmuter", new ItemStack(
-				Transcraft.BasicTransmuter));
+				TranscraftItems.BasicTransmuter));
 		OreDictionary.registerOre("TRANS-QuadTransmuter", new ItemStack(
-				Transcraft.QuadTransmuter));
+				TranscraftItems.QuadTransmuter));
 		OreDictionary.registerOre("TRANS-NanoTransmuter", new ItemStack(
-				Transcraft.NanoTransmuter));
+				TranscraftItems.NanoTransmuter));
 		OreDictionary.registerOre("TRANS-EnderGem", new ItemStack(
-				Transcraft.EnderGem));
+				TranscraftItems.EnderGem));
 		OreDictionary.registerOre("TRANS-EnderQuartz", new ItemStack(
-				Transcraft.EnderQuartz));
+				TranscraftItems.EnderQuartz));
 		OreDictionary.registerOre("TRANS-Plastic", new ItemStack(
-				Transcraft.Plastic));
+				TranscraftItems.Plastic));
 		OreDictionary.registerOre("TRANS-HardendPlastic", new ItemStack(
-				Transcraft.HardendPlastic));
+				TranscraftItems.HardendPlastic));
 		OreDictionary.registerOre("TRANS-IronStick", new ItemStack(
-				Transcraft.IronStick));
+				TranscraftItems.IronStick));
 
 		OreDictionary.registerOre("TRANS-BunkerPick", new ItemStack(
-				Transcraft.BunkerPick));
+				TranscraftItems.BunkerPick));
 		OreDictionary.registerOre("TRANS-EnderSword", new ItemStack(
-				Transcraft.EnderSword));
+				TranscraftItems.EnderSword));
 		OreDictionary.registerOre("TRANS-PlasicAxe", new ItemStack(
-				Transcraft.PlasticAxe));
+				TranscraftItems.PlasticAxe));
 		OreDictionary.registerOre("TRANS-PlasicHoe", new ItemStack(
-				Transcraft.PlasticHoe));
+				TranscraftItems.PlasticHoe));
 		OreDictionary.registerOre("TRANS-PlasicPickaxe", new ItemStack(
-				Transcraft.PlasticPickaxe));
+				TranscraftItems.PlasticPickaxe));
 		OreDictionary.registerOre("TRANS-PlasicShovel", new ItemStack(
-				Transcraft.PlasticShovel));
+				TranscraftItems.PlasticShovel));
 		OreDictionary.registerOre("TRANS-PlasicSword", new ItemStack(
-				Transcraft.PlasticSword));
+				TranscraftItems.PlasticSword));
 	}
 
 }

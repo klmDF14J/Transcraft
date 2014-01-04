@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -308,7 +309,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	
     	for(int j = 0; slot < 9; slot++)
     	{
-    		if (getStackInSlot(0).itemID != Transcraft.BasicTransmuter.itemID)
+    		if (getStackInSlot(0).itemID != TranscraftItems.BasicTransmuter.itemID)
     		{
     		}
     		else
@@ -337,7 +338,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     	
     	if(getStackInSlot(0) != null)
     	{
-    		if (getStackInSlot(0).itemID == Transcraft.BasicTransmuter.itemID)
+    		if (getStackInSlot(0).itemID == TranscraftItems.BasicTransmuter.itemID)
     		{
     			if(BASIC != 0 && getStackInSlot(0).stackSize <=  64)
         		{
@@ -350,7 +351,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         		}
     		}
     		
-    		if (getStackInSlot(0).itemID == Transcraft.QuadTransmuter.itemID)
+    		if (getStackInSlot(0).itemID == TranscraftItems.QuadTransmuter.itemID)
     		{
     			if(QUAD != 0 && getStackInSlot(0).stackSize <=  64)
         		{
@@ -363,7 +364,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
         		}
     		}
     		
-    		if (getStackInSlot(0).itemID == Transcraft.NanoTransmuter.itemID)
+    		if (getStackInSlot(0).itemID == TranscraftItems.NanoTransmuter.itemID)
     		{
     			if(NANO != 0 && getStackInSlot(0).stackSize <=  64)
         		{

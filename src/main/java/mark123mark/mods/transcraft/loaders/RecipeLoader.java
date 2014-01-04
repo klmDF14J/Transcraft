@@ -1,6 +1,7 @@
 package mark123mark.mods.transcraft.loaders;
 
 import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.Items.TranscraftItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -25,14 +26,14 @@ public class RecipeLoader {
 		ItemStack Bwood = new ItemStack(Block.wood, 1, 2);
 		ItemStack Jwood = new ItemStack(Block.wood, 1, 3);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticHelmet, 1),
-				"ppp", "p p", "   ", 'p', Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticChest, 1),
-				"p p", "ppp", "ppp", 'p', Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticLegs, 1), "ppp",
-				"p p", "p p", 'p', Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticBoots, 1),
-				"   ", "p p", "p p", 'p', Transcraft.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticHelmet, 1),
+				"ppp", "p p", "   ", 'p', TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticChest, 1),
+				"p p", "ppp", "ppp", 'p', TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticLegs, 1), "ppp",
+				"p p", "p p", 'p', TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticBoots, 1),
+				"   ", "p p", "p p", 'p', TranscraftItems.Plastic);
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ComIronOre, 1), "ii",
 				"ii", 'i', Block.oreIron);
@@ -41,7 +42,7 @@ public class RecipeLoader {
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ComTransmutterOre, 1),
 				"ii", "ii", 'i', Transcraft.TranscraftOre);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ComOilOre, 1), "ii",
-				"ii", 'i', Transcraft.Oil);
+				"ii", 'i', TranscraftItems.Oil);
 
 		GameRegistry.addRecipe(new ItemStack(Block.oreIron, 4), "i", 'i',
 				Transcraft.ComIronOre);
@@ -49,10 +50,10 @@ public class RecipeLoader {
 				Transcraft.ComGoldOre);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.TranscraftOre, 4), "i",
 				'i', Transcraft.ComTransmutterOre);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.Oil, 4), "i", 'i',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.Oil, 4), "i", 'i',
 				Transcraft.ComOilOre);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.HotDog, 8), "bbb",
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.HotDog, 8), "bbb",
 				"ppp", "bbb", 'b', Item.bread, 'p', Item.porkCooked);
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ObsidianLever, 2),
@@ -63,10 +64,10 @@ public class RecipeLoader {
 				"yxy", 'x', Water, 'y', GoldIStack, 'd', Item.diamond);
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.BunkerBlock, 8), "opo",
-				"pdp", "opo", 'o', Transcraft.HardendPlastic, 'p',
-				Transcraft.Plastic, 'd', Item.diamond);
+				"pdp", "opo", 'o', TranscraftItems.HardendPlastic, 'p',
+				TranscraftItems.Plastic, 'd', Item.diamond);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.ClearGlass, 8), "ggg",
-				"gpg", "ggg", 'g', Block.glass, 'p', Transcraft.Plastic);
+				"gpg", "ggg", 'g', Block.glass, 'p', TranscraftItems.Plastic);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.FancyCrystalGlass, 8),
 				"ggg", "gpg", "ggg", 'g', Transcraft.ClearGlass, 'p',
 				Block.sponge);
@@ -95,82 +96,82 @@ public class RecipeLoader {
 				" q ", "qqq", " d ", 'd', GreenDye, 'q', Item.netherQuartz);
 
 		GameRegistry.addRecipe(new ItemStack(Transcraft.BlueLight, 8), "prp",
-				"pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b',
+				"pbp", "prp", 'r', Item.redstone, 'p', TranscraftItems.Plastic, 'b',
 				BlueDye);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.GreenLight, 8), "prp",
-				"pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b',
+				"pbp", "prp", 'r', Item.redstone, 'p', TranscraftItems.Plastic, 'b',
 				GreenDye);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.OrangeLight, 8), "prp",
-				"pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b',
+				"pbp", "prp", 'r', Item.redstone, 'p', TranscraftItems.Plastic, 'b',
 				OrangeDye);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.DarkLight, 8), "prp",
-				"pbp", "prp", 'r', Item.redstone, 'p', Transcraft.Plastic, 'b',
+				"pbp", "prp", 'r', Item.redstone, 'p', TranscraftItems.Plastic, 'b',
 				Block.obsidian);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.HardendPlastic, 8),
-				"pop", "ooo", "pop", 'p', Transcraft.Plastic, 'o',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.HardendPlastic, 8),
+				"pop", "ooo", "pop", 'p', TranscraftItems.Plastic, 'o',
 				Block.obsidian);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.IronStick, 4), " i ",
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.IronStick, 4), " i ",
 				" s ", " i ", 'i', Item.ingotIron, 's', Item.stick);
 		GameRegistry.addRecipe(new ItemStack(Transcraft.IronTorch, 16), "o",
-				"i", 'i', Transcraft.IronStick, 'o', Transcraft.Oil);
+				"i", 'i', TranscraftItems.IronStick, 'o', TranscraftItems.Oil);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticSword), " p ",
-				" p ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticPickaxe), "ppp",
-				" i ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticAxe), " pp",
-				" ip", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticAxe), "pp ",
-				"pi ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticHoe), "pp ",
-				" i ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticHoe), " pp",
-				" i ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.PlasticShovel), " p ",
-				" i ", " i ", 'i', Transcraft.IronStick, 'p',
-				Transcraft.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticSword), " p ",
+				" p ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticPickaxe), "ppp",
+				" i ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticAxe), " pp",
+				" ip", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticAxe), "pp ",
+				"pi ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticHoe), "pp ",
+				" i ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticHoe), " pp",
+				" i ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.PlasticShovel), " p ",
+				" i ", " i ", 'i', TranscraftItems.IronStick, 'p',
+				TranscraftItems.Plastic);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.BunkerPick), "bbb",
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.BunkerPick), "bbb",
 				"dod", "qoq", 'b', Transcraft.BunkerBlock, 'd',
-				Block.blockDiamond, 'o', Transcraft.HardendPlastic, 'q',
-				Transcraft.DarkEndershard);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderSword), "ebe",
-				"ebe", "ndn", 'e', Transcraft.EnderGem, 'd',
+				Block.blockDiamond, 'o', TranscraftItems.HardendPlastic, 'q',
+				TranscraftItems.DarkEndershard);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderSword), "ebe",
+				"ebe", "ndn", 'e', TranscraftItems.EnderGem, 'd',
 				Block.blockDiamond, 'b', Transcraft.BunkerBlock, 'n',
 				Item.swordDiamond);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderQuartz, 6), "qeq",
-				"qdq", "qeq", 'q', Transcraft.DarkEndershard, 'd',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderQuartz, 6), "qeq",
+				"qdq", "qeq", 'q', TranscraftItems.DarkEndershard, 'd',
 				Block.whiteStone, 'e', Item.eyeOfEnder);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderGem), "qdq",
-				"qeq", "qdq", 'q', Transcraft.EnderQuartz, 'd', Item.diamond,
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderGem), "qdq",
+				"qeq", "qdq", 'q', TranscraftItems.EnderQuartz, 'd', Item.diamond,
 				'e', Item.eyeOfEnder);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderHelmet, 1), "ppp",
-				"pgp", "   ", 'p', Transcraft.EnderGem, 'g',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderHelmet, 1), "ppp",
+				"pgp", "   ", 'p', TranscraftItems.EnderGem, 'g',
 				Transcraft.FancyCrystalGlass);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderChest, 1), "pbp",
-				"ppp", "ppp", 'p', Transcraft.EnderGem, 'b',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderChest, 1), "pbp",
+				"ppp", "ppp", 'p', TranscraftItems.EnderGem, 'b',
 				Transcraft.BunkerBlock);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderLegs, 1), "ppp",
-				"p p", "pep", 'p', Transcraft.EnderGem, 'e', Item.eyeOfEnder);
-		GameRegistry.addRecipe(new ItemStack(Transcraft.EnderBoots, 1), "   ",
-				"pep", "pep", 'p', Transcraft.EnderGem, 'e', Item.enderPearl);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderLegs, 1), "ppp",
+				"p p", "pep", 'p', TranscraftItems.EnderGem, 'e', Item.eyeOfEnder);
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.EnderBoots, 1), "   ",
+				"pep", "pep", 'p', TranscraftItems.EnderGem, 'e', Item.enderPearl);
 
 		GameRegistry
-				.addRecipe(new ItemStack(Transcraft.QuadTransmuter), "sbs",
-						"bsb", "sbs", 'b', Transcraft.BasicTransmuter, 's',
+				.addRecipe(new ItemStack(TranscraftItems.QuadTransmuter), "sbs",
+						"bsb", "sbs", 'b', TranscraftItems.BasicTransmuter, 's',
 						Block.stone);
 
-		GameRegistry.addRecipe(new ItemStack(Transcraft.NanoTransmuter), "qqr",
-				"qqg", "qqr", 'q', Transcraft.QuadTransmuter, 'g',
+		GameRegistry.addRecipe(new ItemStack(TranscraftItems.NanoTransmuter), "qqr",
+				"qqg", "qqr", 'q', TranscraftItems.QuadTransmuter, 'g',
 				Item.glowstone, 'r', Item.redstone);
 
 		// GameRegistry.addRecipe(new ItemStack(Transcraft.DimPortalBlock, 1),
@@ -179,11 +180,11 @@ public class RecipeLoader {
 
 		// Smelting Recipes
 		GameRegistry.addSmelting(Transcraft.TranscraftOre.blockID,
-				new ItemStack(Transcraft.BasicTransmuter), 2.3f);
-		GameRegistry.addSmelting(Transcraft.Oil.itemID, new ItemStack(
-				Transcraft.Plastic), 2.3f);
+				new ItemStack(TranscraftItems.BasicTransmuter), 2.3f);
+		GameRegistry.addSmelting(TranscraftItems.Oil.itemID, new ItemStack(
+				TranscraftItems.Plastic), 2.3f);
 		GameRegistry.addSmelting(Transcraft.OilOre.blockID, new ItemStack(
-				Transcraft.Oil), 2.3f);
+				TranscraftItems.Oil), 2.3f);
 
 	}
 
