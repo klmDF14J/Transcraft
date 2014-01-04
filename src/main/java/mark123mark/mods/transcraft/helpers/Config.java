@@ -82,6 +82,10 @@ public class Config {
 
 	public static boolean WorldGen = true;
 
+	public static boolean enderswordpearl;
+	public static boolean EnderArmorBuffs;
+	
+	
 	public static File getMinecraftDir() {
 		return new File(".");
 	}
@@ -187,6 +191,10 @@ public class Config {
 		EnderLegsID = config.getItem("EnderLegs", 5047).getInt();
 		EnderBootsID = config.getItem("EnderBoots", 5048).getInt();
 
+		enderswordpearl = config.get("Settings", "Endersword ender pearl right click", true).getBoolean(true);
+		EnderArmorBuffs = config.get("Settings", "Ender Armor Buffs", true).getBoolean(true);
+		
+		
 		config.save();
 	}
 }

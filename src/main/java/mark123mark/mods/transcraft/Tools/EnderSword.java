@@ -2,6 +2,10 @@ package mark123mark.mods.transcraft.Tools;
 
 import java.util.List;
 
+import org.lwjgl.input.Keyboard;
+
+import mark123mark.mods.transcraft.Transcraft;
+import mark123mark.mods.transcraft.helpers.Config;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayer;
@@ -34,24 +38,30 @@ public class EnderSword extends ItemSword {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,
-			EntityPlayer par3EntityPlayer) {
-		if (par3EntityPlayer.isSneaking()) {
-			par3EntityPlayer.setItemInUse(par1ItemStack,
-					this.getMaxItemUseDuration(par1ItemStack));
-			return par1ItemStack;
-		} else {
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,EntityPlayer par3EntityPlayer) {
+		
+		if(Config.enderswordpearl == true)
+		{
+			if (par3EntityPlayer.isSneaking()) 
+			{
+				par3EntityPlayer.setItemInUse(par1ItemStack,this.getMaxItemUseDuration(par1ItemStack));
+				return par1ItemStack;
+			} 
+			
+			else 
+			{
+				par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F,0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
-			par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F,
-					0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-
-			if (!par2World.isRemote) {
-				par2World.spawnEntityInWorld(new EntityEnderPearl(par2World,
-						par3EntityPlayer));
+				if (!par2World.isRemote) {
+					par2World.spawnEntityInWorld(new EntityEnderPearl(par2World,par3EntityPlayer));
+				}
 			}
-
-			return par1ItemStack;
 		}
+		else
+		{
+			par3EntityPlayer.setItemInUse(par1ItemStack,this.getMaxItemUseDuration(par1ItemStack));
+		}
+		return par1ItemStack;
 
 	}
 
@@ -59,7 +69,19 @@ public class EnderSword extends ItemSword {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack stack, EntityPlayer player, List list,
 			boolean par4) {
-		list.add("Try right clicking!");
+		
+		
+		if(Config.enderswordpearl == true)
+		{
+			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_RSHIFT))
+	        {
+				list.add("Right click to throw an ender peral");
+	        }
+			else
+			{
+				list.add("§2[§4SHIFT§2]");
+			}
+		}
 	}
 
 }

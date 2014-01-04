@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft;
 import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
+import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
 import mark123mark.mods.transcraft.helpers.Config;
@@ -10,6 +11,7 @@ import mark123mark.mods.transcraft.helpers.EventCloakRender;
 import mark123mark.mods.transcraft.helpers.EventMobDeath;
 import mark123mark.mods.transcraft.helpers.FuelHandler;
 import mark123mark.mods.transcraft.helpers.GuiHand;
+import mark123mark.mods.transcraft.helpers.ItemToolTipHelper;
 import mark123mark.mods.transcraft.helpers.PacketHandlerTranscraft;
 import mark123mark.mods.transcraft.helpers.PlayerEditor;
 import mark123mark.mods.transcraft.ixp.Tiles.GuiHanderIXP;
@@ -207,6 +209,8 @@ public class Transcraft {
 
 		// GameRegistry.addBiome(FlatLands);
 
+		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
+		
 	}
 
 	@EventHandler
@@ -231,17 +235,14 @@ public class Transcraft {
 		Coproxy.renderThings();
 		
 		
-		
-		
-		/*
+/*
 
-		REMOVED DUE TO BASE EDIT IN DEV ENV SO WONT BULID
-		
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		}
-
+		
  */
+
 
 		MinecraftForge.EVENT_BUS.register(new EventMobDeath());
 
@@ -254,13 +255,12 @@ public class Transcraft {
 
 	}
 
-	@ForgeSubscribe
 	@EventHandler
-	public void postinit(FMLServerStartingEvent event, EntityPlayer player) {
-
+	public void onServerStarting(FMLServerStartingEvent event)
+	{
 		FMLLog.info("[TRANSCRAFT]	Adding new commands");
 		event.registerServerCommand(new CommandTranscraftVersion());
-
+		event.registerServerCommand(new CommandReloadConfig());
 	}
 
 	@EventHandler
