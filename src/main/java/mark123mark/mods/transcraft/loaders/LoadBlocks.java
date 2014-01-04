@@ -169,6 +169,7 @@ public class LoadBlocks {
 				.setTextureName("Transcraft:EnderQuartzBrick")
 				.setHardness(1.0F).setCreativeTab(Transcraft.TranstabDecBlocks);
 
+		
 		Transcraft.EnderQuartzBigBrick = new EnderQuartzBigBrick(
 				Config.BlockEnderQuartzBigBrickID)
 				.setUnlocalizedName("Transcraft:EnderQuartzBigBricks")
