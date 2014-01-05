@@ -8,22 +8,13 @@
   "updateUrl": "",
   "authorList": [
     "mark123mark",
-    "tattyseal"
+    "tattyseal",
+	"shifu_"
   ],
-  "credits": "By mark123mark and LOADS of help by tattyseal",
+  "credits": "By mark123mark, tattyseal, shifu_",
   "logoFile": "/assets/transcraft/textures/logo/logo.png",
   "screenshots": [
   ],
   "parent":"",
-  "requiredMods": [
-      "Forge",
-      "ForgeMultipart",
-      "CodeChickenCore"
-  ],
-  "dependencies": [
-      "ForgeMultipart",
-      "CodeChickenCore",
-  ],
-  "useDependencyInformation": "true"
-}
+
 ]
