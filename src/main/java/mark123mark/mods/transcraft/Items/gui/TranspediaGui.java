@@ -26,18 +26,12 @@ public class TranspediaGui extends GuiContainer
     private float ySize_lo;
     
     private int pageNumber = 0;
-    
-    private GuiButton next;
-    private GuiButton back;
-   
 
 	public TranspediaGui()
 	{
 		super(new ContainerTranspedia());
 		this.xSize = 256;
 		this.ySize = 256;
-		next = new GuiButton(0, 388, 290, 20, 20, ">");
-		back = new GuiButton(1, 220, 290, 20, 20, "<");
 	}	
 
     /**
@@ -55,9 +49,9 @@ public class TranspediaGui extends GuiContainer
 	@Override
 	public void initGui() {
 		super.initGui();
-		this.buttonList.add(next);
-		this.buttonList.add(back);
 		
+		this.buttonList.add(new GuiButton(0, this.width / 2 + 48, height / 2 + 100, 20, 20, ">"));
+		this.buttonList.add(new GuiButton(1, this.width / 2 - 123, height / 2 + 100, 20, 20, "<"));
 	}
     
     
@@ -101,7 +95,7 @@ public class TranspediaGui extends GuiContainer
             }
             else
             {
-               // drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, this.mc.thePlayer);
+                drawPlayerModel(k + 162, l + 80, 30, (float) (k + 162) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, this.mc.thePlayer);
             }
         }
         
