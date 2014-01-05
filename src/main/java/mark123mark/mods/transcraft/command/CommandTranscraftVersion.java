@@ -21,7 +21,7 @@ public class CommandTranscraftVersion extends Command {
 						+ Transcraft.VERSION + Transcraft.STATE));
 		par1ICommandSender
 				.sendChatToPlayer(ChatMessageComponent
-						.createFromTranslationWithSubstitutions("Made by Mark123mark,shifu_"));
+						.createFromTranslationWithSubstitutions("Made by mark123mark, shifu_ and tattyseal"));
 		par1ICommandSender
 				.sendChatToPlayer(ChatMessageComponent
 						.createFromTranslationWithSubstitutions("----------Transcraft!----------"));
