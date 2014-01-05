@@ -43,6 +43,9 @@ public class TranspediaGui extends GuiContainer
     	{
             this.fontRenderer.drawString("Transpedia Page " + pageNumber, 8, 8, 4210752);	
     	}
+    	
+
+    	
     }
 
     @SuppressWarnings("unchecked")
@@ -50,8 +53,9 @@ public class TranspediaGui extends GuiContainer
 	public void initGui() {
 		super.initGui();
 		
+		this.buttonList.add(new GuiButton(1, this.width / 2 - 123, height / 2 + 100, 20, 20, "<"));	
 		this.buttonList.add(new GuiButton(0, this.width / 2 + 48, height / 2 + 100, 20, 20, ">"));
-		this.buttonList.add(new GuiButton(1, this.width / 2 - 123, height / 2 + 100, 20, 20, "<"));
+		
 	}
     
     
@@ -61,14 +65,7 @@ public class TranspediaGui extends GuiContainer
         this.xSize_lo = (float) par1;
         this.ySize_lo = (float) par2;
         
-        if(pageNumber == 0)
-        {
-        	back.enabled = false;
-        }
-        else
-        {
-        	back.enabled = true;
-        }
+       
 }
     
     /**
@@ -101,7 +98,7 @@ public class TranspediaGui extends GuiContainer
         
         if(pageNumber == 0)
         {
-        	drawBigPlayerModel(k + 105, l + 220, 30, (float) (k + 105) - this.xSize_lo, (float) (l + 220) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
+        	drawBigPlayerModel(k + 105, l + 220, 30, (float) (k + 105) - this.xSize_lo, (float) (l + 80) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
         }
     }
    
@@ -186,7 +183,6 @@ public class TranspediaGui extends GuiContainer
 
     public void actionPerformed(GuiButton par0Button)
     {
-    	System.out.println(pageNumber);
     	/** Back **/
     	if(par0Button.id == 1)
     	{
@@ -196,8 +192,13 @@ public class TranspediaGui extends GuiContainer
     		}
     		else
     		{
-        		pageNumber -= 1;
+    			if(pageNumber != 0)
+    			{
+    				pageNumber -= 1;
+    			}
     		}
+    		
+    		
     	}
     	
     	/** Next **/
