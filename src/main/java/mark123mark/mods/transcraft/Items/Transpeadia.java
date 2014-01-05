@@ -37,9 +37,7 @@ public class Transpeadia extends Item {
 	
 	public ItemStack onItemRightClick(ItemStack i, World w, EntityPlayer p)
     {     
-                    p.openGui(Transcraft.instance, 3, w, (int)p.posX, (int)p.posY, (int)p.posZ);
-                    i.stackSize = i.stackSize-1;
-
+            p.openGui(Transcraft.instance, 3, w, (int)p.posX, (int)p.posY, (int)p.posZ);
             return i;   
     }
 	
