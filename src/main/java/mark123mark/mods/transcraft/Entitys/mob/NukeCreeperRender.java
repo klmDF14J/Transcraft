@@ -14,7 +14,6 @@ public class NukeCreeperRender extends RenderCreeper {
 		return texture;
 	}
 
-	static final ResourceLocation texture = new ResourceLocation("transcraft",
-			"textures/mob/NukeCreeper.png");
+	static final ResourceLocation texture = new ResourceLocation("transcraft","textures/mob/NukeCreeper.png");
 
 }
