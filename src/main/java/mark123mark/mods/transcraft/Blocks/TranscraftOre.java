@@ -4,13 +4,11 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class TranscraftOre extends Block {
-	public static Minecraft mc = Minecraft.getMinecraft();
 
 	public TranscraftOre(int par1) {
 		super(par1, Material.rock);
@@ -21,7 +19,6 @@ public class TranscraftOre extends Block {
 	public void randomDisplayTick(World par1World, int par2, int par3,
 			int par4, Random par5Random) {
 
-		if (Minecraft.isFancyGraphicsEnabled()) {
 			for (int l = 0; l < 20; ++l) {
 				double d0 = par2 + par5Random.nextFloat();
 				double d1 = par3 + par5Random.nextFloat();
@@ -43,6 +40,5 @@ public class TranscraftOre extends Block {
 
 		}
 
-	}
 
 }
