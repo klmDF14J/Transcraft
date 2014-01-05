@@ -48,8 +48,8 @@ public class RegisterBlocks {
 		LanguageRegistry.addName(Transcraft.TransManiaOre,
 				"Dried Transmutter Ore");
 
-		// LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
-		// "Transmania Escape Portal");
+		 LanguageRegistry.addName(Transcraft.DimPortalEscapeBlock,
+		 "Transmania Escape Portal");
 
 		GameRegistry.registerBlock(Transcraft.TranscraftOre, "Transmuter Ore");
 		GameRegistry.registerBlock(Transcraft.OilOre, "Oil Ore");
@@ -99,10 +99,10 @@ public class RegisterBlocks {
 
 		GameRegistry.registerBlock(Transcraft.Transcrafter, "Transcrafter");
 		
-		// GameRegistry.registerBlock(Transcraft.DimPortalBlock,
-		// "DimPortalBlock");
-		// GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
-		// "DimPortalEscapeBlock");
+		 GameRegistry.registerBlock(Transcraft.DimPortalBlock,
+		 "DimPortalBlock");
+		 GameRegistry.registerBlock(Transcraft.DimPortalEscapeBlock,
+		 "DimPortalEscapeBlock");
 		GameRegistry.registerBlock(Transcraft.TransManiaOre, "TransManiaOre");
 		 GameRegistry.registerBlock(Transcraft.ixpGrinder, "ixpGrinder");
 

@@ -307,7 +307,7 @@ public class TileIXP extends TileEntity implements IInventory, ISidedInventory
     {
     	int slot = 1;
     	
-    	for(int j = 0; slot < 9; slot++)
+    	for(int j = 0; slot < 10; slot++)
     	{
     		if (getStackInSlot(0).itemID != TranscraftItems.BasicTransmuter.itemID)
     		{

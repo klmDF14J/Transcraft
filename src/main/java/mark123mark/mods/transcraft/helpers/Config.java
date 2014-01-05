@@ -32,8 +32,8 @@ public class Config {
 	public static int BlockEnderQuartzBrickID = 2115;
 	public static int BlockEnderQuartzBigBrickID = 2116;
 
-	// public static int DimPortalBlockID = 2200;
-	// public static int DimPortalEscapeBlockID = 2201;
+	 public static int DimPortalBlockID = 2200;
+	 public static int DimPortalEscapeBlockID = 2201;
 
 	public static int ComIronOreID = 2021;
 	public static int ComGoldOreID = 2022;
@@ -153,9 +153,8 @@ public class Config {
 		TranscrafterID = config.getBlock("Transcrafter", 2112).getInt();
 		LTranscrafterID = config.getBlock("Liquid Transcrafter", 2113).getInt();
 
-		// DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
-		// DimPortalEscapeBlockID = config.getBlock("Portal Escape Block",
-		// 2201).getInt();
+		DimPortalBlockID = config.getBlock("Portal Block", 2200).getInt();
+		 DimPortalEscapeBlockID = config.getBlock("Portal Escape Block", 2201).getInt();
 
 		// Items
 		BasicTransmuterID = config.getItem("BasicTransmuter", 5000).getInt();

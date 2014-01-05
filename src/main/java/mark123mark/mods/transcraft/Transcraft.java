@@ -22,6 +22,7 @@ import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
+import mark123mark.mods.transcraft.loaders.LoadDim;
 import mark123mark.mods.transcraft.loaders.LoadEntity;
 import mark123mark.mods.transcraft.loaders.LoadItems;
 import mark123mark.mods.transcraft.loaders.LoadLang;
@@ -93,8 +94,8 @@ public class Transcraft {
 	public static Block EnderQuartzBrick;
 	public static Block EnderQuartzBigBrick;
 
-	// public static Block DimPortalBlock;
-	// public static Block DimPortalEscapeBlock;
+	 public static Block DimPortalBlock;
+	 public static Block DimPortalEscapeBlock;
 
 	 public static Block ixpGrinder;
 
@@ -170,7 +171,7 @@ public class Transcraft {
 		BiomeManager.addSpawnBiome(TransmutterBiome);
 		BiomeManager.addStrongholdBiome(TransmutterBiome);
 
-		// GameRegistry.addBiome(FlatLands);
+		 GameRegistry.addBiome(FlatLands);
 
 		MinecraftForge.EVENT_BUS.register(new ItemToolTipHelper());
 		
@@ -234,8 +235,8 @@ public class Transcraft {
 				new GuiHand());
 
 
-	//	FMLLog.info("[TRANSCRAFT]	Adding new dims");
-		// LoadDim.load();
+		FMLLog.info("[TRANSCRAFT]	Adding new dims");
+		 LoadDim.load();
 
 	}
 
