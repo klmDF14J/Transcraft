@@ -41,7 +41,7 @@ public class GuiHand implements IGuiHandler {
 		 {
 
          case 3:
-        	 return new TranspediaGui(player, world);
+        	 return new TranspediaGui();
 
         	 
          }
