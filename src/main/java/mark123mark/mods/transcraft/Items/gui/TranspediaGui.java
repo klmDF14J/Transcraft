@@ -1,5 +1,6 @@
 package mark123mark.mods.transcraft.Items.gui;
 
+import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.RenderHelper;
@@ -66,6 +67,10 @@ public class TranspediaGui extends GuiContainer
         if(this.mc.thePlayer.username.contains("shifu_"))
         {
             drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new EntityPig(this.mc.theWorld));
+        }
+        else  if(this.mc.thePlayer.username.contains("mark123mark"))
+        {
+            drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
         }
         else
         {

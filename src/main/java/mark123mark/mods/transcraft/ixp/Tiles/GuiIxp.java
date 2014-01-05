@@ -3,6 +3,7 @@ package mark123mark.mods.transcraft.ixp.Tiles;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 
+import mark123mark.mods.transcraft.Entitys.mob.NukeCreeper;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -10,6 +11,7 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.network.packet.Packet250CustomPayload;
@@ -94,8 +96,19 @@ public class GuiIxp extends GuiContainer
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(k, l, 0, 0, xSize, ySize);
-        drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, this.mc.thePlayer);
         
+        if(this.mc.thePlayer.username.contains("shifu_"))
+        {
+            drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new EntityPig(this.mc.theWorld));
+        }
+        else  if(this.mc.thePlayer.username.contains("mark123mark"))
+        {
+            drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, new NukeCreeper(this.mc.theWorld));
+        }
+        else
+        {
+            drawPlayerModel(k + 200, l + 80, 30, (float) (k + 200) - this.xSize_lo, (float) (l + 60 - 30) - this.ySize_lo, this.mc.thePlayer);
+        }
         
         
         //this.drawTexturedModalRect(k, l + this.inventoryRows * 18 + 17, 0, 126, this.xSize, 96);
