@@ -1,24 +1,18 @@
 package mark123mark.mods.transcraft;
 
 import mark123mark.mods.transcraft.Items.TranscraftItems;
-import mark123mark.mods.transcraft.TileEntitys.Transcrafter.GuiHanderTC;
 import mark123mark.mods.transcraft.WorldGen.TranscraftGenerator;
 import mark123mark.mods.transcraft.biomes.transmania.FlatLands;
 import mark123mark.mods.transcraft.command.CommandReloadConfig;
 import mark123mark.mods.transcraft.command.CommandTranscraftVersion;
 import mark123mark.mods.transcraft.fluids.TranscraftFluids;
 import mark123mark.mods.transcraft.helpers.Config;
-import mark123mark.mods.transcraft.helpers.EventCloakRender;
 import mark123mark.mods.transcraft.helpers.EventMobDeath;
 import mark123mark.mods.transcraft.helpers.FuelHandler;
 import mark123mark.mods.transcraft.helpers.GuiHand;
 import mark123mark.mods.transcraft.helpers.ItemToolTipHelper;
 import mark123mark.mods.transcraft.helpers.PacketHandlerTranscraft;
 import mark123mark.mods.transcraft.helpers.PlayerEditor;
-import mark123mark.mods.transcraft.ixp.Tiles.GuiHanderIXP;
-import mark123mark.mods.transcraft.ixp.Tiles.ItemTileIxpRender;
-import mark123mark.mods.transcraft.ixp.Tiles.TileECRender;
-import mark123mark.mods.transcraft.ixp.Tiles.TileIXP;
 import mark123mark.mods.transcraft.loaders.LoadBlockSettings;
 import mark123mark.mods.transcraft.loaders.LoadBlocks;
 import mark123mark.mods.transcraft.loaders.LoadChestGen;
@@ -31,19 +25,14 @@ import mark123mark.mods.transcraft.loaders.RecipeLoader;
 import mark123mark.mods.transcraft.loaders.RegisterBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumToolMaterial;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.ForgeSubscribe;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -55,7 +44,6 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
 
 @Mod(modid = "transcraft", name = "Transcraft", version = Transcraft.VERSION+ Transcraft.STATE, useMetadata = true)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = "transcraft", packetHandler = PacketHandlerTranscraft.class)
@@ -200,11 +188,9 @@ public class Transcraft {
 		
 		
 /*
-
 		if (event.getSide() == Side.CLIENT) {
 			MinecraftForge.EVENT_BUS.register(new EventCloakRender());
 		}
-		
  */
 
 
@@ -248,9 +234,8 @@ public class Transcraft {
 
 	};
 
-	public static CreativeTabs TranstabBlocks = new CreativeTabs(
-			"TranstabBlocks") {
-
+	public static CreativeTabs TranstabBlocks = new CreativeTabs("TranstabBlocks") 
+	{
 		@Override
 		public ItemStack getIconItemStack() {
 			return new ItemStack(TranscraftOre, 1, 0);
