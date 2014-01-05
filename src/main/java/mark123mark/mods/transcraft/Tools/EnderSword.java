@@ -79,7 +79,7 @@ public class EnderSword extends ItemSword {
 	        }
 			else
 			{
-				list.add("§2[§4SHIFT§2]");
+				list.add("\u00a72[\u00a74SHIFT\u00a72]");
 			}
 		}
 	}
