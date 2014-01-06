@@ -138,7 +138,6 @@ public class RegisterBlocks {
 
 		GameRegistry.registerTileEntity(TileTC.class, "TileEntityTC");
 		GameRegistry.registerTileEntity(TileIXP.class, "TileIXP");
-		
 	}
 
 	public static void registerItem(Item item) {
